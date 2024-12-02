@@ -1,0 +1,11 @@
+﻿<Application x:Class="PCU_GUI_Idea.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PCU_GUI_Idea"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             StartupUri="MainWindow.xaml"
+            >
+    <Application.Resources>
+    </Application.Resources>
+</Application>
+    
