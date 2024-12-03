@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="PCU_GUI_Idea.Menu.MenuTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:PCU_GUI_Idea.Menu"
+             mc:Ignorable="d" 
+             d:DesignHeight="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=ActualHeight}"
+             d:DesignWidth="450">
+             <!--Future Use
+             d:DesignHeight="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=ActualHeight}"-->
+    <Grid >
+        <StackPanel Height="Auto" Margin="0,0,0,0" Orientation="Horizontal" Background="#FF310F38" telerik:CornerRadiusHelper.ClipRadius="24">
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                <StackPanel Height="Auto" Orientation="Vertical" CanVerticallyScroll="True">
+                    <Button Style="{StaticResource MenuButton}"
+                            Content="Converter"
+                            FontSize="30"
+                            Margin="20, 20, 0 ,0"
+                            HorizontalContentAlignment="Left"
+                            Click="Menu_Button_Clicked"
+                            />
+                    <Button Style="{StaticResource MenuButton}"
+                            Content="Graphics"
+                            FontSize="30"
+                            Margin="20, 40, 0 ,0" 
+                            Click="Menu_Button_Clicked"
+                            />
+                    <Button Style="{StaticResource MenuButton}"
+                            Content="Customize"
+                            FontSize="30"
+                            Margin="20, 40, 0 ,0"
+                            Click="Menu_Button_Clicked"
+                            />
+                    <Button Style="{StaticResource MenuButton}"
+                            Content="Help"
+                            FontSize="30"
+                            Margin="20, 40, 0 ,0"
+                            Click="Menu_Button_Clicked"
+                            />
+                    <Button Style="{StaticResource MenuButton}"
+                            Content="To be added"
+                            FontSize="30"
+                            Margin="20, 40, 0 ,20"
+                            Click="Menu_Button_Clicked"
+                            />
+                    <Button Style="{StaticResource MenuButton}"
+                            Content="To be added"
+                            FontSize="30"
+                            Margin="20, 40, 0 ,20"
+                            />
+                    <Button Style="{StaticResource MenuButton}"
+                            Content="To be added"
+                            FontSize="30"
+                            Margin="20, 40, 0 ,20"
+                            Click="Menu_Button_Clicked"
+                            />
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</UserControl>

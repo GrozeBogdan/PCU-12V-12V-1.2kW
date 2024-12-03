@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Bogdan\source\repos\PCU GUI Idea\PCU GUI Idea\obj\Debug\
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\
 PCU_GUI_Idea
 none
 false
 DEBUG;TRACE
-C:\Users\Bogdan\source\repos\PCU GUI Idea\PCU GUI Idea\App.xaml
-1219584333
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\App.xaml
+32090122429
 
-6-1329684040
+8-1617555704
 85-2009484405
-MainWindow.xaml;
+MainWindow.xaml;Menu\MenuTab.xaml;Modules\Converter.xaml;
 
 False
 

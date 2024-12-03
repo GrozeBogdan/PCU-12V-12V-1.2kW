@@ -1,55 +1,100 @@
-﻿<Window x:Class="PCU_GUI_Idea.MainWindow"
+﻿
+<Window x:Class="PCU_GUI_Idea.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCU_GUI_Idea"
-        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+        xmlns:localMenu="clr-namespace:PCU_GUI_Idea.Menu"
+        xmlns:module="clr-namespace:PCU_GUI_Idea.Modules"
         mc:Ignorable="d"
-        Height="768" Width="1366" Background="Transparent" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
-    <Border Background="#451952" CornerRadius="24" BorderThickness="4" BorderBrush="#5D3370">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition MaxHeight="100" MinHeight="50" Height="Auto"/>
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Height="35" Grid.Column="0" Grid.ColumnSpan="2" Text="PCU GUI" Margin="10" FontSize="24" FontWeight="Bold" Foreground="#E8BC89" HorizontalAlignment="Center" />
-                <TextBox Height="35" Grid.Column="3" Grid.ColumnSpan="4" Text=" 🔎 Search" Margin="10" FontSize="18" FontWeight="Medium" Foreground="#E8BC89" Background="#5D3370" telerik:CornerRadiusHelper.ClipRadius="16" VerticalContentAlignment="Center" BorderBrush="Transparent"/>
-                <StackPanel Grid.Row="0" Grid.Column="12" Grid.ColumnSpan="2" Orientation="Horizontal">
-                    <Button telerik:CornerRadiusHelper.ClipRadius="12" Margin="10" Width="40" Height="30" Background="#FFE8BC89" BorderBrush="Transparent" Content="min" FontSize="18" VerticalContentAlignment="Center" FontWeight="Medium" Foreground="WhiteSmoke"/>
-                    <Button Click="Button_Click" telerik:CornerRadiusHelper.ClipRadius="12" Margin="10" Width="40" Height="30" Background="#FFE8BC89" BorderBrush="Transparent" Content="max" FontSize="18" VerticalContentAlignment="Center" FontWeight="Medium" Foreground="WhiteSmoke"/>
-                    <Button telerik:CornerRadiusHelper.ClipRadius="12" Margin="10" Width="40" Height="30" Background="#FFF90303" BorderBrush="Transparent" Content="X" FontSize="18" VerticalContentAlignment="Center" FontWeight="Medium" Foreground="WhiteSmoke"/>
-                </StackPanel>
+        Height="768" 
+        Width="1366" 
+        Background="Transparent" 
+        WindowStyle="None" 
+        AllowsTransparency="True" 
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Drag_Window"
+        Title="PCU 12V-12V"
+        Icon="Pictures/Icon.png">
+    <Viewbox>
+        <Border x:Name="sWindow" Background="#451952" CornerRadius="24" BorderThickness="4" BorderBrush="#5D3370" MinHeight="768" MinWidth="1366" MaxWidth="1920" MaxHeight="1080">
 
-            </Grid>
 
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="450"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+            <Grid Width="{Binding RelativeSource={RelativeSource AncestorType=Border}, Path=ActualWidth}"
+                  Height="{Binding RelativeSource={RelativeSource AncestorType=Border}, Path=ActualHeight}">
+                <Grid.RowDefinitions>
+                    <RowDefinition MaxHeight="100" MinHeight="50" Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
 
-                <Grid Grid.Column="0">
+                <!--Application Tab-->
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Height="35" Grid.Column="0" Grid.ColumnSpan="2" Text="PCU GUI" Margin="10" FontSize="24" FontWeight="Bold" Foreground="#E8BC89" HorizontalAlignment="Center" />
+                    <TextBox Height="35" Grid.Column="3" Grid.ColumnSpan="4" Text=" 🔎 Search" Margin="10" FontSize="18" FontWeight="Medium" Foreground="#E8BC89" Background="#5D3370" telerik:CornerRadiusHelper.ClipRadius="16" VerticalContentAlignment="Center" BorderBrush="Transparent"/>
+
+                    <!--<Button telerik:CornerRadiusHelper.ClipRadius="12" Margin="10" Width="40" Height="30" Background="#FFE8BC89" BorderBrush="Transparent" Content="min" FontSize="18" VerticalContentAlignment="Center" FontWeight="Medium" Foreground="WhiteSmoke"/>
+                        <Button Click="Button_Click" telerik:CornerRadiusHelper.ClipRadius="12" Margin="10" Width="40" Height="30" Background="#FFE8BC89" BorderBrush="Transparent" Content="max" FontSize="18" VerticalContentAlignment="Center" FontWeight="Medium" Foreground="WhiteSmoke"/>
+                        <Button telerik:CornerRadiusHelper.ClipRadius="12" Margin="10" Width="40" Height="30" Background="#FFF90303" BorderBrush="Transparent" Content="X" FontSize="18" VerticalContentAlignment="Center" FontWeight="Medium" Foreground="WhiteSmoke"/>-->
+                    <Button Style="{StaticResource WindowButton}"
+                                Grid.Column="11"
+                                Content="_"
+                                FontSize="30"
+                                Margin="5, 5, 0 ,0"
+                                Click="Minimize_Window"
+                                />
+                    <Button Style="{StaticResource WindowButton}"
+                                Grid.Column="12"
+                                Content="&#x26F6;"
+                                FontSize="30"
+                                Margin="0, 5, 0 ,0"
+                                Click="Maximize_Window"
+                                />
+                    <Button Style="{StaticResource ExitButton}"
+                                Grid.Column="13"
+                                Content="X"
+                                FontSize="30"
+                                Margin="0, 5, 5 ,0" 
+                                Click="Exit_Button"
+                                />
+
+                </Grid>
+
+                <!--Gird used for Main UI-->
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="450"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Gird used for menu tab-->
+                    <Grid Grid.Column="0" Height="Auto" Margin="20">
+                        <localMenu:MenuTab Visibility="Visible" Margin="0,0,0,0"></localMenu:MenuTab>
+                    </Grid>
+                
+                    <!--Gird used for different tabs-->
+                    <Grid Grid.Column="1">
+                    </Grid>
                 </Grid>
             </Grid>
-        </Grid>
-    </Border>
+        </Border>
+    </Viewbox>
 </Window>
 

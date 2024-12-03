@@ -27,14 +27,36 @@ namespace PCU_GUI_Idea
             InitializeComponent();
 
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void Drag_Window(object sender, MouseButtonEventArgs e)
         {
-            Workbook workbook = new Workbook();
-            Worksheet worksheet = workbook.Worksheets.Add();
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
 
-            CellSelection selection = worksheet.Cells[1, 1]; //B2 cell 
-            selection.SetValue("Hello RadSpreadProcessing");
+        public void Exit_Button(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
+
+        public void Minimize_Window(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;   
+        }
+
+        public void Maximize_Window(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState == WindowState.Normal)
+            {
+                this.WindowState = WindowState.Maximized;
+                sWindow.CornerRadius = new CornerRadius(0);
+                return;
+            }
+            if (this.WindowState == WindowState.Maximized)
+            {
+                this.WindowState = WindowState.Normal;
+                sWindow.CornerRadius = new CornerRadius(24);
+                return;
+            }
         }
     }
 }
