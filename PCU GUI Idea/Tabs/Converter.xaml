@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="PCU_GUI_Idea.Tabs.Converter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PCU_GUI_Idea"  
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="945" 
+             d:DesignWidth="1390"
+             >
+    <Grid Background="{DynamicResource PanelBackground}" telerik:CornerRadiusHelper.ClipRadius="24">
+        <Grid Margin="20" Background="{DynamicResource ButtonContrast}" telerik:CornerRadiusHelper.ClipRadius="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" MaxHeight="50" MinHeight="20"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <!--Toolbar Grid-->
+            <Grid Grid.Row="0">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="FileButton" Style="{DynamicResource ToolbarButton}" Margin="8,6,2,6" Width="105" Content="File" telerik:CornerRadiusHelper.ClipRadius="4"/>
+                    <Button x:Name="EditButton" Style="{DynamicResource ToolbarButton}" Margin="0,6,2,6" Width="105" Content="Edit" telerik:CornerRadiusHelper.ClipRadius="4"/>
+                    <Button x:Name="ViewButton" Style="{DynamicResource ToolbarButton}" Margin="0,6,2,6" Width="105" Content="View" telerik:CornerRadiusHelper.ClipRadius="4"/>
+                    <Button x:Name="Tools" Style="{DynamicResource ToolbarButton}" Margin="0,6,2,6" Width="105" Content="Tools" telerik:CornerRadiusHelper.ClipRadius="4"/>
+                    <Button x:Name="Help" Style="{DynamicResource ToolbarButton}" Margin="1,6,8,6" Width="105" Content="Help" telerik:CornerRadiusHelper.ClipRadius="4"/>
+                </StackPanel>
+            </Grid>
+            
+            <!--Tab contating Converter and other functionalities-->
+            <Grid Grid.Row="1" x:Name="convTab">
+                <!--<Image Margin="400, 0, 400, 550" x:Name="converter_ph1" Source="C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_transp.png">
+                </Image>
+                <Image Margin="400, 350, 400, 300" x:Name="converter_ph2" Source="C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_transp.png">
+                </Image>-->
+                <!--<Image Margin="0,0,30,160" Source="C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_converter.png"/>-->
+                <Image Margin="100,50,100,150">
+                    <Image.Source>
+                        <DrawingImage Drawing="{StaticResource PCU_Layout}"/>
+                    </Image.Source>
+                </Image>
+            </Grid>
+            <Grid Grid.Row="1">
+                <!--Current Measurements TextBoxes-->
+                <TextBox x:Name="PH1_Curr"  Width="100" Height="50" Margin="135,35,1115,770" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
+                <TextBox Width="100" Height="50" Margin="1100,35,150,770" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
+                <TextBox Width="100" Height="50" Margin="153,360,1097,445" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
+                <TextBox Width="100" Height="50" Margin="1100,360,150,445" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
+                <ToggleButton Style="{DynamicResource CustomToggleButton}" Width="90" Height="40" Margin="297,40,963,775" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <ToggleButton Style="{DynamicResource CustomToggleButton}" Width="90" Height="40" Margin="297,365,963,450" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <ToggleButton Style="{DynamicResource CustomToggleButton}" Width="90" Height="40" Margin="939,365,321,450" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <ToggleButton Style="{DynamicResource CustomToggleButton}" Width="90" Height="40" Margin="939,40,321,775" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <ToggleButton Style="{DynamicResource CustomToggleButton}" Width="90" Height="40" Margin="606,122,654,693" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <ToggleButton Style="{DynamicResource CustomToggleButton}" Width="90" Height="40" Margin="606,60,654,755" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <ToggleButton Style="{DynamicResource CustomToggleButton}" Width="90" Height="40" Margin="58,360,1202,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
+                    <ToggleButton.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ToggleButton.RenderTransform>
+                </ToggleButton>
+                <ToggleButton Style="{StaticResource CustomToggleButton}" Width="90" Height="40" Margin="1208,360,52,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
+                    <ToggleButton.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ToggleButton.RenderTransform>
+                </ToggleButton>
+                <TextBox x:Name="PH1_Curr_Copy"  Width="100" Height="50" Margin="135,35,1115,770" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

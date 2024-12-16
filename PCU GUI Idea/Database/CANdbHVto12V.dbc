@@ -1,0 +1,120 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Canoe_Debug
+
+
+BO_ 161 Phases_Temp_Readings_0x0A1: 8 Vector__XXX
+ SG_ tempPhase1 : 0|32@1- (1,0) [0|0] ""  Canoe_Debug
+ SG_ tempPhase2 : 32|32@1- (1,0) [0|0] ""  Canoe_Debug
+
+BO_ 162 V48_Current_and_Voltage_Readings: 8 Vector__XXX
+ SG_ voltage48V : 0|32@1- (1,0) [0|0] ""  Canoe_Debug
+ SG_ current48V : 32|32@1- (1,0) [0|0] ""  Canoe_Debug
+
+BO_ 163 Phases_Current_Readings_0X0A3: 8 Vector__XXX
+ SG_ currentPhase1 : 0|32@1- (1,0) [0|0] ""  Canoe_Debug
+ SG_ currentPhase2 : 32|32@1- (1,0) [0|0] ""  Canoe_Debug
+
+BO_ 164 V12_Voltage_Reading_0x0A4: 8 Vector__XXX
+ SG_ voltage12V : 0|32@1- (1,0) [0|0] ""  Canoe_Debug
+ SG_ current12V : 32|32@1- (1,0) [0|0] ""  Canoe_Debug
+
+BO_ 165 Power_Reading_0x0A5: 8 Vector__XXX
+ SG_ power48V : 0|32@1- (1,0) [0|0] ""  Canoe_Debug
+ SG_ power12V : 32|32@1- (1,0) [0|0] ""  Canoe_Debug
+
+BO_ 166 Efficiency_0xA6: 8 Vector__XXX
+ SG_ efficiency : 0|32@1- (1,0) [0|0] ""  Canoe_Debug
+
+BO_ 167 OVP_OCP_0xA7: 8 Vector__XXX
+ SG_ input_OV : 0|1@1+ (1,0) [0|0] ""  Canoe_Debug
+ SG_ input_OC : 1|1@1+ (1,0) [0|0] ""  Canoe_Debug
+ SG_ output_OV : 2|1@1+ (1,0) [0|0] ""  Canoe_Debug
+ SG_ phase1_OC : 3|1@1+ (1,0) [0|0] ""  Canoe_Debug
+ SG_ phase2_OC : 4|1@1+ (1,0) [0|0] ""  Canoe_Debug
+
+BO_ 209 PWM_Updates_0X0D1: 8 Canoe_Debug
+ SG_ frequency : 0|9@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ dutyCycle : 9|7@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ deadbandRED : 16|10@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ deadbandFED : 26|10@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ phase : 36|9@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph1 : 45|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph2 : 46|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 210 Enables_and_Readings_0x0D2: 1 Canoe_Debug
+ SG_ V12Supply : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ referenceSupply : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ V5Supply : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ phase1 : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ phase2 : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ adcClear : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 241 EmergencyButton_0x0F1: 1 Canoe_Debug
+ SG_ emergencyStop : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_  "SystemMessageLongSymbol" STRING ;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "SystemMessageLongSymbol" "";
+BA_ "BusType" "CAN";
+BA_ "SystemMessageLongSymbol" BO_ 162 "V48_Current_and_Voltage_Readings_0x0A2";
+SIG_VALTYPE_ 161 tempPhase1 : 1;
+SIG_VALTYPE_ 161 tempPhase2 : 1;
+SIG_VALTYPE_ 162 voltage48V : 1;
+SIG_VALTYPE_ 162 current48V : 1;
+SIG_VALTYPE_ 163 currentPhase1 : 1;
+SIG_VALTYPE_ 163 currentPhase2 : 1;
+SIG_VALTYPE_ 164 voltage12V : 1;
+SIG_VALTYPE_ 164 current12V : 1;
+SIG_VALTYPE_ 165 power48V : 1;
+SIG_VALTYPE_ 165 power12V : 1;
+SIG_VALTYPE_ 166 efficiency : 1;
+

@@ -320,8 +320,6 @@ C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\it\Tel
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea.csproj.AssemblyReference.cache
-C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea.csproj.SuggestedBindingRedirects.cache
-C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea.exe.config
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\MainWindow.g.cs
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\App.g.cs
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea_MarkupCompile.cache
@@ -338,5 +336,28 @@ C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Menu\M
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Menu\MenuTab.baml
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\App.baml
-C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Modules\Converter.g.cs
-C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Modules\Converter.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Converter.g.cs
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Graphics.g.cs
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Customize.g.cs
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Help.g.cs
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Converter.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Graphics.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Customize.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Help.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\ExCSS.dll
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Svg.dll
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Buffers.dll
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Memory.dll
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Svg.xml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Buffers.xml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Memory.xml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\pcu_buck_boost_inductor_up.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\pcu_buck_boost_inductor_down.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\pcu_buck_boost_converter.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\SchematicConv.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\vxlapi_NET.dll
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\vxlapi_NET.xml

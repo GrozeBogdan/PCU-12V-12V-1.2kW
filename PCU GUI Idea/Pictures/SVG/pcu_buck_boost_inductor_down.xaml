@@ -1,0 +1,1988 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="Layer_2">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,1821.3333,1024.0"/>
+        </DrawingGroup.ClipGeometry>
+        <DrawingGroup>
+            <DrawingGroup.ClipGeometry>
+                <PathGeometry Figures="M 0 768 H 1366 V 0 H 0 Z" FillRule="Nonzero" Transform="1.33333,0.0,0.0,-1.33333,0.0,1024.0"/>
+            </DrawingGroup.ClipGeometry>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 672.766 504.994 h -3.638 v 3.728 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 672.766 508.722 h -3.638 v 3.847 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 672.766 512.569 h -3.638 v 3.728 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 672.766 516.297 h -3.638 v 3.909 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 669.128 516.297 h -3.755 v 3.909 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 669.128 520.206 h -3.755 v 3.728 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 669.128 523.934 h -3.755 v 3.847 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,887.16347,320.29187">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-665.373,-527.781"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 0 0 v -3.847 l -3.638 0.005 v 3.847 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,887.16347,315.3216">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-665.373,-531.509"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 0 0 v -3.728 l -3.638 0.006 v 3.727 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 661.734 527.786 h -3.811 v 3.728 h 3.811 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 657.923 527.786 h -3.644 v 3.728 h 3.644 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 654.28 527.786 h -3.755 v 3.728 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 650.525 523.939 h -3.638 v 3.847 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 650.525 527.786 h -3.638 v 3.728 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 646.886 516.302 h -3.096 v 3.909 h 3.096 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 646.886 520.212 h -3.096 v 3.728 h 3.096 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 646.886 523.939 h -3.096 v 3.847 h 3.096 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 643.79 505 h -3.638 v 3.728 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 643.79 508.727 h -3.638 v 3.847 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 643.79 512.574 h -3.638 v 3.728 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 643.79 516.302 h -3.638 v 3.909 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 640.151 505 h -3.755 v 3.728 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 640.151 508.727 h -3.755 v 3.847 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 640.151 512.574 h -3.755 v 3.728 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 640.151 516.302 h -3.755 v 3.909 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 636.396 516.302 h -3.638 v 3.909 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 636.396 520.212 h -3.638 v 3.728 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 636.396 523.939 h -3.638 v 3.847 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 632.758 523.939 h -3.811 v 3.847 h 3.811 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 632.758 527.786 h -3.811 v 3.728 h 3.811 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 628.947 527.786 h -3.638 v 3.728 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 625.309 527.786 h -3.755 v 3.728 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 621.554 527.786 h -3.639 v 3.728 h 3.639 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 617.915 523.939 h -3.334 v 3.847 h 3.334 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 617.915 527.786 h -3.334 v 3.728 h 3.334 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,819.44093,330.38467">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-614.581,-520.212"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 0 0 v -3.909 l -3.638 0.005 v 3.909 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,819.44093,325.4144">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-614.581,-523.939"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 0 0 v -3.728 l -3.638 0.006 v 3.727 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,819.44093,320.28493">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-614.581,-527.786"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 0 0 v -3.847 l -3.638 0.005 v 3.847 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 610.942 505.005 h -3.755 v 3.728 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 610.942 508.733 h -3.755 v 3.847 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 610.942 512.58 h -3.755 v 3.728 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 607.187 531.514 h 65.579 v -26.52 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 610.942 516.307 h -3.755 v 3.909 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,809.583,269.987">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.99 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.728 v -39.992" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,814.59,269.994">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.728 v -39.992" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,819.441,269.987">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.996 v -3.727 v -3.847 v -3.728 v -3.91 v -3.727 v -3.847 v -3.728 v -39.982" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,823.887,270.008">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.98 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.727 v -39.998" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,828.738,270.008">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.98 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.727 v -39.998" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,833.745,270.008">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.98 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.727 v -39.998" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,838.596,270.001">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.728 v -39.997" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,843.677,270.008">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.98 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.727 v -39.998" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,848.529,270.001">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.728 v -39.997" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,853.535,270.008">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.98 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.727 v -39.998" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,858.387,270.001">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.728 v -39.997" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,862.515,270.001">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.728 v -39.992" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,867.366,269.994">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.99 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.728 v -39.992" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,872.373,270.001">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.728 v -39.992" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,877.231,269.994">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.99 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.728 v -39.992" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,882.312,270.001">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.728 v -39.992" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,887.163,269.994">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.996 v -3.727 v -3.847 v -3.728 v -3.91 v -3.727 v -3.847 v -3.728 v -39.987" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,892.17,270.001">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.99 v -3.728 v -3.847 v -3.728 v -3.909 v -3.728 v -3.847 v -3.728 v -39.987" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,897.022,269.994">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.996 v -3.727 v -3.847 v -3.728 v -3.91 v -3.727 v -3.847 v -3.728 v -39.982" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,785.211,350.66">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.81 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.644 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.234" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,785.211,345.69">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.81 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.644 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.229" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,785.211,340.56">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.81 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.644 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.234" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,785.211,335.59">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.81 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.644 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.229" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,785.211,330.378">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.81 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.644 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.234" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,785.211,325.407">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.81 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.644 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.229" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,785.211,320.278">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.81 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.644 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.234" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,785.211,315.308">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.81 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.644 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.229" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup.ClipGeometry>
+                <PathGeometry Figures="M 0 768 H 1366 V 0 H 0 Z" FillRule="Nonzero" Transform="1.33333,0.0,0.0,-1.33333,0.0,1024.0"/>
+            </DrawingGroup.ClipGeometry>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 738.151 505.019 h -3.638 v 3.728 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 738.151 508.747 h -3.638 v 3.847 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 738.151 512.594 h -3.638 v 3.728 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 738.151 516.322 h -3.638 v 3.904 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 734.513 516.322 h -3.755 v 3.904 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 734.513 520.226 h -3.755 v 3.728 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 734.513 523.954 h -3.755 v 3.847 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,974.3436,320.26547">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-730.758,-527.801"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 0 0 v -3.847 l -3.638 0.005 v 3.847 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,974.3436,315.2952">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-730.758,-531.529"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 0 0 v -3.728 l -3.638 0.006 v 3.727 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 723.308 531.534 h 3.811 v -3.728 h -3.811 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 719.67 531.534 h 3.638 v -3.728 h -3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 715.915 531.534 h 3.755 v -3.728 h -3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 712.276 527.806 h 3.638 v -3.847 h -3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 712.276 531.534 h 3.638 v -3.728 h -3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 709.18 520.231 h 3.096 v -3.904 h -3.096 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 712.276 520.231 h -3.096 v 3.728 h 3.096 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 712.276 523.959 h -3.096 v 3.847 h 3.096 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 705.542 508.752 h 3.638 v -3.728 h -3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 709.18 508.752 h -3.638 v 3.847 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 709.18 512.599 h -3.638 v 3.728 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 709.18 516.327 h -3.638 v 3.904 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 701.787 508.752 h 3.755 v -3.728 h -3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 701.787 512.599 h 3.755 v -3.847 h -3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 701.787 516.327 h 3.755 v -3.728 h -3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 701.787 520.231 h 3.755 v -3.904 h -3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 701.787 516.327 h -3.638 v 3.904 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 698.148 523.959 h 3.638 v -3.728 h -3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 698.148 527.806 h 3.638 v -3.847 h -3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 694.332 527.806 h 3.816 v -3.847 h -3.816 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 694.332 531.534 h 3.816 v -3.728 h -3.816 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 690.694 531.534 h 3.638 v -3.728 h -3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 686.939 531.534 h 3.755 v -3.728 h -3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 686.939 527.806 h -3.638 v 3.728 h 3.638 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 679.966 527.806 h 3.334 v -3.847 h -3.334 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 679.966 531.534 h 3.334 v -3.728 h -3.334 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,901.76973,335.55693">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-676.327,-516.332"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="M 0 0 V 3.904 L 3.638 3.899 v -3.904 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,906.62107,330.35827">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-679.966,-520.231"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="M 0 0 L -3.638 0.005 V 3.733 L 0 3.728 Z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,906.62107,325.388">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-679.966,-523.959"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="M 0 0 L -3.638 0.005 V 3.852 L 0 3.847 Z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 676.327 505.03 h -3.755 v 3.728 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 676.327 508.758 h -3.755 v 3.847 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 676.327 512.605 h -3.755 v 3.728 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,0.0,1024.0">
+                <DrawingGroup.ClipGeometry>
+                    <PathGeometry Figures="m 672.572 531.534 h 65.579 v -26.515 h -65.579 z" FillRule="Nonzero"/>
+                </DrawingGroup.ClipGeometry>
+                <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                    <GeometryDrawing.Geometry>
+                        <PathGeometry Figures="m 676.327 516.332 h -3.755 v 3.904 h 3.755 z" FillRule="Nonzero"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,896.763,269.961">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.99 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.728 v -39.992" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,901.77,269.961">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.99 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.728 v -39.997" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,906.621,269.961">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.996 v -3.727 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.728 v -39.987" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,911.067,269.981">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.98 v -3.728 v -3.847 v -3.728 v -3.904 v -3.727 v -3.848 v -3.727 v -40.003" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,915.918,269.975">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.727 v -39.998" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,920.925,269.975">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.727 v -40.003" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,925.776,269.975">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.727 v -39.998" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,930.864,269.981">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.98 v -3.728 v -3.847 v -3.728 v -3.904 v -3.727 v -3.848 v -3.727 v -40.003" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,935.715,269.975">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.727 v -39.998" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,940.722,269.975">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.727 v -40.003" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,945.573,269.975">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.727 v -39.998" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,949.702,269.975">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.985 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.727 v -39.998" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,954.553,269.968">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.99 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.728 v -39.992" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,959.56,269.968">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.99 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.728 v -39.997" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,964.411,269.968">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.99 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.728 v -39.992" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,969.492,269.968">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.99 v -3.728 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.728 v -39.997" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,974.344,269.968">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.996 v -3.727 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.728 v -39.987" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,979.35,269.968">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.996 v -3.727 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.728 v -39.992" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,984.202,269.968">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -33.996 v -3.727 v -3.847 v -3.728 v -3.904 v -3.728 v -3.847 v -3.728 v -39.987" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,872.398,350.627">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.274 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.815 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.639 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.234" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,872.391,345.657">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.815 h 3.639 h 3.755 h 3.639 h 3.096 h 3.638 h 3.755 h 3.639 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.234" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,872.398,340.527">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.274 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.815 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.639 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.234" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,872.391,335.557">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.815 h 3.639 h 3.755 h 3.639 h 3.096 h 3.638 h 3.755 h 3.639 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.229" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,872.398,330.351">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.274 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.815 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.639 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.234" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,872.391,325.381">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.815 h 3.639 h 3.755 h 3.639 h 3.096 h 3.638 h 3.755 h 3.639 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.234" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,872.398,320.252">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.274 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.815 h 3.639 h 3.755 h 3.638 h 3.097 h 3.638 h 3.755 h 3.639 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.234" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,872.391,315.281">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#ffffffff" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h 18.279 h 3.755 l 3.638 -0.005 h 3.335 h 3.638 h 3.755 h 3.639 h 3.815 h 3.639 h 3.755 h 3.639 h 3.096 h 3.638 h 3.755 h 3.639 h 3.811 l 3.638 -0.005 h 3.755 h 3.639 h 14.234" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingBrush Stretch="Uniform" Drawing="{StaticResource Layer_2}" x:Key="db_Layer_2"/>
+    <DrawingGroup x:Key="Layer_1">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,1821.3333,1024.0"/>
+        </DrawingGroup.ClipGeometry>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,501.975,220.799">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 H 6.176 V -53.235 H 0 v 23.573 h -30.879 v 5.893 H 0 Z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,551.655,252.491">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 H 9.264 V -47.342 H 3.088 v 20.823 h -15.44 v -2.947 h -6.175 v 11.786 h 6.175 v -2.946 H 3.088 V -5.893 H 0 v -5.893 l 0.012 -2.931 l -3.1 2.931 l -3.088 2.946 l -3.118 2.947 h -3.058 V -8.84 h -6.175 V 2.947 h 6.175 V 0 h 3.058 L -6.176 2.947 L -3.088 6.09 L 0 8.964 Z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,551.655,252.491">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 H 9.264 V -47.342 H 3.875 H 3.088 v 20.823 h -15.44 v -2.947 h -6.175 v 11.786 h 6.175 v -2.946 H 3.088 V -5.893 H 0 v -5.893 l 0.012 -2.931 l -3.1 2.931 l -3.088 2.946 l -3.118 2.947 h -3.058 V -8.84 h -6.175 V 2.947 h 6.175 V 0 h 3.058 L -6.176 2.947 L -3.088 6.09 L 0 8.964 Z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,564.007,201.155">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -23.573 h -21.615 v -2.946 h -6.176 v 11.786 h 6.176 V -17.68 H -6.176 V 0 Z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,501.975,410.132">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 H 6.176 V -53.235 H 0 v 23.573 h -30.879 v 5.893 H 0 Z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,551.655,441.825">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 H 9.264 V -47.342 H 3.088 v 20.823 h -15.44 v -2.947 h -6.175 v 11.786 h 6.175 v -2.946 H 3.088 V -5.893 H 0 v -5.893 l 0.012 -2.931 l -3.1 2.931 l -3.088 2.946 l -3.118 2.947 h -3.058 V -8.84 h -6.175 V 2.947 h 6.175 V 0 h 3.058 L -6.176 2.947 L -3.088 6.09 L 0 8.964 Z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,564.007,390.488">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -23.573 h -21.615 v -2.946 h -6.176 v 11.786 h 6.176 V -17.68 H -6.176 V 0 Z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1306.69,220.799">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 H -6.176 V -53.235 H 0 v 23.573 h 30.879 v 5.893 H 0 Z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1257.01,252.491">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h -9.264 v -47.342 h 6.176 v 20.823 h 15.44 v -2.947 h 6.175 v 11.786 h -6.175 v -2.946 H -3.088 V -5.893 H 0 v -5.893 l -0.012 -2.931 l 3.1 2.931 l 3.088 2.946 l 3.119 2.947 h 3.057 V -8.84 h 6.175 V 2.947 H 12.352 V 0 H 9.295 L 6.176 2.947 L 3.088 6.09 L 0 8.964 Z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1244.66,201.155">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -23.573 h 21.615 v -2.946 h 6.176 v 11.786 H 21.615 V -17.68 H 6.176 l 0 17.68 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1306.69,410.132">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 H -6.176 V -53.235 H 0 v 23.573 h 30.879 v 5.893 H 0 Z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1257.01,441.825">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 h -9.264 v -47.342 h 6.176 v 20.823 h 15.44 v -2.947 h 6.175 v 11.786 h -6.175 v -2.946 H -3.088 V -5.893 H 0 v -5.893 l -0.012 -2.931 l 3.1 2.931 l 3.088 2.946 l 3.119 2.947 h 3.057 V -8.84 h 6.175 V 2.947 H 12.352 V 0 H 9.295 L 6.176 2.947 L 3.088 6.09 L 0 8.964 Z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1244.66,390.488">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 0 0 v -23.573 h 21.615 v -2.946 h 6.176 v 11.786 H 21.615 V -17.68 H 6.176 l 0 17.68 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,0.0,1024.0">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 423.015 475 h -6.23 v 57 h 6.23 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,0.0,1024.0">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 939.715 475.1 h -6.23 v 57 h 6.23 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,812.0,352.153">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 H -188.513 V 6.115 H -4.806 H 0" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,984.0,344.0">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 H 200 V -6.115 H 0" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,941.5904,348.9344">
+            <DrawingGroup.ClipGeometry>
+                <PathGeometry Figures="M 0 768 H 1366 V 0 H 0 Z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-706.193,-506.299"/>
+            </DrawingGroup.ClipGeometry>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 C 0 -9.949 -7.156 -18 -16 -18" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,897.5904,348.9344">
+            <DrawingGroup.ClipGeometry>
+                <PathGeometry Figures="M 0 768 H 1366 V 0 H 0 Z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-673.193,-506.299"/>
+            </DrawingGroup.ClipGeometry>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 C 0 -9.949 7.604 -18 17 -18" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,897.12853,348.66667">
+            <DrawingGroup.ClipGeometry>
+                <PathGeometry Figures="M 0 768 H 1366 V 0 H 0 Z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-672.846,-506.5"/>
+            </DrawingGroup.ClipGeometry>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 C 0 -9.949 -7.156 -18 -16 -18" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,853.12853,348.66667">
+            <DrawingGroup.ClipGeometry>
+                <PathGeometry Figures="M 0 768 H 1366 V 0 H 0 Z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-639.846,-506.5"/>
+            </DrawingGroup.ClipGeometry>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 C 0 -9.949 7.604 -18 17 -18" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,853.12853,348.66667">
+            <DrawingGroup.ClipGeometry>
+                <PathGeometry Figures="M 0 768 H 1366 V 0 H 0 Z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-639.846,-506.5"/>
+            </DrawingGroup.ClipGeometry>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 C 0 -9.949 -7.156 -18 -16 -18" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,809.12853,348.66667">
+            <DrawingGroup.ClipGeometry>
+                <PathGeometry Figures="M 0 768 H 1366 V 0 H 0 Z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-606.846,-506.5"/>
+            </DrawingGroup.ClipGeometry>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 C 0 -9.949 7.604 -18 17 -18" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,986.46187,348.66667">
+            <DrawingGroup.ClipGeometry>
+                <PathGeometry Figures="M 0 768 H 1366 V 0 H 0 Z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-739.846,-506.5"/>
+            </DrawingGroup.ClipGeometry>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 C 0 -9.949 -7.156 -18 -16 -18" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.3333333,0.0,0.0,-1.3333333,942.46187,348.66667">
+            <DrawingGroup.ClipGeometry>
+                <PathGeometry Figures="M 0 768 H 1366 V 0 H 0 Z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-706.846,-506.5"/>
+            </DrawingGroup.ClipGeometry>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 0 0 C 0 -9.949 7.604 -18 17 -18" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingBrush Stretch="Uniform" Drawing="{StaticResource Layer_1}" x:Key="db_Layer_1"/>
+</ResourceDictionary>

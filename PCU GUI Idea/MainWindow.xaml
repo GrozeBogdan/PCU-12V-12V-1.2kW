@@ -7,7 +7,8 @@
         xmlns:local="clr-namespace:PCU_GUI_Idea"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
         xmlns:localMenu="clr-namespace:PCU_GUI_Idea.Menu"
-        xmlns:module="clr-namespace:PCU_GUI_Idea.Modules"
+        xmlns:tabs="clr-namespace:PCU_GUI_Idea.Tabs"
+        
         mc:Ignorable="d"
         Height="768" 
         Width="1366" 
@@ -19,13 +20,13 @@
         Title="PCU 12V-12V"
         Icon="Pictures/Icon.png">
     <Viewbox>
-        <Border x:Name="sWindow" Background="#451952" CornerRadius="24" BorderThickness="4" BorderBrush="#5D3370" MinHeight="768" MinWidth="1366" MaxWidth="1920" MaxHeight="1080">
+        <Border x:Name="sWindow" Background="{DynamicResource WindowBackground}" CornerRadius="24" BorderThickness="4" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" MinHeight="768" MinWidth="1366" MaxWidth="1920" MaxHeight="1080">
 
 
             <Grid Width="{Binding RelativeSource={RelativeSource AncestorType=Border}, Path=ActualWidth}"
                   Height="{Binding RelativeSource={RelativeSource AncestorType=Border}, Path=ActualHeight}">
                 <Grid.RowDefinitions>
-                    <RowDefinition MaxHeight="100" MinHeight="50" Height="Auto"/>
+                    <RowDefinition MaxHeight="100" MinHeight="75" Height="Auto"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
@@ -47,8 +48,8 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Height="35" Grid.Column="0" Grid.ColumnSpan="2" Text="PCU GUI" Margin="10" FontSize="24" FontWeight="Bold" Foreground="#E8BC89" HorizontalAlignment="Center" />
-                    <TextBox Height="35" Grid.Column="3" Grid.ColumnSpan="4" Text=" 🔎 Search" Margin="10" FontSize="18" FontWeight="Medium" Foreground="#E8BC89" Background="#5D3370" telerik:CornerRadiusHelper.ClipRadius="16" VerticalContentAlignment="Center" BorderBrush="Transparent"/>
+                    <TextBlock Height="35" Grid.Column="0" Grid.ColumnSpan="2" Text="PCU GUI" Margin="0" FontSize="32" FontWeight="Bold" Foreground="{DynamicResource TextForeground}" HorizontalAlignment="Center" />
+                    <TextBox Height="35" Grid.Column="3" Grid.ColumnSpan="4" Text=" 🔎 Search" Margin="10" FontSize="18" FontWeight="Medium" Foreground="{DynamicResource TextForeground}" Background="{DynamicResource ButtonAndHighlightBackground}" telerik:CornerRadiusHelper.ClipRadius="16" VerticalContentAlignment="Center" BorderBrush="Transparent"/>
 
                     <!--<Button telerik:CornerRadiusHelper.ClipRadius="12" Margin="10" Width="40" Height="30" Background="#FFE8BC89" BorderBrush="Transparent" Content="min" FontSize="18" VerticalContentAlignment="Center" FontWeight="Medium" Foreground="WhiteSmoke"/>
                         <Button Click="Button_Click" telerik:CornerRadiusHelper.ClipRadius="12" Margin="10" Width="40" Height="30" Background="#FFE8BC89" BorderBrush="Transparent" Content="max" FontSize="18" VerticalContentAlignment="Center" FontWeight="Medium" Foreground="WhiteSmoke"/>
@@ -80,17 +81,19 @@
                 <!--Gird used for Main UI-->
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="450"/>
+                        <ColumnDefinition Width="470"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
                     <!--Gird used for menu tab-->
-                    <Grid Grid.Column="0" Height="Auto" Margin="20">
+                    <Grid Grid.Column="0" Height="Auto" Margin="30,30,0,30">
                         <localMenu:MenuTab Visibility="Visible" Margin="0,0,0,0"></localMenu:MenuTab>
                     </Grid>
                 
                     <!--Gird used for different tabs-->
-                    <Grid Grid.Column="1">
+                    <Grid Grid.Column="1" Margin="30">
+                        <ContentControl x:Name="tab"
+                                        Margin="0"/>
                     </Grid>
                 </Grid>
             </Grid>

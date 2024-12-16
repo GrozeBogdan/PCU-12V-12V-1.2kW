@@ -25,8 +25,11 @@ namespace PCU_GUI_Idea
         public MainWindow()
         {
             InitializeComponent();
-
+            CAN.Start_CAN();
+            DbcParser.ParseDatabase();
         }
+
+        // Asta trebuie sa fie tot codul pe care il am in MAIN!
         public void Drag_Window(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -35,6 +38,7 @@ namespace PCU_GUI_Idea
 
         public void Exit_Button(object sender, RoutedEventArgs e)
         {
+            CAN.Stop_CAN();
             App.Current.Shutdown();
         }
 
@@ -58,5 +62,6 @@ namespace PCU_GUI_Idea
                 return;
             }
         }
+
     }
 }

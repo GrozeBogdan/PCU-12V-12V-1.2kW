@@ -1,0 +1,1317 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="PCU_Layout">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,815.0,344.0"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <LineGeometry StartPoint="222.5,221.0" EndPoint="222.5,183.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <LineGeometry StartPoint="222.5,255.0" EndPoint="222.5,229.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="#ff020202" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <LineGeometry StartPoint="377.0,213.5" EndPoint="440.0,213.5"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 376.608 213.689 L 450.5 126.5" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <DrawingGroup Transform="0.0,1.0,1.0,0.0,600.0,84.0">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="0.0,-0.5" EndPoint="19.0,-0.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <LineGeometry StartPoint="321.996,58.5" EndPoint="205.996,57.5"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <LineGeometry StartPoint="272.0,182.5" EndPoint="74.0,182.5"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <DrawingGroup Transform="1.0,0.00085403,-0.00104636,0.9999989999999999,499.254,57.7319">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="0.0,-0.5" EndPoint="116.753,-0.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <GeometryDrawing Brush="#ff131212">
+            <GeometryDrawing.Geometry>
+                <EllipseGeometry RadiusX="5.0" RadiusY="4.5" Center="447.0,213.5"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ff131212">
+            <GeometryDrawing.Geometry>
+                <EllipseGeometry RadiusX="5.0" RadiusY="5.0" Center="381.0,126.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <LineGeometry StartPoint="616.007,57.334" EndPoint="748.887,57.3316"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <DrawingGroup Transform="-1.0,-1.76142e-05,-1.79169e-05,1.0,206.88,58.0024">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="0.0,-0.5" EndPoint="132.88,-0.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="0.00467419,0.999989,-0.999989,0.004595210000000001,748.132,57.834">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="0.0,-0.5" EndPoint="55.7103,-0.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="0.00233132,0.999997,-0.9999980000000002,0.0019028,74.1152,57.7319">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="0.0,-0.5" EndPoint="41.4365,-0.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <LineGeometry StartPoint="74.5,146.0" EndPoint="74.5,182.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 749.425 181.9 L 550.5 182" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 749 147 V 182" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <LineGeometry StartPoint="388.0,126.5" EndPoint="451.0,126.5"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <DrawingGroup>
+            <DrawingGroup Transform="-0.000429186,1.0,-1.0,-0.00035029700000000006,499.01,260.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="22.0085,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="0.69295,-0.720985,0.7868009999999999,0.6172069999999998,310.383,87.9111">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="16.6622,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="0.626997,-0.779022,0.835795,0.549042,311.353,135.95">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="15.8971,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="0.6320399999999999,0.7749359999999998,-0.832427,0.554135,498.536,247.827">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="15.9071,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-0.6320399999999999,0.7749359999999998,0.832427,0.554135,323.054,247.625">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="15.9071,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="0.6320399999999999,0.7749359999999998,-0.832427,0.554135,499.254,78.4932">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="15.9071,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 499.446 128.673 L 509.5 141" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,239.0,229.5">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="33.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup Transform="-1.0,0.0,0.0,1.0,239.0,113.0">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="0.0,-0.5" EndPoint="33.0,-0.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="239.0,221.0" EndPoint="206.0,221.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <LineGeometry StartPoint="239.0,104.5" EndPoint="206.0,104.5"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="222.5,113.0" EndPoint="222.5,159.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,234.0,161.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="23.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,226.0,168.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="9.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,230.0,164.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="16.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="222.5,138.5" EndPoint="222.5,160.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 222 104 L 222 58" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,616.0,236.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="33.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="616.0,227.5" EndPoint="583.0,227.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="0.0,1.0,1.0,0.0,600.0,235.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="19.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup Transform="-1.0,0.0,0.0,1.0,616.0,236.0">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="0.0,-0.5" EndPoint="33.0,-0.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <LineGeometry StartPoint="616.0,227.5" EndPoint="583.0,227.5"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <DrawingGroup>
+            <DrawingGroup Transform="0.0,1.0,1.0,0.0,600.0,209.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="19.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="587.0,161.5" EndPoint="610.0,161.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="595.0,168.5" EndPoint="604.0,168.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="591.0,164.5" EndPoint="607.0,164.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="599.5,129.0" EndPoint="599.5,162.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="599.5,57.0" EndPoint="599.5,84.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,616.0,111.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="33.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="616.0,102.5" EndPoint="583.0,102.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="0.0,1.0,1.0,0.0,600.0,110.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="19.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup Transform="-1.0,0.0,0.0,1.0,616.0,111.0">
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="0.0,-0.5" EndPoint="33.0,-0.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <GeometryDrawing>
+            <GeometryDrawing.Pen>
+                <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                    <Pen.DashStyle>
+                        <DashStyle Dashes=""/>
+                    </Pen.DashStyle>
+                </Pen>
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+                <LineGeometry StartPoint="616.0,102.5" EndPoint="583.0,102.5"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="214.0,284.5" EndPoint="230.0,284.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="591.0,284.5" EndPoint="607.0,284.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,511.0,162.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="23.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,504.0,169.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="9.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,508.0,165.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="16.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="499.5,140.0" EndPoint="499.5,162.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,333.0,161.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="23.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,326.0,167.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="10.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-1.0,0.0,0.0,1.0,329.0,164.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="16.0,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-0.00750607,0.9999720000000001,-0.999981,-0.00612643,321.155,138.659">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="22.0091,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-0.000429186,1.0,-1.0,-0.00035029700000000006,322.01,260.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="22.0085,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="222.5,255.0" EndPoint="222.5,282.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="599.5,254.0" EndPoint="599.5,282.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="599.5,182.0" EndPoint="599.5,209.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="322.5,182.0" EndPoint="322.5,205.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="321.5,58.0" EndPoint="321.5,76.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="499.5,182.0" EndPoint="499.5,204.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="499.754,57.083" EndPoint="499.754,78.4931"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 499 219 L 499 241" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 322.464 219 L 322.464 241" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="321.5,90.0062" EndPoint="321.082,123.744"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="374.0,227.5" EndPoint="322.0,227.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 373 111.912 L 321 112.002" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="322.0,182.5" EndPoint="271.0,182.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 551 182 H 499" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="499.0,227.5" EndPoint="449.0,227.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="500.0,112.5" EndPoint="449.0,112.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="-0.0037398599999999994,0.9999930000000001,-0.999995,-0.00305244,498.587,234.203">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="13.6246,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="0.0037398599999999994,0.9999930000000001,0.999995,-0.00305244,323.0,234.0">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="13.6246,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="499.5,92.0" EndPoint="499.5,129.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <DrawingGroup Transform="0.6320399999999999,0.7749359999999998,-0.832427,0.554135,499.254,203.709">
+                <GeometryDrawing>
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                            <Pen.DashStyle>
+                                <DashStyle Dashes=""/>
+                            </Pen.DashStyle>
+                        </Pen>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0.0,-0.5" EndPoint="15.9071,-0.5"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="311.153,216.471" EndPoint="322.641,204.652"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="487.0,281.5" EndPoint="510.0,281.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="310.0,281.5" EndPoint="333.0,281.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="210.0,281.5" EndPoint="233.0,281.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="587.0,281.5" EndPoint="610.0,281.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="495.0,288.5" EndPoint="504.0,288.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="318.0,288.5" EndPoint="327.0,288.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="218.0,288.5" EndPoint="227.0,288.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="595.0,288.5" EndPoint="604.0,288.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="491.0,284.5" EndPoint="507.0,284.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="1.0" DashCap="Flat">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes=""/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <LineGeometry StartPoint="314.0,284.5" EndPoint="330.0,284.5"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingBrush Stretch="Uniform" Drawing="{StaticResource Layer_1}" x:Key="db_Layer_1"/>
+</ResourceDictionary>

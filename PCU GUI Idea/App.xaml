@@ -6,156 +6,247 @@
              StartupUri="MainWindow.xaml"
             >
     <Application.Resources>
-        
-        <!--Style for Exit Button-->
-        <Style TargetType="{x:Type Button}" x:Key="ExitButton">
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontWeight" Value="Medium"/>
-            <Setter Property="Background" Value="Red"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}" x:Name="WindowButton">
-                        <Border Width="80" 
-                                Height="50"
-                                CornerRadius="12"
-                                Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                              HorizontalAlignment="Center"
-                                      />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="DarkRed"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source="Pictures/SVG/pcu_buck_boost_inductor_up.xaml"/>
+                <ResourceDictionary Source="Pictures/SVG/pcu_buck_boost_inductor_down.xaml"/>-->
+                <ResourceDictionary Source="Pictures/SVG/pcu_buck_boost_converter.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+            <!--For Theme management-->
+            <SolidColorBrush x:Key="PrimaryBackground" Color="White" />
+            <SolidColorBrush x:Key="SecondaryBackground" Color="LightGray" />
+            <SolidColorBrush x:Key="PrimaryForeground" Color="Black" />
+            <SolidColorBrush x:Key="SecondaryForeground" Color="DarkGray" />
 
-        <!--Style for all Window Buttons-->
-        <Style TargetType="{x:Type Button}" x:Key="WindowButton">
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontWeight" Value="Medium"/>
-            <Setter Property="Background" Value="#FFE8BC89"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}" x:Name="WindowButton">
-                        <Border Width="80" 
-                                Height="50"
-                                CornerRadius="12"
-                                Background="{TemplateBinding Background}">
+            <SolidColorBrush x:Key="WindowBackground" Color="#451952" />
+            <SolidColorBrush x:Key="ButtonAndHighlightBackground" Color="#5D3370" />
+            <SolidColorBrush x:Key="PanelBackground" Color="#FF310F38" />
+            <SolidColorBrush x:Key="TextForeground" Color="#FFE8BC89" />
+            <SolidColorBrush x:Key="ButtonContrast" Color="#FF442452" />
+            <SolidColorBrush x:Key="SVGBackground" Color="#ffe8bcb9"/>
+
+            <!--Style for Exit Button-->
+            <Style TargetType="{x:Type Button}" x:Key="ExitButton">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontWeight" Value="Medium"/>
+                <Setter Property="Background" Value="Red"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}" x:Name="WindowButton">
+                            <Border Width="80" 
+                                    Height="50"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"
-                                              HorizontalAlignment="Center"
-                                              />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#FFB1906A"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+                                                  HorizontalAlignment="Center"
+                                          />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="DarkRed"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <!--Style for MenuButton-->
-        <Style TargetType="{x:Type Button}" x:Key="MenuButton">
-            <Setter Property="Foreground" Value="#FFE8BC89"/>
-            <Setter Property="FontWeight" Value="Medium"/>
-            <Setter Property="Background" Value="#5D3370"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}" x:Name="MenuButton">
-                        <Border Width="350" 
-                        Height="125"
-                        CornerRadius="24"
-                        Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                      HorizontalAlignment="Left"
-                                      Margin="20"
-                                      />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#FF442452"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+            <!--Style for all Window Buttons-->
+            <Style TargetType="{x:Type Button}" x:Key="WindowButton">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontWeight" Value="Medium"/>
+                <Setter Property="Background" Value="#FFE8BC89"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}" x:Name="WindowButton">
+                            <Border Width="80" 
+                                    Height="50"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"
+                                                  />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#FFB1906A"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <!--<Style x:Key="CustomScrollBar" TargetType="{x:Type ScrollBar}">
-            <Setter Property="Background" Value="Transparent" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type ScrollBar}">
-                        <Grid>
-                            --><!-- Background for the ScrollBar --><!--
-                            <Rectangle Fill="#4B0D5F" />
-                            <Track Name="PART_Track"
-                                   Orientation="{TemplateBinding Orientation}">
-                                <Track.DecreaseRepeatButton>
-                                    <RepeatButton Background="Transparent" />
-                                </Track.DecreaseRepeatButton>
-                                <Track.Thumb>
-                                    <Thumb Background="#F5D4D4" Width="8" />
-                                </Track.Thumb>
-                                <Track.IncreaseRepeatButton>
-                                    <RepeatButton Background="Transparent" />
-                                </Track.IncreaseRepeatButton>
-                            </Track>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>-->
+            <!--Style for MenuButton-->
+            <Style TargetType="{x:Type Button}" x:Key="MenuButton">
+                <Setter Property="Foreground" Value="{DynamicResource TextForeground}"/>
+                <Setter Property="FontWeight" Value="Medium"/>
+                <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}" x:Name="MenuButton">
+                            <Border Width="350" 
+                            Height="125"
+                            CornerRadius="24"
+                            Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Left"
+                                          Margin="20"
+                                          />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="{DynamicResource ButtonContrast}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <!-- ScrollViewer Style --><!--
-        <Style x:Key="CustomScrollViewer" TargetType="{x:Type ScrollViewer}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type ScrollViewer}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-                            --><!-- Content Presenter --><!--
-                            <ScrollContentPresenter Grid.Column="0" Grid.Row="0" />
-                            --><!-- Vertical ScrollBar --><!--
-                            <ScrollBar Grid.Column="1" Grid.Row="0"
-                                       Orientation="Vertical"
-                                       Style="{StaticResource CustomScrollBar}"
-                                       Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
-                                       ViewportSize="{TemplateBinding ViewportHeight}"
-                                       Maximum="{TemplateBinding ScrollableHeight}"
-                                       Value="{TemplateBinding VerticalOffset}" />
-                            --><!-- Horizontal ScrollBar --><!--
-                            <ScrollBar Grid.Column="0" Grid.Row="1"
-                                       Orientation="Horizontal"
-                                       Style="{StaticResource CustomScrollBar}"
-                                       Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
-                                       ViewportSize="{TemplateBinding ViewportWidth}"
-                                       Maximum="{TemplateBinding ScrollableWidth}"
-                                       Value="{TemplateBinding HorizontalOffset}" />
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>-->
+            <!--Style for ToolbarButtons-->
+            <Style TargetType="{x:Type Button}" x:Key="ToolbarButton">
+                <Setter Property="Foreground" Value="{DynamicResource TextForeground}"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontWeight" Value="Medium"/>
+                <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}" x:Name="ToolbarButton">
+                            <Border Width="{TemplateBinding Width}" 
+                                    Height="{TemplateBinding Height}"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"
+                                                  Margin="{TemplateBinding Margin}"
+                                                  />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="{DynamicResource ButtonContrast}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            
+            <!--Style for ToggleButton kind of Slider-->
+            <Style x:Key="CustomToggleButton" TargetType="ToggleButton">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Grid Width="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=ActualWidth}" 
+                                  Height="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=ActualHeight}" 
+                                  Background="Transparent">
+                                <!-- Outer Background -->
+                                <Border x:Name="OuterBorder" CornerRadius="20" Background="{DynamicResource SVGBackground}" />
 
+                                <!-- Inner Circle -->
+                                <Ellipse x:Name="InnerCircle" Fill="{DynamicResource ButtonContrast}" Width="30" Height="30" HorizontalAlignment="Left" Margin="3,3,0,3" />
+
+                                <!-- Animation Triggers -->
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <!-- Checked State -->
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Move Inner Circle to Right -->
+                                                <ThicknessAnimation Storyboard.TargetName="InnerCircle" Storyboard.TargetProperty="Margin" From="3,3,0,3" To="55,3,0,3" Duration="0:0:0.2" FillBehavior="HoldEnd" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Move Inner Circle to Left -->
+                                                <ThicknessAnimation Storyboard.TargetName="InnerCircle" Storyboard.TargetProperty="Margin" From="55,3,0,3" To="3,3,0,3" Duration="0:0:0.2" FillBehavior="HoldEnd" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!--<Style x:Key="CustomScrollBar" TargetType="{x:Type ScrollBar}">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ScrollBar}">
+                            <Grid>
+                                --><!-- Background for the ScrollBar --><!--
+                                <Rectangle Fill="#4B0D5F" />
+                                <Track Name="PART_Track"
+                                       Orientation="{TemplateBinding Orientation}">
+                                    <Track.DecreaseRepeatButton>
+                                        <RepeatButton Background="Transparent" />
+                                    </Track.DecreaseRepeatButton>
+                                    <Track.Thumb>
+                                        <Thumb Background="#F5D4D4" Width="8" />
+                                    </Track.Thumb>
+                                    <Track.IncreaseRepeatButton>
+                                        <RepeatButton Background="Transparent" />
+                                    </Track.IncreaseRepeatButton>
+                                </Track>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>-->
+
+            <!-- ScrollViewer Style --><!--
+            <Style x:Key="CustomScrollViewer" TargetType="{x:Type ScrollViewer}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                --><!-- Content Presenter --><!--
+                                <ScrollContentPresenter Grid.Column="0" Grid.Row="0" />
+                                --><!-- Vertical ScrollBar --><!--
+                                <ScrollBar Grid.Column="1" Grid.Row="0"
+                                           Orientation="Vertical"
+                                           Style="{StaticResource CustomScrollBar}"
+                                           Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                                           ViewportSize="{TemplateBinding ViewportHeight}"
+                                           Maximum="{TemplateBinding ScrollableHeight}"
+                                           Value="{TemplateBinding VerticalOffset}" />
+                                --><!-- Horizontal ScrollBar --><!--
+                                <ScrollBar Grid.Column="0" Grid.Row="1"
+                                           Orientation="Horizontal"
+                                           Style="{StaticResource CustomScrollBar}"
+                                           Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                                           ViewportSize="{TemplateBinding ViewportWidth}"
+                                           Maximum="{TemplateBinding ScrollableWidth}"
+                                           Value="{TemplateBinding HorizontalOffset}" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>-->
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
     

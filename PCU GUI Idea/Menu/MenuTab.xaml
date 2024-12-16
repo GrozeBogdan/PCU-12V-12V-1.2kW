@@ -9,51 +9,90 @@
              d:DesignHeight="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=ActualHeight}"
              d:DesignWidth="450">
              <!--Future Use
-             d:DesignHeight="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=ActualHeight}"-->
+             d:DesigndHeight="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=ActualHeight}"-->
+    <UserControl.Resources>
+        <Style x:Key="CustomScrollBar" TargetType="{x:Type ScrollBar}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollBar}">
+                        <Grid Background="{DynamicResource ButtonAndHighlightBackground}" Width="16" Margin="0,20,0,20">
+                            <Track x:Name="PART_Track"
+                                   IsDirectionReversed="true"
+                                   Minimum="0"
+                                   Maximum="{TemplateBinding Maximum}"
+                                   Value="{TemplateBinding Value}"
+                                   ViewportSize="{TemplateBinding ViewportSize}"
+                                   Orientation="{TemplateBinding Orientation}">
+                                <Track.Thumb>
+                                    <Thumb Height="Auto" Width="8" Background="{DynamicResource TextForeground}"  HorizontalAlignment="Center" Margin="0,5,0,5">
+                                        <Thumb.Template>
+                                            <ControlTemplate>
+                                                <Rectangle Fill="{DynamicResource TextForeground}"/>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+    
+    
     <Grid >
-        <StackPanel Height="Auto" Margin="0,0,0,0" Orientation="Horizontal" Background="#FF310F38" telerik:CornerRadiusHelper.ClipRadius="24">
-            <ScrollViewer VerticalScrollBarVisibility="Hidden">
-                <StackPanel Height="Auto" Orientation="Vertical" CanVerticallyScroll="True">
-                    <Button Style="{StaticResource MenuButton}"
+        <StackPanel Height="Auto" Margin="0,0,0,0" Orientation="Horizontal" Background="{DynamicResource PanelBackground}" telerik:CornerRadiusHelper.ClipRadius="24">
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ScrollViewer.Resources>
+                    <Style TargetType="ScrollBar" BasedOn="{StaticResource CustomScrollBar}"></Style>
+                </ScrollViewer.Resources>
+                <StackPanel Height="Auto" Orientation="Vertical" CanVerticallyScroll="True" x:Name="buttonTab" Margin="0,0,30,0">
+                    <Button x:Name="ConverterButton"
+                            Style="{DynamicResource MenuButton}"
                             Content="Converter"
                             FontSize="30"
                             Margin="20, 20, 0 ,0"
                             HorizontalContentAlignment="Left"
                             Click="Menu_Button_Clicked"
                             />
-                    <Button Style="{StaticResource MenuButton}"
+                    <Button x:Name="GraphicsButton"
+                            Style="{DynamicResource MenuButton}"
                             Content="Graphics"
                             FontSize="30"
                             Margin="20, 40, 0 ,0" 
                             Click="Menu_Button_Clicked"
                             />
-                    <Button Style="{StaticResource MenuButton}"
+                    <Button x:Name="CustomizeButton"
+                            Style="{DynamicResource MenuButton}"
                             Content="Customize"
                             FontSize="30"
                             Margin="20, 40, 0 ,0"
                             Click="Menu_Button_Clicked"
                             />
-                    <Button Style="{StaticResource MenuButton}"
+                    <Button x:Name="HelpButton"
+                            Style="{DynamicResource MenuButton}"
                             Content="Help"
                             FontSize="30"
                             Margin="20, 40, 0 ,0"
                             Click="Menu_Button_Clicked"
                             />
-                    <Button Style="{StaticResource MenuButton}"
+                    <Button Style="{DynamicResource MenuButton}"
                             Content="To be added"
                             FontSize="30"
-                            Margin="20, 40, 0 ,20"
+                            Margin="20, 40, 0 ,0"
                             Click="Menu_Button_Clicked"
                             />
-                    <Button Style="{StaticResource MenuButton}"
+                    <Button Style="{DynamicResource MenuButton}"
                             Content="To be added"
                             FontSize="30"
-                            Margin="20, 40, 0 ,20"
+                            Margin="20, 40, 0 ,0"
                             />
-                    <Button Style="{StaticResource MenuButton}"
+                    <Button Style="{DynamicResource MenuButton}"
                             Content="To be added"
                             FontSize="30"
-                            Margin="20, 40, 0 ,20"
+                            Margin="20, 40, 0 ,0"
                             Click="Menu_Button_Clicked"
                             />
                 </StackPanel>

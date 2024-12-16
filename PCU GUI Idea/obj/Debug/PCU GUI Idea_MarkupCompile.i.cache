@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\App.xaml
-479845873
+10-111977312
 
-10-1278418659
-85-2009484405
-MainWindow.xaml;Menu\MenuTab.xaml;Modules\Converter.xaml;Modules\Graphics.xaml;
+16-346596807
+95200410684
+MainWindow.xaml;Menu\MenuTab.xaml;Pictures\SVG\pcu_buck_boost_converter.xaml;Pictures\SVG\pcu_buck_boost_inductor_down.xaml;Pictures\SVG\pcu_buck_boost_inductor_up.xaml;Pictures\SVG\SchematicConv.xaml;Tabs\Converter.xaml;Tabs\Graphics.xaml;Tabs\Customize.xaml;Tabs\Help.xaml;
 
 False
 
