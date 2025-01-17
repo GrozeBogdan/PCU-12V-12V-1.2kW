@@ -5,9 +5,9 @@
             <RectangleGeometry Rect="0.0,0.0,2142.6667,1124.0"/>
         </DrawingGroup.ClipGeometry>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,656.642,168.799">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -19,7 +19,7 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,706.322,200.491">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Geometry>
                     <PathGeometry Figures="M 0 0 H 9.264 V -47.342 H 3.088 v 20.823 h -15.44 v -2.947 h -6.175 v 11.786 h 6.175 v -2.946 H 3.088 V -5.893 H 0 v -5.893 l 0.012 -2.931 l -3.1 2.931 l -3.088 2.946 l -3.119 2.947 h -3.057 V -8.84 h -6.175 V 2.947 h 6.175 V 0 h 3.057 L -6.176 2.947 L -3.088 6.09 L 0 8.964 Z" FillRule="Nonzero"/>
                 </GeometryDrawing.Geometry>
@@ -28,7 +28,7 @@
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,706.322,200.491">
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -40,9 +40,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,718.674,149.155">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -54,9 +54,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,656.642,358.132">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -68,9 +68,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,706.322,389.825">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -82,9 +82,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,718.674,338.488">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -96,9 +96,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1461.36,168.799">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -110,9 +110,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1411.68,200.491">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -124,9 +124,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1399.33,149.155">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -138,9 +138,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1461.36,358.132">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -152,9 +152,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1411.68,389.825">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -166,9 +166,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1399.33,338.488">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -180,9 +180,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,0.0,1124.0">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -194,9 +194,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,0.0,1124.0">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -208,9 +208,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,966.667,300.153">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -222,9 +222,9 @@
             </GeometryDrawing>
         </DrawingGroup>
         <DrawingGroup Transform="1.33333,0.0,0.0,-1.33333,1138.67,292.0">
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -241,7 +241,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -258,7 +258,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -275,7 +275,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -292,7 +292,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -309,7 +309,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -326,7 +326,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -343,7 +343,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -360,7 +360,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -377,7 +377,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -394,7 +394,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -411,7 +411,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -428,7 +428,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -445,7 +445,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -462,7 +462,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -477,9 +477,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 462.414 177.5 h 98 v 89 h -98 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-496.895,-249.901"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -494,7 +494,7 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 462.414 177.5 h 98 v 89 h -98 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-534.156,-226.132"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Geometry>
                     <PathGeometry Figures="M 0 0 H 9.264 V -47.342 H 3.088 v 20.823 h -15.44 v -2.947 h -6.175 v 11.786 h 6.175 v -2.946 H 3.088 V -5.893 H 0 v -5.893 l 0.012 -2.931 l -3.1 2.931 l -3.088 2.946 l -3.118 2.947 h -3.058 V -8.84 h -6.175 V 2.947 h 6.175 V 0 h 3.058 L -6.176 2.947 L -3.088 6.09 L 0 8.964 Z" FillRule="Nonzero"/>
                 </GeometryDrawing.Geometry>
@@ -506,7 +506,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -521,9 +521,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 462.414 177.5 h 98 v 89 h -98 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-543.419,-264.634"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -538,9 +538,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 462.414 35.5 h 98 v 89 h -98 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-496.895,-107.901"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -555,9 +555,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 462.414 35.5 h 98 v 89 h -98 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-534.156,-84.1315"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -572,9 +572,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 462.414 35.5 h 98 v 89 h -98 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-543.419,-122.634"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -589,9 +589,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 1036.91 177.5 h 97.999 v 89 h -97.999 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-1100.43,-249.901"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -606,9 +606,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 1036.91 177.5 h 97.999 v 89 h -97.999 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-1063.17,-226.132"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -623,9 +623,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 1036.91 177.5 h 97.999 v 89 h -97.999 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-1053.91,-264.634"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -640,9 +640,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 1036.91 35.5 h 97.999 v 89 h -97.999 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-1100.43,-107.901"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -657,9 +657,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 1036.91 35.5 h 97.999 v 89 h -97.999 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-1063.17,-84.1315"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -674,9 +674,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="m 1036.91 35.5 h 97.999 v 89 h -97.999 z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-1053.91,-122.634"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -691,9 +691,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="M 0 843 H 1607 V 0 H 0 Z" FillRule="Nonzero"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -708,9 +708,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="M 0 843 H 1607 V 0 H 0 Z" FillRule="Nonzero"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -725,9 +725,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="M 0 843 H 1607 V 0 H 0 Z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-729.414,-151.385"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -742,9 +742,9 @@
             <DrawingGroup.ClipGeometry>
                 <PathGeometry Figures="M 0 843 H 1607 V 0 H 0 Z" FillRule="Nonzero" Transform="1.0,0.0,0.0,1.0,-858.414,-157.5"/>
             </DrawingGroup.ClipGeometry>
-            <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="0.038" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="0.038" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -761,7 +761,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -778,7 +778,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -795,7 +795,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -812,7 +812,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -829,7 +829,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -846,7 +846,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -863,7 +863,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -880,7 +880,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -897,7 +897,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -914,7 +914,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -931,7 +931,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -948,7 +948,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -965,7 +965,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -982,7 +982,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="5.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="5.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -999,7 +999,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="6.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="6.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -1016,7 +1016,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="6.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="6.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -1033,7 +1033,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="6.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="6.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>
@@ -1050,7 +1050,7 @@
             </DrawingGroup.ClipGeometry>
             <GeometryDrawing>
                 <GeometryDrawing.Pen>
-                    <Pen Brush="#ffe8bcb9" Thickness="6.0" DashCap="Flat">
+                    <Pen Brush="{DynamicResource SVGBackground}" Thickness="6.0" DashCap="Flat">
                         <Pen.DashStyle>
                             <DashStyle Dashes=""/>
                         </Pen.DashStyle>

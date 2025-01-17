@@ -408,15 +408,17 @@ using vxlapi_NET;
                                     {
                                         if (message.Id == receivedEvent.tagData.can_Msg.id)
                                         {
+                                            // Dont forget to link Graphics UC too
                                             Converter.UpdateUI();
-                                            //for (int i = 0; i < MainWindow.receivedEvents.messageCount ; i++)
-                                            //{
-                                            //    if (MainWindow.receivedEvents.xlEvent[i].tagData.can_Msg.id == receivedEvent.tagData.can_Msg.id)
-                                            //    {
-                                            //        foreach (var signal in message.Signals)
-                                            //        {
-                                            //            if (signal.DataType == "Float")
-                                            //            {
+
+                                            for (int i = 0; i < DbcParser.receivedEvents.messageCount ; i++)
+                                            {
+                                                if (DbcParser.receivedEvents.xlEvent[i].tagData.can_Msg.id == receivedEvent.tagData.can_Msg.id)
+                                                {
+                                                    foreach (var signal in message.Signals)
+                                                    {
+                                                        if (signal.DataType == "Float")
+                                                        {
                                             //                signal.Value = BinaryToFloat(receivedEvent.tagData.can_Msg.data, signal.StartBit, signal.Length);
                                             //                //var olupitia = MainWindow.ConvertingDigitalValueToAnalogValue(signal.Value, signal.Name);
                                             //                Application.Current.Dispatcher.Invoke(() =>
@@ -428,9 +430,9 @@ using vxlapi_NET;
                                             //                    }
                                             //                    mainWindowInstance.UpdateChart(signal , Math.Round(signal.Value, 3));
                                             //                });
-                                            //            }
-                                            //            if (signal.DataType == "Unsigned")
-                                            //            {
+                                                        }
+                                                        if (signal.DataType == "Unsigned")
+                                                        {
                                             //                signal.Value = BinaryToInt(receivedEvent.tagData.can_Msg.data, signal.StartBit, signal.Length);
                                             //                Application.Current.Dispatcher.Invoke(() =>
                                             //                {
@@ -441,12 +443,11 @@ using vxlapi_NET;
                                             //                    }
                                             //                    mainWindowInstance.UpdateChart(signal, Math.Round(signal.Value, 3));
                                             //                });
-                                            //            }
-                                            //            Console.WriteLine("Data extracted:" + signal.Value);
-
-                                            //        }
-                                            //    }
-                                            //}
+                                                        }
+                                                        Console.WriteLine("Data extracted:" + signal.Value);
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }

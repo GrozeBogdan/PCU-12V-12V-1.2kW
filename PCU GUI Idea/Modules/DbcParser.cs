@@ -6,12 +6,14 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Media;
 using vxlapi_NET;
+using static DbcParser;
 
 public  class DbcParser
 {
@@ -20,7 +22,8 @@ public  class DbcParser
 
     public class Signal : INotifyPropertyChanged
     {
-        
+
+        public FrameworkElement AssociatedElement { get; set; }
 
         private TextDecorationCollection dectoration = null;    
         public string Message { get; set; }
@@ -77,8 +80,8 @@ public  class DbcParser
 
     private static readonly Random _random = new Random();
     public static List<Message> Messages { get; private set; }
-    public static XLClass.xl_event_collection xlEventCollection = new XLClass.xl_event_collection(3);
-    public static XLClass.xl_event_collection receivedEvents = new XLClass.xl_event_collection(7);
+    public static XLClass.xl_event_collection sentEvents = new XLClass.xl_event_collection(0);
+    public static XLClass.xl_event_collection receivedEvents = new XLClass.xl_event_collection(0);
     public DbcParser()
     {
         AvailableColors.AddRange(new SolidColorBrush[]
@@ -101,25 +104,12 @@ public  class DbcParser
         string dbcContents = File.ReadAllText(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database/CANdbHVto12V.dbc");
         ParseMessages(dbcContents);
         int i = 0;
+
+        // First loop to find the 
         foreach (var message in DbcParser.Messages)
         {
             int signalsCount = 0;
-            if (message.Sender == "Canoe_Debug")
-            {
-                xlEventCollection.xlEvent[i].tagData.can_Msg.id = (uint)message.Id;
-                xlEventCollection.xlEvent[i].tagData.can_Msg.dlc = (ushort)message.DataLengthCode;
-                i++;
-                if (i == 3)
-                    i = 0;
-            }
-            if (message.Sender == "Vector__XXX")
-            {
-                receivedEvents.xlEvent[i].tagData.can_Msg.id = (uint)message.Id;
-                receivedEvents.xlEvent[i].tagData.can_Msg.dlc = (ushort)message.DataLengthCode;
-                i++;
-                if (i == 7)
-                    i = 0;
-            }
+            
             Console.WriteLine($"Message Name: {message.Name}, ID: {message.Id}, DLC: {message.DataLengthCode}, Sender: {message.Sender}");
             Console.WriteLine($"");
             foreach (var signal in message.Signals)
@@ -128,6 +118,32 @@ public  class DbcParser
                 Console.WriteLine($"    Signal Name: {signal.Name}, Start Bit: {signal.StartBit}, End Bit {signal.EndBit}, Length: {signal.Length}, Data Type: {signal.DataType}");
             }
             Console.WriteLine($"-----------------------------------------------------------------------------");
+        }
+
+        var messagesCount = DbcParser.Messages.GroupBy(meassage => meassage.Sender).ToDictionary(group => group.Key, group => group.Count()) ;
+        sentEvents.messageCount = (uint)messagesCount["Canoe_Debug"];
+        receivedEvents.messageCount = (uint)messagesCount["Vector__XXX"];
+
+        foreach (var message in DbcParser.Messages)
+        {
+            if (message.Sender == "Canoe_Debug")
+            {
+                sentEvents.xlEvent.Add(new XLClass.xl_event());
+                sentEvents.xlEvent[i].tagData.can_Msg.id = (uint)message.Id;
+                sentEvents.xlEvent[i].tagData.can_Msg.dlc = (ushort)message.DataLengthCode;
+                i++;
+                if (i == 3)
+                    i = 0;
+            }
+            if (message.Sender == "Vector__XXX")
+            {
+                receivedEvents.xlEvent.Add(new XLClass.xl_event());
+                receivedEvents.xlEvent[i].tagData.can_Msg.id = (uint)message.Id;
+                receivedEvents.xlEvent[i].tagData.can_Msg.dlc = (ushort)message.DataLengthCode;
+                i++;
+                if (i == 7)
+                    i = 0;
+            }
         }
     }
 
@@ -237,7 +253,7 @@ public  class DbcParser
                     EndBit = startBit + length - 1,
                     Length = length,
                     DataType = dataType,
-
+                    
                     //from interface
                     SigColor = GetRandomBrush(message),
                     TextDec = null
