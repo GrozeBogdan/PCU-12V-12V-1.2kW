@@ -396,7 +396,3 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-*.cache
-*.vsidx
-.vs/PCU GUI Idea/v17/.suo
-*.lref
