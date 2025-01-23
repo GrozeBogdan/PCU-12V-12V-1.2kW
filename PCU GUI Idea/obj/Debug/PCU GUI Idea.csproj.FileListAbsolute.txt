@@ -361,3 +361,125 @@ C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictur
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\SchematicConv.baml
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\vxlapi_NET.dll
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\vxlapi_NET.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\PCU GUI Idea.exe.config
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\PCU GUI Idea.exe
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\PCU GUI Idea.pdb
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\ExCSS.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Svg.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Buffers.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Memory.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Svg.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Buffers.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Memory.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Documents.SpreadsheetStreaming.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Pivot.Core.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Pivot.DataProviders.Adomd.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Pivot.DataProviders.Queryable.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Pivot.DataProviders.Xmla.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Cloud.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Cloud.Controls.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Chart.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Chart.Direct2D.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.ConversationalUI.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Data.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.DataServices.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.DataServices50.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.DataServices60.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Diagrams.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Diagrams.Extensions.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Diagrams.Ribbon.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Docking.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.EntityFramework.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Expressions.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.FileDialogs.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.FixedDocumentViewers.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.FixedDocumentViewersUI.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.GanttView.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.GridView.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.GridView.Export.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.GridView.SpreadsheetStreamingExport.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.ImageEditor.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Input.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Media.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Pivot.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.PivotFieldList.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.RibbonView.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.RichTextBoxUI.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.ScheduleView.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.Spreadsheet.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.SpreadsheetUI.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.SyntaxEditor.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Controls.VirtualGrid.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Data.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Diagrams.Core.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.CMapUtils.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Core.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.DrawingML.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Fixed.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Flow.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Flow.FormatProviders.Doc.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Flow.FormatProviders.Pdf.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.FormatProviders.Html.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.FormatProviders.OpenXml.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.FormatProviders.Pdf.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.FormatProviders.Rtf.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.FormatProviders.Xaml.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Proofing.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Proofing.DataGrid.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Proofing.RadGridView.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Spreadsheet.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.MediaFoundation.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.PersistenceFramework.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Scheduling.Core.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.SyntaxEditor.Core.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Zip.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Zip.Extensions.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\vxlapi_NET.xml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea.csproj.AssemblyReference.cache
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\pcu_buck_boost_converter.baml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\pcu_buck_boost_inductor_down.baml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\pcu_buck_boost_inductor_up.baml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\SchematicConv.baml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\MainWindow.g.cs
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Menu\MenuTab.g.cs
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Converter.g.cs
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Graphics.g.cs
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Customize.g.cs
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Help.g.cs
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\App.g.cs
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea_MarkupCompile.cache
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea_MarkupCompile.lref
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\App.baml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\MainWindow.baml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Menu\MenuTab.baml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Converter.baml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Graphics.baml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Customize.baml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Help.baml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea.g.resources
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU_GUI_Idea.Properties.Resources.resources
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea.csproj.GenerateResource.cache
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea.csproj.CoreCompileInputs.cache
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI .582BCEEA.Up2Date
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea.exe
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea.pdb

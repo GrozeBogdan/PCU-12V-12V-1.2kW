@@ -15,7 +15,7 @@
                 <RowDefinition Height="50" MaxHeight="50" MinHeight="20"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
+
             <!--Toolbar Grid-->
             <Grid Grid.Row="0">
                 <StackPanel Orientation="Horizontal">
@@ -26,15 +26,15 @@
                     <Button x:Name="Help" Style="{DynamicResource ToolbarButton}" Margin="1,6,8,6" Width="105" Content="Help" telerik:CornerRadiusHelper.ClipRadius="4"/>
                 </StackPanel>
             </Grid>
-            
+
             <!--Tab contating Converter and other functionalities-->
             <Grid Grid.Row="1" x:Name="convTab">
                 <!--<Image Margin="400, 0, 400, 550" x:Name="converter_ph1" Source="C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_transp.png">
                 </Image>
                 <Image Margin="400, 350, 400, 300" x:Name="converter_ph2" Source="C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_transp.png">
                 </Image>-->
-                <!--<Image Margin="0,0,30,160" Source="C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_converter.png"/>-->
-                
+                <!--<Image Margin="15,25,40,130" Source="C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_converter.png"/>-->
+
                 <!--Correct Image-->
                 <!--<Image Margin="100,50,100,150">
                     <Image.Source>
@@ -46,14 +46,25 @@
                 <!--Current Measurements TextBoxes-->
                 <TextBox x:Name="current_ph1_in"  Width="100" Height="50" Margin="135,35,1115,770" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
                 <TextBox x:Name="current_ph1_out" Width="100" Height="50" Margin="1100,35,150,770" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
-                <TextBox x:Name="current_ph2_in" Width="100" Height="50" Margin="153,360,1097,445" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
+                <TextBox x:Name="current_ph2_in" Width="100" Height="50" Margin="135,360,1115,445" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
                 <TextBox x:Name="current_ph2_out" Width="100" Height="50" Margin="1100,360,150,445" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
+
+                <!--Toggle Buttons to Trip each phase, stop input or output, and to change the work mode from Buck-Boost-BuckBoost-->
                 <ToggleButton x:Name="trip_ph1_in" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="297,40,963,775" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
                 <ToggleButton x:Name="trip_ph2_in" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="297,365,963,450" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
                 <ToggleButton x:Name="trip_ph2_out" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="939,365,321,450" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
                 <ToggleButton x:Name="trip_ph1_out" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="939,40,321,775" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+
+                <!--<Label Content="Direction" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="595,170,643,644" HorizontalContentAlignment="Center"/>-->
+                <Label Content="Left" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,120,744,685" HorizontalContentAlignment="Center"/>
+                <Label Content="Right" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,120,567,685" HorizontalContentAlignment="Center"/>
                 <ToggleButton Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,122,654,693" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+
+                <Label Content="Mode" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="595,10,643,795" HorizontalContentAlignment="Center"/>
+                <Label Content="Buck" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,60,744,745" HorizontalContentAlignment="Center"/>
+                <Label Content="Buck-Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,60,513,745" HorizontalContentAlignment="Center"/>
                 <ToggleButton Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,60,654,755" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                
                 <ToggleButton x:Name="trip_in" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="58,360,1202,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
                     <ToggleButton.RenderTransform>
                         <TransformGroup>
@@ -74,6 +85,31 @@
                         </TransformGroup>
                     </ToggleButton.RenderTransform>
                 </ToggleButton>
+                
+                <!--TextBoxes needed for PWM Control: Frequency,Duty,Deadband,Phaseshift-->
+                <TextBox x:Name="frequency_ph1_hbIn"  Width="100" Height="50" Margin="135,142,1115,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="dbRED_ph1_hbIn"  Width="100" Height="50" Margin="135,232,1115,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text=""/>
+                <TextBox x:Name="duty_ph1_hbIn"  Width="100" Height="50" Margin="265,142,985,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text=""/>
+                <TextBox x:Name="dbFED_ph1_hbIn"  Width="100" Height="50" Margin="265,232,985,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text=""/>
+
+                <TextBox x:Name="frequency_ph2_hbIn"  Width="100" Height="50" Margin="135,464,1115,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="dbRED_ph2_hbIn"  Width="100" Height="50" Margin="135,554,1115,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="duty_ph2_hbIn"  Width="100" Height="50" Margin="265,464,985,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="dbFED_ph2_hbIn"  Width="100" Height="50" Margin="265,554,985,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="phase_hbIn"  Width="100" Height="50" Margin="199,628,1051,177" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+
+                <TextBox x:Name="frequency_ph2_hbOut"  Width="100" Height="50" Margin="966,464,284,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="dbRED_ph2_hbOut"  Width="100" Height="50" Margin="966,554,284,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="duty_ph2_hbOut"  Width="100" Height="50" Margin="1100,464,150,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="dbFED_ph2_hbOut"  Width="100" Height="50" Margin="1100,554,150,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="phase_hbOut"  Width="100" Height="50" Margin="1033,628,217,177" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                
+                <TextBox x:Name="frequency_ph1_hbOut"  Width="100" Height="50" Margin="966,142,284,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="dbRED_ph1_hbOut"  Width="100" Height="50" Margin="966,232,284,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="duty_ph1_hbOut"  Width="100" Height="50" Margin="1100,142,150,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+                <TextBox x:Name="dbFED_ph1_hbOut"  Width="100" Height="50" Margin="1100,232,150,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text=""/>
+        
+
             </Grid>
         </Grid>
     </Grid>
