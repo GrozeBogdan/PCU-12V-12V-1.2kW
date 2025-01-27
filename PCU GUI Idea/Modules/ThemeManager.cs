@@ -7,7 +7,7 @@ public static class ThemeManager
     public static void ApplyTheme(Theme theme)
     {
         CurrentTheme = theme;
-
+        
         // Update application-wide resources
         Application.Current.Resources["PrimaryBackground"] = theme.PrimaryBackground;
         Application.Current.Resources["SecondaryBackground"] = theme.SecondaryBackground;

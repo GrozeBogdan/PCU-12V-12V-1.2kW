@@ -111,8 +111,8 @@
                 </telerik:RadCartesianChart>
                 <Button Width="50" Height="150" Content=">" Foreground="{DynamicResource SVGBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" Margin="1234,280,66,425" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="Transparent"/>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="100" Margin="15,30">
-                    <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="100" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left"> 
-                    
+                    <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="100" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left" CornerRadius="12"> 
+                        
                     </Border>
                     <StackPanel Orientation="Vertical" Margin="100,0,0,0">
                         <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100"  Margin="0,0,0,0">
@@ -131,16 +131,34 @@
                         </Border>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="0,0,0,0">
-                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100"  Margin="50,0,0,0">
-
-                        </Border>
-                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100" Margin="50,20,0,0">
-
-                        </Border>
+                        <Button Style="{DynamicResource ToolbarButton}"
+                                Width="100"
+                                Height="40"
+                                Margin="50,0,0,0"
+                                Content="Autoscale"
+                                telerik:CornerRadiusHelper.ClipRadius="8"/>
+                        <Button Style="{DynamicResource ToolbarButton}"
+                                Width="100"
+                                Height="40"
+                                Margin="50,20,0,0"
+                                Content="Toggle Filter"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                FontSize="16"
+                                telerik:CornerRadiusHelper.ClipRadius="8"
+                                />
                     </StackPanel>
-                    <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="100" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="50,0,0,0">
+                    <Button Style="{DynamicResource ToolbarButton}" 
+                            Height="100"
+                            Width="350" 
+                            VerticalAlignment="Bottom" 
+                            HorizontalAlignment="Left"
+                            Margin="50,0,0,0" 
+                            telerik:CornerRadiusHelper.ClipRadius="12" 
+                            Content="Manage Signals"
+                            FontSize="24"/>
 
-                    </Border>
+
                 </StackPanel>
             </Grid>
         </Grid>

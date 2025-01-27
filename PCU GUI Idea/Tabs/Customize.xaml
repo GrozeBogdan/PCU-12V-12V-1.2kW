@@ -27,12 +27,61 @@
             </Grid>
 
             <Grid Grid.Row="1">
+                <telerik:RadSpreadsheet Margin="50,20,50,0" VerticalAlignment="Top" Height="600" Visibility="Hidden">
+                    
+                </telerik:RadSpreadsheet>
+                <ComboBox x:Name="themeBox" 
+                          Height="50" 
+                          Width="300"
+                          Margin="561,662,489,143"                          
+                          FontSize="32" 
+                          VerticalContentAlignment="Center"
+                          Background="{DynamicResource ButtonAndHighlightBackground}"
+                          BorderBrush="{DynamicResource ButtonAndHighlightBackground}"
+                          Foreground="{DynamicResource TextForeground}"
+                          DropDownClosed="ChangeTheme">
+                    <ComboBox.ItemContainerStyle>
+                        <Style TargetType="ComboBoxItem">
+                            <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TextForeground}" />
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </ComboBox.ItemContainerStyle>
+                    <ComboBoxItem Content="Sunset" FontSize="32"/>
+                    <ComboBoxItem Content="Chill" FontSize="32"/>
+                </ComboBox>
 
+
+                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="50,762,1000,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Upload to Cloud"/>
+                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="561,762,489,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Autoselect Instrumentation"/>
+                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="1000,762,50,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="To be added"/>
+                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="1000,662,50,143" telerik:CornerRadiusHelper.ClipRadius="8" Content="To be added"/>
+                
+                <ComboBox x:Name="databaseBox" 
+                    Height="50" 
+                    Width="300"
+                    Margin="50,662,1000,143"                          
+                    FontSize="32" 
+                    VerticalContentAlignment="Center"
+                    Background="{DynamicResource ButtonAndHighlightBackground}"
+                    BorderBrush="{DynamicResource ButtonAndHighlightBackground}"
+                    Foreground="{DynamicResource TextForeground}"
+                    SelectionChanged="databaseBox_SelectionChanged">
+                    <ComboBox.ItemContainerStyle>
+                        <Style TargetType="{x:Type ComboBoxItem}">
+                            <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TextForeground}" />
+                            <Setter Property="BorderThickness" Value="0"/>
+                        </Style>
+                    </ComboBox.ItemContainerStyle>
+                    <ComboBoxItem Content="Sunset" FontSize="32"/>
+                    <ComboBoxItem Content="Chill" FontSize="32"/>
+                </ComboBox>
             </Grid>
+            
         </Grid>
-        <Expander HorizontalAlignment="Left" Height="100" Header="Expander" Margin="1240,464,0,0" VerticalAlignment="Top" Width="100" ExpandDirection="Right" >
-            <Grid Background="#FFE5E5E5" Width="142"/>
-        </Expander>
     </Grid>
     
 </UserControl>

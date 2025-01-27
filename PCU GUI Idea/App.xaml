@@ -25,7 +25,8 @@
             <SolidColorBrush x:Key="TextForeground" Color="#FFE8BC89" />
             <SolidColorBrush x:Key="ButtonContrast" Color="#FF442452" />
             <SolidColorBrush x:Key="SVGBackground" Color="#ffe8bcb9"/>
-
+            
+            
             <!--Style for Exit Button-->
             <Style TargetType="{x:Type Button}" x:Key="ExitButton">
                 <Setter Property="Foreground" Value="White"/>
@@ -127,7 +128,6 @@
                                     Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"
                                                   HorizontalAlignment="Center"
-                                                  Margin="{TemplateBinding Margin}"
                                                   />
                             </Border>
                         </ControlTemplate>
@@ -138,6 +138,28 @@
                         <Setter Property="Background" Value="{DynamicResource ButtonContrast}"/>
                     </Trigger>
                 </Style.Triggers>
+            </Style>
+            
+            <!--Style for "Transparent" TextBox with auto delete-->
+            <Style x:Key="UITextBox" TargetType="TextBox">
+                <Setter Property="Foreground" Value="{DynamicResource TextForeground}"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Border Width="{TemplateBinding Width}" 
+                                    Height="{TemplateBinding Height}"
+                                    Background="{DynamicResource ButtonAndHighlightBackground}">
+                                <ContentPresenter VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                                  HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                                  Content="{Binding RelativeSource={RelativeSource AncestorType=TextBox}, Path=Text}"
+                                                  />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
             </Style>
             
             <!--Style for ToggleButton kind of Slider-->
@@ -182,70 +204,62 @@
                     </Setter.Value>
                 </Setter>
             </Style>
-
-            <!--<Style x:Key="CustomScrollBar" TargetType="{x:Type ScrollBar}">
-                <Setter Property="Background" Value="Transparent" />
+            
+            <!--Style for ComboBox-->
+            <!--<Style TargetType="ComboBox">
                 <Setter Property="Template">
                     <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type ScrollBar}">
+                        <ControlTemplate TargetType="ComboBox">
                             <Grid>
-                                --><!-- Background for the ScrollBar --><!--
-                                <Rectangle Fill="#4B0D5F" />
-                                <Track Name="PART_Track"
-                                       Orientation="{TemplateBinding Orientation}">
-                                    <Track.DecreaseRepeatButton>
-                                        <RepeatButton Background="Transparent" />
-                                    </Track.DecreaseRepeatButton>
-                                    <Track.Thumb>
-                                        <Thumb Background="#F5D4D4" Width="8" />
-                                    </Track.Thumb>
-                                    <Track.IncreaseRepeatButton>
-                                        <RepeatButton Background="Transparent" />
-                                    </Track.IncreaseRepeatButton>
-                                </Track>
-                            </Grid>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>-->
-
-            <!-- ScrollViewer Style --><!--
-            <Style x:Key="CustomScrollViewer" TargetType="{x:Type ScrollViewer}">
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type ScrollViewer}">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
+                                --><!-- Main Button --><!--
+                                <ToggleButton Name="ToggleButton"
+                                          Grid.Column="2"
+                                          Focusable="False"
+                                          ClickMode="Press"
+                                          IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
                                 --><!-- Content Presenter --><!--
-                                <ScrollContentPresenter Grid.Column="0" Grid.Row="0" />
-                                --><!-- Vertical ScrollBar --><!--
-                                <ScrollBar Grid.Column="1" Grid.Row="0"
-                                           Orientation="Vertical"
-                                           Style="{StaticResource CustomScrollBar}"
-                                           Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
-                                           ViewportSize="{TemplateBinding ViewportHeight}"
-                                           Maximum="{TemplateBinding ScrollableHeight}"
-                                           Value="{TemplateBinding VerticalOffset}" />
-                                --><!-- Horizontal ScrollBar --><!--
-                                <ScrollBar Grid.Column="0" Grid.Row="1"
-                                           Orientation="Horizontal"
-                                           Style="{StaticResource CustomScrollBar}"
-                                           Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
-                                           ViewportSize="{TemplateBinding ViewportWidth}"
-                                           Maximum="{TemplateBinding ScrollableWidth}"
-                                           Value="{TemplateBinding HorizontalOffset}" />
+                                <ContentPresenter Name="ContentSite"
+                                              IsHitTestVisible="False"
+                                              Content="{TemplateBinding SelectionBoxItem}"
+                                              ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                              ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                              Margin="3,3,23,3"
+                                              VerticalAlignment="Center"
+                                              HorizontalAlignment="Left" />
+                                --><!-- Popup --><!--
+                                <Popup Name="Popup"
+                                   Placement="Bottom"
+                                   IsOpen="{TemplateBinding IsDropDownOpen}"
+                                   AllowsTransparency="True"
+                                   Focusable="False"
+                                   PopupAnimation="Slide">
+                                    <Grid Name="DropDown"
+                                      SnapsToDevicePixels="True"
+                                      MinWidth="{TemplateBinding ActualWidth}"
+                                      MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                        <Border Name="DropDownBorder"
+                                            Background="{DynamicResource ButtonAndHighlightBackground}"
+                                            BorderThickness="1"
+                                            BorderBrush="{DynamicResource ButtonAndHighlightBackground}" />
+                                        <ScrollViewer Margin="0"
+                                                  Style="{DynamicResource {x:Static GridView.GridViewScrollViewerStyleKey}}">
+                                            <StackPanel IsItemsHost="True"
+                                                    KeyboardNavigation.DirectionalNavigation="Contained" />
+                                        </ScrollViewer>
+                                    </Grid>
+                                </Popup>
                             </Grid>
+                            --><!-- Triggers --><!--
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsDropDownOpen" Value="True">
+                                    <Setter TargetName="DropDownBorder" Property="Visibility" Value="Visible" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
             </Style>-->
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

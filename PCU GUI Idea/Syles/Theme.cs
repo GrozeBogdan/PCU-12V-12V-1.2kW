@@ -1,4 +1,7 @@
-﻿using System.Windows.Media;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Windows.Documents;
+using System.Windows.Media;
 
     /// <summary>
     /// Asserts the different type of backgrounds and foregrounds used in a UC.
@@ -10,6 +13,7 @@
         public Brush PrimaryForeground { get; set; }
         public Brush SecondaryForeground { get; set; }
 
+        public string Name { get; set; }
         public Brush WindowBackground { get; set; }
         public Brush ButtonAndHighlightBackground { get; set; } 
         public Brush PanelBackground { get; set; }
@@ -36,9 +40,10 @@
 /// </summary>
 /// 
     public static class ThemePresets
-    {
+    {        
         public static Theme LightTheme = new Theme
         {
+            Name = "Light",
             PrimaryBackground = new SolidColorBrush(Colors.White),
             SecondaryBackground = new SolidColorBrush(Colors.LightGray),
             PrimaryForeground = new SolidColorBrush(Colors.Black),
@@ -47,14 +52,16 @@
 
         public static Theme DarkTheme = new Theme
         {
+            Name = "Dark",
             PrimaryBackground = new SolidColorBrush(Colors.Black),
             SecondaryBackground = new SolidColorBrush(Colors.Gray),
             PrimaryForeground = new SolidColorBrush(Colors.White),
             SecondaryForeground = new SolidColorBrush(Colors.LightGray)
         };
 
-        public static Theme OlaMamiCheSamset = new Theme
-        { 
+        public static Theme Sunset = new Theme
+        {
+            Name = "Sunset",
             WindowBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#451952")),
             ButtonAndHighlightBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#5D3370")),
             PanelBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF310F38")),
@@ -65,6 +72,7 @@
 
         public static Theme Chill = new Theme
         {
+            Name = "Ice",
             WindowBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1B3358")),
             ButtonAndHighlightBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1B3358")),
             PanelBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#06142E")),
@@ -72,4 +80,4 @@
             ButtonContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#152844")),
             SVGBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5D7DB"))
         };
-}
+    }
