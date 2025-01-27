@@ -58,6 +58,7 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -283,12 +284,14 @@
     <Reference Include="Telerik.Windows.Zip.Extensions">
       <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Zip.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="vxlapi_NET">
       <HintPath>..\..\..\..\..\Public\Documents\Vector\XL Driver Library 20.30.14\bin\vxlapi_NET.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

@@ -6,8 +6,143 @@
              xmlns:local="clr-namespace:PCU_GUI_Idea.Tabs"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="945" 
+             d:DesignWidth="1390">
     <Grid Background="{DynamicResource PanelBackground}" telerik:CornerRadiusHelper.ClipRadius="24">
-        <TextBlock Text="Graphics" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="48" Foreground="{DynamicResource TextForeground}"/>
+        <Grid Margin="20" telerik:CornerRadiusHelper.ClipRadius="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" MaxHeight="50" MinHeight="20"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--Toolbar Grid-->
+            <Grid Grid.Row="0">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="FileButton" Style="{DynamicResource ToolbarButton}" Margin="8,6,2,6" Width="105" Content="File" telerik:CornerRadiusHelper.ClipRadius="4"/>
+                    <Button x:Name="EditButton" Style="{DynamicResource ToolbarButton}" Margin="0,6,2,6" Width="105" Content="Edit" telerik:CornerRadiusHelper.ClipRadius="4"/>
+                    <Button x:Name="ViewButton" Style="{DynamicResource ToolbarButton}" Margin="0,6,2,6" Width="105" Content="View" telerik:CornerRadiusHelper.ClipRadius="4"/>
+                    <Button x:Name="Tools" Style="{DynamicResource ToolbarButton}" Margin="0,6,2,6" Width="105" Content="Tools" telerik:CornerRadiusHelper.ClipRadius="4"/>
+                    <Button x:Name="Help" Style="{DynamicResource ToolbarButton}" Margin="1,6,8,6" Width="105" Content="Help" telerik:CornerRadiusHelper.ClipRadius="4"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <telerik:RadCartesianChart x:Name="chart" Palette="Windows8" Background="{DynamicResource ButtonAndHighlightBackground}" Width="1150" Height="650" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,30">
+                    <telerik:RadCartesianChart.Behaviors>
+                        <telerik:ChartPanAndZoomBehavior x:Name="zoom" ZoomMode="Both" MouseWheelMode="Zoom" />
+                    </telerik:RadCartesianChart.Behaviors>
+                    <telerik:RadCartesianChart.HorizontalAxis >
+                        <telerik:CategoricalAxis LabelFitMode="Rotate" LabelRotationAngle="315" FontSize="15" FontWeight="Medium" LineStroke="Black" LineThickness="3"/>
+                    </telerik:RadCartesianChart.HorizontalAxis>
+                    <telerik:RadCartesianChart.VerticalAxis>
+                        <telerik:LinearAxis LabelOffset="1" LineStroke="Black" LineThickness="3" MajorStep="20" Minimum="0" Maximum="100" Visibility="Hidden"/>
+                    </telerik:RadCartesianChart.VerticalAxis>
+                    <telerik:RadCartesianChart.Grid>
+                        <telerik:CartesianChartGrid MajorLinesVisibility="XY">
+                            <telerik:CartesianChartGrid.MajorXLineStyle>
+                                <Style TargetType="Line">
+                                    <Setter Property="Stroke" Value="BlanchedAlmond" />
+                                </Style>
+                            </telerik:CartesianChartGrid.MajorXLineStyle>
+                            <telerik:CartesianChartGrid.MajorYLineStyle>
+                                <Style TargetType="Line">
+                                    <Setter Property="Stroke" Value="BlanchedAlmond" />
+                                </Style>
+                            </telerik:CartesianChartGrid.MajorYLineStyle>
+                        </telerik:CartesianChartGrid>
+                    </telerik:RadCartesianChart.Grid>
+                    <telerik:RadCartesianChart.Series>
+                        <telerik:LineSeries x:Name="voltage48V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed" >
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Voltage 48V" HorizontalLocation="Left" Minimum="0" Maximum="50"/>
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        <telerik:LineSeries x:Name="current48V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Current 48V" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100"/>
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        <telerik:LineSeries x:Name="voltage12V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Voltage 12V" HorizontalLocation="Left" MajorStep="4" Minimum="0" Maximum="20"/>
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        <telerik:LineSeries x:Name="current12V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis >
+                                <telerik:LinearAxis Title="Current 12V" HorizontalLocation="Left" MajorStep="66" Minimum="0" Maximum="330" />
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        <telerik:LineSeries x:Name="currentPhase1" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Current Phase 1" HorizontalLocation="Left" MajorStep="30" Minimum="0" Maximum="150"/>
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        <telerik:LineSeries x:Name="currentPhase2" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Current Phase 2" HorizontalLocation="Left" MajorStep="30" Minimum="0" Maximum="150" />
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        <telerik:LineSeries x:Name="tempPhase1" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Temp Phase 1" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100"/>
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        <telerik:LineSeries x:Name="tempPhase2" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis >
+                                <telerik:LinearAxis Title="Temp Phase 2" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100" />
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        <telerik:LineSeries x:Name="power48V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis >
+                                <telerik:LinearAxis Title="Power 48V" HorizontalLocation="Left" MajorStep="1000" Minimum="0" Maximum="5000" />
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        <telerik:LineSeries x:Name="power12V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis >
+                                <telerik:LinearAxis Title="Power 12V" HorizontalLocation="Left" MajorStep="1000" Minimum="0" Maximum="5000" />
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        <telerik:LineSeries x:Name="efficiency" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis >
+                                <telerik:LinearAxis Title="Efficiency" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100" />
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                    </telerik:RadCartesianChart.Series>
+                </telerik:RadCartesianChart>
+                <Button Width="50" Height="150" Content=">" Foreground="{DynamicResource SVGBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" Margin="1234,280,66,425" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="Transparent"/>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="100" Margin="15,30">
+                    <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="100" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left"> 
+                    
+                    </Border>
+                    <StackPanel Orientation="Vertical" Margin="100,0,0,0">
+                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100"  Margin="0,0,0,0">
+
+                        </Border>
+                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100" Margin="0,20,0,0">
+
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100"  Margin="50,0,0,0">
+
+                        </Border>
+                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100" Margin="50,20,0,0">
+
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100"  Margin="50,0,0,0">
+
+                        </Border>
+                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100" Margin="50,20,0,0">
+
+                        </Border>
+                    </StackPanel>
+                    <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="100" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="50,0,0,0">
+
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Grid>
     </Grid>
 </UserControl>

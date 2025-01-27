@@ -63,13 +63,13 @@
             SVGBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ffe8bcb9"))
         };
 
-        public static Theme PinkGuy = new Theme
+        public static Theme Chill = new Theme
         {
-            WindowBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#8546F0")),
-            ButtonAndHighlightBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#5E4DFF")),
-            PanelBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FEC7D7")),
-            TextForeground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#0E172C")),
-            ButtonContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF442452")),
-            SVGBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#0E172C"))
+            WindowBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1B3358")),
+            ButtonAndHighlightBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1B3358")),
+            PanelBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#06142E")),
+            TextForeground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5D7DB")),
+            ButtonContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#152844")),
+            SVGBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5D7DB"))
         };
 }

@@ -27,7 +27,7 @@ namespace PCU_GUI_Idea.Tabs
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ThemeManager.ApplyTheme(ThemePresets.PinkGuy);
+            ThemeManager.ApplyTheme(ThemePresets.Chill);
         }
 
         private void Button_Click2(object sender, RoutedEventArgs e)
