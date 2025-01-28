@@ -80,4 +80,12 @@ using System.Windows.Media;
             ButtonContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#152844")),
             SVGBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5D7DB"))
         };
+
+        public static Dictionary<string, Theme> Themes = new Dictionary<string, Theme>
+        {
+            { LightTheme.Name, LightTheme },
+            { DarkTheme.Name, DarkTheme },
+            { Sunset.Name, Sunset },
+            { Chill.Name, Chill }
+        };
     }

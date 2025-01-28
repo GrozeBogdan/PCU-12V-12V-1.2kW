@@ -68,221 +68,293 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Telerik.Documents.SpreadsheetStreaming">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Pivot.Core">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Pivot.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Pivot.DataProviders.Adomd">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Pivot.DataProviders.Adomd.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Pivot.DataProviders.Queryable">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Pivot.DataProviders.Queryable.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Pivot.DataProviders.Xmla">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Pivot.DataProviders.Xmla.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Cloud">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Cloud.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Cloud.Controls">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Cloud.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Chart">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Chart.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Chart.Direct2D">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Chart.Direct2D.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.ConversationalUI">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.ConversationalUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Data">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.DataServices">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.DataServices.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.DataServices50">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.DataServices50.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.DataServices60">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.DataServices60.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.DataVisualization">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Diagrams">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Diagrams.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Diagrams.Extensions">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Diagrams.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Diagrams.Ribbon">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Diagrams.Ribbon.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Docking">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Docking.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.EntityFramework">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Expressions">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Expressions.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.FileDialogs">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.FileDialogs.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.FixedDocumentViewersUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.GanttView">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.GanttView.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.GridView">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.GridView.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.GridView.Export">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.GridView.Export.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.GridView.SpreadsheetStreamingExport">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.GridView.SpreadsheetStreamingExport.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.ImageEditor">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.ImageEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Media">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Media.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Pivot">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Pivot.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.PivotFieldList">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.PivotFieldList.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.RibbonView">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.RibbonView.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.RichTextBoxUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.ScheduleView">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.ScheduleView.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.Spreadsheet">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.Spreadsheet.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.SpreadsheetUI">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.SpreadsheetUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.SyntaxEditor">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.SyntaxEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Controls.VirtualGrid">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Controls.VirtualGrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Data">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Diagrams.Core">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Diagrams.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.CMapUtils">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.CMapUtils.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Core">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.DrawingML">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.DrawingML.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Fixed">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Fixed.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Flow">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Flow.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Doc">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Pdf">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Html">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.FormatProviders.Html.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.OpenXml">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.FormatProviders.OpenXml.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Pdf">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.FormatProviders.Pdf.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Rtf">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.FormatProviders.Rtf.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.FormatProviders.Xaml">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.FormatProviders.Xaml.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Proofing">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Proofing.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Proofing.DataGrid">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Proofing.DataGrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Proofing.Dictionaries.En-US">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Proofing.RadGridView">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Proofing.RadGridView.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.MediaFoundation">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.MediaFoundation.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.PersistenceFramework">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.PersistenceFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Scheduling.Core">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Scheduling.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.SyntaxEditor.Core">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.SyntaxEditor.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Zip">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Zip.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Windows.Zip.Extensions">
-      <HintPath>..\..\..\..\..\Public\Documents\Telerik_UI_for_WPF_2023_3_1218_Trial_Hotfix\Binaries\WPF40\Telerik.Windows.Zip.Extensions.dll</HintPath>
+    <Reference Include="Telerik.Documents.SpreadsheetStreaming, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Pivot.Core, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Pivot.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Pivot.DataProviders.Adomd, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Pivot.DataProviders.Adomd.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Pivot.DataProviders.Queryable, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Pivot.DataProviders.Queryable.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Pivot.DataProviders.Xmla, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Pivot.DataProviders.Xmla.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Cloud, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Cloud.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Cloud.Controls, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Cloud.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Chart, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Chart.Direct2D, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Chart.Direct2D.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.ConversationalUI, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.ConversationalUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataServices, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.DataServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataServices50, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.DataServices50.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataServices60, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.DataServices60.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataVisualization, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Diagrams.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams.Extensions, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Diagrams.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams.Ribbon, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Diagrams.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Docking, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.EntityFramework, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Expressions, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Expressions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.FileDialogs, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.FileDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.FixedDocumentViewersUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GanttView, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.GanttView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView.Export, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.GridView.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView.SpreadsheetStreamingExport, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.GridView.SpreadsheetStreamingExport.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.ImageEditor, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.ImageEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Media, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Pivot, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Pivot.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.PivotFieldList, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.PivotFieldList.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RibbonView, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.RichTextBoxUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.ScheduleView, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.ScheduleView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Spreadsheet, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.SpreadsheetUI, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.SpreadsheetUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.SyntaxEditor, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.SyntaxEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.VirtualGrid, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Controls.VirtualGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Diagrams.Core, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Diagrams.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.CMapUtils, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.CMapUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.DrawingML, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.DrawingML.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Fixed.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Doc, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Pdf, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Html, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.FormatProviders.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.OpenXml, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Pdf, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Rtf, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.FormatProviders.Rtf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Xaml, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.FormatProviders.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Proofing, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Proofing.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Proofing.DataGrid, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Proofing.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Proofing.Dictionaries.En-US, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Proofing.RadGridView, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Proofing.RadGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.MediaFoundation, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.MediaFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.PersistenceFramework, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.PersistenceFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Scheduling.Core, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Scheduling.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.SyntaxEditor.Core, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.SyntaxEditor.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip.Extensions, Version=2023.3.1218.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Telerik\WPF40\Telerik.Windows.Zip.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UIAutomationProvider" />
     <Reference Include="vxlapi_NET">

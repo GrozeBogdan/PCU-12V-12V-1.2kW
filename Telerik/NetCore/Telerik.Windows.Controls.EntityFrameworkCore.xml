@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Windows.Controls.EntityFrameworkCore</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource">
+            <summary>
+            Provides an object for loading, paging, filtering, sorting, and editing entities coming from 
+            EntityFrameworkCore's DbContext.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.DbContextProperty">
+            <summary>
+            Identifies <see cref="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.DbContext"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.QueryNameProperty">
+            <summary>
+            Identifies <see cref="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.QueryName"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.DbContext">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.DbContext"/> instance used for executing the load and submit operations. 
+            </summary>
+            <value>The context.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.QueryName">
+            <summary>
+            Gets or sets the name of the query to use for loading.
+            </summary>
+            <value>The name of the query to use for loading data.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.FilterDescriptors">
+            <summary>
+            Gets the filter descriptors used for filtering operations.
+            </summary>
+            <value>The filter descriptors.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.SortDescriptors">
+            <summary>
+            Gets the sort descriptors used for sorting operations.
+            </summary>
+            <value>The sort descriptors.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.GroupDescriptors">
+            <summary>
+            Gets the group descriptors used for grouping operations.
+            </summary>
+            <value>The group descriptors.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.DataView">
+            <summary>
+            Gets the current view of entities resulting from the last load operation, 
+            using a <see cref="T:Telerik.Windows.Data.DataItemCollection"/>.
+            </summary>
+            <value>The current view of entities resulting from the last load operation.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.RelatedObjects">
+            <summary>
+            The names of the related entities.
+            </summary>
+            <remarks>
+            For example, if your main entity set is called "Orders", you might want to add "OrderDetails"
+            to this collection in case you want to get the related OrderDetails for each Order from the database.
+            </remarks>
+            <value>The names of the related entities.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.LoadCommand">
+            <summary>
+            Gets the command for loading data.
+            </summary>
+            <value>The command for loading data.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.SubmitChangesCommand">
+            <summary>
+            Gets the command for submitting changes.
+            </summary>
+            <value>The command for submitting changes.</value>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.Load">
+            <summary>
+            Initiates a Load operation if possible.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.SubmitChanges">
+            <summary>
+            Initiates a Submit operation if possible.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.IsValidQueryProperty(System.Reflection.PropertyInfo)">
+            <summary>
+            Determines whether the property is a valid query property.
+            </summary>
+            <param name="propertyInfo">The property info.</param>
+            <returns>
+            	<c>true</c> if the property is a valid query property; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadEntityFrameworkCoreDataSource.CreateView">
+            <summary>
+            Creates the view.
+            </summary>
+            <returns>The view.</returns>
+        </member>
+        <member name="T:Telerik.Windows.Data.QueryableEntityCoreCollectionView`1">
+            <summary>
+            Represents a collection view that can handle filterm sort, selectm group and page operations.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Telerik.Windows.Data.QueryableEntityCoreCollectionView`1.#ctor(Microsoft.EntityFrameworkCore.DbContext,System.Linq.IQueryable{`0},System.Collections.ObjectModel.Collection{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Data.QueryableEntityCoreCollectionView`1"/> class;
+            </summary>
+            <param name="dbContext">The EntityFrameworkCore dbContext to be used.</param>
+            <param name="query">The name of the Table that will be quried.</param>
+            <param name="include">A collection of forward slash "/" separated navigational property names. Used for eager loading of related entities.</param>
+        </member>
+        <member name="M:Telerik.Windows.Data.QueryableEntityCoreCollectionView`1.ConstructNewItem">
+            <summary>
+            Creates a new entity object.
+            </summary>
+            <returns>A new entity object.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Data.QueryableEntityCoreCollectionView`1.CreateView">
+            <summary>
+            Builds the view taking into account all filter, sort, group and page operations.
+            </summary>
+            <returns>An <see cref="T:System.Linq.IQueryable"/> representing the current view.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Data.QueryableEntityCoreCollectionView`1.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Raises the PropertyChanged event.
+            </summary>
+            <param name="e">The PropertyChangedEventArgs instance containing the event data.</param>
+        </member>
+    </members>
+</doc>

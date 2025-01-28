@@ -22,31 +22,14 @@ namespace PCU_GUI_Idea.Tabs
     /// </summary>
     public partial class Customize : UserControl
     {
-        List<Theme> Themes = new List<Theme>();
         public Customize()
         {
-            
-            Themes.Add(LightTheme);
-            Themes.Add(DarkTheme);
-            Themes.Add(Sunset);
-            Themes.Add(Chill);
-
             InitializeComponent();            
         }
 
-        private void databaseBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void RadComboBox_SelectionChanged()
         {
 
-        }
-
-        private void ChangeTheme(object sender, SelectionChangedEventArgs e)
-        {
-            ComboBox comboBox = sender as ComboBox;
-            if (comboBox != null)
-            {
-                comboBox.Text = ThemePresets.Sunset.Name;  
-                ThemeManager.ApplyTheme(theme);
-            }
         }
     }
 }
