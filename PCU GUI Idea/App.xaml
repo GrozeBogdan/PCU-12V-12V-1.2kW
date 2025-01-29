@@ -18,7 +18,7 @@
             <SolidColorBrush x:Key="SecondaryBackground" Color="LightGray" />
             <SolidColorBrush x:Key="PrimaryForeground" Color="Black" />
             <SolidColorBrush x:Key="SecondaryForeground" Color="DarkGray" />
-
+            
             <SolidColorBrush x:Key="WindowBackground" Color="#451952" />
             <SolidColorBrush x:Key="ButtonAndHighlightBackground" Color="#5D3370" />
             <SolidColorBrush x:Key="PanelBackground" Color="#FF310F38" />

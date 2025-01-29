@@ -72,7 +72,7 @@ using System.Windows.Media;
 
         public static Theme Chill = new Theme
         {
-            Name = "Ice",
+            Name = "Chill",
             WindowBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1B3358")),
             ButtonAndHighlightBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1B3358")),
             PanelBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#06142E")),

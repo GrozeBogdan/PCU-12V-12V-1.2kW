@@ -50,7 +50,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock Height="35" Grid.Column="0" Grid.ColumnSpan="2" Text="PCU GUI" Margin="0" FontSize="32" FontWeight="Bold" Foreground="{DynamicResource TextForeground}" HorizontalAlignment="Center" />
                     
-                    <TextBox Height="35" Grid.Column="3" Grid.ColumnSpan="4" Text=" 🔎 Search" Margin="10" FontSize="18" FontWeight="Medium" Foreground="{DynamicResource TextForeground}" Background="{DynamicResource ButtonAndHighlightBackground}" telerik:CornerRadiusHelper.ClipRadius="16" VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0"/>
+                    <TextBox Height="35" Grid.Column="3" Grid.ColumnSpan="4" Text=" 🔎 Search" Margin="10" FontSize="18" FontWeight="Medium" Foreground="{DynamicResource TextForeground}" Background="{DynamicResource PanelBackground}" telerik:CornerRadiusHelper.ClipRadius="16" VerticalContentAlignment="Center" BorderBrush="Transparent" BorderThickness="0"/>
 
                     <!--<Button telerik:CornerRadiusHelper.ClipRadius="12" Margin="10" Width="40" Height="30" Background="#FFE8BC89" BorderBrush="Transparent" Content="min" FontSize="18" VerticalContentAlignment="Center" FontWeight="Medium" Foreground="WhiteSmoke"/>
                         <Button Click="Button_Click" telerik:CornerRadiusHelper.ClipRadius="12" Margin="10" Width="40" Height="30" Background="#FFE8BC89" BorderBrush="Transparent" Content="max" FontSize="18" VerticalContentAlignment="Center" FontWeight="Medium" Foreground="WhiteSmoke"/>

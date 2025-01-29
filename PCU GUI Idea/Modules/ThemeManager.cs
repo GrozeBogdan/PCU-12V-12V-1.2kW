@@ -2,7 +2,7 @@
 
 public static class ThemeManager
 {
-    public static Theme CurrentTheme { get; private set; }
+    public static Theme CurrentTheme { get; private set; } = ThemePresets.Sunset;
 
     public static void ApplyTheme(Theme theme)
     {

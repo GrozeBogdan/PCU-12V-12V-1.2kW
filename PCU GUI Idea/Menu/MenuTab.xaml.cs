@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExCSS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,7 +44,14 @@ namespace PCU_GUI_Idea.Menu
                 {
                     if (clickedButton.Name == button.Name)
                     {
-                        clickedButton.Background = (Brush)Application.Current.Resources["ButtonContrast"];
+                        // With this line the color remained even after i changed the theme.
+                        //clickedButton.Background = (Brush)Application.Current.Resources["ButtonContrast"];
+
+                        // Proposed solution for the problem.
+                        // Extra: Try to understand how SetResourceReference works.
+                        // On short: It is getting the resource dynamicaly, even if i change the Property from the ResourceDictonary it will change.
+
+                        clickedButton.SetResourceReference(Button.BackgroundProperty, "ButtonContrast");
                     }
                     else
                     {
@@ -69,15 +77,10 @@ namespace PCU_GUI_Idea.Menu
                 try
                 {
                     // Use reflection to find and instantiate the UserControl
-                    var controlType = Type.GetType($"PCU_GUI_Idea.Tabs.{controlName.Replace("Button","")}");
-                    if (controlType != null && Activator.CreateInstance(controlType) is UserControl control)
-                    {
-                        mainWindow.tab.Content = control;
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Could not find UserControl: {controlName}");
-                    }
+
+                    // Check if the UserControl exists in the dictionary
+                    var usercontrol = mainWindow.GetControlByName(controlName);
+                    mainWindow.tab.Content = usercontrol;
                 }
                 catch (Exception ex)
                 {

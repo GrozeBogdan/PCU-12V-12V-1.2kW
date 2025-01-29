@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ExCSS;
+using PCU_GUI_Idea.Tabs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,11 +24,28 @@ namespace PCU_GUI_Idea
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Customize customize_UC = new Customize();
+        private Converter converter_UC = new Converter();
+        private Graphics graphics_UC = new Graphics();
+        private Help help_UC = new Help();
+
+        private Dictionary<string, UserControl> controls = new Dictionary<string, UserControl> { };
+
         public MainWindow()
         {
             InitializeComponent();
             CAN.Start_CAN();
             DbcParser.ParseDatabase();
+
+            customize_UC.InitializeComponent();
+            converter_UC.InitializeComponent();
+            graphics_UC.InitializeComponent();
+            help_UC.InitializeComponent();
+
+            controls.Add("CustomizeButton", customize_UC);
+            controls.Add("ConverterButton", converter_UC);
+            controls.Add("GraphicsButton", graphics_UC);
+            controls.Add("HelpButton", help_UC);
         }
 
         // Asta trebuie sa fie tot codul pe care il am in MAIN!
@@ -63,5 +82,14 @@ namespace PCU_GUI_Idea
             }
         }
 
+        public UserControl GetControlByName(string controlName)
+        {
+            if (controls.ContainsKey(controlName))
+            {
+                return controls[controlName];
+            }
+            else MessageBox.Show($"Could not find UserControl: {controlName}");
+            return null; // or throw exception if needed
+        }
     }
 }
