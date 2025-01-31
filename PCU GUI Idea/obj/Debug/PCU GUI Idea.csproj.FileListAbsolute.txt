@@ -555,3 +555,12 @@ C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU 
 C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.SyntaxEditor.Core.dll
 C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Zip.dll
 C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Telerik.Windows.Zip.Extensions.dll
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\3d-cube.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\diagram.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\length-vertical.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\length.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\pie-chart.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\pwm_duty.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\pwm_freq.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\HelixToolkit.Wpf.dll
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\HelixToolkit.Wpf.xml

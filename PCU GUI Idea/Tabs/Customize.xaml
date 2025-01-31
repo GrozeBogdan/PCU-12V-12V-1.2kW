@@ -52,10 +52,10 @@ Loaded="IntializeOthersFromMemory"-->
                     <telerik:RadComboBoxItem Content="Chill"/>
                 </telerik:RadComboBox>
 
-                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="50,762,1000,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Upload to Cloud"/>
-                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="561,762,489,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Autoselect Instrumentation"/>
-                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="1000,762,50,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="To be added"/>
-                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="1000,662,50,143" telerik:CornerRadiusHelper.ClipRadius="8" Content="To be added"/>
+                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="50,762,1000,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Upload to Cloud" FontSize="24"/>
+                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="561,762,489,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Autoselect Instrumentation" FontSize="22"/>
+                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="1000,762,50,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="To be added" FontSize="24"/>
+                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="1000,662,50,143" telerik:CornerRadiusHelper.ClipRadius="8" Content="To be added" FontSize="24"/>
 
                 <telerik:RadComboBox  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="300" Margin="50,660,1000,145" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" FontSize="24" BorderThickness="0" BorderBrush="Transparent" telerik:StyleManager.Theme="Windows8" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="databaseBox" DropDownButtonIconContent="⮟" DropDownOpened="SearchForDatabases" EmptyText="Select Database">
                     <telerik:RadComboBox.ItemContainerStyle>

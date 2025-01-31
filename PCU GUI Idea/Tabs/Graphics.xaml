@@ -110,25 +110,61 @@
                     </telerik:RadCartesianChart.Series>
                 </telerik:RadCartesianChart>
                 <Button Width="50" Height="150" Content=">" Foreground="{DynamicResource SVGBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" Margin="1234,280,66,425" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="Transparent"/>
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="100" Margin="15,30">
-                    <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="100" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left" CornerRadius="12"> 
-                        
-                    </Border>
-                    <StackPanel Orientation="Vertical" Margin="100,0,0,0">
-                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100"  Margin="0,0,0,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="100" Margin="15,50">
+                    <StackPanel Orientation="Horizontal" Background="{DynamicResource ButtonAndHighlightBackground}" Height="100" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="chart_Type_Button_Panel">
+                        <Button Width="80" Margin="30,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                            <!--<Button.Template>
+                                <ControlTemplate>
+                                    <Image x:Name="diagram_Image">
+                                        <Image.Source>
+                                            <DrawingImage Drawing="{StaticResource Chart}"/>
+                                        </Image.Source>
+                                    </Image>
+                                </ControlTemplate>
+                            </Button.Template>-->
+                        </Button>
 
-                        </Border>
-                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100" Margin="0,20,0,0">
+                        <Button Width="80" Margin="50,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Stretch" x:Name="cube">
+                            <!--<Button.Template>
+                                <ControlTemplate>
+                                    <Image x:Name="cube_Image">
+                                        <Image.Source>
+                                            <DrawingImage Drawing="{StaticResource ThreeD_Cube}"/>
+                                        </Image.Source>
+                                    </Image>
+                                </ControlTemplate>
+                            </Button.Template>-->
+                        </Button>
 
-                        </Border>
+                        <Button Width="80" Margin="50,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Stretch" x:Name="pie">
+                            <!--<Button.Template>
+                                <ControlTemplate>
+                                    <Image x:Name="pie_Image">
+                                        <Image.Source>
+                                            <DrawingImage Drawing="{StaticResource Pie_Chart}"/>
+                                        </Image.Source>
+                                    </Image>
+                                </ControlTemplate>
+                            </Button.Template>-->
+                        </Button>
                     </StackPanel>
-                    <StackPanel Orientation="Vertical" Margin="0,0,0,0">
-                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100"  Margin="50,0,0,0">
+                    <Grid x:Name="vertical_Length" Margin="20,0,0,0"/>
 
-                        </Border>
-                        <Border Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100" Margin="50,20,0,0">
+                    <StackPanel Orientation="Vertical" Margin="20,0,0,0">
+                        <TextBox FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100"  Margin="0,0,0,0" telerik:CornerRadiusHelper.ClipRadius="12" Foreground="{DynamicResource TextForeground}" FontSize="20">
 
-                        </Border>
+                        </TextBox>
+                        <TextBox FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100" Margin="0,20,0,0" telerik:CornerRadiusHelper.ClipRadius="12" Foreground="{DynamicResource TextForeground}" FontSize="20">
+
+                        </TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="0,0,0,0" Height="100">
+                        <TextBox FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100"  Margin="50,0,0,0" telerik:CornerRadiusHelper.ClipRadius="12" Foreground="{DynamicResource TextForeground}" FontSize="20">
+
+                        </TextBox>
+                        <TextBox FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100" Margin="50,20,0,0" telerik:CornerRadiusHelper.ClipRadius="12" Foreground="{DynamicResource TextForeground}" FontSize="20">
+
+                        </TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="0,0,0,0">
                         <Button Style="{DynamicResource ToolbarButton}"
@@ -162,5 +198,6 @@
                 </StackPanel>
             </Grid>
         </Grid>
+        <Grid  Width="100" Margin="682,482,608,-392" x:Name="horizontal_Length"></Grid>
     </Grid>
 </UserControl>

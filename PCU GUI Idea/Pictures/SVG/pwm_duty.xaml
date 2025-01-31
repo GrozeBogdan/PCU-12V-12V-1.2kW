@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="PWM_Duty">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,660.0,237.0"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="319.0,29.75,13.0,195.5"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 331.5 30.25 v 194.5 h -12 V 30.25 H 331.5 M 332.5 29.25 h -14 v 196.5 h 14 V 29.25 L 332.5 29.25 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="329.04053,213.5,313.45947,12.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="m 641.982 214 v 11 H 328.444 V 214 H 641.982 M 643 213 H 327.426 v 13 H 643 Z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="122.5,17.5,13.0,195.5"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 135 18 v 194.5 h -12 V 18 H 135 M 136 17 h -14 v 196.5 h 14 V 17 L 136 17 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <DrawingGroup Transform="1.07187,0.0,0.0,1.0,-23.9133,0.0">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Geometry>
+                    <RectangleGeometry Rect="136.75,17.0,195.5,13.0"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="1.07187,0.0,0.0,1.0,-23.9133,0.0">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="m 331.75 17.5 v 12 h -194.5 v -12 h 194.5 m 1 -1 h -196.5 v 14 h 196.5 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="10.5,213.5,125.0,12.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 135 214 v 11 H 11 v -11 H 135 M 136 213 H 10 v 13 h 126 V 213 L 136 213 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingBrush Stretch="Uniform" Drawing="{DynamicResource PWM_Duty}" x:Key="db_PWM_Duty"/>
+</ResourceDictionary>

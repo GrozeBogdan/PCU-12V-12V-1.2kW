@@ -14,6 +14,7 @@ public static class ThemeManager
         Application.Current.Resources["PrimaryForeground"] = theme.PrimaryForeground;
         Application.Current.Resources["SecondaryForeground"] = theme.SecondaryForeground;
 
+        Application.Current.Resources["TextForegroundContrast"] = theme.TextForegroundContrast;
         Application.Current.Resources["WindowBackground"] = theme.WindowBackground;
         Application.Current.Resources["ButtonAndHighlightBackground"] = theme.ButtonAndHighlightBackground;
         Application.Current.Resources["PanelBackground"] = theme.PanelBackground;

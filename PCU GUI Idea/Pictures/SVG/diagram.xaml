@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="Chart">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,512.0,512.0"/>
+        </DrawingGroup.ClipGeometry>
+        <DrawingGroup Transform="0.1,0.0,0.0,-0.1,0.0,512.0">
+            <GeometryDrawing Brush="{DynamicResource TextForeground}">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 4216 4989 c -365 -98 -486 -135 -504 -152 c -40 -37 -55 -75 -49 -131 c 4 -42 10 -55 45 -88 c 40 -37 66 -45 127 -38 c 11 1 145 35 297 76 c 152 41 282 74 288 74 c 14 0 -19 -59 -113 -200 c -487 -729 -1260 -1391 -2127 -1819 c -647 -320 -1257 -484 -1903 -510 c -155 -6 -180 -10 -204 -27 c -94 -70 -95 -190 -3 -252 c 35 -24 37 -24 230 -19 c 906 26 1914 387 2795 1000 c 297 207 551 421 825 696 c 286 287 464 504 660 803 c 58 89 101 145 104 137 c 3 -8 35 -126 71 -264 c 36 -137 72 -264 80 -282 c 16 -36 77 -81 115 -83 c 65 -5 83 1 120 38 c 67 67 68 56 -76 595 c -75 282 -137 493 -149 511 c -24 37 -78 66 -120 65 c -16 0 -246 -59 -509 -130 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Transform="0.1,0.0,0.0,-0.1,0.0,512.0">
+            <GeometryDrawing Brush="{DynamicResource TextForeground}">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 3988 3389 c -23 -12 -46 -35 -58 -59 c -20 -39 -20 -56 -20 -1535 l 0 -1495 l -150 0 l -150 0 l 0 995 c 0 978 0 996 -20 1035 c -13 26 -34 47 -60 60 c -37 19 -58 20 -370 20 c -312 0 -333 -1 -370 -20 c -26 -13 -47 -34 -60 -60 c -20 -39 -20 -57 -20 -1035 l 0 -995 l -150 0 l -150 0 l 0 720 c 0 703 -1 722 -20 760 c -13 26 -34 47 -60 60 c -37 19 -58 20 -370 20 c -312 0 -333 -1 -370 -20 c -26 -13 -47 -34 -60 -60 c -19 -38 -20 -57 -20 -760 l 0 -720 l -150 0 l -150 0 l 0 540 c 0 522 -1 542 -20 580 c -13 26 -34 47 -60 60 c -37 19 -58 20 -370 20 c -312 0 -333 -1 -370 -20 c -26 -13 -47 -34 -60 -60 c -19 -38 -20 -58 -20 -580 l 0 -540 l -95 0 c -76 0 -104 -4 -135 -20 c -45 -23 -80 -80 -80 -130 c 0 -50 35 -107 80 -130 c 39 -20 53 -20 2480 -20 c 2427 0 2441 0 2480 20 c 45 23 80 80 80 130 c 0 50 -35 107 -80 130 c -31 16 -59 20 -135 20 l -95 0 l 0 1495 c 0 1479 0 1496 -20 1535 c -13 26 -34 47 -60 60 c -37 19 -58 20 -372 20 c -312 -1 -335 -2 -370 -21 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingBrush Stretch="Uniform" Drawing="{DynamicResource Chart}" x:Key="db_Chart"/>
+</ResourceDictionary>

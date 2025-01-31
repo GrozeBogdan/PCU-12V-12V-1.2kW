@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="Pie_Chart">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,512.0,512.0"/>
+        </DrawingGroup.ClipGeometry>
+        <DrawingGroup Transform="0.1,0.0,0.0,-0.1,0.0,512.0">
+            <GeometryDrawing Brush="{DynamicResource TextForeground}">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 2592 4881 c -65 -42 -62 13 -62 -1109 l 0 -1019 l 23 -34 c 49 -74 -27 -69 1114 -67 c 1021 3 1022 3 1050 24 c 15 12 37 36 47 54 c 18 31 19 41 8 149 c -36 357 -156 701 -354 1006 c -205 318 -540 616 -883 788 c -238 119 -564 209 -800 222 c -100 6 -113 5 -143 -14 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="{DynamicResource TextForeground}">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 2060 4723 c -99 -8 -292 -44 -412 -77 c -788 -217 -1414 -877 -1592 -1679 c -41 -182 -51 -280 -50 -497 c 0 -376 65 -659 230 -996 c 181 -372 480 -700 839 -924 c 672 -418 1553 -443 2255 -63 c 164 89 404 263 442 322 c 29 42 24 111 -11 157 c -16 21 -354 363 -751 759 c -397 396 -728 732 -736 747 c -12 23 -14 185 -14 1080 c 0 1021 -1 1054 -20 1096 c -15 33 -29 47 -62 62 c -24 11 -50 19 -58 18 c -8 -1 -35 -3 -60 -5 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="{DynamicResource TextForeground}">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 3145 2340 c -33 -13 -66 -56 -75 -95 c -18 -82 -33 -65 623 -723 c 337 -338 634 -632 660 -654 c 38 -33 58 -42 95 -45 c 62 -5 85 8 155 92 c 284 337 457 752 508 1216 c 10 95 10 110 -6 142 c -9 20 -32 46 -50 57 c -32 20 -47 20 -961 19 c -511 0 -938 -4 -949 -9 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingBrush Stretch="Uniform" Drawing="{DynamicResource Pie_Chart}" x:Key="db_Pie_Chart"/>
+</ResourceDictionary>

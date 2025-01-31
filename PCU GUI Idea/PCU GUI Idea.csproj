@@ -38,6 +38,9 @@
     <Reference Include="ExCSS, Version=4.2.3.0, Culture=neutral, PublicKeyToken=bdbe16be9b936b9a, processorArchitecture=MSIL">
       <HintPath>..\packages\ExCSS.4.2.3\lib\net48\ExCSS.dll</HintPath>
     </Reference>
+    <Reference Include="HelixToolkit.Wpf, Version=2.26.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.Wpf.2.26.0\lib\net462\HelixToolkit.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="Svg, Version=3.4.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
       <HintPath>..\packages\Svg.3.4.7\lib\net472\Svg.dll</HintPath>
     </Reference>
@@ -371,6 +374,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Modules\CAN.cs" />
+    <Compile Include="Modules\BatteryModel3D.cs" />
     <Compile Include="Modules\DbcParser.cs" />
     <Compile Include="Modules\ThemeManager.cs" />
     <Compile Include="Syles\Theme.cs" />
@@ -388,7 +392,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -396,6 +399,22 @@
     <Page Include="Menu\MenuTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pictures\SVG\3d-cube.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pictures\SVG\diagram.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pictures\SVG\length-vertical.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pictures\SVG\length.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pictures\SVG\pcu_buck_boost_converter.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -406,6 +425,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pictures\SVG\pcu_buck_boost_inductor_up.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pictures\SVG\pie-chart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pictures\SVG\pwm_duty.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pictures\SVG\pwm_freq.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -459,6 +490,8 @@
     </EmbeddedResource>
     <None Include="Database\CANdbHVto12V.dbc" />
     <None Include="packages.config" />
+    <None Include="Pictures\3D Models\car-battery-001.mtl" />
+    <None Include="Pictures\3D Models\car-battery-001.obj" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -476,5 +509,6 @@
   <ItemGroup>
     <Resource Include="Pictures\SVG\pcu_buck_boost_converter.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

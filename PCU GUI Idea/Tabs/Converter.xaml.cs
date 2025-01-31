@@ -18,6 +18,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PCU_GUI_Idea.Modules;
 using Svg;
 using Telerik.Windows.Documents.Fixed.Model.Objects;
 using Telerik.Windows.Documents.Spreadsheet.Expressions.Functions;
@@ -30,38 +31,49 @@ namespace PCU_GUI_Idea.Tabs
     /// </summary>
     public partial class Converter : UserControl
     {
+        private bool _signalesBinded;
         public static List<UIElement> elements;
         public Converter()
         {
             InitializeComponent();
-            //LoadXAMLFile("pcu_buck_boost_inductor_up", new Thickness(400, 50, 400, 50));
-            //LoadXAMLFile("pcu_buck_boost_inductor_down", new Thickness(400, 0, 400, 550));
-            LoadXAMLFile("pcu_buck_boost_converter", new Thickness(100, 50, 100, 150));
-            //LoadXAMLFile("SchematicConv", new Thickness(0));
+            InitizalizeImages();  
             this.Loaded += BindSignalToFrameworkElement;
         }
+
+        /// <summary>
+        /// Finds the FrameworkElement in the UC and binds it to the respective Signal
+        /// </summary>
+        /// 
         private void BindSignalToFrameworkElement(object sender, RoutedEventArgs e)
         {
-            // Now that the control is loaded, we can safely get all elements inside it
-            var allElements = GetAllUIElements(gridContainingElements); // 'this' refers to the UserControl
-            elements = allElements;
-            // Do something with allElements
-            foreach (var element in elements)
-            {
-                foreach(var message in DbcParser.Messages)
+            if(!_signalesBinded)
+            {  
+                // Now that the control is loaded, we can safely get all elements inside it
+                var allElements = GetAllUIElements(gridContainingElements); // 'this' refers to the UserControl
+                elements = allElements;
+                // Do something with allElements
+                foreach (var element in elements)
                 {
-                    foreach(var signal in message.Signals)
+                    foreach(var message in DbcParser.Messages)
                     {
-                        if (element is FrameworkElement frameworkElement && frameworkElement.Name.Contains(signal.Name))
+                        foreach(var signal in message.Signals)
                         {
-                            signal.AssociatedElement = frameworkElement;
-                            Debug.WriteLine("Message:" + message.Name + "  " + signal.Name);
-                            Debug.WriteLine("UI Element: " + frameworkElement.Name);
-                        }
+                            if (element is FrameworkElement frameworkElement && frameworkElement.Name.Contains(signal.Name))
+                            {
+                                signal.AssociatedElement = frameworkElement;
+                                Debug.WriteLine("Message:" + message.Name + "  " + signal.Name);
+                                Debug.WriteLine("UI Element: " + frameworkElement.Name);
+                            }
+                        }    
                     }    
-                }    
+                }
+                _signalesBinded = true;
             }
         }
+        /// <summary>
+        /// Method used to find all UIElements
+        /// </summary>
+        /// 
         public List<UIElement> GetAllUIElements(DependencyObject parent)
         {
             var elements = new List<UIElement>();
@@ -97,7 +109,14 @@ namespace PCU_GUI_Idea.Tabs
 
             return elements;
         }
-        // Method to filter out unwanted internal elements (like ScrollBars, Rectangles, etc.)
+
+        /// <summary>
+        /// Method to filter out unwanted internal elements (like ScrollBars, Rectangles, etc.)
+        /// </summary>
+        /// <param name="element">The element to be checked</param>
+        /// <returns>true if we want the element, false if we don't</returns>
+        /// 
+
         private bool IsElementWanted(UIElement element)
         {
             // Exclude unwanted types of elements that are part of the visual tree but not part of the UI you're interested in
@@ -110,7 +129,10 @@ namespace PCU_GUI_Idea.Tabs
                      element is Border); // Add any other unwanted types here
         }
 
-        private void LoadXAMLFile(string fileName, Thickness margin)
+        /// <summary>
+        /// Loads and XAML file that is a drawaing in a UIElement
+        /// </summary>
+        private void LoadXAMLFile(string fileName, string resourceKey, Thickness margin, Grid grid)
         {
             var path = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Pictures/SVG/" + fileName + ".xaml";
             using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read))
@@ -120,7 +142,7 @@ namespace PCU_GUI_Idea.Tabs
 
                 // Retrieve the DrawingGroup by its key
                 // If you placed a name in an app you are using, for ex: Adobe Ilustrator; You have to use the name you put as the key.
-                var drawingGroup = (DrawingGroup)resourceDictionary["PCU_Layout"];
+                var drawingGroup = (DrawingGroup)resourceDictionary[resourceKey];
 
                 // Wrap the DrawingGroup in a DrawingImage
                 var drawingImage = new DrawingImage(drawingGroup);
@@ -134,10 +156,33 @@ namespace PCU_GUI_Idea.Tabs
                 };
 
                 // Add the generated image to the grid.
-                convTab.Children.Add(imageControl);
+                grid.Children.Add(imageControl);
             }
         }
+        /// <summary>
+        /// Initializes the images used in the UC
+        /// </summary>
+        private void InitizalizeImages()
+        {
+            // Puting the converter in the UC
+            LoadXAMLFile("pcu_buck_boost_converter", "PCU_Layout", new Thickness(100, 50, 100, 150), convTab);
 
+            // Images coresponding for each Duty Cycle
+            LoadXAMLFile("pwm_duty", "PWM_Duty", new Thickness(), pwm_duty);
+            LoadXAMLFile("pwm_duty", "PWM_Duty", new Thickness(), pwm_duty2);
+            LoadXAMLFile("pwm_duty", "PWM_Duty", new Thickness(), pwm_duty3);
+            LoadXAMLFile("pwm_duty", "PWM_Duty", new Thickness(), pwm_duty4);
+
+            // Images coresponding for each Frequency
+            LoadXAMLFile("pwm_freq", "PWM_Freq", new Thickness(), pwm_freq);
+            LoadXAMLFile("pwm_freq", "PWM_Freq", new Thickness(), pwm_freq2);
+            LoadXAMLFile("pwm_freq", "PWM_Freq", new Thickness(), pwm_freq3);
+            LoadXAMLFile("pwm_freq", "PWM_Freq", new Thickness(), pwm_freq4);
+        }
+
+        /// <summary>
+        /// temp temp temp
+        /// </summary>
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
             //if (sender is ToggleButton toggleButton)
@@ -146,6 +191,9 @@ namespace PCU_GUI_Idea.Tabs
             //}
         }
 
+        /// <summary>
+        /// Asserts the recieved data to the coressponding FrameworkElement / Chart
+        /// </summary>
         public static void UpdateUI()
         {
 

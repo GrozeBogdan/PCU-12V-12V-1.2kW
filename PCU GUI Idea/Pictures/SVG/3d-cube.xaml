@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="ThreeD_Cube">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,512.0,512.0"/>
+        </DrawingGroup.ClipGeometry>
+        <DrawingGroup Transform="0.1,0.0,0.0,-0.1,0.0,512.0">
+            <GeometryDrawing Brush="{DynamicResource TextForeground}">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 2430 5067 c -250 -138 -2000 -1142 -2000 -1147 c 0 -3 479 -279 1065 -613 l 1065 -608 l 1065 608 c 586 334 1065 610 1065 613 c 0 5 -1750 1009 -2000 1147 c -64 36 -106 53 -130 53 c -24 0 -66 -17 -130 -53 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="{DynamicResource TextForeground}">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 270 2442 l 0 -1218 l 1070 -611 l 1070 -612 l 0 1223 l 0 1222 l -1063 607 c -584 334 -1065 607 -1070 607 c -4 0 -7 -548 -7 -1218 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="{DynamicResource TextForeground}">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 3773 3052 l -1063 -607 l 0 -1222 l 0 -1222 l 1070 612 l 1070 611 l 0 1218 c 0 670 -3 1218 -7 1218 c -5 0 -486 -274 -1070 -608 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingBrush Stretch="Uniform" Drawing="{DynamicResource ThreeD_Cube}" x:Key="db_ThreeD_Cube"/>
+</ResourceDictionary>

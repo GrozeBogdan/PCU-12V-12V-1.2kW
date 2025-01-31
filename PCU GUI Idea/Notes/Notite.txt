@@ -1,0 +1,8 @@
+===========================
+
+De acum incolo, cand vrei sa mai pui ceva SVG/XAML in interfata, si vrei ca acesta sa isi poata modifica
+culoarea in functie de o resursa definita la nivelul App.xaml ( in cazul unei tematice ),
+
+TREBUIE SA TII MINTE CA ACEASTA TREBUIE INITIALIZATA LA NIVEL DE C# SI NU DE XAML!!!!!!
+Te-ai chinuit ca prostu 2 zile, cauta pe chatGPT - Dynamic Theme Switching WPF si vezi acolo cum ai facut la butoane.
+Acelasi lucru poti sa il vezi si la alte imagini precum in Graphics.xaml.cs si Converter.xaml.cs la fucntia LoadXAMLFile();

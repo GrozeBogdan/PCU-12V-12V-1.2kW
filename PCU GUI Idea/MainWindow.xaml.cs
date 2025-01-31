@@ -26,7 +26,7 @@ namespace PCU_GUI_Idea
     {
         private Customize customize_UC = new Customize();
         private Converter converter_UC = new Converter();
-        private Graphics graphics_UC = new Graphics();
+        public Graphics graphics_UC = new Graphics();
         private Help help_UC = new Help();
 
         private Dictionary<string, UserControl> controls = new Dictionary<string, UserControl> { };

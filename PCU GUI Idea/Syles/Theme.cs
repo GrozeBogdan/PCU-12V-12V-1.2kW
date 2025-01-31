@@ -18,27 +18,28 @@ using System.Windows.Media;
         public Brush ButtonAndHighlightBackground { get; set; } 
         public Brush PanelBackground { get; set; }
         public Brush TextForeground { get; set; }
+        public Brush TextForegroundContrast { get; set; }
         public Brush ButtonContrast { get; set; }
         public Brush SVGBackground { get; set; }
     }
 
 
-/*  If you want to add a preset just follow this example:
-    Make sure to change this example to use acordingly to your needs (ex: If you use RGB or HEX values; not predefined).
+    /*  If you want to add a preset just follow this example:
+        Make sure to change this example to use acordingly to your needs (ex: If you use RGB or HEX values; not predefined).
 
-    public static Theme YourThemeName = new Theme
-    {
-        PrimaryBackground = new SolidColorBrush(YourColor),
-        SecondaryBackground = new SolidColorBrush(YourColor),
-        PrimaryForeground = new SolidColorBrush(YourColor),
-        SecondaryForeground = new SolidColorBrush(YourColor)
-    };
-*/
+        public static Theme YourThemeName = new Theme
+        {
+            PrimaryBackground = new SolidColorBrush(YourColor),
+            SecondaryBackground = new SolidColorBrush(YourColor),
+            PrimaryForeground = new SolidColorBrush(YourColor),
+            SecondaryForeground = new SolidColorBrush(YourColor)
+        };
+    */
 
-/// <summary>
-/// Contains all the available theme presets.
-/// </summary>
-/// 
+    /// <summary>
+    /// Contains all the available theme presets & a list with all themes.
+    /// </summary>
+    /// 
     public static class ThemePresets
     {        
         public static Theme LightTheme = new Theme
@@ -66,6 +67,7 @@ using System.Windows.Media;
             ButtonAndHighlightBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#5D3370")),
             PanelBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF310F38")),
             TextForeground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFE8BC89")),
+            TextForegroundContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFB1906A")),
             ButtonContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF442452")),
             SVGBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ffe8bcb9"))
         };
@@ -77,6 +79,7 @@ using System.Windows.Media;
             ButtonAndHighlightBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#1B3358")),
             PanelBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#06142E")),
             TextForeground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5D7DB")),
+            TextForegroundContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ebafb7")),
             ButtonContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#152844")),
             SVGBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5D7DB"))
         };

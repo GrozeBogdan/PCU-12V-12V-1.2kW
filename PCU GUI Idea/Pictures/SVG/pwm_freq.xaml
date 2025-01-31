@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="PWM_Freq">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,733.0,248.0"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="171.5,217.5,68.489281,12.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="m 239.131 218 v 11 h -67.5393 v -11 h 67.5393 m 0.99322 -1 h -69.5258 v 13 h 69.5258 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="227.5,19.5,12.12,202.88"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 239.12 20 v 201.88 H 228 V 20 H 239.12 M 240.12 19 H 227 v 203.88 h 13.12 V 19 L 240.12 19 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="171.12,19.5,13.38,203.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 184 20 v 202 h -12.38 V 20 H 184 M 185 19 h -14.38 v 204 H 185 V 19 L 185 19 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="66.5,19.5,118.0,12.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 184 20 v 11 H 67 V 20 H 184 M 185 19 H 66 v 13 h 119 V 19 L 185 19 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="10.5,217.5,68.613068,12.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="m 78.0846 218 v 11 h -67.0979 v -11 h 67.0979 m 0.986734 -1 H 10 v 13 h 69.0714 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="66.5,19.5,12.12,202.88"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 78.12 20 v 201.88 H 67 V 20 H 78.12 M 79.12 19 H 66 v 203.88 h 13.12 V 19 L 79.12 19 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="332.12,19.5,13.38,203.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 345 20 v 202 h -12.38 V 20 H 345 M 346 19 h -14.38 v 204 H 346 V 19 L 346 19 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="227.5,19.5,118.0,12.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 345 20 v 11 H 228 V 20 H 345 M 346 19 H 227 v 13 h 119 V 19 L 346 19 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="331.99411,216.5,68.18634,12.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="m 399.686 217 v 11 h -67.1981 v -11 h 67.1981 m 0.98821 -1 H 331.5 v 13 h 69.1745 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="388.0,18.5,12.12,202.88"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 399.62 19 v 201.88 H 388.5 V 19 H 399.62 M 400.62 18 H 387.5 v 203.88 h 13.12 V 18 L 400.62 18 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="388.0,18.5,118.0,12.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 505.5 19 v 11 h -117 V 19 H 505.5 M 506.5 18 h -119 v 13 h 119 V 18 L 506.5 18 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="492.67087,216.5,68.491463,12.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="m 560.666 217 v 11 h -67.4988 v -11 h 67.4988 m 0.99262 -1 h -69.4841 v 13 h 69.4841 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="653.55829,216.5,69.934937,12.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="m 722.986 217 v 11 h -68.9214 v -11 h 68.9214 M 724 216 h -70.9485 v 13 H 724 Z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="549.0,18.5,118.0,12.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 666.5 19 v 11 h -117 V 19 H 666.5 M 667.5 18 h -119 v 13 h 119 V 18 L 667.5 18 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="549.0,18.5,12.12,202.88"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 560.62 19 v 201.88 H 549.5 V 19 H 560.62 M 561.62 18 H 548.5 v 203.88 h 13.12 V 18 L 561.62 18 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="653.62,18.5,13.38,203.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 666.5 19 v 202 h -12.38 V 19 H 666.5 M 667.5 18 h -14.38 v 204 h 14.38 V 18 L 667.5 18 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <RectangleGeometry Rect="492.62,18.5,13.38,203.0"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ffe8bcb9">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 505.5 19 v 202 h -12.38 V 19 H 505.5 M 506.5 18 h -14.38 v 204 h 14.38 V 18 L 506.5 18 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingBrush Stretch="Uniform" Drawing="{StaticResource PWM_Freq}" x:Key="db_PWM_Freq"/>
+</ResourceDictionary>

@@ -51,7 +51,7 @@
                 <StackPanel Height="Auto" Orientation="Vertical" CanVerticallyScroll="True" x:Name="buttonTab" Margin="0,0,30,0">
                     <Button x:Name="ConverterButton"
                             Style="{DynamicResource MenuButton}"
-                            Content="Converter"
+                            Content="⎓ Converter"
                             FontSize="30"
                             Margin="20, 20, 0 ,0"
                             HorizontalContentAlignment="Left"
@@ -59,21 +59,21 @@
                             />
                     <Button x:Name="GraphicsButton"
                             Style="{DynamicResource MenuButton}"
-                            Content="Graphics"
+                            Content="📈 Graphics"
                             FontSize="30"
                             Margin="20, 40, 0 ,0" 
                             Click="Menu_Button_Clicked"
                             />
                     <Button x:Name="CustomizeButton"
                             Style="{DynamicResource MenuButton}"
-                            Content="Customize"
+                            Content="⚙️ Customize"
                             FontSize="30"
                             Margin="20, 40, 0 ,0"
                             Click="Menu_Button_Clicked"
                             />
                     <Button x:Name="HelpButton"
                             Style="{DynamicResource MenuButton}"
-                            Content="Help"
+                            Content="❓ Help"
                             FontSize="30"
                             Margin="20, 40, 0 ,0"
                             Click="Menu_Button_Clicked"

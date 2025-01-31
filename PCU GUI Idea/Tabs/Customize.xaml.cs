@@ -29,22 +29,7 @@ namespace PCU_GUI_Idea.Tabs
         public Customize()
         {
             InitializeComponent();
-            //themeBox.Text = ThemeManager.CurrentTheme.Name;
         }
-
-        //private void IntializeOthersFromMemory(object sender, RoutedEventArgs e)
-        //{
-        //    if (_selectedDatabase != null) 
-        //    {
-        //        databaseBox.EmptyText = _selectedDatabase;
-        //    }
-
-        //    if (_cachedWorkbook != null) // First time, create it
-        //    {
-        //        excelTable.Workbook = _cachedWorkbook;
-        //    }
-        //}
-
         private void themeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var radComboBox = sender as RadComboBox;
@@ -53,7 +38,6 @@ namespace PCU_GUI_Idea.Tabs
             {
                 var theme = Themes[item.Content.ToString()];
                 ThemeManager.ApplyTheme(theme);
-               
             }
             else
                 MessageBox.Show("Nu merge daca nu alegi nimic");
@@ -73,14 +57,5 @@ namespace PCU_GUI_Idea.Tabs
                 }
             }
         }
-
-        //private void UserControl_Unloaded(object sender, RoutedEventArgs e)
-        //{
-        //    if (databaseBox.SelectedItem != null)
-        //        _selectedDatabase = (string)databaseBox.SelectedItem;
-        //    else
-        //        _selectedDatabase = databaseBox.EmptyText;
-        //    _cachedWorkbook = excelTable.Workbook;
-        //}
     }
 }

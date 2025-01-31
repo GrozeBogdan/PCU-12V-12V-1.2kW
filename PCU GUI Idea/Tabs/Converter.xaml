@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PCU_GUI_Idea"  
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:helix="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="945" 
              d:DesignWidth="1390"
@@ -43,6 +44,7 @@
                 </Image>-->
             </Grid>
             <Grid Grid.Row="1" x:Name="gridContainingElements">
+                
                 <!--Current Measurements TextBoxes-->
                 <TextBox x:Name="current_ph1_in"  Width="100" Height="50" Margin="135,35,1115,770" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
                 <TextBox x:Name="current_ph1_out" Width="100" Height="50" Margin="1100,35,150,770" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
@@ -64,7 +66,7 @@
                 <Label Content="Buck" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,60,744,745" HorizontalContentAlignment="Center"/>
                 <Label Content="Buck-Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,60,513,745" HorizontalContentAlignment="Center"/>
                 <ToggleButton Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,60,654,755" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
-                
+
                 <ToggleButton x:Name="trip_in" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="58,360,1202,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
                     <ToggleButton.RenderTransform>
                         <TransformGroup>
@@ -85,7 +87,7 @@
                         </TransformGroup>
                     </ToggleButton.RenderTransform>
                 </ToggleButton>
-                
+
                 <!--TextBoxes needed for PWM Control: Frequency,Duty,Deadband,Phaseshift-->
                 <TextBox x:Name="frequency_ph1_hbIn"  Width="100" Height="50" Margin="135,142,1115,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
                 <TextBox x:Name="dbRED_ph1_hbIn"  Width="100" Height="50" Margin="135,232,1115,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text="" BorderThickness="0"/>
@@ -108,8 +110,18 @@
                 <TextBox x:Name="dbRED_ph1_hbOut"  Width="100" Height="50" Margin="966,232,284,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
                 <TextBox x:Name="duty_ph1_hbOut"  Width="100" Height="50" Margin="1100,142,150,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
                 <TextBox x:Name="dbFED_ph1_hbOut"  Width="100" Height="50" Margin="1100,232,150,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-        
 
+                <Grid Width="100" Height="40" x:Name="pwm_duty" Margin="265,97,985,718"/>
+                <Grid Width="100" Height="40" x:Name="pwm_duty2" Margin="265,419,985,396"/>
+                <Grid Width="100" Height="40" x:Name="pwm_duty3" Margin="1100,419,150,396"/>
+                <Grid Width="100" Height="40" x:Name="pwm_duty4" Margin="1100,97,150,718"/>
+                
+                <Grid Width="100" Height="40" x:Name="pwm_freq" Margin="135,97,1115,718"/>
+                <Grid Width="100" Height="40" x:Name="pwm_freq2" Margin="135,419,1115,396"/>
+                <Grid Width="100" Height="40" x:Name="pwm_freq3" Margin="966,419,284,396"/>
+                <Grid Width="100" Height="40" x:Name="pwm_freq4" Margin="966,97,284,718"/>
+
+                <!--<helix:HelixViewport3D x:Name="battery_in" Width="150" Height="150" Margin="35,695,1165,10"/>-->
             </Grid>
         </Grid>
     </Grid>
