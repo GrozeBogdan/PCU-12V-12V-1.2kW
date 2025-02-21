@@ -1062,5 +1062,5 @@
             </GeometryDrawing>
         </DrawingGroup>
     </DrawingGroup>
-    <DrawingBrush Stretch="Uniform" Drawing="{StaticResource PCU_Layout}" x:Key="db_PCU_Layout"/>
+    <DrawingBrush Stretch="Uniform" Drawing="{DynamicResource PCU_Layout}" x:Key="db_PCU_Layout"/>
 </ResourceDictionary>

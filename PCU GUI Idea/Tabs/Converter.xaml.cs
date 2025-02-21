@@ -6,6 +6,7 @@ using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,15 +14,20 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HelixToolkit.Wpf;
 using PCU_GUI_Idea.Modules;
 using Svg;
+using Telerik.Windows.Controls.Gauge;
 using Telerik.Windows.Documents.Fixed.Model.Objects;
 using Telerik.Windows.Documents.Spreadsheet.Expressions.Functions;
+using vxlapi_NET;
 using Image = System.Windows.Controls.Image;
 
 namespace PCU_GUI_Idea.Tabs
@@ -33,12 +39,39 @@ namespace PCU_GUI_Idea.Tabs
     {
         private bool _signalesBinded;
         public static List<UIElement> elements;
+        private static XLDriver can = new XLDriver();
         public Converter()
         {
             InitializeComponent();
             InitizalizeImages();  
             this.Loaded += BindSignalToFrameworkElement;
+            Load3DModel();
         }
+
+        private void AppendSignalValue(byte[] binaryArray, int value, int startBit, int length)
+        {
+            for (int i = 0; i < length; i++)
+            {
+                int bit = (value >> i) & 1;
+                int byteIndex = (startBit + i) / 8;
+                int bitIndex = (startBit + i) % 8;
+                binaryArray[byteIndex] |= (byte)(bit << bitIndex);
+            }
+        }
+
+        private void AppendAndTransmitData(DbcParser.Message msg, byte[] bArr)
+        {
+            for (int i = 0; i < DbcParser.sentEvents.messageCount; i++)
+            {
+                if( msg.Id == DbcParser.sentEvents.xlEvent[i].tagData.can_Msg.id )
+                {
+                    DbcParser.sentEvents.xlEvent[i].tagData.can_Msg.data = bArr;
+                    DbcParser.sentEvents.xlEvent[i].tag = XLDefine.XL_EventTags.XL_TRANSMIT_MSG;
+                    can.XL_CanTransmit(CAN.portHandle, CAN.txMask, DbcParser.sentEvents.xlEvent[i]);
+                }
+            }
+        }
+
 
         /// <summary>
         /// Finds the FrameworkElement in the UC and binds it to the respective Signal
@@ -61,8 +94,11 @@ namespace PCU_GUI_Idea.Tabs
                             if (element is FrameworkElement frameworkElement && frameworkElement.Name.Contains(signal.Name))
                             {
                                 signal.AssociatedElement = frameworkElement;
+                                Debug.WriteLine("");
                                 Debug.WriteLine("Message:" + message.Name + "  " + signal.Name);
                                 Debug.WriteLine("UI Element: " + frameworkElement.Name);
+                                Debug.WriteLine("Type: " + frameworkElement.GetType());
+                                Debug.WriteLine("");
                             }
                         }    
                     }    
@@ -107,6 +143,18 @@ namespace PCU_GUI_Idea.Tabs
                 }
             }
 
+            if (parent is HelixViewport3D viewport3D)
+            {
+                foreach (var child in viewport3D.Children)
+                {
+                    if (child is Viewport2DVisual3D viewport)
+                    {
+                        elements.Add(viewport.Visual as TextBox);
+                        //visitedElements.Add(uiElement);
+                    }
+                }   
+            }
+
             return elements;
         }
 
@@ -132,6 +180,8 @@ namespace PCU_GUI_Idea.Tabs
         /// <summary>
         /// Loads and XAML file that is a drawaing in a UIElement
         /// </summary>
+        /// 
+
         private void LoadXAMLFile(string fileName, string resourceKey, Thickness margin, Grid grid)
         {
             var path = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Pictures/SVG/" + fileName + ".xaml";
@@ -159,9 +209,13 @@ namespace PCU_GUI_Idea.Tabs
                 grid.Children.Add(imageControl);
             }
         }
+
+
         /// <summary>
         /// Initializes the images used in the UC
         /// </summary>
+        /// 
+
         private void InitizalizeImages()
         {
             // Puting the converter in the UC
@@ -178,25 +232,244 @@ namespace PCU_GUI_Idea.Tabs
             LoadXAMLFile("pwm_freq", "PWM_Freq", new Thickness(), pwm_freq2);
             LoadXAMLFile("pwm_freq", "PWM_Freq", new Thickness(), pwm_freq3);
             LoadXAMLFile("pwm_freq", "PWM_Freq", new Thickness(), pwm_freq4);
+
+            // Images coresponding for each Temp of the Halfbridge
+            LoadXAMLFile("thermometer", "Thermo" , new Thickness(), thermometer_hb1);
+            LoadXAMLFile("thermometer", "Thermo" , new Thickness(), thermometer_hb2);
+            LoadXAMLFile("thermometer", "Thermo" , new Thickness(), thermometer_hb3);
+            LoadXAMLFile("thermometer", "Thermo" , new Thickness(), thermometer_hb4);
         }
 
+
         /// <summary>
-        /// temp temp temp
+        /// Method used to see which ToggleButton was triggered and 
+        /// from which group to send the respective message with the signals
+        /// corresponding to the ToggleButton.IsChecked.Value
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
-            //if (sender is ToggleButton toggleButton)
-            //{
-            //    PH1_Curr.Text = toggleButton.IsChecked.Value.ToString();
-            //}
+            ToggleButton actioner = (ToggleButton)sender;
+            byte[] binaryArray = new byte[8];
+            DbcParser.Message msg = new DbcParser.Message();
+
+            foreach (UIElement element in gridContainingElements.Children)
+            {
+                if (element is ToggleButton toggle)
+                {
+                    foreach (var message in DbcParser.Messages)
+                    {
+                        if (toggle.Name.Contains(message.Name) && actioner.Name.Contains(message.Name))
+                        {
+                            foreach (var signal in message.Signals)
+                            {
+                                if (toggle.Name.Contains(signal.Name))
+                                {
+                                    AppendSignalValue(binaryArray, System.Convert.ToInt16(toggle.IsChecked.Value), signal.StartBit, signal.Length); 
+                                }
+                            }
+                            msg = message;
+                            break;
+                        }
+                    }
+                }
+            }
+            AppendAndTransmitData(msg, binaryArray);
+
+            //A delay is needed to not overload the Slope action of changing the duty       
+        }
+
+        private void Send_PWM_Values(object sender, KeyEventArgs e)
+        {
+            byte[] binaryArray = new byte[8];
+            TextBox senderBox = sender as TextBox;
+            if(e.Key == Key.Enter)
+            {
+                try
+                {
+                    List<TextBox> textBoxes = new List<TextBox>();
+                    foreach (var message in DbcParser.Messages)
+                    {
+                        if (senderBox.Name.Contains(message.Name))
+                        {
+                            foreach (UIElement element in gridContainingElements.Children)
+                            {
+                                if (element is TextBox textbox && textbox.Name.Contains(senderBox.Name.Remove(0, senderBox.Name.Length - 10)))
+                                {
+                                    textBoxes.Add(textbox);
+                                }
+                            }
+
+                            foreach (var signal in message.Signals)
+                            {
+                                foreach (var text in textBoxes)
+                                {
+                                    if (text.Name.Contains(signal.Name))
+                                    {
+                                        AppendSignalValue(binaryArray, System.Convert.ToInt16(text.Text), signal.StartBit, signal.Length);
+                                    }
+                                    if (signal.Name.Contains(text.Uid))
+                                    {
+                                        AppendSignalValue(binaryArray, 1, signal.StartBit, signal.Length);
+                                    }
+                                }
+                            }
+
+                            AppendAndTransmitData(message, binaryArray);
+                            break;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    if (ex is System.FormatException)
+                        MessageBox.Show("Please enter a value in the empty text box", "Invalid data", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                    else
+                        MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         /// <summary>
         /// Asserts the recieved data to the coressponding FrameworkElement / Chart
         /// </summary>
-        public static void UpdateUI()
-        {
+        /// 
 
+        public void UpdateUI(string name, double value, FrameworkElement element)
+        {
+            if (element != null)
+            {
+                if(element is TextBox textbox)
+                {
+                    textbox.Text = value.ToString();
+                }
+                else if(element is BarIndicator barIndicator) 
+                { 
+                    barIndicator.Value = value;
+                }
+            }
+        }
+        private void Load3DModel()
+        {
+            var stLReader = new StLReader();
+            Model3D model = stLReader.Read("C:\\Users\\Bogdan\\Documents\\GitHub\\PCU-12V-12V-1.2kW\\PCU GUI Idea\\Pictures\\3D Models\\car-battery.stl");
+
+            model = CenterAndScaleModel(model, 10.0); // Adjust size (5.0 is a good default scale)
+
+            var material = new DiffuseMaterial((SolidColorBrush)FindResource("SVGBackground")); // Change to desired color
+            ApplyMaterial(model, material);
+
+            // Create a ModelVisual3D to hold the model
+            ModelVisual3D modelVisual = new ModelVisual3D { Content = model };
+
+            // Add the model to the Helix viewport
+            battery_in.Children.Add(modelVisual);
+
+            modelVisual = new ModelVisual3D { Content = model };
+            battery_out.Children.Add(modelVisual);
+
+            FitCameraToModel(model);
+        }
+        private Model3D CenterAndScaleModel(Model3D model, double desiredSize)
+        {
+            Rect3D bounds = model.Bounds;
+            double maxDimension = Math.Max(bounds.SizeX, Math.Max(bounds.SizeY, bounds.SizeZ));
+
+            // Calculate scale factor
+            double scale = desiredSize / maxDimension;
+
+            // Center model at (0,0,0)
+            Transform3DGroup transformGroup = new Transform3DGroup();
+            transformGroup.Children.Add(new ScaleTransform3D(scale, scale, scale));
+            transformGroup.Children.Add(new TranslateTransform3D(
+                -bounds.X - bounds.SizeX / 2,
+                -bounds.Y - bounds.SizeY / 2,
+                -bounds.Z - bounds.SizeZ / 2));
+
+            model.Transform = transformGroup;
+            return model;
+        }
+        private void FitCameraToModel(Model3D model)
+        {
+            Rect3D bounds = model.Bounds;
+            double maxDimension = Math.Max(bounds.SizeX, Math.Max(bounds.SizeY, bounds.SizeZ));
+
+            // Set camera distance based on model size
+            double distance = maxDimension * 1.5; // Adjust multiplier if needed
+
+            battery_in.Camera = new PerspectiveCamera
+            {
+                Position = new Point3D(0, distance/5, distance),
+                LookDirection = new Vector3D(0, 0, -1),
+                UpDirection = new Vector3D(0, 1, 0),
+                FieldOfView = 50
+            };
+
+            battery_out.Camera = new PerspectiveCamera
+            {
+                Position = new Point3D(0, distance/5, distance),
+                LookDirection = new Vector3D(0, 0, -1),
+                UpDirection = new Vector3D(0, 1, 0),
+                FieldOfView = 50
+            };
+
+            // Panned view Top-Left
+            //battery_in.Camera = new PerspectiveCamera
+            //{
+            //    Position = new Point3D(-distance, distance, distance),
+            //    LookDirection = new Vector3D(1, -1, -1),
+            //    UpDirection = new Vector3D(0, 1, 0),
+            //    FieldOfView = 50
+            //};
+
+            // Panned view Top-Right
+            //battery_out.Camera = new PerspectiveCamera
+            //{
+            //    Position = new Point3D(distance, distance, distance),
+            //    LookDirection = new Vector3D(-1, -1, -1),
+            //    UpDirection = new Vector3D(0, 1, 0),
+            //    FieldOfView = 50
+            //};
+        }
+        public void ApplyMaterial(Model3D model, Material material)
+        {
+            if (model is GeometryModel3D geometryModel)
+            {
+                geometryModel.Material = material;
+                geometryModel.BackMaterial = material; // Apply color to both sides
+            }
+            else if (model is Model3DGroup modelGroup)
+            {
+                foreach (Model3D child in modelGroup.Children)
+                {
+                    ApplyMaterial(child, material); // Recursively apply material
+                }
+            }
+        }
+        private void Clear_Box(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Clear();
+        }
+        private void Sync_Text_In_TextBox(object sender, TextChangedEventArgs e)
+        {
+            TextBox _senderTextBox = (TextBox)sender;
+            foreach (UIElement element in gridContainingElements.Children)
+            {
+                if (element is TextBox tb)
+                { 
+                    if (tb.Name.Contains("phase") && _senderTextBox.Name.Contains("phase"))
+                    {
+                        tb.Text = _senderTextBox.Text;
+                    }
+
+                    if (tb.Name.Contains("frequency") && _senderTextBox.Name.Contains("frequency"))
+                    {
+                        tb.Text = _senderTextBox.Text;
+                    }
+                }
+            }
         }
     }
 }

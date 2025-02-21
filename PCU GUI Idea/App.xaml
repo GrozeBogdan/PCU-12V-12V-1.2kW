@@ -48,8 +48,8 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Button}" x:Name="WindowButton">
-                            <Border Width="80" 
-                                    Height="50"
+                            <Border Width="{TemplateBinding Width}" 
+                                    Height="{TemplateBinding Height}"
                                     CornerRadius="12"
                                     Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"
@@ -76,10 +76,10 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Button}" x:Name="WindowButton">
-                            <Border Width="80" 
-                                    Height="50"
-                                    CornerRadius="12"
-                                    Background="{TemplateBinding Background}">
+                            <Border Width="{TemplateBinding Width}" 
+                                    Height="{TemplateBinding Height}"
+                                    Background="{TemplateBinding Background}"
+                                    CornerRadius="12">
                                     <ContentPresenter VerticalAlignment="Center"
                                                   HorizontalAlignment="Center"
                                                   />
@@ -173,6 +173,54 @@
                 </Setter>
             </Style>
             
+            <!--Styke for SliderButton For Trips-->
+            <Style x:Key="SliderButtonTrip" TargetType="ToggleButton">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Grid Width="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=ActualWidth}" 
+                      Height="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=ActualHeight}" 
+                      Background="Transparent">
+                                <!-- Outer Background -->
+                                <Border x:Name="OuterBorder" CornerRadius="20" Background="{DynamicResource SVGBackground}" />
+
+                                <!-- Inner Circle -->
+                                <Ellipse x:Name="InnerCircle" Fill="{DynamicResource ButtonContrast}" Width="30" Height="30" HorizontalAlignment="Left" Margin="3,3,0,3" />
+
+                                <!-- Animation Triggers -->
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <!-- Checked State -->
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="InnerCircle" Property="Fill" Value="green"></Setter>
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Move Inner Circle to Right -->
+                                                <ThicknessAnimation Storyboard.TargetName="InnerCircle" Storyboard.TargetProperty="Margin" From="3,3,0,3" To="55,3,0,3" Duration="0:0:0.2" FillBehavior="HoldEnd" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Move Inner Circle to Left -->
+                                                <ThicknessAnimation Storyboard.TargetName="InnerCircle" Storyboard.TargetProperty="Margin" From="55,3,0,3" To="3,3,0,3" Duration="0:0:0.2" FillBehavior="HoldEnd" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+                                </Trigger>
+
+                                <Trigger Property="IsChecked" Value="False">
+                                    <Setter TargetName="InnerCircle" Property="Fill" Value="red"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
             <!--Style for ToggleButton kind of Slider-->
             <Style x:Key="SliderButton" TargetType="ToggleButton">
                 <Setter Property="Template">
@@ -215,62 +263,34 @@
                     </Setter.Value>
                 </Setter>
             </Style>
-            
-            <!--Style for ComboBox-->
-            <!--<Style TargetType="ComboBox">
+
+            <!--Style for UIToggleButton-->
+            <Style TargetType="{x:Type ToggleButton}" x:Key="UIToggleButton">
+                <Setter Property="Foreground" Value="{DynamicResource TextForeground}"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontWeight" Value="Medium"/>
+                <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Cursor" Value="Hand"/>
                 <Setter Property="Template">
                     <Setter.Value>
-                        <ControlTemplate TargetType="ComboBox">
-                            <Grid>
-                                --><!-- Main Button --><!--
-                                <ToggleButton Name="ToggleButton"
-                                          Grid.Column="2"
-                                          Focusable="False"
-                                          ClickMode="Press"
-                                          IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
-                                --><!-- Content Presenter --><!--
-                                <ContentPresenter Name="ContentSite"
-                                              IsHitTestVisible="False"
-                                              Content="{TemplateBinding SelectionBoxItem}"
-                                              ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
-                                              ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
-                                              Margin="3,3,23,3"
-                                              VerticalAlignment="Center"
-                                              HorizontalAlignment="Left" />
-                                --><!-- Popup --><!--
-                                <Popup Name="Popup"
-                                   Placement="Bottom"
-                                   IsOpen="{TemplateBinding IsDropDownOpen}"
-                                   AllowsTransparency="True"
-                                   Focusable="False"
-                                   PopupAnimation="Slide">
-                                    <Grid Name="DropDown"
-                                      SnapsToDevicePixels="True"
-                                      MinWidth="{TemplateBinding ActualWidth}"
-                                      MaxHeight="{TemplateBinding MaxDropDownHeight}">
-                                        <Border Name="DropDownBorder"
-                                            Background="{DynamicResource ButtonAndHighlightBackground}"
-                                            BorderThickness="1"
-                                            BorderBrush="{DynamicResource ButtonAndHighlightBackground}" />
-                                        <ScrollViewer Margin="0"
-                                                  Style="{DynamicResource {x:Static GridView.GridViewScrollViewerStyleKey}}">
-                                            <StackPanel IsItemsHost="True"
-                                                    KeyboardNavigation.DirectionalNavigation="Contained" />
-                                        </ScrollViewer>
-                                    </Grid>
-                                </Popup>
-                            </Grid>
-                            --><!-- Triggers --><!--
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="IsDropDownOpen" Value="True">
-                                    <Setter TargetName="DropDownBorder" Property="Visibility" Value="Visible" />
-                                </Trigger>
-                            </ControlTemplate.Triggers>
+                        <ControlTemplate TargetType="{x:Type ToggleButton}" x:Name="ToolbarButton">
+                            <Border Width="{TemplateBinding Width}" 
+                                    Height="{TemplateBinding Height}"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"
+                                                  />
+                            </Border>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
-            </Style>-->
-            
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="{DynamicResource ButtonContrast}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

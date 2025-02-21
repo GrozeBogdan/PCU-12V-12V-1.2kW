@@ -375,9 +375,13 @@
     </ApplicationDefinition>
     <Compile Include="Modules\CAN.cs" />
     <Compile Include="Modules\BatteryModel3D.cs" />
+    <Compile Include="Modules\DataPoint.cs" />
     <Compile Include="Modules\DbcParser.cs" />
     <Compile Include="Modules\ThemeManager.cs" />
     <Compile Include="Syles\Theme.cs" />
+    <Compile Include="Tabs\AddSignalWindow.xaml.cs">
+      <DependentUpon>AddSignalWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Customize.xaml.cs">
       <DependentUpon>Customize.xaml</DependentUpon>
     </Compile>
@@ -444,6 +448,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pictures\SVG\thermometer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tabs\AddSignalWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Tabs\Converter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -488,10 +500,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Database\CANdb12Vto12V.dbc" />
     <None Include="Database\CANdbHVto12V.dbc" />
     <None Include="packages.config" />
     <None Include="Pictures\3D Models\car-battery-001.mtl" />
     <None Include="Pictures\3D Models\car-battery-001.obj" />
+    <None Include="Pictures\3D Models\car-battery.stl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

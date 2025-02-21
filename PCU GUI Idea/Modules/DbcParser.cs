@@ -1,4 +1,5 @@
 ﻿using PCU_GUI_Idea;
+using PCU_GUI_Idea.Modules;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,8 +13,10 @@ using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Media;
+using Telerik.Charting;
 using vxlapi_NET;
 using static DbcParser;
+using DataPoint = PCU_GUI_Idea.Modules.DataPoint;
 
 public  class DbcParser
 {
@@ -22,9 +25,6 @@ public  class DbcParser
 
     public class Signal : INotifyPropertyChanged
     {
-
-        public FrameworkElement AssociatedElement { get; set; }
-
         private TextDecorationCollection dectoration = null;    
         public string Message { get; set; }
         public string Name { get; set; }
@@ -37,6 +37,8 @@ public  class DbcParser
         public double MaxValue { get; set; }
         public float Value { get; set; }
         public Brush SigColor { get; set; }
+        public FrameworkElement AssociatedElement { get; set; }
+        public ObservableCollection<DataPoint> ChartData { get; set; }
         public TextDecorationCollection TextDec 
         { 
             get
@@ -99,9 +101,9 @@ public  class DbcParser
         });
     }
 
-    public static void ParseDatabase()
+    public static void ParseDatabase(string database)
     {
-        string dbcContents = File.ReadAllText(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database/CANdbHVto12V.dbc");
+        string dbcContents = File.ReadAllText(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database/" + database);
         ParseMessages(dbcContents);
         int i = 0;
 
@@ -132,7 +134,7 @@ public  class DbcParser
                 sentEvents.xlEvent[i].tagData.can_Msg.id = (uint)message.Id;
                 sentEvents.xlEvent[i].tagData.can_Msg.dlc = (ushort)message.DataLengthCode;
                 i++;
-                if (i == 3)
+                if (i == sentEvents.messageCount)
                     i = 0;
             }
             if (message.Sender == "Vector__XXX")
@@ -141,7 +143,7 @@ public  class DbcParser
                 receivedEvents.xlEvent[i].tagData.can_Msg.id = (uint)message.Id;
                 receivedEvents.xlEvent[i].tagData.can_Msg.dlc = (ushort)message.DataLengthCode;
                 i++;
-                if (i == 7)
+                if (i == receivedEvents.messageCount)
                     i = 0;
             }
         }
@@ -161,11 +163,15 @@ public  class DbcParser
                 Brushes.Gold,
                 Brushes.GreenYellow,
                 Brushes.Blue,
-                Brushes.Indigo,
+                Brushes.White,
                 Brushes.Chocolate,
                 Brushes.Black,
                 Brushes.Cyan,
-                Brushes.LightPink
+                Brushes.LightPink,
+                Brushes.AliceBlue,
+                Brushes.Honeydew,
+                Brushes.Khaki, 
+                Brushes.Magenta
                 });
             }
 
@@ -192,6 +198,13 @@ public  class DbcParser
             if (randomBrush.Opacity != 1)
                 randomBrush.Opacity = 1;
             return randomBrush;
+    }
+    public static ObservableCollection<DataPoint> CreateSignalDataChart(Message message)
+    {
+        if (message.Sender == "Vector__XXX")
+            return new ObservableCollection<DataPoint>();
+        else
+            return null;
     }
     private static void ParseMessages(string dbcContents)
     {
@@ -256,6 +269,7 @@ public  class DbcParser
                     
                     //from interface
                     SigColor = GetRandomBrush(message),
+                    ChartData = CreateSignalDataChart(message),
                     TextDec = null
                 };
                 
@@ -266,24 +280,3 @@ public  class DbcParser
         }
     }
 }
-
-//public class Program
-//{
-//    public static void Main()
-//    {
-//        string dbcFilePath = "C:\\Users\\Bogdan\\Desktop\\Hella\\Proiect Convertor-DSP-CCS-Interface\\DSP CAN Codes\\CANdbHVto12V.dbc";
-//        DbcParser dbcParser = new DbcParser();
-//        dbcParser.Parse(dbcFilePath);
-//        Console.WriteLine($"");
-//        foreach (var message in dbcParser.Messages)
-//        {
-//            Console.WriteLine($"Message Name: {message.Name}, ID: {message.Id}, DLC: {message.DataLengthCode}, Sender: {message.Sender}");
-//            Console.WriteLine($"");
-//            foreach (var signal in message.Signals)
-//            {
-//                Console.WriteLine($"    Signal Name: {signal.Name}, Start Bit: {signal.StartBit}, End Bit {signal.EndBit}, Length: {signal.Length}, Data Type: {signal.DataType}");
-//            }
-//            Console.WriteLine($"-----------------------------------------------------------------------------");
-//        }
-//    }
-//}

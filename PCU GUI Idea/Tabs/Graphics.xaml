@@ -8,6 +8,58 @@
              mc:Ignorable="d" 
              d:DesignHeight="945" 
              d:DesignWidth="1390">
+    <UserControl.Resources>
+        <Style TargetType="telerik:RadListBoxItem">
+            <Setter Property="Foreground" Value="{Binding SigColor}" />
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="telerik:RadListBoxItem">
+                        <Border x:Name="Border"
+                          Background="{TemplateBinding Background}"
+                          BorderBrush="{TemplateBinding BorderBrush}"
+                          BorderThickness="{TemplateBinding BorderThickness}"
+                          CornerRadius="10"
+                          >
+                            <TextBlock TextDecorations="{Binding TextDec}"                                 
+                                 Text="{Binding Name}"
+                                 VerticalAlignment="Center"
+                                 Margin="10,0,0,0">
+                            </TextBlock>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Border" Property="BorderBrush" Value="Black"/>
+                                <Setter TargetName="Border" Property="BorderThickness" Value="3"/>
+                                <Setter Property="Background" Value="#B3FFFFFF"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsSelected" Value="True"/>
+                                    <Condition Property="Selector.IsSelectionActive" Value="False"/>
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="Border" Property="BorderBrush" Value="Transparent"/>
+                                <Setter TargetName="Border" Property="BorderThickness" Value="0"/>
+                                <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Border" Property="BorderBrush" Value="Transparent"/>
+                                <Setter TargetName="Border" Property="BorderThickness" Value="0"/>
+                                <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <EventSetter Event="MouseDoubleClick" Handler="Edit_Signal_Click"/>
+        </Style>
+    </UserControl.Resources>
+    
     <Grid Background="{DynamicResource PanelBackground}" telerik:CornerRadiusHelper.ClipRadius="24">
         <Grid Margin="20" telerik:CornerRadiusHelper.ClipRadius="4">
             <Grid.RowDefinitions>
@@ -27,7 +79,7 @@
             </Grid>
 
             <Grid Grid.Row="1">
-                <telerik:RadCartesianChart x:Name="chart" Palette="Windows8" Background="{DynamicResource ButtonAndHighlightBackground}" Width="1150" Height="650" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,30">
+                <telerik:RadCartesianChart x:Name="chart" Palette="Windows8" Background="{DynamicResource ButtonAndHighlightBackground}" Width="1150" Height="650" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,30" Visibility="Collapsed">
                     <telerik:RadCartesianChart.Behaviors>
                         <telerik:ChartPanAndZoomBehavior x:Name="zoom" ZoomMode="Both" MouseWheelMode="Zoom" />
                     </telerik:RadCartesianChart.Behaviors>
@@ -52,67 +104,243 @@
                         </telerik:CartesianChartGrid>
                     </telerik:RadCartesianChart.Grid>
                     <telerik:RadCartesianChart.Series>
-                        <telerik:LineSeries x:Name="voltage48V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed" >
+
+                        <telerik:LineSeries x:Name="voltage12V_bat1_phase1" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed" >
                             <telerik:LineSeries.VerticalAxis>
-                                <telerik:LinearAxis Title="Voltage 48V" HorizontalLocation="Left" Minimum="0" Maximum="50"/>
+                                <telerik:LinearAxis Title="Voltage 12V Phase 1 Bat1" HorizontalLocation="Left" Minimum="0" Maximum="50"/>
                             </telerik:LineSeries.VerticalAxis>
                         </telerik:LineSeries>
-                        <telerik:LineSeries x:Name="current48V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+
+                        <telerik:LineSeries x:Name="voltage12V_bat2_phase1" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
                             <telerik:LineSeries.VerticalAxis>
-                                <telerik:LinearAxis Title="Current 48V" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100"/>
+                                <telerik:LinearAxis Title="Voltage 12V Phase 1 Bat2" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100"/>
                             </telerik:LineSeries.VerticalAxis>
                         </telerik:LineSeries>
-                        <telerik:LineSeries x:Name="voltage12V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                        
+                        <telerik:LineSeries x:Name="voltage12V_bat1_phase2" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
                             <telerik:LineSeries.VerticalAxis>
-                                <telerik:LinearAxis Title="Voltage 12V" HorizontalLocation="Left" MajorStep="4" Minimum="0" Maximum="20"/>
+                                <telerik:LinearAxis Title="Voltage 12V Phase 2 Bat1" HorizontalLocation="Left" MajorStep="4" Minimum="0" Maximum="20"/>
                             </telerik:LineSeries.VerticalAxis>
                         </telerik:LineSeries>
-                        <telerik:LineSeries x:Name="current12V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+
+                        <telerik:LineSeries x:Name="voltage12V_bat2_phase2" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Voltage 12V Phase 2 Bat2" HorizontalLocation="Left" MajorStep="4" Minimum="0" Maximum="20"/>
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+
+                        <telerik:LineSeries x:Name="current_ph1_in" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Current Phase 1 Bat1" HorizontalLocation="Left" MajorStep="30" Minimum="0" Maximum="150"/>
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        
+                        <telerik:LineSeries x:Name="current_ph1_out" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Current Phase 1 Bat2" HorizontalLocation="Left" MajorStep="30" Minimum="0" Maximum="150" />
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+
+                        <telerik:LineSeries x:Name="current_ph2_in" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Current Phase 2 Bat1" HorizontalLocation="Left" MajorStep="30" Minimum="0" Maximum="150" />
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+
+                        <telerik:LineSeries x:Name="current_ph2_out" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Current Phase 2 Bat2" HorizontalLocation="Left" MajorStep="30" Minimum="0" Maximum="150" />
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+
+                        <telerik:LineSeries x:Name="tempPhase1_LEFT" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis>
+                                <telerik:LinearAxis Title="Temp Phase 1 Bat1" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100"/>
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        
+                        <telerik:LineSeries x:Name="tempPhase1_RIGHT" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
                             <telerik:LineSeries.VerticalAxis >
-                                <telerik:LinearAxis Title="Current 12V" HorizontalLocation="Left" MajorStep="66" Minimum="0" Maximum="330" />
+                                <telerik:LinearAxis Title="Temp Phase 1 Bat2" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100" />
                             </telerik:LineSeries.VerticalAxis>
                         </telerik:LineSeries>
-                        <telerik:LineSeries x:Name="currentPhase1" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
-                            <telerik:LineSeries.VerticalAxis>
-                                <telerik:LinearAxis Title="Current Phase 1" HorizontalLocation="Left" MajorStep="30" Minimum="0" Maximum="150"/>
-                            </telerik:LineSeries.VerticalAxis>
-                        </telerik:LineSeries>
-                        <telerik:LineSeries x:Name="currentPhase2" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
-                            <telerik:LineSeries.VerticalAxis>
-                                <telerik:LinearAxis Title="Current Phase 2" HorizontalLocation="Left" MajorStep="30" Minimum="0" Maximum="150" />
-                            </telerik:LineSeries.VerticalAxis>
-                        </telerik:LineSeries>
-                        <telerik:LineSeries x:Name="tempPhase1" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
-                            <telerik:LineSeries.VerticalAxis>
-                                <telerik:LinearAxis Title="Temp Phase 1" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100"/>
-                            </telerik:LineSeries.VerticalAxis>
-                        </telerik:LineSeries>
-                        <telerik:LineSeries x:Name="tempPhase2" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+
+                        <telerik:LineSeries x:Name="tempPhase2_LEFT" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
                             <telerik:LineSeries.VerticalAxis >
-                                <telerik:LinearAxis Title="Temp Phase 2" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100" />
+                                <telerik:LinearAxis Title="Temp Phase 2 Bat1" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100" />
                             </telerik:LineSeries.VerticalAxis>
                         </telerik:LineSeries>
-                        <telerik:LineSeries x:Name="power48V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+
+                        <telerik:LineSeries x:Name="tempPhase2_RIGHT" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
                             <telerik:LineSeries.VerticalAxis >
-                                <telerik:LinearAxis Title="Power 48V" HorizontalLocation="Left" MajorStep="1000" Minimum="0" Maximum="5000" />
+                                <telerik:LinearAxis Title="Temp Phase 2 Bat2" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100" />
                             </telerik:LineSeries.VerticalAxis>
                         </telerik:LineSeries>
-                        <telerik:LineSeries x:Name="power12V" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+
+                        <telerik:LineSeries x:Name="power12V_phase1" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
                             <telerik:LineSeries.VerticalAxis >
-                                <telerik:LinearAxis Title="Power 12V" HorizontalLocation="Left" MajorStep="1000" Minimum="0" Maximum="5000" />
+                                <telerik:LinearAxis Title="Power 12V Phase 1" HorizontalLocation="Left" MajorStep="1000" Minimum="0" Maximum="5000" />
                             </telerik:LineSeries.VerticalAxis>
                         </telerik:LineSeries>
+
+                        <telerik:LineSeries x:Name="power12V_phase2" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
+                            <telerik:LineSeries.VerticalAxis >
+                                <telerik:LinearAxis Title="Power 12V Phase 2" HorizontalLocation="Left" MajorStep="1000" Minimum="0" Maximum="5000" />
+                            </telerik:LineSeries.VerticalAxis>
+                        </telerik:LineSeries>
+                        
                         <telerik:LineSeries x:Name="efficiency" CategoryBinding="Timestamp" ValueBinding="Value"  StrokeThickness="5" Visibility="Collapsed">
                             <telerik:LineSeries.VerticalAxis >
                                 <telerik:LinearAxis Title="Efficiency" HorizontalLocation="Left" MajorStep="20" Minimum="0" Maximum="100" />
                             </telerik:LineSeries.VerticalAxis>
                         </telerik:LineSeries>
+                        
                     </telerik:RadCartesianChart.Series>
                 </telerik:RadCartesianChart>
-                <Button Width="50" Height="150" Content=">" Foreground="{DynamicResource SVGBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" Margin="1234,280,66,425" FontSize="40" FontWeight="DemiBold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="Transparent"/>
+
+                <telerik:RadCartesianChart3D x:Name="cube_chart" PlotAreaSize="1000, 1000, 1000" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}"  Width="1150" Height="650" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,30" Visibility="Collapsed">
+                    <telerik:RadCartesianChart3D.Behaviors>
+                        <telerik:Chart3DCameraBehavior x:Name="cameraBehavior"
+                                       MinDistance="4000"
+                                       MaxDistance="5000"
+                                       />
+                        <telerik:Chart3DTooltipBehavior/>
+                    </telerik:RadCartesianChart3D.Behaviors>
+                    <telerik:RadCartesianChart3D.XAxis>
+                        <telerik:CategoricalAxis3D Title="Current (A)" FontSize="25" SmartLabelsMode="SmartStep" Foreground="{DynamicResource TextForeground}">
+                            <telerik:CategoricalAxis3D.LabelStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Foreground" Value="{DynamicResource TextForeground}" />
+                                </Style>
+                            </telerik:CategoricalAxis3D.LabelStyle>
+                        </telerik:CategoricalAxis3D>
+                    </telerik:RadCartesianChart3D.XAxis>
+                    <telerik:RadCartesianChart3D.YAxis>
+                        <telerik:CategoricalAxis3D Title="Frequency (kHz)" FontSize="25" SmartLabelsMode="SmartStep" Foreground="{DynamicResource TextForeground}">
+                            <telerik:CategoricalAxis3D.LabelStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Foreground" Value="{DynamicResource TextForeground}" />
+                                </Style>
+                            </telerik:CategoricalAxis3D.LabelStyle>
+                        </telerik:CategoricalAxis3D>
+                    </telerik:RadCartesianChart3D.YAxis>
+                    <telerik:RadCartesianChart3D.ZAxis>
+                        <telerik:LinearAxis3D x:Name="efficiencyAxis3DChart" Title="Efficiency (%)" FontSize="25" SmartLabelsMode="SmartStep" Minimum="0" Maximum="100">
+                            <telerik:LinearAxis3D.LabelStyle>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Foreground" Value="{DynamicResource TextForeground}" />
+                                </Style>
+                            </telerik:LinearAxis3D.LabelStyle>
+                        </telerik:LinearAxis3D>
+                    </telerik:RadCartesianChart3D.ZAxis>
+                    <telerik:RadCartesianChart3D.Series>
+                        <telerik:SurfaceSeries3D x:Name="surfaceSeries"
+                             XValueBinding="XValue"  
+                             YValueBinding="YValue"                                       
+                             ZValueBinding="ZValue"  
+                             ItemsSource="{Binding}"
+                             Foreground="{DynamicResource TextForeground}">
+                            <telerik:SurfaceSeries3D.Colorizer>
+                                <telerik:SurfaceSeries3DValueGradientColorizer IsAbsolute="True">
+                                    <telerik:SurfaceSeries3DValueGradientColorizer.GradientStops>
+                                        <GradientStopCollection>
+                                            <GradientStop Color="#C02E1D" Offset="65" />
+                                            <GradientStop Color="#D94E1F" Offset="70" />
+                                            <GradientStop Color="#F16C20" Offset="75" />
+                                            <GradientStop Color="#EF8B2C" Offset="80" />
+                                            <GradientStop Color="#EBC844" Offset="85" />
+                                            <GradientStop Color="#FF50B800" Offset="90" />
+                                            <GradientStop Color="#FF139500" Offset="95" />
+                                            <GradientStop Color="#FF0D6900" Offset="100" />
+                                        </GradientStopCollection>
+                                    </telerik:SurfaceSeries3DValueGradientColorizer.GradientStops>
+                                </telerik:SurfaceSeries3DValueGradientColorizer>
+                            </telerik:SurfaceSeries3D.Colorizer>
+                        </telerik:SurfaceSeries3D>
+                        <telerik:PointSeries3D x:Name="pointSeries"  XValueBinding="XValueMax"  YValueBinding="YValueMax" ZValueBinding="ZValueMax" ItemsSource="{Binding}">
+
+                            <telerik:PointSeries3D.TooltipTemplate>
+                                <DataTemplate>
+                                    <Border Background="#5A000000" Padding="5" TextElement.Foreground="White">
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="X - " FontWeight="Bold" />
+                                                <TextBlock Text="{Binding XValue}"  />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="Y - " FontWeight="Bold" />
+                                                <TextBlock Text="{Binding YValue}"  />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="Z - " FontWeight="Bold" />
+                                                <TextBlock Text="{Binding ZValue}"  />
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </telerik:PointSeries3D.TooltipTemplate>
+                        </telerik:PointSeries3D>
+                        <telerik:LineSeries3D x:Name="interSeries"  XValueBinding="XValueMax"  YValueBinding="YValueMax" ZValueBinding="ZValueMax" ItemsSource="{Binding}" DefaultLineVisualDiameter="20">
+                        </telerik:LineSeries3D>
+                    </telerik:RadCartesianChart3D.Series>
+                    <telerik:RadCartesianChart3D.Grid>
+                        <telerik:CartesianChart3DGrid Foreground="{DynamicResource TextForeground}"/>
+                    </telerik:RadCartesianChart3D.Grid>
+                </telerik:RadCartesianChart3D>
+
+                <ToggleButton x:Name="OpenPopupButton"
+                              Width="50" 
+                              Height="50"  
+                              Style="{DynamicResource UIToggleButton}"
+                              Margin="1234,280,66,425" 
+                              FontSize="40" 
+                              FontWeight="DemiBold" 
+                              VerticalContentAlignment="Center" 
+                              HorizontalContentAlignment="Center" 
+                              BorderBrush="Transparent"
+                              Checked="SignalList_ViewEnable"
+                              Unchecked="SignalList_ViewEnable">
+                </ToggleButton>
+                
+                <Popup Name="MyPopup" PlacementTarget="{Binding ElementName=OpenPopupButton}" 
+                       Placement="Relative"  HorizontalOffset="50" VerticalOffset="-300" StaysOpen="False" >
+                    <Border Background="{DynamicResource PanelBackground}" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" BorderThickness="2">
+                        <StackPanel Width="300" Height="600" VerticalAlignment="Center" Orientation="Vertical">
+                            <TextBlock x:Name="signalChartEdit" HorizontalAlignment="Center" FontSize="24" FontWeight="DemiBold" Foreground="{DynamicResource TextForeground}"/>
+                             <telerik:RadListBox x:Name="MyListBox" 
+                                                 SelectionMode="Single"
+                                                 DisplayMemberPath="Name"
+                                                 Height="550"
+                                                 ItemsSource="{Binding Sig}"
+                                                 telerik:StyleManager.Theme="Windows11" 
+                                                 Background="{DynamicResource ButtonAndHighlightBackground}"
+                                                 Margin="10"                                                                             
+                                                 >
+                                 <telerik:RadListBox.ContextMenu>
+                                     <ContextMenu x:Name="rightClickMenu">
+                                        <MenuItem Header="Add singal" Click="OpenSignalTab">
+                                         </MenuItem>
+                                         <MenuItem Header="Remove signal" Click="RemoveSignal_Click">
+                                         </MenuItem>
+                                         <Separator/>
+                                         <MenuItem Header="Edit the signal on the chart" Click="Edit_Signal_Click">
+
+                                         </MenuItem>
+                                         <Separator/>
+                                         <MenuItem Header="Move axis to left" Click="SignalItem_Click" >
+                                         </MenuItem>
+                                         <MenuItem Header="Move axis to right" Click="SignalItem_Click">
+                                         </MenuItem>
+                                     </ContextMenu>
+                                 </telerik:RadListBox.ContextMenu>
+                             </telerik:RadListBox>
+                        </StackPanel>
+                    </Border>
+                </Popup>
+                
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="100" Margin="15,50">
                     <StackPanel Orientation="Horizontal" Background="{DynamicResource ButtonAndHighlightBackground}" Height="100" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="chart_Type_Button_Panel">
-                        <Button Width="80" Margin="30,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                        <Button Width="80" Margin="30,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Stretch" x:Name="diagram" Click="ShowChart">
                             <!--<Button.Template>
                                 <ControlTemplate>
                                     <Image x:Name="diagram_Image">
@@ -124,7 +352,7 @@
                             </Button.Template>-->
                         </Button>
 
-                        <Button Width="80" Margin="50,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Stretch" x:Name="cube">
+                        <Button Width="80" Margin="50,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Stretch" x:Name="cube" Click="ShowChart">
                             <!--<Button.Template>
                                 <ControlTemplate>
                                     <Image x:Name="cube_Image">
@@ -136,7 +364,7 @@
                             </Button.Template>-->
                         </Button>
 
-                        <Button Width="80" Margin="50,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Stretch" x:Name="pie">
+                        <Button Width="80" Margin="50,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Stretch" x:Name="pie" Click="ShowChart">
                             <!--<Button.Template>
                                 <ControlTemplate>
                                     <Image x:Name="pie_Image">
@@ -151,10 +379,10 @@
                     <Grid x:Name="vertical_Length" Margin="20,0,0,0"/>
 
                     <StackPanel Orientation="Vertical" Margin="20,0,0,0">
-                        <TextBox FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100"  Margin="0,0,0,0" telerik:CornerRadiusHelper.ClipRadius="12" Foreground="{DynamicResource TextForeground}" FontSize="20">
+                        <TextBox x:Name="signalMaxVertical" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100"  Margin="0,0,0,0" telerik:CornerRadiusHelper.ClipRadius="12" Foreground="{DynamicResource TextForeground}" FontSize="20">
 
                         </TextBox>
-                        <TextBox FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100" Margin="0,20,0,0" telerik:CornerRadiusHelper.ClipRadius="12" Foreground="{DynamicResource TextForeground}" FontSize="20">
+                        <TextBox x:Name="signalMinVertical" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" Background="{DynamicResource ButtonAndHighlightBackground}" Height="40" Width="100" Margin="0,20,0,0" telerik:CornerRadiusHelper.ClipRadius="12" Foreground="{DynamicResource TextForeground}" FontSize="20">
 
                         </TextBox>
                     </StackPanel>
@@ -166,13 +394,16 @@
 
                         </TextBox>
                     </StackPanel>
+                    
                     <StackPanel Orientation="Vertical" Margin="0,0,0,0">
-                        <Button Style="{DynamicResource ToolbarButton}"
-                                Width="100"
-                                Height="40"
-                                Margin="50,0,0,0"
-                                Content="Autoscale"
-                                telerik:CornerRadiusHelper.ClipRadius="8"/>
+                        <ToggleButton Style="{DynamicResource UIToggleButton}"
+                                      Width="100"
+                                      Height="40"
+                                      Margin="50,0,0,0"
+                                      Content="Autoscale"
+                                      telerik:CornerRadiusHelper.ClipRadius="8"
+                                      Checked="AutoscaleEnable"
+                                      Unchecked="AutoscaleEnable"/>
                         <Button Style="{DynamicResource ToolbarButton}"
                                 Width="100"
                                 Height="40"
@@ -192,7 +423,9 @@
                             Margin="50,0,0,0" 
                             telerik:CornerRadiusHelper.ClipRadius="12" 
                             Content="Manage Signals"
-                            FontSize="24"/>
+                            FontSize="24"
+                            Click="OpenSignalTab"
+                            />
 
 
                 </StackPanel>

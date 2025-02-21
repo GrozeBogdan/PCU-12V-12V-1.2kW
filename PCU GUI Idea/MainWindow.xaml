@@ -8,7 +8,6 @@
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
         xmlns:localMenu="clr-namespace:PCU_GUI_Idea.Menu"
         xmlns:tabs="clr-namespace:PCU_GUI_Idea.Tabs"
-        
         mc:Ignorable="d"
         Height="768" 
         Width="1366" 
@@ -60,6 +59,8 @@
                                 FontSize="30"
                                 Margin="5, 5, 0 ,0"
                                 Click="Minimize_Window"
+                                Width="80"
+                                Height="50"
                                 />
                     <Button Style="{StaticResource WindowButton}"
                                 Grid.Column="12"
@@ -67,6 +68,8 @@
                                 FontSize="30"
                                 Margin="0, 5, 0 ,0"
                                 Click="Maximize_Window"
+                                Width="80"
+                                Height="50"
                                 />
                     <Button Style="{StaticResource ExitButton}"
                                 Grid.Column="13"
@@ -74,6 +77,8 @@
                                 FontSize="30"
                                 Margin="0, 5, 5 ,0" 
                                 Click="Exit_Button"
+                                Width="80"
+                                Height="50"
                                 />
 
                 </Grid>

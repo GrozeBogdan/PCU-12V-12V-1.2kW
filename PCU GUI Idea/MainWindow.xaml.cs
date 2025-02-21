@@ -25,7 +25,7 @@ namespace PCU_GUI_Idea
     public partial class MainWindow : Window
     {
         private Customize customize_UC = new Customize();
-        private Converter converter_UC = new Converter();
+        public Converter converter_UC = new Converter();
         public Graphics graphics_UC = new Graphics();
         private Help help_UC = new Help();
 
@@ -34,13 +34,15 @@ namespace PCU_GUI_Idea
         public MainWindow()
         {
             InitializeComponent();
+            DbcParser.ParseDatabase("CANdb12Vto12V.dbc");
+            CAN.Initialize(this);
             CAN.Start_CAN();
-            DbcParser.ParseDatabase();
 
             customize_UC.InitializeComponent();
             converter_UC.InitializeComponent();
             graphics_UC.InitializeComponent();
             help_UC.InitializeComponent();
+            AddSignalWindow.Initialize(this);
 
             controls.Add("CustomizeButton", customize_UC);
             controls.Add("ConverterButton", converter_UC);

@@ -10,6 +10,22 @@
              d:DesignHeight="945" 
              d:DesignWidth="1390"
              >
+    <UserControl.Resources>
+        <telerik:Windows8Colors x:Key="Windows8Colors" />
+        <SolidColorBrush x:Key="AccentBrush" Color="#FF30B524" />
+        <SolidColorBrush x:Key="StrongBrush" Color="{Binding Source={StaticResource Windows8Colors}, Path=Palette.StrongColor}" />
+
+        <Style x:Key="CustomLabel" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="11" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="Foreground" Value="{StaticResource StrongBrush}" />
+        </Style>
+        <Style x:Key="CustomScale" TargetType="telerik:VerticalLinearScale">
+            <Setter Property="Fill" Value="Transparent" />
+            <Setter Property="Stroke" Value="Transparent" />
+        </Style>
+    </UserControl.Resources>
+
     <Grid Background="{DynamicResource PanelBackground}" telerik:CornerRadiusHelper.ClipRadius="24">
         <Grid Margin="20" Background="{DynamicResource ButtonContrast}" telerik:CornerRadiusHelper.ClipRadius="4">
             <Grid.RowDefinitions>
@@ -34,7 +50,7 @@
                 </Image>
                 <Image Margin="400, 350, 400, 300" x:Name="converter_ph2" Source="C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_transp.png">
                 </Image>-->
-                <!--<Image Margin="15,25,40,130" Source="C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_converter.png"/>-->
+                <!--<Image Margin="15,25,40,130" Source="C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_converter.png"/>-->
 
                 <!--Correct Image-->
                 <!--<Image Margin="100,50,100,150">
@@ -44,30 +60,32 @@
                 </Image>-->
             </Grid>
             <Grid Grid.Row="1" x:Name="gridContainingElements">
-                
+
                 <!--Current Measurements TextBoxes-->
                 <TextBox x:Name="current_ph1_in"  Width="100" Height="50" Margin="135,35,1115,770" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
                 <TextBox x:Name="current_ph1_out" Width="100" Height="50" Margin="1100,35,150,770" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
                 <TextBox x:Name="current_ph2_in" Width="100" Height="50" Margin="135,360,1115,445" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
                 <TextBox x:Name="current_ph2_out" Width="100" Height="50" Margin="1100,360,150,445" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
 
+
                 <!--Toggle Buttons to Trip each phase, stop input or output, and to change the work mode from Buck-Boost-BuckBoost-->
-                <ToggleButton x:Name="trip_ph1_in" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="297,40,963,775" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
-                <ToggleButton x:Name="trip_ph2_in" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="297,365,963,450" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
-                <ToggleButton x:Name="trip_ph2_out" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="939,365,321,450" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
-                <ToggleButton x:Name="trip_ph1_out" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="939,40,321,775" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="Enables_and_Readings_0x0D2_trip_ph1_in" Style="{DynamicResource SliderButtonTrip}" Width="90" Height="40" Margin="297,40,963,775" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" />
+                <ToggleButton x:Name="Enables_and_Readings_0x0D2_trip_ph2_in" Style="{DynamicResource SliderButtonTrip}" Width="90" Height="40" Margin="297,365,963,450" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="Enables_and_Readings_0x0D2_trip_ph2_out" Style="{DynamicResource SliderButtonTrip}" Width="90" Height="40" Margin="939,365,321,450" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="Enables_and_Readings_0x0D2_trip_ph1_out" Style="{DynamicResource SliderButtonTrip}" Width="90" Height="40" Margin="939,40,321,775" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
 
                 <!--<Label Content="Direction" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="595,170,643,644" HorizontalContentAlignment="Center"/>-->
                 <Label Content="Left" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,120,744,685" HorizontalContentAlignment="Center"/>
                 <Label Content="Right" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,120,567,685" HorizontalContentAlignment="Center"/>
-                <ToggleButton Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,122,654,693" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="WorkingMode_StateMachine_0x0D3_pcu_direction" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,122,654,693" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
 
+                <!--WorkingMode_StateMachine_0x0D3_-->
                 <Label Content="Mode" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="595,10,643,795" HorizontalContentAlignment="Center"/>
                 <Label Content="Buck" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,60,744,745" HorizontalContentAlignment="Center"/>
                 <Label Content="Buck-Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,60,513,745" HorizontalContentAlignment="Center"/>
-                <ToggleButton Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,60,654,755" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <ToggleButton x:Name="WorkingMode_StateMachine_0x0D3_pcu_work_mode" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,60,654,755" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
 
-                <ToggleButton x:Name="trip_in" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="58,360,1202,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
+                <!--<ToggleButton x:Name="trip_in" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="58,360,1202,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
                     <ToggleButton.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -76,8 +94,9 @@
                             <TranslateTransform/>
                         </TransformGroup>
                     </ToggleButton.RenderTransform>
-                </ToggleButton>
-                <ToggleButton x:Name="trip_out" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="1208,360,52,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
+                </ToggleButton>-->
+                
+                <!--<ToggleButton x:Name="trip_out" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="1208,360,52,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
                     <ToggleButton.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -86,42 +105,255 @@
                             <TranslateTransform/>
                         </TransformGroup>
                     </ToggleButton.RenderTransform>
-                </ToggleButton>
+                </ToggleButton>-->
+
 
                 <!--TextBoxes needed for PWM Control: Frequency,Duty,Deadband,Phaseshift-->
-                <TextBox x:Name="frequency_ph1_hbIn"  Width="100" Height="50" Margin="135,142,1115,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="dbRED_ph1_hbIn"  Width="100" Height="50" Margin="135,232,1115,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text="" BorderThickness="0"/>
-                <TextBox x:Name="duty_ph1_hbIn"  Width="100" Height="50" Margin="265,142,985,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text="" BorderThickness="0"/>
-                <TextBox x:Name="dbFED_ph1_hbIn"  Width="100" Height="50" Margin="265,232,985,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text="" BorderThickness="0"/>
+                <TextBox x:Uid="ph1in" x:Name="PWM_Updates_0X0D1_frequency_ph1_hbIn_"  Width="100" Height="50" Margin="135,142,1115,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
+                <TextBox x:Uid="ph1in" x:Name="PWM_Updates_0X0D1_deadbandRED_ph1_hbIn_"  Width="100" Height="50" Margin="135,232,1115,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
+                <TextBox x:Uid="ph1in" x:Name="PWM_Updates_0X0D1_dutyCycle_ph1_hbIn_"  Width="100" Height="50" Margin="265,142,985,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
+                <TextBox x:Uid="ph1in" x:Name="PWM_Updates_0X0D1_deadbandFED_ph1_hbIn_"  Width="100" Height="50" Margin="265,232,985,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
 
-                <TextBox x:Name="frequency_ph2_hbIn"  Width="100" Height="50" Margin="135,464,1115,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="dbRED_ph2_hbIn"  Width="100" Height="50" Margin="135,554,1115,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="duty_ph2_hbIn"  Width="100" Height="50" Margin="265,464,985,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="dbFED_ph2_hbIn"  Width="100" Height="50" Margin="265,554,985,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="phase_hbIn"  Width="100" Height="50" Margin="199,628,1051,177" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
+                <TextBox x:Uid="ph2in" x:Name="PWM_Updates_0X0D1_frequency_ph2_hbIn_"  Width="100" Height="50" Margin="135,464,1115,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
+                <TextBox x:Uid="ph2in" x:Name="PWM_Updates_0X0D1_deadbandRED_ph2_hbIn_"  Width="100" Height="50" Margin="135,554,1115,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
+                <TextBox x:Uid="ph2in" x:Name="PWM_Updates_0X0D1_dutyCycle_ph2_hbIn_"  Width="100" Height="50" Margin="265,464,985,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
+                <TextBox x:Uid="ph2in" x:Name="PWM_Updates_0X0D1_deadbandFED_ph2_hbIn_"  Width="100" Height="50" Margin="265,554,985,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
+                <TextBox x:Uid="ph2in" x:Name="PWM_Updates_0X0D1_phase_ph2_hbIn_"  Width="100" Height="50" Margin="199,628,1051,177" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="180" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
 
-                <TextBox x:Name="frequency_ph2_hbOut"  Width="100" Height="50" Margin="966,464,284,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="dbRED_ph2_hbOut"  Width="100" Height="50" Margin="966,554,284,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="duty_ph2_hbOut"  Width="100" Height="50" Margin="1100,464,150,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="dbFED_ph2_hbOut"  Width="100" Height="50" Margin="1100,554,150,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="phase_hbOut"  Width="100" Height="50" Margin="1033,628,217,177" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
+                <TextBox x:Uid="ph2out" x:Name="PWM_Updates_0X0D1_frequency_ph2_hbOut"  Width="100" Height="50" Margin="966,464,284,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
+                <TextBox x:Uid="ph2out" x:Name="PWM_Updates_0X0D1_deadbandRED_ph2_hbOut"  Width="100" Height="50" Margin="966,554,284,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
+                <TextBox x:Uid="ph2out" x:Name="PWM_Updates_0X0D1_dutyCycle_ph2_hbOut"  Width="100" Height="50" Margin="1100,464,150,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
+                <TextBox x:Uid="ph2out" x:Name="PWM_Updates_0X0D1_deadbandFED_ph2_hbOut"  Width="100" Height="50" Margin="1100,554,150,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
+                <TextBox x:Uid="ph2out" x:Name="PWM_Updates_0X0D1_phase_ph2_hbOut"  Width="100" Height="50" Margin="1033,628,217,177" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="180" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
 
-                <TextBox x:Name="frequency_ph1_hbOut"  Width="100" Height="50" Margin="966,142,284,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="dbRED_ph1_hbOut"  Width="100" Height="50" Margin="966,232,284,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="duty_ph1_hbOut"  Width="100" Height="50" Margin="1100,142,150,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
-                <TextBox x:Name="dbFED_ph1_hbOut"  Width="100" Height="50" Margin="1100,232,150,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="" BorderThickness="0"/>
 
+                <TextBox x:Uid="ph1out" x:Name="PWM_Updates_0X0D1_frequency_ph1_hbOut"  Width="100" Height="50" Margin="966,142,284,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
+                <TextBox x:Uid="ph1out" x:Name="PWM_Updates_0X0D1_deadbandRED_ph1_hbOut"  Width="100" Height="50" Margin="966,232,284,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
+                <TextBox x:Uid="ph1out" x:Name="PWM_Updates_0X0D1_dutyCycle_ph1_hbOut"  Width="100" Height="50" Margin="1100,142,150,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
+                <TextBox x:Uid="ph1out" x:Name="PWM_Updates_0X0D1_deadbandFED_ph1_hbOut"  Width="100" Height="50" Margin="1100,232,150,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
+
+                <!--Grid to load dynamically the Images for Frequency / Duty <=> Trying to respect Bauhaus-->
                 <Grid Width="100" Height="40" x:Name="pwm_duty" Margin="265,97,985,718"/>
                 <Grid Width="100" Height="40" x:Name="pwm_duty2" Margin="265,419,985,396"/>
                 <Grid Width="100" Height="40" x:Name="pwm_duty3" Margin="1100,419,150,396"/>
                 <Grid Width="100" Height="40" x:Name="pwm_duty4" Margin="1100,97,150,718"/>
-                
+
                 <Grid Width="100" Height="40" x:Name="pwm_freq" Margin="135,97,1115,718"/>
                 <Grid Width="100" Height="40" x:Name="pwm_freq2" Margin="135,419,1115,396"/>
                 <Grid Width="100" Height="40" x:Name="pwm_freq3" Margin="966,419,284,396"/>
                 <Grid Width="100" Height="40" x:Name="pwm_freq4" Margin="966,97,284,718"/>
 
-                <!--<helix:HelixViewport3D x:Name="battery_in" Width="150" Height="150" Margin="35,695,1165,10"/>-->
+                <!--Temperature controls-->
+                <Grid x:Name="thermometer_hb1" Margin="484,222,826,507"/>
+                <telerik:RadVerticalLinearGauge Width="20" Margin="494,232,836,517" telerik:StyleManager.Theme="VisualStudio2019" Background="Transparent" Foreground="{DynamicResource SVGBackground}" RenderTransformOrigin="-1.425,-0.505">
+                    <telerik:VerticalLinearScale 
+                                Name="linearScaleC1" 
+                                Min="00" 
+                                Max="120" 
+                                RelativeY="0" 
+                                RelativeHeight="1" 
+                                StartWidth="1" 
+                                EndWidth="1" 
+                                MajorTicks="6" 
+                                MajorTickRelativeWidth="0.2" 
+                                MajorTickRelativeHeight="0.003" 
+                                MajorTickLocation="OverOutside" 
+                                MiddleTicks="2" 
+                                MiddleTickRelativeWidth="0.12" 
+                                MiddleTickRelativeHeight="0.003" 
+                                MiddleTickOffset="0.12" 
+                                MiddleTickLocation="OverOutside" 
+                                MinorTicks="1"  
+                                LabelOffset="10" 
+                                LabelLocation="Outside" 
+                                Fill="Transparent" 
+                                Stroke="Transparent" 
+                                IsInteractive="False" FontSize="14" Foreground="{DynamicResource SVGBackground}" MajorTickBackground="{DynamicResource SVGBackground}" MiddleTickBackground="{DynamicResource SVGBackground}" >
+                        <telerik:VerticalLinearScale.Indicators>
+                            <telerik:BarIndicator Name="tempPhase1_LEFT" 
+                                                    Value="20" 
+                                                    StrokeThickness="0" 
+                                                    StartWidth="0.42" 
+                                                    EndWidth="0.42" Background="#FF30B524" BorderBrush="Transparent" />
+                        </telerik:VerticalLinearScale.Indicators>
+                        <!--<telerik:VerticalLinearScale.CustomItems>
+                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF30B524" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
+                        </telerik:VerticalLinearScale.CustomItems>-->
+                        
+                    </telerik:VerticalLinearScale>
+                </telerik:RadVerticalLinearGauge>
+
+                <Grid x:Name="thermometer_hb2" Margin="797,222,513,507"/>
+                <telerik:RadVerticalLinearGauge Width="20" Margin="807,232,523,517" telerik:StyleManager.Theme="VisualStudio2019" Background="Transparent" Foreground="{DynamicResource SVGBackground}" RenderTransformOrigin="-1.425,-0.505">
+                    <telerik:VerticalLinearScale 
+                                Name="linearScaleC" 
+                                Min="00" 
+                                Max="120" 
+                                RelativeY="0" 
+                                RelativeHeight="1" 
+                                StartWidth="1" 
+                                EndWidth="1" 
+                                MajorTicks="6" 
+                                MajorTickRelativeWidth="0.2" 
+                                MajorTickRelativeHeight="0.003" 
+                                MajorTickLocation="OverOutside" 
+                                MiddleTicks="2" 
+                                MiddleTickRelativeWidth="0.12" 
+                                MiddleTickRelativeHeight="0.003" 
+                                MiddleTickOffset="0.12" 
+                                MiddleTickLocation="OverOutside" 
+                                MinorTicks="1"  
+                                LabelOffset="10" 
+                                LabelLocation="Outside" 
+                                Fill="Transparent" 
+                                Stroke="Transparent" 
+                                IsInteractive="False" FontSize="14" Foreground="{DynamicResource SVGBackground}" MajorTickBackground="{DynamicResource SVGBackground}" MiddleTickBackground="{DynamicResource SVGBackground}" >
+                        <telerik:VerticalLinearScale.Indicators>
+                            <telerik:BarIndicator Name="tempPhase1_RIGHT" 
+                                                    Value="20" 
+                                                    StrokeThickness="0" 
+                                                    StartWidth="0.42" 
+                                                    EndWidth="0.42" Background="#FF30B524" BorderBrush="Transparent" />
+                        </telerik:VerticalLinearScale.Indicators>
+                        <telerik:VerticalLinearScale.CustomItems>
+                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF30B524" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
+                        </telerik:VerticalLinearScale.CustomItems>
+                    </telerik:VerticalLinearScale>
+                </telerik:RadVerticalLinearGauge>
+
+                <Grid x:Name="thermometer_hb3" Margin="797,453,513,276"/>
+                <telerik:RadVerticalLinearGauge Width="20" Margin="787,463,503,286" telerik:StyleManager.Theme="VisualStudio2019" Background="Transparent" Foreground="{DynamicResource SVGBackground}" RenderTransformOrigin="-1.425,-0.505">
+                    <telerik:VerticalLinearScale 
+                                Name="linearScaleC2" 
+                                Min="00" 
+                                Max="120" 
+                                RelativeY="0" 
+                                RelativeHeight="1" 
+                                StartWidth="1" 
+                                EndWidth="1" 
+                                MajorTicks="6" 
+                                MajorTickRelativeWidth="0.2" 
+                                MajorTickRelativeHeight="0.003" 
+                                MajorTickLocation="OverOutside" 
+                                MiddleTicks="2" 
+                                MiddleTickRelativeWidth="0.12" 
+                                MiddleTickRelativeHeight="0.003" 
+                                MiddleTickOffset="0.12" 
+                                MiddleTickLocation="OverOutside" 
+                                MinorTicks="1"  
+                                LabelOffset="10" 
+                                LabelLocation="Outside" 
+                                Fill="Transparent" 
+                                Stroke="Transparent" 
+                                IsInteractive="False" FontSize="14" Foreground="{DynamicResource SVGBackground}" MajorTickBackground="{DynamicResource SVGBackground}" MiddleTickBackground="{DynamicResource SVGBackground}" >
+                        <telerik:VerticalLinearScale.Indicators>
+                            <telerik:BarIndicator Name="tempPhase2_RIGHT" 
+                                                    Value="20" 
+                                                    StrokeThickness="0" 
+                                                    StartWidth="0.42" 
+                                                    EndWidth="0.42" Background="#FF30B524" BorderBrush="Transparent" />
+                        </telerik:VerticalLinearScale.Indicators>
+                        <telerik:VerticalLinearScale.CustomItems>
+                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF30B524" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
+                        </telerik:VerticalLinearScale.CustomItems>
+                    </telerik:VerticalLinearScale>
+                </telerik:RadVerticalLinearGauge>
+                
+                <Grid x:Name="thermometer_hb4" Margin="484,453,826,276"/>
+                <telerik:RadVerticalLinearGauge Width="20" Margin="494,463,836,286" telerik:StyleManager.Theme="VisualStudio2019" Background="Transparent" Foreground="{DynamicResource SVGBackground}" RenderTransformOrigin="-1.425,-0.505">
+                    <telerik:VerticalLinearScale 
+                                Name="linearScaleC4" 
+                                Min="00" 
+                                Max="120" 
+                                RelativeY="0" 
+                                RelativeHeight="1" 
+                                StartWidth="1" 
+                                EndWidth="1" 
+                                MajorTicks="6" 
+                                MajorTickRelativeWidth="0.2" 
+                                MajorTickRelativeHeight="0.003" 
+                                MajorTickLocation="OverOutside" 
+                                MiddleTicks="2" 
+                                MiddleTickRelativeWidth="0.12" 
+                                MiddleTickRelativeHeight="0.003" 
+                                MiddleTickOffset="0.12" 
+                                MiddleTickLocation="OverOutside" 
+                                MinorTicks="1"  
+                                LabelOffset="10" 
+                                LabelLocation="Outside" 
+                                Fill="Transparent" 
+                                Stroke="Transparent" 
+                                IsInteractive="False" FontSize="14" Foreground="{DynamicResource SVGBackground}" MajorTickBackground="{DynamicResource SVGBackground}" MiddleTickBackground="{DynamicResource SVGBackground}" >
+                        <telerik:VerticalLinearScale.Indicators>
+                            <telerik:BarIndicator Name="tempPhase2_LEFT" 
+                                                    Value="20" 
+                                                    StrokeThickness="0" 
+                                                    StartWidth="0.42" 
+                                                    EndWidth="0.42" Background="#FF30B524" BorderBrush="Transparent" />
+                        </telerik:VerticalLinearScale.Indicators>
+                        <telerik:VerticalLinearScale.CustomItems>
+                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF30B524" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
+                        </telerik:VerticalLinearScale.CustomItems>
+                    </telerik:VerticalLinearScale>
+                </telerik:RadVerticalLinearGauge>
+                
+                <!--3D Models for the battery + voltage readings-->
+                <helix:HelixViewport3D x:Name="battery_in" Width="150" Height="150" Margin="35,680,1165,25" ShowViewCube="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                    <helix:DefaultLights/>
+                    <Viewport2DVisual3D>
+                        <Viewport2DVisual3D.Transform>
+                            <!-- Positioning the TextBox in 3D -->
+                            <TranslateTransform3D OffsetX="0" OffsetY="4" OffsetZ="3"/>
+                        </Viewport2DVisual3D.Transform>
+
+                        <Viewport2DVisual3D.Geometry>
+                            <MeshGeometry3D Positions="-4,-1,0  4,-1,0  4,1,0  -4,1,0"
+                            TextureCoordinates="0,1 1,1 1,0 0,0"
+                            TriangleIndices="0 1 2 2 3 0"/>
+                        </Viewport2DVisual3D.Geometry>
+
+                        <!-- TextBox UI Element -->
+                        <Viewport2DVisual3D.Visual>
+                            <TextBox x:Name="voltage12V_bat1_phase1" Text="ce femeie"
+                                     Width="400" Height="100" FontSize="60" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderThickness="0" telerik:CornerRadiusHelper.ClipRadius="24"
+                                     Background="{DynamicResource PanelBackground}" Foreground="{DynamicResource TextForeground}"/>
+                        </Viewport2DVisual3D.Visual>
+
+                        <!-- Material for the 3D UI -->
+                        <Viewport2DVisual3D.Material>
+                            <DiffuseMaterial Viewport2DVisual3D.IsVisualHostMaterial="True"/>
+                        </Viewport2DVisual3D.Material>
+                    </Viewport2DVisual3D>
+                </helix:HelixViewport3D>
+
+                <helix:HelixViewport3D x:Name="battery_out" Width="150" Height="150" Margin="1178,680,22,25" ShowViewCube="False" >
+                    <helix:DefaultLights/>
+                    <Viewport2DVisual3D>
+                        <Viewport2DVisual3D.Transform>
+                            <!-- Positioning the TextBox in 3D -->
+                            <TranslateTransform3D OffsetX="0" OffsetY="4" OffsetZ="3"/>
+                        </Viewport2DVisual3D.Transform>
+
+                        <Viewport2DVisual3D.Geometry>
+                            <MeshGeometry3D Positions="-4,-1,0  4,-1,0  4,1,0  -4,1,0"
+                            TextureCoordinates="0,1 1,1 1,0 0,0"
+                            TriangleIndices="0 1 2 2 3 0"/>
+                        </Viewport2DVisual3D.Geometry>
+
+                        <!-- TextBox UI Element -->
+                        <Viewport2DVisual3D.Visual>
+                            <TextBox x:Name="voltage12V_bat2_phase1" Text="are si zahar si miere"
+                                     Width="400" Height="100" FontSize="60" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderThickness="0" telerik:CornerRadiusHelper.ClipRadius="24"
+                                     Background="{DynamicResource PanelBackground}" Foreground="{DynamicResource TextForeground}"/>
+                        </Viewport2DVisual3D.Visual>
+
+                        <!-- Material for the 3D UI -->
+                        <Viewport2DVisual3D.Material>
+                            <DiffuseMaterial Viewport2DVisual3D.IsVisualHostMaterial="True"/>
+                        </Viewport2DVisual3D.Material>
+                    </Viewport2DVisual3D>
+                </helix:HelixViewport3D>
+                
             </Grid>
         </Grid>
     </Grid>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32.SafeHandles;
+using PCU_GUI_Idea;
 using PCU_GUI_Idea.Tabs;
 using System;
 using System.Collections.Generic;
@@ -40,26 +41,26 @@ using vxlapi_NET;
         // RX thread
         public static Thread rxThread;
         public static bool blockRxThread = false;
-        // -----------------------------------------------------------------------------------------------
-        //private static MainWindow mainWindowInstance;
+    // -----------------------------------------------------------------------------------------------
+        private static MainWindow mainWindowInstance;
 
-        //public static void Initialize(MainWindow mainWindow)
-        //{
-        //    mainWindowInstance = mainWindow;
-        //}
+        public static void Initialize(MainWindow mainWindow)
+        {
+            mainWindowInstance = mainWindow;
+        }
 
 
 
-        // -----------------------------------------------------------------------------------------------
-        /// <summary>
-        /// MAIN
-        /// 
-        /// Sends and receives CAN messages using main methods of the "XLDriver" class.
-        /// This demo requires two connected CAN channels (Vector network interface). 
-        /// The configuration is read from Vector Hardware Config (vcanconf.exe).
-        /// </summary>
-        // -----------------------------------------------------------------------------------------------
-        [STAThread]
+    // -----------------------------------------------------------------------------------------------
+    /// <summary>
+    /// MAIN
+    /// 
+    /// Sends and receives CAN messages using main methods of the "XLDriver" class.
+    /// This demo requires two connected CAN channels (Vector network interface). 
+    /// The configuration is read from Vector Hardware Config (vcanconf.exe).
+    /// </summary>
+    // -----------------------------------------------------------------------------------------------
+    [STAThread]
         public static int Start_CAN()
         {
             XLDefine.XL_Status status;
@@ -408,8 +409,8 @@ using vxlapi_NET;
                                     {
                                         if (message.Id == receivedEvent.tagData.can_Msg.id)
                                         {
-                                            // Dont forget to link Graphics UC too
-                                            Converter.UpdateUI();
+                                        // Dont forget to link Graphics UC too
+                                         //mainWindowInstance.converter_UC.UpdateUI();
 
                                             for (int i = 0; i < DbcParser.receivedEvents.messageCount ; i++)
                                             {
@@ -419,18 +420,14 @@ using vxlapi_NET;
                                                     {
                                                         if (signal.DataType == "Float")
                                                         {
-                                            //                signal.Value = BinaryToFloat(receivedEvent.tagData.can_Msg.data, signal.StartBit, signal.Length);
-                                            //                //var olupitia = MainWindow.ConvertingDigitalValueToAnalogValue(signal.Value, signal.Name);
-                                            //                Application.Current.Dispatcher.Invoke(() =>
-                                            //                {
-                                            //                    mainWindowInstance.UpdateInterface(signal.Name, Math.Round(signal.Value, 3));
-                                            //                    if (mainWindowInstance.Enables_and_Readings_0x0D2_V12Supply.IsChecked == true && mainWindowInstance.Enables_and_Readings_0x0D2_referenceSupply.IsChecked == true)
-                                            //                    {   
-                                            //                       // mainWindowInstance.LogData(signal.Name, signal.Value);
-                                            //                    }
-                                            //                    mainWindowInstance.UpdateChart(signal , Math.Round(signal.Value, 3));
-                                            //                });
-                                                        }
+                                                           signal.Value = BinaryToFloat(receivedEvent.tagData.can_Msg.data, signal.StartBit, signal.Length);
+                                                        //                //var olupitia = MainWindow.ConvertingDigitalValueToAnalogValue(signal.Value, signal.Name);
+                                                        Application.Current.Dispatcher.Invoke(() =>
+                                                        {
+                                                            mainWindowInstance.converter_UC.UpdateUI(signal.Name, Math.Round(signal.Value, 3), signal.AssociatedElement);
+                                                            mainWindowInstance.graphics_UC.UpdateChart(signal, Math.Round(signal.Value, 3));
+                                                        });
+                                                    }
                                                         if (signal.DataType == "Unsigned")
                                                         {
                                             //                signal.Value = BinaryToInt(receivedEvent.tagData.can_Msg.data, signal.StartBit, signal.Length);

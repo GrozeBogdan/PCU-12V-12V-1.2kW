@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="Thermo">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,640.0,1280.0"/>
+        </DrawingGroup.ClipGeometry>
+        <DrawingGroup Transform="0.1,0.0,0.0,-0.1,0.0,1280.0">
+            <GeometryDrawing Brush="{DynamicResource SVGBackground}">
+                <GeometryDrawing.Geometry>
+                    <PathGeometry Figures="M 3033 12785 c -93 -17 -162 -40 -248 -83 c -255 -127 -432 -345 -507 -623 l -23 -84 l -5 -4232 l -5 -4232 l -85 -56 c -437 -292 -714 -707 -821 -1233 c -27 -130 -36 -423 -19 -570 c 94 -797 686 -1452 1471 -1626 c 990 -219 1982 385 2238 1365 c 50 191 56 247 56 489 c 0 239 -8 301 -61 499 c -91 337 -299 673 -560 903 c -85 76 -213 171 -281 209 l -43 24 l 0 518 l 0 517 l 325 0 l 325 0 l 0 120 l 0 120 l -325 0 l -325 0 l 0 765 l 0 765 l 325 0 l 325 0 l 0 120 l 0 120 l -325 0 l -325 0 l 0 765 l 0 765 l 325 0 l 325 0 l 0 120 l 0 120 l -322 2 l -323 3 l -3 763 l -2 762 l 325 0 l 325 0 l 0 125 l 0 125 l -325 0 l -325 0 l 0 913 c 0 850 -2 918 -19 1002 c -38 186 -127 345 -270 485 c -219 213 -524 309 -818 255 z m 340 -349 c 189 -60 340 -209 405 -400 l 27 -81 l 3 -4312 l 2 -4312 l 118 -69 c 310 -184 502 -381 646 -664 c 254 -498 227 -1079 -72 -1543 c -228 -355 -580 -595 -1005 -687 c -150 -32 -446 -32 -600 0 c -484 102 -870 399 -1092 841 c -210 419 -208 947 5 1372 c 142 285 353 504 654 680 l 126 73 l 0 4266 c 0 2729 4 4289 10 4333 c 21 140 75 249 178 352 c 67 67 179 133 262 153 c 25 6 54 14 65 16 c 38 9 220 -3 268 -18 z" FillRule="Nonzero"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingBrush Stretch="Uniform" Drawing="{DynamicResource Thermo}" x:Key="db_Thermo"/>
+</ResourceDictionary>

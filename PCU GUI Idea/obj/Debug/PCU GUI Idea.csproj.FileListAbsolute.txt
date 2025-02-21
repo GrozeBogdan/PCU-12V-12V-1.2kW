@@ -564,3 +564,6 @@ C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictur
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\pwm_freq.baml
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\HelixToolkit.Wpf.dll
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\HelixToolkit.Wpf.xml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\thermometer.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\AddSignalWindow.g.cs
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\AddSignalWindow.baml
