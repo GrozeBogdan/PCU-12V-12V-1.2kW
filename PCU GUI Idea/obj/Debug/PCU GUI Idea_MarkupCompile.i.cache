@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\App.xaml
-191689562659
+201758413335
 
-18-1835646800
-991354786982
-MainWindow.xaml;Menu\MenuTab.xaml;Pictures\SVG\3d-cube.xaml;Pictures\SVG\diagram.xaml;Pictures\SVG\length-vertical.xaml;Pictures\SVG\length.xaml;Pictures\SVG\pcu_buck_boost_converter.xaml;Pictures\SVG\pcu_buck_boost_inductor_down.xaml;Pictures\SVG\pcu_buck_boost_inductor_up.xaml;Pictures\SVG\pie-chart.xaml;Pictures\SVG\pwm_duty.xaml;Pictures\SVG\pwm_freq.xaml;Pictures\SVG\SchematicConv.xaml;Pictures\SVG\thermometer.xaml;Tabs\AddSignalWindow.xaml;Tabs\Converter.xaml;Tabs\Graphics.xaml;Tabs\Customize.xaml;Tabs\Help.xaml;
+19-40734524
+1041044511739
+MainWindow.xaml;Menu\MenuTab.xaml;Pictures\SVG\3d-cube.xaml;Pictures\SVG\diagram.xaml;Pictures\SVG\length-vertical.xaml;Pictures\SVG\length.xaml;Pictures\SVG\pcu_buck_boost_converter.xaml;Pictures\SVG\pcu_buck_boost_inductor_down.xaml;Pictures\SVG\pcu_buck_boost_inductor_up.xaml;Pictures\SVG\pie-chart.xaml;Pictures\SVG\pwm_duty.xaml;Pictures\SVG\pwm_freq.xaml;Pictures\SVG\SchematicConv.xaml;Pictures\SVG\thermometer.xaml;Tabs\AddSignalWindow.xaml;Tabs\Converter.xaml;Tabs\Graphics.xaml;Tabs\Customize.xaml;Tabs\Instruments.xaml;Tabs\Help.xaml;
 
 False
 

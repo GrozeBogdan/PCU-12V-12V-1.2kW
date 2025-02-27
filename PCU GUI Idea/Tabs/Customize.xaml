@@ -31,9 +31,9 @@ Loaded="IntializeOthersFromMemory"-->
 
             <Grid Grid.Row="1">
                 <telerik:RadSpreadsheet x:Name="excelTable" Margin="50,20,50,0" VerticalAlignment="Top" Height="600" Visibility="Visible">
-                    
+
                 </telerik:RadSpreadsheet>
-                <telerik:RadComboBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" EmptyText="Theme Select" Height="50" Width="300" Margin="561,662,489,143" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" FontSize="24" BorderThickness="0" BorderBrush="Transparent" telerik:StyleManager.Theme="Windows8" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="themeBox" DropDownButtonIconContent="⮟" SelectionChanged="themeBox_SelectionChanged">
+                <telerik:RadComboBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" EmptyText="Theme Select" Height="50" Width="300" Margin="411,662,639,143" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" FontSize="24" BorderThickness="0" BorderBrush="Transparent" telerik:StyleManager.Theme="Windows8" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="themeBox" DropDownButtonIconContent="⮟" SelectionChanged="themeBox_SelectionChanged">
                     <telerik:RadComboBox.ItemContainerStyle>
                         <Style TargetType="telerik:RadComboBoxItem">
                             <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>
@@ -53,9 +53,9 @@ Loaded="IntializeOthersFromMemory"-->
                 </telerik:RadComboBox>
 
                 <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="50,762,1000,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Upload to Cloud" FontSize="24"/>
-                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="561,762,489,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Autoselect Instrumentation" FontSize="22"/>
-                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="1000,762,50,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="To be added" FontSize="24"/>
-                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="1000,662,50,143" telerik:CornerRadiusHelper.ClipRadius="8" Content="To be added" FontSize="24"/>
+                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="411,762,639,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Autoselect Instrumentation" FontSize="22"/>
+                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="776,762,274,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="To be added" FontSize="24"/>
+                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="776,662,274,143" telerik:CornerRadiusHelper.ClipRadius="8" Content="To be added" FontSize="24"/>
 
                 <telerik:RadComboBox  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="300" Margin="50,660,1000,145" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" FontSize="24" BorderThickness="0" BorderBrush="Transparent" telerik:StyleManager.Theme="Windows8" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="databaseBox" DropDownButtonIconContent="⮟" DropDownOpened="SearchForDatabases" EmptyText="Select Database">
                     <telerik:RadComboBox.ItemContainerStyle>
@@ -73,11 +73,13 @@ Loaded="IntializeOthersFromMemory"-->
                         </DataTemplate>
                     </telerik:RadComboBox.DropDownButtonIconTemplate>
                 </telerik:RadComboBox>
-                
+
+                <TextBox Style="{DynamicResource UITextBox}" Width="150" Height="50" Margin="1139,762,61,43" telerik:CornerRadiusHelper.ClipRadius="12"/>
+                <TextBox Style="{DynamicResource UITextBox}" Width="150" Height="50" Margin="1139,662,61,143" telerik:CornerRadiusHelper.ClipRadius="12"/>
             </Grid>
-            
+
         </Grid>
     </Grid>
-    
+
 </UserControl>
     

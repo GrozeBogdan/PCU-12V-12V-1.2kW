@@ -28,6 +28,7 @@ namespace PCU_GUI_Idea
         public Converter converter_UC = new Converter();
         public Graphics graphics_UC = new Graphics();
         private Help help_UC = new Help();
+        public Instruments instruments_UC = new Instruments();
 
         private Dictionary<string, UserControl> controls = new Dictionary<string, UserControl> { };
 
@@ -42,12 +43,14 @@ namespace PCU_GUI_Idea
             converter_UC.InitializeComponent();
             graphics_UC.InitializeComponent();
             help_UC.InitializeComponent();
+            instruments_UC.InitializeComponent();
             AddSignalWindow.Initialize(this);
 
             controls.Add("CustomizeButton", customize_UC);
             controls.Add("ConverterButton", converter_UC);
             controls.Add("GraphicsButton", graphics_UC);
             controls.Add("HelpButton", help_UC);
+            controls.Add("InstrumentsButton", instruments_UC);
         }
 
         // Asta trebuie sa fie tot codul pe care il am in MAIN!

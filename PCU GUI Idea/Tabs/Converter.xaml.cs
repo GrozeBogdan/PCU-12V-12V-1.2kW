@@ -23,7 +23,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HelixToolkit.Wpf;
 using PCU_GUI_Idea.Modules;
-using Svg;
 using Telerik.Windows.Controls.Gauge;
 using Telerik.Windows.Documents.Fixed.Model.Objects;
 using Telerik.Windows.Documents.Spreadsheet.Expressions.Functions;
