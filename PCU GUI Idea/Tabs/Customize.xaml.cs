@@ -23,6 +23,7 @@ using Telerik.Windows.Documents.Spreadsheet.Model.ConditionalFormattings;
 using Microsoft.Office.Interop.Excel;
 using Telerik.Windows.Documents.Fixed.Model.Graphics;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
+using Telerik.Windows.Controls.Spreadsheet.Worksheets;
 
 namespace PCU_GUI_Idea.Tabs
 {
@@ -34,7 +35,6 @@ namespace PCU_GUI_Idea.Tabs
         public Customize()
         {
             InitializeComponent();
-            Generate_Excel();
         }
         private void themeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -62,7 +62,7 @@ namespace PCU_GUI_Idea.Tabs
                 }
             }
         }
-        private void Generate_Excel()
+        private void Generate_Excel(object sender, RoutedEventArgs e)
         {
             string directory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Excel Templates/Excel Data";
             XlsxFormatProvider formatProvider = new XlsxFormatProvider();
@@ -72,7 +72,9 @@ namespace PCU_GUI_Idea.Tabs
                 using (Stream input = new FileStream(directory + "\\template.xlsx", FileMode.Open))
                 {
                     this.excelTable.Workbook = formatProvider.Import(input);
+                    input.Dispose();
                 }
+
             }
 
             else
@@ -89,18 +91,21 @@ namespace PCU_GUI_Idea.Tabs
                 // Nameing the sheet as the date + hour
                 worksheet.Name = date;
 
-                Dynamic_Generated_Template_3D_Chart(worksheet, workbook, 30, 1000);
+                Dynamic_Generated_Template_3D_Chart(worksheet, workbook, int.Parse(excel_Current.Text), int.Parse(excel_Frequency.Text));
 
                 workbook.SaveAs(directory + "\\template.xlsx");
-                using (Stream input = new FileStream(directory + "\\template.xlsx", FileMode.Open))
-                {
-                    this.excelTable.Workbook = formatProvider.Import(input);
-                }
 
                 workbook.Close();
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
                 app.Quit();
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
+
+                using (Stream input = new FileStream(directory + "\\template.xlsx", FileMode.Open))
+                {
+                    this.excelTable.Workbook = formatProvider.Import(input);
+                }
+
+                
             }
         }
         private void Dynamic_Generated_Template_3D_Chart(Excel.Worksheet sheet, Excel.Workbook workbook, int maxCurrent, int maxFrequency)
@@ -241,6 +246,35 @@ namespace PCU_GUI_Idea.Tabs
             // Define the maximum criteria (type and color)
             colorScale3.ColorScaleCriteria[3].Type = Excel.XlConditionValueTypes.xlConditionValueHighestValue;
             colorScale3.ColorScaleCriteria[3].FormatColor.Color = Excel.XlRgbColor.rgbGreen; // Red
+        }
+
+        private async void Converter_Efficency_Model(object sender, RoutedEventArgs e)
+        {
+            Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = excelTable.Workbook;
+            Telerik.Windows.Documents.Spreadsheet.Model.Worksheet sheet = (Telerik.Windows.Documents.Spreadsheet.Model.Worksheet)workbook.ActiveSheet ;
+
+            CellRange usedRange = excelTable.ActiveWorksheet.UsedCellRange;
+            CellRange workingRange = new CellRange(5, 2, usedRange.ToIndex.RowIndex, usedRange.ToIndex.ColumnIndex); // (5 , 2) -> C6 cell ; programmers count from 0;
+
+            int increment = 1;
+            
+            for(int collumn = 2; collumn <= workingRange.ToIndex.ColumnIndex; collumn++) 
+            {
+                increment = 1;
+                for (int rows = 5; rows <= workingRange.ToIndex.RowIndex; rows++)
+                {
+                    sheet.Cells[rows, collumn].SetValue(increment);
+                    increment++;
+                    await Task.Delay(100);
+                }
+            }
+
+            XlsxFormatProvider formatProvider = new XlsxFormatProvider();
+
+            using (Stream output = new FileStream(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Excel Templates/Excel Data/test123.xlsx", FileMode.Create))
+            {
+                formatProvider.Export(excelTable.Workbook, output);
+            }
         }
     }
 }

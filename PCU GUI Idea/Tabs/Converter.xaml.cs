@@ -470,5 +470,11 @@ namespace PCU_GUI_Idea.Tabs
                 }
             }
         }
+
+        private void ChangeWorkMode(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)
+        {
+            Slider slider = sender as Slider;
+            slider.Value = (int)e.NewValue;
+        }
     }
 }

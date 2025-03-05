@@ -75,15 +75,17 @@
                 <ToggleButton x:Name="Enables_and_Readings_0x0D2_trip_ph1_out" Style="{DynamicResource SliderButtonTrip}" Width="90" Height="40" Margin="939,40,321,775" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
 
                 <!--<Label Content="Direction" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="595,170,643,644" HorizontalContentAlignment="Center"/>-->
-                <Label Content="Left" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,120,744,685" HorizontalContentAlignment="Center"/>
-                <Label Content="Right" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,120,567,685" HorizontalContentAlignment="Center"/>
-                <ToggleButton x:Name="WorkingMode_StateMachine_0x0D3_pcu_direction" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,122,654,693" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <Label Content="Left" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,136,744,669" HorizontalContentAlignment="Center"/>
+                <Label Content="Right" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,136,567,669" HorizontalContentAlignment="Center"/>
+                <ToggleButton x:Name="WorkingMode_StateMachine_0x0D3_pcu_direction" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,138,654,677" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
 
                 <!--WorkingMode_StateMachine_0x0D3_-->
-                <Label Content="Mode" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="595,10,643,795" HorizontalContentAlignment="Center"/>
-                <Label Content="Buck" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,60,744,745" HorizontalContentAlignment="Center"/>
-                <Label Content="Buck-Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,60,513,745" HorizontalContentAlignment="Center"/>
-                <ToggleButton x:Name="WorkingMode_StateMachine_0x0D3_pcu_work_mode" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,60,654,755" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <Label Content="Mode" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Margin="595,-2,643,820" HorizontalContentAlignment="Center"/>
+                <Label Content="Buck" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,85,744,720" HorizontalContentAlignment="Center"/>
+                <Label Content="Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="614,85,662,720" HorizontalContentAlignment="Center"/>
+                <Label Content="Buck-Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,85,513,720" HorizontalContentAlignment="Center"/>
+                <Slider Style="{DynamicResource ThreeStateToggleSliderStyle}" Width="200" Margin="551,40,599,775" ValueChanged="ChangeWorkMode"/>
+                <!--<ToggleButton x:Name="WorkingMode_StateMachine_0x0D3_pcu_work_mode" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,60,654,755" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>-->
 
                 <!--<ToggleButton x:Name="trip_in" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="58,360,1202,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
                     <ToggleButton.RenderTransform>
@@ -95,7 +97,7 @@
                         </TransformGroup>
                     </ToggleButton.RenderTransform>
                 </ToggleButton>-->
-                
+
                 <!--<ToggleButton x:Name="trip_out" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="1208,360,52,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
                     <ToggleButton.RenderTransform>
                         <TransformGroup>
@@ -176,10 +178,10 @@
                                                     StartWidth="0.42" 
                                                     EndWidth="0.42" Background="#FF30B524" BorderBrush="Transparent" />
                         </telerik:VerticalLinearScale.Indicators>
-                        <!--<telerik:VerticalLinearScale.CustomItems>
+                        <telerik:VerticalLinearScale.CustomItems>
                             <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF30B524" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
-                        </telerik:VerticalLinearScale.CustomItems>-->
-                        
+                        </telerik:VerticalLinearScale.CustomItems>
+
                     </telerik:VerticalLinearScale>
                 </telerik:RadVerticalLinearGauge>
 
@@ -258,7 +260,7 @@
                         </telerik:VerticalLinearScale.CustomItems>
                     </telerik:VerticalLinearScale>
                 </telerik:RadVerticalLinearGauge>
-                
+
                 <Grid x:Name="thermometer_hb4" Margin="484,453,826,276"/>
                 <telerik:RadVerticalLinearGauge Width="20" Margin="494,463,836,286" telerik:StyleManager.Theme="VisualStudio2019" Background="Transparent" Foreground="{DynamicResource SVGBackground}" RenderTransformOrigin="-1.425,-0.505">
                     <telerik:VerticalLinearScale 
@@ -296,7 +298,7 @@
                         </telerik:VerticalLinearScale.CustomItems>
                     </telerik:VerticalLinearScale>
                 </telerik:RadVerticalLinearGauge>
-                
+
                 <!--3D Models for the battery + voltage readings-->
                 <helix:HelixViewport3D x:Name="battery_in" Width="150" Height="150" Margin="35,680,1165,25" ShowViewCube="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
                     <helix:DefaultLights/>
@@ -353,7 +355,7 @@
                         </Viewport2DVisual3D.Material>
                     </Viewport2DVisual3D>
                 </helix:HelixViewport3D>
-                
+
             </Grid>
         </Grid>
     </Grid>

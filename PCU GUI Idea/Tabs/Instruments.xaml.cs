@@ -14,7 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DeviceControlLib;
+using DeviceControlLib.TTi;
 using Telerik.Windows.Controls;
+using Telerik.Windows.Controls.FieldList;
 
 namespace PCU_GUI_Idea.Tabs
 {
@@ -31,10 +33,17 @@ namespace PCU_GUI_Idea.Tabs
         List<string> ModelList;
         List<string> ConnectedDevicesIds;
 
-        DeviceControlLib.IDevice ps;
-        DeviceControlLib.IDevice ld;
+        DeviceControlLib.IPowerSupply ps;
+        DeviceControlLib.IElectronicLoad ld;
 
-        Dictionary<string, string> ModelAndId = new Dictionary<string, string> { };
+        private Dictionary<string, string> ModelAndId = new Dictionary<string, string> { };
+        private Dictionary<string, int> OperationMode = new Dictionary<string, int> 
+        {
+            {"CV", 0},
+            {"CC", 1},
+            {"CP", 2},
+            {"CR", 3}
+        };
 
         public Instruments()
         {
@@ -56,12 +65,19 @@ namespace PCU_GUI_Idea.Tabs
             {
                 if (ModelList[i].Contains("CPX400DP"))
                 {
-                    ModelList[i] = ModelList[i].Replace(" ", "");
+                    ModelList[i] = ModelList[i].Replace(" ", "");   
                 }
                 ModelAndId.Add(ModelList[i], ConnectedDevicesIds[i]);
             }
 
             if (ConnectedDevicesIds.Count <= 0) return;
+        }
+        public void CloseThread()
+        {
+            instrumentsAreRunning = false;
+            if(InstrumentsThread != null) 
+                InstrumentsThread.Abort();
+            //GC.Collect();
         }
         private void Search_ModelList(object sender, EventArgs e)
         {
@@ -87,21 +103,21 @@ namespace PCU_GUI_Idea.Tabs
             {
                 if (device is DeviceControlLib.IPowerSupply powersupply)
                 {
-                    ps = device;
+                    ps = (IPowerSupply)device;
                     MessageBox.Show(radComboBox.Text + " succesfully connected!", "Instrumentation");
 
                     powersupply.SetOperationMode(OperationModeEnum.CV_MODE);
-                    double voltage = 5; // 5V
-                    double current = 5;
+                    //double voltage = 5; // 5V
+                    //double current = 5;
                     //double currentlimit = 1; // 1A
-                    powersupply.SetCurrentLimitPositive(current);
-                    powersupply.SetVoltage(voltage);
+                    //powersupply.SetCurrentLimitPositive(current);
+                    //powersupply.SetVoltage(voltage);
                     //powersupply.SetCurrent(current);
                 }
 
                 else if (device is DeviceControlLib.IElectronicLoad load)
                 {
-                    ld = device;
+                    ld = (IElectronicLoad)device;
                     MessageBox.Show(radComboBox.Text + " succesfully connected!", "Instrumentation");
                     load.SetOperationMode(OperationModeEnum.CC_MODE);
                     //double current = 0.5; // 0.5 amperi
@@ -134,22 +150,185 @@ namespace PCU_GUI_Idea.Tabs
                     //Load via VISA
                     if (ld != null)
                     {
-                        ld_voltage.Text = ld.GetVoltage().ToString();
-                        ld_current.Text = ld.GetCurrent().ToString();
-                        ld_power.Text = ld.GetPower().ToString();
-                        //ld_resistance.Text = ld.GetResistance().ToString();
+                        ld_voltage.Text = ld.GetVoltage().ToString() + " V";
+                        ld_current.Text = ld.GetCurrent().ToString() + " A";
+                        ld_power.Text = ld.GetPower().ToString() + " W";
+                        ld_resistance.Text = ld.GetResistance().ToString() + " Ω";
 
                     }
                     if(ps != null) 
                     {
-                        ps_voltageCH1.Text = ps.GetVoltage().ToString();
-                        ps_currentCH1.Text = ps.GetCurrent().ToString();                      
+                        ps_voltageCH1.Text = ps.GetVoltage().ToString() + " V";
+                        ps_currentCH1.Text = ps.GetCurrent().ToString() + " A";
 
+                        ps.SetSelectedOutput(2);
 
+                        ps_voltageCH2.Text = ps.GetVoltage().ToString() + " V";
+                        ps_currentCH2.Text = ps.GetCurrent().ToString() + " A";
+
+                        ps.SetSelectedOutput(1);
                         //realEffic.Text = (Math.Round((double.Parse(loadPower2.Text) / double.Parse(supplyPower.Text) * 100), 3)).ToString();
                     }
                 });
                 Thread.Sleep(100);
+            }
+        }
+        private void SetWorkMode(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            try
+            {
+                ld.SetOperationMode((OperationModeEnum)OperationMode[button.Content.ToString()]);
+                foreach(Button controls in loadWorkMode.Children)
+                {
+                    if(controls == button)
+                    {
+                        button.SetResourceReference(Button.BackgroundProperty, "PanelBackground");
+                    }
+                    else
+                        controls.ClearValue(Button.BackgroundProperty);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void TurnOnSupply(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            int temp = ps.GetSelectedOutput();
+            ps.SetSelectedOutput(int.Parse(button.Name.Replace("supplyCH", "")));
+            try
+            {
+                var value = ps.GetOutput();
+                ps.SetOutput(!value);
+                button.SetResourceReference(Button.BackgroundProperty, !value ? "PanelBackground" : "ButtonAndHighlightBackground");
+                // Revert back to old output, so to not interfere with the threads.
+                ps.SetSelectedOutput(temp);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void TurnOnLoad(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            try
+            {
+                var value = ld.GetOutput();
+                ld.SetOutput(!value);
+                button.Content = !value ? "On" : "Off" ;
+                button.SetResourceReference(Button.BackgroundProperty, !value ? "PanelBackground" : "ButtonAndHighlightBackground");
+            }
+            catch(Exception ex )
+            {
+                MessageBox.Show(ex.Message);    
+            }
+        }
+
+        private void LoadRampMode(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            try 
+            {
+                foreach (Button button in loadWorkMode.Children)
+                {
+                    if (button.Content.ToString() == "CC" && button.Background == Application.Current.Resources["PanelBackground"] && ld != null)
+                        ld.SetCurrent<int>(double.Parse(loadRampStart.Text), double.Parse(loadRampEnd.Text), int.Parse(loadRampEnd.Text), _ => { }, Array.Empty<int>());
+
+                    //  Works but needs to be changed the Ramp method in the library.
+                    //ld.SetCurrent<int>(double.Parse(loadRampStart.Text), double.Parse(loadRampEnd.Text), 10, args => Thread.Sleep(args.Length > 0 ? args[0] : 0), 100);
+                }    
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
+
+        private void SendLoadValue(object sender, RoutedEventArgs e)
+        {
+            //foreach (Button btn in loadWorkMode.Children)
+            //{
+            //    if(btn.Background == Application.Current.Resources["PanelBackground"])
+            //    {
+            //        var item = ld.GetWorkingMode();
+            //    }
+            //}
+
+            //Bullshit incomming
+            try
+            { 
+                foreach (Button btn in loadWorkMode.Children)
+                {
+                    if (btn.Background == Application.Current.Resources["PanelBackground"])
+                    {
+                        if (btn.Content.ToString() == "CC")
+                        {
+                            ld.SetCurrent(double.Parse(loadValue.Text));
+                            return;
+                        }
+                        if (btn.Content.ToString() == "CV")
+                        {
+                            ld.SetVoltage(double.Parse(loadValue.Text));
+                            return;
+                        }
+                        if (btn.Content.ToString() == "CR")
+                        {
+                            ld.SetResistance(double.Parse(loadValue.Text));
+                            return;
+                        }
+                        if (btn.Content.ToString() == "CP")
+                        {
+                            ld.SetPower(double.Parse(loadValue.Text));
+                            return;
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + "Error");
+            }
+        }
+
+        private void SendLoadValue(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                SendLoadValue(sender, (RoutedEventArgs)e);
+            }
+        }
+
+        private void SendSupplyValue(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                try
+                {
+                    TextBox textBox = sender as TextBox;
+                    int temp = ps.GetSelectedOutput();
+
+                    if (textBox.Name.Contains("1"))
+                    {
+                        ps.SetSelectedOutput(1);
+                        ps.SetVoltage(double.Parse(supplyVoltageCH1.Text));
+                        ps.SetCurrentLimitPositive(double.Parse(supplyCurrentCH1.Text));
+                    }
+                    if (textBox.Name.Contains("2"))
+                    {
+                        ps.SetSelectedOutput(2);
+                        ps.SetVoltage(double.Parse(supplyVoltageCH2.Text));
+                        ps.SetCurrentLimitPositive(double.Parse(supplyCurrentCH2.Text));
+                    }
+                    ps.SetSelectedOutput(temp);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error");
+                }
             }
         }
     }

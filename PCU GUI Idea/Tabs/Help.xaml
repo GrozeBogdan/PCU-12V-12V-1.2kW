@@ -6,8 +6,20 @@
              xmlns:local="clr-namespace:PCU_GUI_Idea.Tabs"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="945" d:DesignWidth="1390">
+    
     <Grid Background="{DynamicResource PanelBackground}" telerik:CornerRadiusHelper.ClipRadius="24">
-        <TextBlock Text="Help" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="48" Foreground="{DynamicResource TextForeground}"/>
+        <StackPanel Margin="50">
+            <TextBlock Text="Remember:" Foreground="{DynamicResource SVGBackground}" FontSize="32" FontWeight="Medium" />
+            <TextBlock Text=" -  PWM_A is Lowside, PWM_B is Highside" Foreground="{DynamicResource SVGBackground}" FontSize="32" FontWeight="Medium"/>
+            <TextBlock Text=" -  Converter always starts with 180 degrees phase shift" Foreground="{DynamicResource SVGBackground}" FontSize="32" FontWeight="Medium"/>
+            <TextBlock Text=" " Foreground="{DynamicResource SVGBackground}" FontSize="32" FontWeight="Medium"/>
+            <TextBlock Text=" -  DONT FORGET TO ADD HERE WHAT IS DONE!!!!" Foreground="{DynamicResource SVGBackground}" FontSize="32" FontWeight="Medium"/>
+            <TextBlock Text=" -  REMOVE THIS FROM MainWindow.xaml.cs " Foreground="Red" FontSize="32" FontWeight="Medium"/>
+            <TextBlock Text=" -  This will be used for State Machine ( Buck, Boost, Buck-Boost) " Foreground="{DynamicResource SVGBackground}" FontSize="32" FontWeight="Medium"/>
+            <!--<Slider x:Name="threeStateSlider" Width="150" Height="20" Minimum="0" Maximum="2" TickFrequency="1" IsSnapToTickEnabled="True" Background="#00000000">
+
+            </Slider>-->
+        </StackPanel>
     </Grid>
 </UserControl>

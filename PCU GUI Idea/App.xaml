@@ -291,6 +291,65 @@
                     </Trigger>
                 </Style.Triggers>
             </Style>
+
+            <Style x:Key="ThreeStateToggleSliderStyle" TargetType="Slider">
+                <!-- Define Basic Slider Properties -->
+                <Setter Property="Minimum" Value="0"/>
+                <Setter Property="Maximum" Value="2"/>
+                <Setter Property="Value" Value="0"/>
+                <Setter Property="Width" Value="120"/>
+                <Setter Property="Height" Value="40"/>
+                <Setter Property="IsSnapToTickEnabled" Value="True"/>
+                <Setter Property="TickFrequency" Value="1"/>
+
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Slider">
+                            <Grid Width="200" Height="40">
+                                <!-- Background -->
+                                <Border x:Name="TrackBackground"
+                            Width="200" Height="40"
+                            CornerRadius="20"
+                            Background="{DynamicResource SVGBackground}"/>
+
+                                <!-- Track (Mandatory for Functionality) -->
+                                <Track x:Name="PART_Track">
+                                    <Track.Thumb>
+                                        <Thumb x:Name="PART_Thumb"
+                                               Width="30" 
+                                               Height="30"
+                                               Background="{DynamicResource ButtonContrast}"
+                                               Margin="5">
+                                            <Thumb.Template>
+                                                <ControlTemplate TargetType="Thumb">
+                                                    <Border Background="{TemplateBinding Background}"
+                                                            BorderBrush="Transparent" 
+                                                            BorderThickness="0"                                                       
+                                                            CornerRadius="15"
+/>
+                                                </ControlTemplate>
+                                            </Thumb.Template>
+                                        </Thumb>
+                                    </Track.Thumb>
+                                </Track>
+                            </Grid>
+
+                            <!-- Custom Triggers to Move Thumb -->
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="Value" Value="0">
+                                    <Setter TargetName="PART_Thumb" Property="Canvas.Left" Value="0"/>
+                                </Trigger>
+                                <Trigger Property="Value" Value="1">
+                                    <Setter TargetName="PART_Thumb" Property="Canvas.Left" Value="40"/>
+                                </Trigger>
+                                <Trigger Property="Value" Value="2">
+                                    <Setter TargetName="PART_Thumb" Property="Canvas.Left" Value="80"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -2,6 +2,7 @@
 using PCU_GUI_Idea.Tabs;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,6 +63,7 @@ namespace PCU_GUI_Idea
 
         public void Exit_Button(object sender, RoutedEventArgs e)
         {
+            instruments_UC.CloseThread();
             CAN.Stop_CAN();
             App.Current.Shutdown();
         }
