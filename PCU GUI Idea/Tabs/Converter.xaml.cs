@@ -23,10 +23,12 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HelixToolkit.Wpf;
 using PCU_GUI_Idea.Modules;
+using Telerik.Windows.Controls.FieldList;
 using Telerik.Windows.Controls.Gauge;
 using Telerik.Windows.Documents.Fixed.Model.Objects;
 using Telerik.Windows.Documents.Spreadsheet.Expressions.Functions;
 using vxlapi_NET;
+using static DbcParser;
 using Image = System.Windows.Controls.Image;
 
 namespace PCU_GUI_Idea.Tabs
@@ -36,9 +38,34 @@ namespace PCU_GUI_Idea.Tabs
     /// </summary>
     public partial class Converter : UserControl
     {
-        private bool _signalesBinded;
         public static List<UIElement> elements;
-        private static XLDriver can = new XLDriver();
+
+        private enum WorkMode 
+        { 
+            BUCK_MODE,
+            BUCK_BOOST_MODE,
+            BOOST_MODE,
+        };
+        private Dictionary<WorkMode, (string, bool)> Madalina = new Dictionary<WorkMode, (string, bool)>
+        {
+            {WorkMode.BUCK_MODE, ("pcu_work_mode_buck" , true)},
+            {WorkMode.BOOST_MODE, ("pcu_work_mode_boost", true)},
+            {WorkMode.BUCK_BOOST_MODE, ("pcu_work_mode_buck_boost", false)}
+        };
+        private Dictionary<bool, string> ValueToDirection = new Dictionary<bool, string>
+        {
+            {false, "left"},
+            {true, "right"}
+        };
+        //private Dictionary<WorkMode, (bool, string)> CorrespondingWorkMode = new Dictionary<WorkMode, (bool, string)>
+        //{
+        //    {WorkMode.BUCK_MODE,  (false, "in")},
+        //    {WorkMode.BUCK_MODE,  (true,  "out")},
+        //    {WorkMode.BOOST_MODE, (false, "out")},
+        //    {WorkMode.BOOST_MODE, (true,  "in")}
+        //};
+
+        private bool _signalesBinded;
         public Converter()
         {
             InitializeComponent();
@@ -66,7 +93,7 @@ namespace PCU_GUI_Idea.Tabs
                 {
                     DbcParser.sentEvents.xlEvent[i].tagData.can_Msg.data = bArr;
                     DbcParser.sentEvents.xlEvent[i].tag = XLDefine.XL_EventTags.XL_TRANSMIT_MSG;
-                    can.XL_CanTransmit(CAN.portHandle, CAN.txMask, DbcParser.sentEvents.xlEvent[i]);
+                    CAN.CAND.XL_CanTransmit(CAN.portHandle, CAN.txMask, DbcParser.sentEvents.xlEvent[i]);
                 }
             }
         }
@@ -237,6 +264,10 @@ namespace PCU_GUI_Idea.Tabs
             LoadXAMLFile("thermometer", "Thermo" , new Thickness(), thermometer_hb2);
             LoadXAMLFile("thermometer", "Thermo" , new Thickness(), thermometer_hb3);
             LoadXAMLFile("thermometer", "Thermo" , new Thickness(), thermometer_hb4);
+
+            LoadXAMLFile("arrow", "Arrow", new Thickness(), directionLeft);
+            LoadXAMLFile("arrow", "Arrow", new Thickness(), directionRight);
+            
         }
 
 
@@ -250,6 +281,7 @@ namespace PCU_GUI_Idea.Tabs
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
             ToggleButton actioner = (ToggleButton)sender;
+            CheckEnables(actioner);
             byte[] binaryArray = new byte[8];
             DbcParser.Message msg = new DbcParser.Message();
 
@@ -265,7 +297,8 @@ namespace PCU_GUI_Idea.Tabs
                             {
                                 if (toggle.Name.Contains(signal.Name))
                                 {
-                                    AppendSignalValue(binaryArray, System.Convert.ToInt16(toggle.IsChecked.Value), signal.StartBit, signal.Length); 
+                                    AppendSignalValue(binaryArray, System.Convert.ToInt16(toggle.IsChecked.Value), signal.StartBit, signal.Length);
+                                    break;
                                 }
                             }
                             msg = message;
@@ -277,6 +310,32 @@ namespace PCU_GUI_Idea.Tabs
             AppendAndTransmitData(msg, binaryArray);
 
             //A delay is needed to not overload the Slope action of changing the duty       
+        }
+
+        private void CheckEnables(ToggleButton toggle)
+        {
+           if(toggle.Name.Contains("trip_all"))
+            {
+                if (toggle.IsChecked == false)
+                    toggle.Opacity = 1;
+                else if (toggle.IsChecked == true)
+                    toggle.Opacity = 0.5;
+
+                Enables_and_Readings_0x0D2_trip_ph1_in.Unchecked -= ToggleButton_Checked;
+                Enables_and_Readings_0x0D2_trip_ph1_out.Unchecked -= ToggleButton_Checked;
+                Enables_and_Readings_0x0D2_trip_ph2_in.Unchecked -= ToggleButton_Checked;
+                Enables_and_Readings_0x0D2_trip_ph2_out.Unchecked -= ToggleButton_Checked;
+
+                Enables_and_Readings_0x0D2_trip_ph1_in.IsChecked = false;
+                Enables_and_Readings_0x0D2_trip_ph1_out.IsChecked = false;
+                Enables_and_Readings_0x0D2_trip_ph2_in.IsChecked = false;
+                Enables_and_Readings_0x0D2_trip_ph2_out.IsChecked = false;
+
+                Enables_and_Readings_0x0D2_trip_ph1_in.Unchecked += ToggleButton_Checked;
+                Enables_and_Readings_0x0D2_trip_ph1_out.Unchecked += ToggleButton_Checked;
+                Enables_and_Readings_0x0D2_trip_ph2_in.Unchecked += ToggleButton_Checked;
+                Enables_and_Readings_0x0D2_trip_ph2_out.Unchecked += ToggleButton_Checked;
+            }
         }
 
         private void Send_PWM_Values(object sender, KeyEventArgs e)
@@ -344,8 +403,8 @@ namespace PCU_GUI_Idea.Tabs
                     textbox.Text = value.ToString();
                 }
                 else if(element is BarIndicator barIndicator) 
-                { 
-                    barIndicator.Value = value;
+                {
+                    barIndicator.Value = Math.Min(value,120.0);
                 }
             }
         }
@@ -474,7 +533,92 @@ namespace PCU_GUI_Idea.Tabs
         private void ChangeWorkMode(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)
         {
             Slider slider = sender as Slider;
-            slider.Value = (int)e.NewValue;
+            var workModes = Enum.GetValues(typeof(WorkMode));
+            foreach(var item in workModes)
+            {
+                if (slider.Value == (int)item)
+                {
+                    byte[] array = new byte[8];
+                    if (DbcParser.Messages == null)
+                        return;
+                    foreach(var message in DbcParser.Messages)
+                    {
+                        if(slider.Name.Contains(message.Name))
+                        {
+                            foreach(var signal in message.Signals)
+                            {
+
+                                if (Madalina[(WorkMode)item].Item1 == signal.Name)
+                                {
+                                    AppendSignalValue(array, 1, signal.StartBit, signal.Length);
+                                    WorkingMode_StateMachine_0x0D3_pcu_direction_.IsEnabled = Madalina[(WorkMode)item].Item2;
+                                    CheckTextBoxes((WorkMode)item, WorkingMode_StateMachine_0x0D3_pcu_direction_.IsChecked.Value);
+                                }
+                                else if (signal.Name.Contains(ValueToDirection[WorkingMode_StateMachine_0x0D3_pcu_direction_.IsChecked.Value]) && (WorkMode)item != WorkMode.BUCK_BOOST_MODE)
+                                {
+                                    AppendSignalValue(array, WorkingMode_StateMachine_0x0D3_pcu_direction_.IsChecked.Value ? 1 : 1, signal.StartBit, signal.Length);
+                                    CheckTextBoxes((WorkMode)item, WorkingMode_StateMachine_0x0D3_pcu_direction_.IsChecked.Value);
+                                }
+                                else
+                                    AppendSignalValue(array, 0, signal.StartBit, signal.Length);
+                            }
+                            AppendAndTransmitData(message, array);
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+        // A different approach to write a function that sends a CAN MSG with the Signals i want..
+        private void ChangeDirection(object sender, RoutedEventArgs e)
+        {
+            ToggleButton toggle = (ToggleButton)sender;
+            byte[] array = new byte[8]; 
+
+            Message message = DbcParser.FindMessage(toggle.Name);
+            Signal directionSignal = DbcParser.FindSignal(message, ValueToDirection[toggle.IsChecked.Value]);
+            Signal workModeSignal = DbcParser.FindSignal(message, Madalina[(WorkMode)WorkingMode_StateMachine_0x0D3_pcu_work_mode_.Value].Item1);
+
+            CheckTextBoxes((WorkMode)WorkingMode_StateMachine_0x0D3_pcu_work_mode_.Value, toggle.IsChecked.Value);
+
+            AppendSignalValue(array, 1, workModeSignal.StartBit, workModeSignal.Length);
+            AppendSignalValue(array, 1, directionSignal.StartBit, directionSignal.Length);
+
+            AppendAndTransmitData(message, array);
+        }
+
+        private void CheckTextBoxes(WorkMode workMode, bool direction)
+        {
+            string boxID = null;
+            if ((workMode == WorkMode.BUCK_MODE && direction ==  false) || (workMode == WorkMode.BOOST_MODE && direction == true))
+            {
+                boxID = "in";
+            }
+
+            if ((workMode == WorkMode.BUCK_MODE && direction == true) || (workMode == WorkMode.BOOST_MODE && direction == false))
+            {
+                boxID = "out";
+            }
+            if (workMode == WorkMode.BUCK_BOOST_MODE)
+                boxID = " ";
+
+            foreach (UIElement element in gridContainingElements.Children)
+            {
+                if(element is TextBox textBox)
+                {
+                    if (textBox.Uid.Contains(boxID))
+                    {
+                        textBox.Opacity = 0.5;
+                        textBox.IsEnabled = false;
+                    }
+                    else
+                    {
+                        textBox.Opacity = 1;
+                        textBox.IsEnabled = true;
+                    }
+                }
+            }
         }
     }
 }

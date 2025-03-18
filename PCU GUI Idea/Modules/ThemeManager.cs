@@ -21,5 +21,6 @@ public static class ThemeManager
         Application.Current.Resources["TextForeground"] = theme.TextForeground;
         Application.Current.Resources["ButtonContrast"] = theme.ButtonContrast;
         Application.Current.Resources["SVGBackground"] = theme.SVGBackground;
+        Application.Current.Resources["SVGBackgroundContrast"] = theme.SVGBackgroundContrast;
     }
 }

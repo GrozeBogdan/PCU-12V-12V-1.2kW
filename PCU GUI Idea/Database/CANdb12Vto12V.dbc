@@ -91,6 +91,7 @@ BO_ 210 Enables_and_Readings_0x0D2: 1 Canoe_Debug
  SG_ trip_ph1_out : 3|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ trip_ph2_in : 4|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ trip_ph2_out : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ trip_all : 6|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 211 WorkingMode_StateMachine_0x0D3: 1 Canoe_Debug
  SG_ pcu_work_mode_buck : 0|1@1+ (1,0) [0|0] "" Vector__XXX

@@ -36,7 +36,7 @@
             <SolidColorBrush x:Key="TextForegroundContrast" Color="#FFB1906A" />
             <SolidColorBrush x:Key="ButtonContrast" Color="#FF442452" />
             <SolidColorBrush x:Key="SVGBackground" Color="#ffe8bcb9"/>
-            
+            <SolidColorBrush x:Key="SVGBackgroundContrast" Color="#ffb99694"/>
             
             <!--Style for Exit Button-->
             <Style TargetType="{x:Type Button}" x:Key="ExitButton">
@@ -257,6 +257,13 @@
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </Trigger.ExitActions>
+                                </Trigger>
+
+                                <Trigger Property="IsEnabled" Value="True">
+                                    <Setter TargetName="OuterBorder" Property="Background" Value="{DynamicResource SVGBackground}"/>
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter TargetName="OuterBorder" Property="Background" Value="{DynamicResource SVGBackgroundContrast}"/>
                                 </Trigger>
                             </ControlTemplate.Triggers>
                         </ControlTemplate>

@@ -14,6 +14,7 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Media;
 using Telerik.Charting;
+using Telerik.Windows.Controls.FieldList;
 using vxlapi_NET;
 using static DbcParser;
 using DataPoint = PCU_GUI_Idea.Modules.DataPoint;
@@ -278,5 +279,21 @@ public  class DbcParser
 
             Messages.Add(message);
         }
+    }
+    public static Message FindMessage(string messageName)
+    {
+        foreach (var message in Messages)
+        {
+            if (messageName.Contains(message.Name)) return message;
+        }
+        throw new Exception("Message not found");   
+    }
+    public static Signal FindSignal(Message message, string signalName)
+    {
+        foreach (var signal in message.Signals)
+        {
+            if(signal.Name.Contains(signalName)) return signal;
+        }
+        throw new Exception("Signal not found");
     }
 }

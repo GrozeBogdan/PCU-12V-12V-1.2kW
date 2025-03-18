@@ -75,16 +75,28 @@
                 <ToggleButton x:Name="Enables_and_Readings_0x0D2_trip_ph1_out" Style="{DynamicResource SliderButtonTrip}" Width="90" Height="40" Margin="939,40,321,775" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
 
                 <!--<Label Content="Direction" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="595,170,643,644" HorizontalContentAlignment="Center"/>-->
-                <Label Content="Left" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,136,744,669" HorizontalContentAlignment="Center"/>
-                <Label Content="Right" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,136,567,669" HorizontalContentAlignment="Center"/>
-                <ToggleButton x:Name="WorkingMode_StateMachine_0x0D3_pcu_direction" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,138,654,677" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>
+                <!--<Label Content="Left" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,136,744,669" HorizontalContentAlignment="Center"/>-->
+                <Grid x:Name="directionLeft" Height="50" Margin="701,133,567,672"/>
+                
+                <!--<Label Content="Right" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,136,567,669" HorizontalContentAlignment="Center"/>-->
+                <Grid x:Name="directionRight" Height="50" Margin="518,133,758,672" RenderTransformOrigin="0.5,0.5">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="-180"/>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                </Grid>
+
+                <ToggleButton IsEnabled="False" x:Name="WorkingMode_StateMachine_0x0D3_pcu_direction_" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,138,654,677" Checked="ChangeDirection" Unchecked="ChangeDirection" />
 
                 <!--WorkingMode_StateMachine_0x0D3_-->
                 <Label Content="Mode" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Margin="595,-2,643,820" HorizontalContentAlignment="Center"/>
-                <Label Content="Buck" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,85,744,720" HorizontalContentAlignment="Center"/>
-                <Label Content="Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="614,85,662,720" HorizontalContentAlignment="Center"/>
-                <Label Content="Buck-Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,85,513,720" HorizontalContentAlignment="Center"/>
-                <Slider Style="{DynamicResource ThreeStateToggleSliderStyle}" Width="200" Margin="551,40,599,775" ValueChanged="ChangeWorkMode"/>
+                <Label Content="Buck" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="504,85,772,720" HorizontalContentAlignment="Center"/>
+                <Label Content="Buck-Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="583,85,630,720" HorizontalContentAlignment="Center"/>
+                <Label Content="Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="725,85,551,720" HorizontalContentAlignment="Center"/>
+                <Slider Name="WorkingMode_StateMachine_0x0D3_pcu_work_mode_" Style="{DynamicResource ThreeStateToggleSliderStyle}" Width="200" Margin="551,40,599,775" ValueChanged="ChangeWorkMode" Value="1"/>
+                
+                
                 <!--<ToggleButton x:Name="WorkingMode_StateMachine_0x0D3_pcu_work_mode" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,60,654,755" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>-->
 
                 <!--<ToggleButton x:Name="trip_in" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="58,360,1202,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
@@ -171,15 +183,56 @@
                                 Fill="Transparent" 
                                 Stroke="Transparent" 
                                 IsInteractive="False" FontSize="14" Foreground="{DynamicResource SVGBackground}" MajorTickBackground="{DynamicResource SVGBackground}" MiddleTickBackground="{DynamicResource SVGBackground}" >
+                        <telerik:VerticalLinearScale.Ranges>
+                            <telerik:GaugeRange Min="0" Max="30" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="#FF23568F" 
+                                TickBackground="#FF23568F" 
+                                LabelForeground="#FF23568F" 
+                                IndicatorBackground="#FF23568F" />
+                            <telerik:GaugeRange Min="30" Max="60" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Green" 
+                                TickBackground="Green" 
+                                LabelForeground="Green" 
+                                IndicatorBackground="Green" />
+                            <telerik:GaugeRange Min="60" Max="80" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Yellow" 
+                                TickBackground="Yellow" 
+                                LabelForeground="Yellow" 
+                                IndicatorBackground="Yellow" />
+                            <telerik:GaugeRange Min="80" Max="100" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Orange" 
+                                TickBackground="Orange" 
+                                LabelForeground="Orange" 
+                                IndicatorBackground="Orange" />
+                            <telerik:GaugeRange Min="100" Max="120"
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Red" 
+                                TickBackground="Red" 
+                                LabelForeground="Red" 
+                                IndicatorBackground="Red" />
+                        </telerik:VerticalLinearScale.Ranges>
                         <telerik:VerticalLinearScale.Indicators>
                             <telerik:BarIndicator Name="tempPhase1_LEFT" 
-                                                    Value="20" 
-                                                    StrokeThickness="0" 
-                                                    StartWidth="0.42" 
-                                                    EndWidth="0.42" Background="#FF30B524" BorderBrush="Transparent" />
+                                                  Value="20" 
+                                                  StrokeThickness="0" 
+                                                  StartWidth="0.42" 
+                                                  UseRangeColor="True"  
+                                                  RangeColorSmoothing="0.5" 
+                                                  RangeColorMode="ProportionalGradient" 
+                                                  EndWidth="0.42" 
+                                                  BorderBrush="Transparent" />
                         </telerik:VerticalLinearScale.Indicators>
                         <telerik:VerticalLinearScale.CustomItems>
-                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF30B524" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
+                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF23568F" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
                         </telerik:VerticalLinearScale.CustomItems>
 
                     </telerik:VerticalLinearScale>
@@ -210,15 +263,55 @@
                                 Fill="Transparent" 
                                 Stroke="Transparent" 
                                 IsInteractive="False" FontSize="14" Foreground="{DynamicResource SVGBackground}" MajorTickBackground="{DynamicResource SVGBackground}" MiddleTickBackground="{DynamicResource SVGBackground}" >
+                        <telerik:VerticalLinearScale.Ranges>
+                            <telerik:GaugeRange Min="0" Max="30" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="#FF23568F" 
+                                TickBackground="#FF23568F" 
+                                LabelForeground="#FF23568F" 
+                                IndicatorBackground="#FF23568F" />
+                            <telerik:GaugeRange Min="30" Max="60" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Green" 
+                                TickBackground="Green" 
+                                LabelForeground="Green" 
+                                IndicatorBackground="Green" />
+                            <telerik:GaugeRange Min="60" Max="80" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Yellow" 
+                                TickBackground="Yellow" 
+                                LabelForeground="Yellow" 
+                                IndicatorBackground="Yellow" />
+                            <telerik:GaugeRange Min="80" Max="100" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Orange" 
+                                TickBackground="Orange" 
+                                LabelForeground="Orange" 
+                                IndicatorBackground="Orange" />
+                            <telerik:GaugeRange Min="100" Max="120"
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Red" 
+                                TickBackground="Red" 
+                                LabelForeground="Red" 
+                                IndicatorBackground="Red" />
+                        </telerik:VerticalLinearScale.Ranges>
                         <telerik:VerticalLinearScale.Indicators>
                             <telerik:BarIndicator Name="tempPhase1_RIGHT" 
-                                                    Value="20" 
-                                                    StrokeThickness="0" 
-                                                    StartWidth="0.42" 
-                                                    EndWidth="0.42" Background="#FF30B524" BorderBrush="Transparent" />
+                                                  UseRangeColor="True"  
+                                                  RangeColorSmoothing="0.5" 
+                                                  RangeColorMode="ProportionalGradient" 
+                                                  Value="20" 
+                                                  StrokeThickness="0" 
+                                                  StartWidth="0.42" 
+                                                  EndWidth="0.42"/>
                         </telerik:VerticalLinearScale.Indicators>
                         <telerik:VerticalLinearScale.CustomItems>
-                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF30B524" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
+                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF23568F" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
                         </telerik:VerticalLinearScale.CustomItems>
                     </telerik:VerticalLinearScale>
                 </telerik:RadVerticalLinearGauge>
@@ -248,15 +341,55 @@
                                 Fill="Transparent" 
                                 Stroke="Transparent" 
                                 IsInteractive="False" FontSize="14" Foreground="{DynamicResource SVGBackground}" MajorTickBackground="{DynamicResource SVGBackground}" MiddleTickBackground="{DynamicResource SVGBackground}" >
+                        <telerik:VerticalLinearScale.Ranges>
+                            <telerik:GaugeRange Min="0" Max="30" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="#FF23568F" 
+                                TickBackground="#FF23568F" 
+                                LabelForeground="#FF23568F" 
+                                IndicatorBackground="#FF23568F" />
+                            <telerik:GaugeRange Min="30" Max="60" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Green" 
+                                TickBackground="Green" 
+                                LabelForeground="Green" 
+                                IndicatorBackground="Green" />
+                            <telerik:GaugeRange Min="60" Max="80" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Yellow" 
+                                TickBackground="Yellow" 
+                                LabelForeground="Yellow" 
+                                IndicatorBackground="Yellow" />
+                            <telerik:GaugeRange Min="80" Max="100" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Orange" 
+                                TickBackground="Orange" 
+                                LabelForeground="Orange" 
+                                IndicatorBackground="Orange" />
+                            <telerik:GaugeRange Min="100" Max="120"
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Red" 
+                                TickBackground="Red" 
+                                LabelForeground="Red" 
+                                IndicatorBackground="Red" />
+                        </telerik:VerticalLinearScale.Ranges>
                         <telerik:VerticalLinearScale.Indicators>
                             <telerik:BarIndicator Name="tempPhase2_RIGHT" 
-                                                    Value="20" 
-                                                    StrokeThickness="0" 
-                                                    StartWidth="0.42" 
-                                                    EndWidth="0.42" Background="#FF30B524" BorderBrush="Transparent" />
+                                                  UseRangeColor="True"  
+                                                  RangeColorSmoothing="0.5" 
+                                                  RangeColorMode="ProportionalGradient" 
+                                                  Value="20" 
+                                                  StrokeThickness="0" 
+                                                  StartWidth="0.42" 
+                                                  EndWidth="0.42"/>
                         </telerik:VerticalLinearScale.Indicators>
                         <telerik:VerticalLinearScale.CustomItems>
-                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF30B524" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
+                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF23568F" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
                         </telerik:VerticalLinearScale.CustomItems>
                     </telerik:VerticalLinearScale>
                 </telerik:RadVerticalLinearGauge>
@@ -286,15 +419,55 @@
                                 Fill="Transparent" 
                                 Stroke="Transparent" 
                                 IsInteractive="False" FontSize="14" Foreground="{DynamicResource SVGBackground}" MajorTickBackground="{DynamicResource SVGBackground}" MiddleTickBackground="{DynamicResource SVGBackground}" >
+                       <telerik:VerticalLinearScale.Ranges>
+                            <telerik:GaugeRange Min="0" Max="30" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="#FF23568F" 
+                                TickBackground="#FF23568F" 
+                                LabelForeground="#FF23568F" 
+                                IndicatorBackground="#FF23568F" />
+                            <telerik:GaugeRange Min="30" Max="60" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Green" 
+                                TickBackground="Green" 
+                                LabelForeground="Green" 
+                                IndicatorBackground="Green" />
+                            <telerik:GaugeRange Min="60" Max="80" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Yellow" 
+                                TickBackground="Yellow" 
+                                LabelForeground="Yellow" 
+                                IndicatorBackground="Yellow" />
+                            <telerik:GaugeRange Min="80" Max="100" 
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Orange" 
+                                TickBackground="Orange" 
+                                LabelForeground="Orange" 
+                                IndicatorBackground="Orange" />
+                            <telerik:GaugeRange Min="100" Max="120"
+                                StartWidth="0" 
+                                EndWidth="0" 
+                                Background="Red" 
+                                TickBackground="Red" 
+                                LabelForeground="Red" 
+                                IndicatorBackground="Red" />
+                        </telerik:VerticalLinearScale.Ranges>
                         <telerik:VerticalLinearScale.Indicators>
                             <telerik:BarIndicator Name="tempPhase2_LEFT" 
-                                                    Value="20" 
-                                                    StrokeThickness="0" 
-                                                    StartWidth="0.42" 
-                                                    EndWidth="0.42" Background="#FF30B524" BorderBrush="Transparent" />
+                                                  UseRangeColor="True"  
+                                                  RangeColorSmoothing="0.5" 
+                                                  RangeColorMode="ProportionalGradient" 
+                                                  Value="20" 
+                                                  StrokeThickness="0" 
+                                                  StartWidth="0.42" 
+                                                  EndWidth="0.42"/>
                         </telerik:VerticalLinearScale.Indicators>
                         <telerik:VerticalLinearScale.CustomItems>
-                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF30B524" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
+                            <Path Data="M5,0 L15,0 L15,3 L15,12.4 L15.2,12.4 C18,14.2 20,17.4 20,21 C20,26.5 15.5,31 10,31 C4.5,31 0,26.5 0,21 C0,17.4 2,14.2 5,12.4 L5,12.3 L5,3 z" Stretch="Fill" Fill="#FF23568F" telerik:ScaleObject.RelativeX="0" telerik:ScaleObject.RelativeY="0.72" Height="31" Width="20"/>
                         </telerik:VerticalLinearScale.CustomItems>
                     </telerik:VerticalLinearScale>
                 </telerik:RadVerticalLinearGauge>
@@ -356,6 +529,13 @@
                     </Viewport2DVisual3D>
                 </helix:HelixViewport3D>
 
+                <ToggleButton x:Name="Enables_and_Readings_0x0D2_trip_all" Width="100" Height="100" Margin="601,705,649,50" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked">
+                    <ToggleButton.Template>
+                        <ControlTemplate>
+                            <Image Source="pack://application:,,,/Pictures/emergency-stop-button.png"/>
+                        </ControlTemplate>
+                    </ToggleButton.Template>
+                </ToggleButton>
             </Grid>
         </Grid>
     </Grid>

@@ -435,6 +435,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pictures\SVG\arrow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pictures\SVG\diagram.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -561,6 +565,9 @@
   <ItemGroup>
     <Folder Include="Excel Templates\Excel Databases\" />
     <Folder Include="Excel Templates\Excel Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\emergency-stop-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

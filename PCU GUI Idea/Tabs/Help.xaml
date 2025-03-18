@@ -20,6 +20,38 @@
             <!--<Slider x:Name="threeStateSlider" Width="150" Height="20" Minimum="0" Maximum="2" TickFrequency="1" IsSnapToTickEnabled="True" Background="#00000000">
 
             </Slider>-->
+            <ToggleButton x:Name="EmergencyToggle"
+                      Width="100" Height="100"
+                      Background="Transparent"
+                      BorderThickness="0">
+                <ToggleButton.Template>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Grid>
+                            <!-- Circular Background -->
+                            <Ellipse x:Name="ButtonEllipse"
+                                 Width="100" Height="100"
+                                 Fill="Red"
+                                 Stroke="DarkRed" StrokeThickness="3"/>
+
+                            <!-- Rotating Arrows -->
+                            <Canvas Width="60" Height="60">
+                                <Path Stroke="White" StrokeThickness="4" Data="M 10,30 C 15,10 45,10 50,30 L 40,25 M 52,31.1 L 51,15"
+                                  StrokeEndLineCap="Round" StrokeStartLineCap="Round" HorizontalAlignment="Center" Canvas.Top="-24" VerticalAlignment="Top"/>
+                                <Path Stroke="White" StrokeThickness="4" Data="M 50,30 C 45,50 15,50 10,30 L 20,35"
+                                  StrokeEndLineCap="Round" StrokeStartLineCap="Round"/>
+                            </Canvas>
+                        </Grid>
+
+                        <!-- Toggle Behavior -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="ButtonEllipse" Property="Fill" Value="LimeGreen"/>
+                                <Setter TargetName="ButtonEllipse" Property="Stroke" Value="DarkGreen"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </ToggleButton.Template>
+            </ToggleButton>
         </StackPanel>
     </Grid>
 </UserControl>

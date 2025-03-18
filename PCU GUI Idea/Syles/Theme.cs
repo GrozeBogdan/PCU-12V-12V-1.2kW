@@ -21,7 +21,8 @@ using System.Windows.Media;
         public Brush TextForegroundContrast { get; set; }
         public Brush ButtonContrast { get; set; }
         public Brush SVGBackground { get; set; }
-    }
+        public Brush SVGBackgroundContrast { get; set; }
+}
 
 
     /*  If you want to add a preset just follow this example:
@@ -69,7 +70,8 @@ using System.Windows.Media;
             TextForeground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFE8BC89")),
             TextForegroundContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFB1906A")),
             ButtonContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF442452")),
-            SVGBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ffe8bcb9"))
+            SVGBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ffe8bcb9")),
+            SVGBackgroundContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ffb99694"))
         };
 
         public static Theme Chill = new Theme
@@ -81,7 +83,8 @@ using System.Windows.Media;
             TextForeground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5D7DB")),
             TextForegroundContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ebafb7")),
             ButtonContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#152844")),
-            SVGBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5D7DB"))
+            SVGBackground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#F5D7DB")),
+            SVGBackgroundContrast = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ffc4acaf"))
         };
 
         public static Dictionary<string, Theme> Themes = new Dictionary<string, Theme>

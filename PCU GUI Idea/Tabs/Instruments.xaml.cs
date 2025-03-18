@@ -32,11 +32,11 @@ namespace PCU_GUI_Idea.Tabs
         List<string> VendorIds;
         List<string> ModelList;
         List<string> ConnectedDevicesIds;
+        List<string> ConnectedDevicesParsed = new List<string>();
 
         DeviceControlLib.IPowerSupply ps;
         DeviceControlLib.IElectronicLoad ld;
 
-        private Dictionary<string, string> ModelAndId = new Dictionary<string, string> { };
         private Dictionary<string, int> OperationMode = new Dictionary<string, int> 
         {
             {"CV", 0},
@@ -63,14 +63,24 @@ namespace PCU_GUI_Idea.Tabs
 
             for (int i = 0; i < ModelList.Count; i++)
             {
-                if (ModelList[i].Contains("CPX400DP"))
-                {
-                    ModelList[i] = ModelList[i].Replace(" ", "");   
-                }
-                ModelAndId.Add(ModelList[i], ConnectedDevicesIds[i]);
+                ModelList[i] = ModelList[i].Replace(" ", "");   
             }
 
             if (ConnectedDevicesIds.Count <= 0) return;
+
+            for (var i = 0; i < ConnectedDevicesIds.Count; i++)
+            {
+                var id = ConnectedDevicesIds[i];
+                var vendor = VendorIds[i];
+                var model = ModelList[i];
+
+                var end = id.IndexOf("::INSTR", StringComparison.Ordinal);
+                var shortId = id.Substring(end - 4, 4);
+
+                var finalString = $"{model} | {shortId} ";
+
+                ConnectedDevicesParsed.Add(finalString);
+            }
         }
         public void CloseThread()
         {
@@ -82,7 +92,9 @@ namespace PCU_GUI_Idea.Tabs
         private void Search_ModelList(object sender, EventArgs e)
         {
             RadComboBox radComboBox = sender as RadComboBox;
-            foreach(string model in ModelList)
+            if (ConnectedDevicesParsed == null)
+                return;
+            foreach(string model in ConnectedDevicesParsed)
             {
                 if(radComboBox.Items.Contains(model))
                 {
@@ -95,9 +107,9 @@ namespace PCU_GUI_Idea.Tabs
         private void Load_Instrument(object sender, SelectionChangedEventArgs e)
         {
             RadComboBox radComboBox = sender as RadComboBox;
-            DeviceControlLib.IDevice device = DeviceFactory.CreateDevice(radComboBox.Text);
+            DeviceControlLib.IDevice device = DeviceFactory.CreateDevice(ModelList[radComboBox.SelectedIndex]);
 
-            Error erdevice = device.Initialize(ModelAndId[radComboBox.Text]);
+            Error erdevice = device.Initialize(ConnectedDevicesIds[radComboBox.SelectedIndex]);
             // Exemplu powersupply in mod CV
             if (erdevice.IsOk)
             {
@@ -197,15 +209,15 @@ namespace PCU_GUI_Idea.Tabs
         private void TurnOnSupply(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            int temp = ps.GetSelectedOutput();
-            ps.SetSelectedOutput(int.Parse(button.Name.Replace("supplyCH", "")));
+           // int temp = ps.GetSelectedOutput();
+           // ps.SetSelectedOutput(int.Parse(button.Name.Replace("supplyCH", "")));
             try
             {
                 var value = ps.GetOutput();
                 ps.SetOutput(!value);
                 button.SetResourceReference(Button.BackgroundProperty, !value ? "PanelBackground" : "ButtonAndHighlightBackground");
                 // Revert back to old output, so to not interfere with the threads.
-                ps.SetSelectedOutput(temp);
+        //        ps.SetSelectedOutput(temp);
             }
             catch (Exception ex)
             {
@@ -309,21 +321,21 @@ namespace PCU_GUI_Idea.Tabs
                 try
                 {
                     TextBox textBox = sender as TextBox;
-                    int temp = ps.GetSelectedOutput();
+                    //int temp = ps.GetSelectedOutput();
 
                     if (textBox.Name.Contains("1"))
-                    {
-                        ps.SetSelectedOutput(1);
+                    {           
+  //                      ps.SetSelectedOutput(1);
                         ps.SetVoltage(double.Parse(supplyVoltageCH1.Text));
                         ps.SetCurrentLimitPositive(double.Parse(supplyCurrentCH1.Text));
                     }
                     if (textBox.Name.Contains("2"))
                     {
-                        ps.SetSelectedOutput(2);
+ //                       ps.SetSelectedOutput(2);
                         ps.SetVoltage(double.Parse(supplyVoltageCH2.Text));
                         ps.SetCurrentLimitPositive(double.Parse(supplyCurrentCH2.Text));
                     }
-                    ps.SetSelectedOutput(temp);
+                   // ps.SetSelectedOutput(temp);
                 }
                 catch (Exception ex)
                 {
