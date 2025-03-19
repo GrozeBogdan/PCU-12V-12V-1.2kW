@@ -52,6 +52,8 @@ namespace PCU_GUI_Idea
             controls.Add("GraphicsButton", graphics_UC);
             controls.Add("HelpButton", help_UC);
             controls.Add("InstrumentsButton", instruments_UC);
+
+            // Added the UC for each device.
         }
 
         // Asta trebuie sa fie tot codul pe care il am in MAIN!
@@ -63,7 +65,7 @@ namespace PCU_GUI_Idea
 
         public void Exit_Button(object sender, RoutedEventArgs e)
         {
-            instruments_UC.CloseThread();
+            //instruments_UC.CloseThread();
             CAN.Stop_CAN();
             App.Current.Shutdown();
         }

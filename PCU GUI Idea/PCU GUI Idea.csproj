@@ -406,6 +406,15 @@
     <Compile Include="Tabs\Customize.xaml.cs">
       <DependentUpon>Customize.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\InstrumentsUC\CPX400DP_UC.xaml.cs">
+      <DependentUpon>CPX400DP_UC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\InstrumentsUC\DL3031_UC.xaml.cs">
+      <DependentUpon>DL3031_UC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\InstrumentsUC\RP7945A_UC.xaml.cs">
+      <DependentUpon>RP7945A_UC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\UC_Template.xaml.cs">
       <DependentUpon>UC_Template.xaml</DependentUpon>
     </Compile>
@@ -496,6 +505,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Tabs\Customize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tabs\InstrumentsUC\CPX400DP_UC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tabs\InstrumentsUC\DL3031_UC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tabs\InstrumentsUC\RP7945A_UC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

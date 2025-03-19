@@ -30,8 +30,8 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                
-                <telerik:RadComboBox  x:Name="powerSupply_comboBox"
+
+                <telerik:RadComboBox  x:Name="deviceLeft_comboBox"
                                       VerticalContentAlignment="Center" 
                                       VerticalAlignment="Top"
                                       HorizontalContentAlignment="Center" 
@@ -49,7 +49,7 @@
                                       DropDownButtonIconContent="⮟" 
                                       DropDownOpened="Search_ModelList" 
                                       SelectionChanged="Load_Instrument"
-                                      EmptyText="Select Power Supply">
+                                      EmptyText="Select Device">
 
                     <telerik:RadComboBox.ItemContainerStyle>
                         <Style TargetType="telerik:RadComboBoxItem">
@@ -70,15 +70,14 @@
                 </telerik:RadComboBox>
                 <Image Height="80" Width="300" Margin="190,99,185,676"/>
 
-                <telerik:RadComboBox  x:Name="electronicLoad_comboBox"
-                                      Grid.Column="1"
+                <telerik:RadComboBox  x:Name="deviceRight_comboBox"                                     
                        VerticalContentAlignment="Center" 
                        VerticalAlignment="Top"
                        HorizontalContentAlignment="Center" 
-                       HorizontalAlignment="Right"
+                       HorizontalAlignment="Center"
                        Height="50"
                        Width="300" 
-                       Margin="0,40,190,0" 
+                       Margin="0,40,0,0" 
                        Background="{DynamicResource ButtonAndHighlightBackground}" 
                        Foreground="{DynamicResource TextForeground}" 
                        FontSize="24" 
@@ -89,7 +88,7 @@
                        DropDownButtonIconContent="⮟" 
                        DropDownOpened="Search_ModelList" 
                        SelectionChanged="Load_Instrument"
-                       EmptyText="Select Electronic Load">
+                       EmptyText="Select Device" Grid.Column="1">
 
                     <telerik:RadComboBox.ItemContainerStyle>
                         <Style TargetType="telerik:RadComboBoxItem">
@@ -110,88 +109,12 @@
                 </telerik:RadComboBox>
                 <Image Height="80" Width="300" Margin="187,99,188,676" Grid.Column="1"/>
 
-                <Grid Grid.Column="0" x:Name="TTISupply">
-                    <!-- TextBoxes to show values from Supply -->
-                    <Label Content="Current" Width="200" Height="55" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="415,328,60,472"/>
-                    <TextBox x:Name="ps_currentCH1" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="240" Height="80" Margin="38,388,397,387" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>
-                    <Label Content="Voltage" Width="200" Height="55" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="58,174,417,626"/>
-                    <TextBox x:Name="ps_voltageCH1" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="240" Height="80" Margin="38,236,397,539" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>
-                    <Label Content="Voltage" Width="200" Height="55" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="415,174,60,626"/>
-                    <TextBox x:Name="ps_currentCH2" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="240" Height="80" Margin="395,388,40,387" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>
-                    <Label Content="Current" Width="200" Height="55" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="58,328,417,472"/>
-                    <TextBox x:Name="ps_voltageCH2" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="240" Height="80" Margin="395,236,40,539" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>
-
-                    <!-- Supply CH1 Control -->
-                    <Label Content="Current" FontSize="24" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="38,721,487,94"/>
-                    <TextBox x:Name="supplyCurrentCH1" KeyDown="SendSupplyValue" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="150" Height="50" Margin="38,761,487,44" telerik:CornerRadiusHelper.ClipRadius="10" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium"/>
-                    <Label Content="Voltage" FontSize="24" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="38,626,487,189"/>
-                    <TextBox x:Name="supplyVoltageCH1" KeyDown="SendSupplyValue" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="150" Height="50" Margin="38,671,487,134" telerik:CornerRadiusHelper.ClipRadius="10" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium"/>
-
-                    <Grid x:Name="SupplyWorkMode" Height="100" Width="200" Margin="65,507,410,248" Grid.Column="1">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="37*"/>
-                            <ColumnDefinition Width="13*"/>
-                        </Grid.ColumnDefinitions>
-                        <Button x:Name="supplyCV" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90" Content="CV" telerik:CornerRadiusHelper.ClipRadius="6" Margin="110,10,0,50" Grid.ColumnSpan="2"/>
-                        <Button x:Name="supplyCP" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90" Content="CP" telerik:CornerRadiusHelper.ClipRadius="6" Margin="110,60,0,0" Grid.ColumnSpan="2"/>
-                        <Button x:Name="supplyCR" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90"  Content="CR" telerik:CornerRadiusHelper.ClipRadius="6" Margin="5,60,53,0"/>
-                        <Button x:Name="supplyCC" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90"  Content="CC" telerik:CornerRadiusHelper.ClipRadius="6" Margin="5,10,53,50"/>
-                    </Grid>
-
-                    <!-- Supply Toggles -->
-                    <!--<Button x:Name="supplyToggleCH2" Click="TurnOnSupply" FontSize="24" Content="CH2" Style="{DynamicResource ToolbarButton}" Width="150" Height="50" Margin="265,765,260,40" telerik:CornerRadiusHelper.ClipRadius="10"/>-->
-                    <Button x:Name="supplyToggleCH1" Click="TurnOnSupply" FontSize="24" Content="CH1" Style="{DynamicResource ToolbarButton}" Width="150" Height="50" Margin="265,671,260,134" telerik:CornerRadiusHelper.ClipRadius="10"/>
-
-                    <!-- Supply CH2 Control -->
-                    <!--<Label Content="Current" FontSize="24" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="489,721,40,94"/>
-                    <TextBox x:Name="supplyCurrentCH2" KeyDown="SendSupplyValue" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="150" Height="50" Margin="485,765,40,40" telerik:CornerRadiusHelper.ClipRadius="10" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium"/>
-                    <Label Content="Voltage" FontSize="24" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="485,626,40,189"/>
-                    <TextBox x:Name="supplyVoltageCH2" KeyDown="SendSupplyValue" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="150" Height="50" Margin="485,671,40,134" telerik:CornerRadiusHelper.ClipRadius="10" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium"/>-->
+                <Grid Grid.Column="0">
+                    <ContentControl x:Name="deviceLeft"/>
                 </Grid>
 
-                <Grid Grid.Column="1" x:Name="RigolLoad" Visibility="Visible">
-                    <!-- Load Controls -->
-                    <Label Content="Power" Width="200" Height="55" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="65,328,410,472" Grid.Column="1"/>
-                    <TextBox x:Name="ld_power" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="240" Height="80" Margin="45,388,390,387" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium" Grid.Column="1"/>
-                    <Label Content="Votlage" Width="200" Height="60" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="65,171,410,624" Grid.Column="1"/>
-                    <TextBox x:Name="ld_voltage" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="240" Height="80" Margin="45,236,390,539" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium" Grid.Column="1"/>
-                    <Label Content="Resistance" Width="200" Height="55" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="422,328,53,472" Grid.Column="1"/>
-                    <TextBox x:Name="ld_resistance" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="240" Height="80" Margin="402,388,33,387" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium" Grid.Column="1"/>
-                    <Label Content="Current" Width="200" Height="60" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="422,172,53,623" Grid.Column="1"/>
-                    <TextBox x:Name="ld_current" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="240" Height="80" Margin="402,237,33,538" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium" Grid.Column="1"/>
-
-                    <!--Ramp Settings-->
-                    <TextBox Visibility="Hidden" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="150" Height="50" Margin="947,765,253,40" telerik:CornerRadiusHelper.ClipRadius="10"/>
-                    <Label Content="Start Value" FontSize="24" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="276,626,253,189" Grid.Column="1"/>
-                    <TextBox x:Name="loadRampStart" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="150" Height="50" Margin="276,671,249,134" telerik:CornerRadiusHelper.ClipRadius="10" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium" Grid.Column="1"/>
-                    <Button Click="LoadRampMode" Style="{DynamicResource ToolbarButton}" Width="150" Height="50" Margin="492,765,33,40" telerik:CornerRadiusHelper.ClipRadius="10" Content="Start Ramp" FontSize="24" Grid.Column="1"/>
-                    <Label Content="End Value" FontSize="24" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="495,626,34,189" Grid.Column="1"/>
-                    <TextBox x:Name="loadRampEnd" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="150" Height="50" Margin="492,671,33,134" telerik:CornerRadiusHelper.ClipRadius="10" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium" Grid.Column="1"/>
-
-                    <Button Click="SendLoadValue" Style="{DynamicResource ToolbarButton}" Width="150" Height="50" Margin="47,765,478,40" telerik:CornerRadiusHelper.ClipRadius="10" Content="Send" FontSize="24" Grid.Column="1"/>
-                    <TextBox KeyDown="SendLoadValue" x:Name="loadValue" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="150" Height="50" Margin="47,671,478,134" telerik:CornerRadiusHelper.ClipRadius="10" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium" Grid.Column="1"/>
-
-                    <Label Content="Value" FontSize="24" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="47,626,478,189" Grid.Column="1"/>
-
-                    <Grid x:Name="loadWorkMode" Height="100" Width="200" Margin="65,507,410,248" Grid.Column="1">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="37*"/>
-                            <ColumnDefinition Width="13*"/>
-                        </Grid.ColumnDefinitions>
-                        <Button x:Name="loadCV" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90" Content="CV" telerik:CornerRadiusHelper.ClipRadius="6" Margin="110,10,0,50" Grid.ColumnSpan="2"/>
-                        <Button x:Name="loadCP" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90" Content="CP" telerik:CornerRadiusHelper.ClipRadius="6" Margin="110,60,0,0" Grid.ColumnSpan="2"/>
-                        <Button x:Name="loadCR" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90"  Content="CR" telerik:CornerRadiusHelper.ClipRadius="6" Margin="5,60,53,0"/>
-                        <Button x:Name="loadCC" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90"  Content="CC" telerik:CornerRadiusHelper.ClipRadius="6" Margin="5,10,53,50"/>
-                    </Grid>
-
-                    <!--
-                    <Button x:Name="loadCV" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90" Margin="840,508,410,307" Content="CV" telerik:CornerRadiusHelper.ClipRadius="6"/>
-                    <Button x:Name="loadCP" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90" Margin="840,557,410,258" Content="CP" telerik:CornerRadiusHelper.ClipRadius="6"/>
-                    <Button x:Name="loadCR" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90" Margin="735,557,515,258" Content="CR" telerik:CornerRadiusHelper.ClipRadius="6"/>
-                    <Button x:Name="loadCC" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90" Margin="735,508,515,307" Content="CC" telerik:CornerRadiusHelper.ClipRadius="6"/>
-                    -->
-
-                    <Button x:Name="loadState" Click="TurnOnLoad" Content="Off" Style="{DynamicResource ToolbarButton}" Height="50" Width="125" Margin="505,532,46,273" telerik:CornerRadiusHelper.ClipRadius="8" FontSize="24" Grid.Column="1"/>
+                <Grid Grid.Column="1">
+                    <ContentControl x:Name="deviceRght"/>
                 </Grid>
 
             </Grid>
