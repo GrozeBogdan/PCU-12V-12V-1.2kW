@@ -316,11 +316,6 @@ namespace PCU_GUI_Idea.Tabs
         {
            if(toggle.Name.Contains("trip_all"))
             {
-                if (toggle.IsChecked == false)
-                    toggle.Opacity = 1;
-                else if (toggle.IsChecked == true)
-                    toggle.Opacity = 0.5;
-
                 Enables_and_Readings_0x0D2_trip_ph1_in.Unchecked -= ToggleButton_Checked;
                 Enables_and_Readings_0x0D2_trip_ph1_out.Unchecked -= ToggleButton_Checked;
                 Enables_and_Readings_0x0D2_trip_ph2_in.Unchecked -= ToggleButton_Checked;

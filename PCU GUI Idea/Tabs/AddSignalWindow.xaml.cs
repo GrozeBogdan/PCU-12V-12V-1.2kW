@@ -16,7 +16,6 @@ namespace PCU_GUI_Idea
         public AddSignalWindow()
         {
             InitializeComponent();
-            DbcParser.ParseDatabase("CANdb12Vto12V.dbc");
             foreach (var message in DbcParser.Messages) 
             {
                 if (message.Sender == "Vector__XXX")

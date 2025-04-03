@@ -529,10 +529,69 @@
                     </Viewport2DVisual3D>
                 </helix:HelixViewport3D>
 
-                <ToggleButton x:Name="Enables_and_Readings_0x0D2_trip_all" Width="100" Height="100" Margin="601,705,649,50" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked">
+                <!--<ToggleButton x:Name="Enables_and_Readings_0x0D2_trip_all" Width="100" Height="100" Margin="601,705,649,50" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked">
                     <ToggleButton.Template>
                         <ControlTemplate>
                             <Image Source="pack://application:,,,/Pictures/emergency-stop-button.png"/>
+                        </ControlTemplate>
+                    </ToggleButton.Template>
+                </ToggleButton>-->
+
+                <ToggleButton x:Name="Enables_and_Readings_0x0D2_trip_all"
+                              Width="100" Height="100"
+                              Background="Transparent"
+                              BorderThickness="0"
+                              Margin="601,705,649,50" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked">
+                    <ToggleButton.Template>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Grid>
+                                <!-- Circular Background -->
+                                <Ellipse x:Name="ButtonEllipse"
+                         Width="100" Height="100"
+                         Fill="Red"
+                         Stroke="DarkRed" StrokeThickness="3"/>
+
+                                <!-- Canvas for Arrows -->
+                                <Canvas Width="90" Height="90">
+                                    <!-- Upper Arrow (Clockwise) -->
+                                    <Path Stroke="White" StrokeThickness="3"
+                          Data="M 68.5,20 A 30,30 0 0,1 20,55 M 20,55 L 25,70 M 20,55 L 35,58"
+                          StrokeEndLineCap="Round" StrokeStartLineCap="Round"
+                          Canvas.Left="11.998" Canvas.Top="9.665" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                        <Path.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="-138.51"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Path.RenderTransform>
+                                    </Path>
+
+                                    <!-- Lower Arrow (Counterclockwise) -->
+                                    <Path Stroke="White" StrokeThickness="3"
+                          Data="M 68,20 A 30,30 0 0,1 20,55.5 M 20,55 L 25,70 M 20,55 L 35,58"
+                          StrokeEndLineCap="Round" StrokeStartLineCap="Round"
+                          Canvas.Left="4.416" Canvas.Top="9.665" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <Path.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="40.272"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Path.RenderTransform>
+                                    </Path>
+                                </Canvas>
+                            </Grid>
+
+                            <!-- Toggle Behavior -->
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter TargetName="ButtonEllipse" Property="Fill" Value="LimeGreen"/>
+                                    <Setter TargetName="ButtonEllipse" Property="Stroke" Value="DarkGreen"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </ToggleButton.Template>
                 </ToggleButton>

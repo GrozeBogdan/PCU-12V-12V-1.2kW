@@ -7,7 +7,7 @@
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              mc:Ignorable="d" 
              d:DesignHeight="945" d:DesignWidth="1390">
-    
+
     <Grid Background="{DynamicResource PanelBackground}" telerik:CornerRadiusHelper.ClipRadius="24">
         <StackPanel Margin="50">
             <TextBlock Text="Remember:" Foreground="{DynamicResource SVGBackground}" FontSize="32" FontWeight="Medium" />
@@ -21,24 +21,49 @@
 
             </Slider>-->
             <ToggleButton x:Name="EmergencyToggle"
-                      Width="100" Height="100"
-                      Background="Transparent"
-                      BorderThickness="0">
+           Width="100" Height="100"
+           Background="Transparent"
+           BorderThickness="0">
                 <ToggleButton.Template>
                     <ControlTemplate TargetType="ToggleButton">
                         <Grid>
                             <!-- Circular Background -->
                             <Ellipse x:Name="ButtonEllipse"
-                                 Width="100" Height="100"
-                                 Fill="Red"
-                                 Stroke="DarkRed" StrokeThickness="3"/>
+                         Width="100" Height="100"
+                         Fill="Red"
+                         Stroke="DarkRed" StrokeThickness="3"/>
 
-                            <!-- Rotating Arrows -->
-                            <Canvas Width="60" Height="60">
-                                <Path Stroke="White" StrokeThickness="4" Data="M 10,30 C 15,10 45,10 50,30 L 40,25 M 52,31.1 L 51,15"
-                                  StrokeEndLineCap="Round" StrokeStartLineCap="Round" HorizontalAlignment="Center" Canvas.Top="-24" VerticalAlignment="Top"/>
-                                <Path Stroke="White" StrokeThickness="4" Data="M 50,30 C 45,50 15,50 10,30 L 20,35"
-                                  StrokeEndLineCap="Round" StrokeStartLineCap="Round"/>
+                            <!-- Canvas for Arrows -->
+                            <Canvas Width="90" Height="90">
+                                <!-- Upper Arrow (Clockwise) -->
+                                <Path Stroke="White" StrokeThickness="3"
+                          Data="M 68.5,20 A 30,30 0 0,1 20,55 M 20,55 L 25,70 M 20,55 L 35,58"
+                          StrokeEndLineCap="Round" StrokeStartLineCap="Round"
+                          Canvas.Left="11.998" Canvas.Top="9.665" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                    <Path.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="-138.51"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Path.RenderTransform>
+                                </Path>
+
+                                <!-- Lower Arrow (Counterclockwise) -->
+                                <Path Stroke="White" StrokeThickness="3"
+                          Data="M 68,20 A 30,30 0 0,1 20,55.5 M 20,55 L 25,70 M 20,55 L 35,58"
+                          StrokeEndLineCap="Round" StrokeStartLineCap="Round"
+                          Canvas.Left="4.416" Canvas.Top="9.665" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                    <Path.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="40.272"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Path.RenderTransform>
+                                </Path>
                             </Canvas>
                         </Grid>
 

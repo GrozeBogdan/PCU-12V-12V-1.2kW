@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -65,9 +66,13 @@ namespace PCU_GUI_Idea
 
         public void Exit_Button(object sender, RoutedEventArgs e)
         {
-            //instruments_UC.CloseThread();
+            foreach(Thread thread in Instruments.runningThreads)
+            {
+                thread.Abort();
+            }
             CAN.Stop_CAN();
             App.Current.Shutdown();
+            GC.Collect();
         }
 
         public void Minimize_Window(object sender, RoutedEventArgs e)

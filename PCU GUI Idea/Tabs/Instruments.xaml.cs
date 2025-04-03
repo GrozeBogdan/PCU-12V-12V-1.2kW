@@ -34,6 +34,7 @@ namespace PCU_GUI_Idea.Tabs
             { "RP7945A | 0128 ", device => new RP7945A_UC(device) },
             { "RP7945A | 0135 ", device => new RP7945A_UC(device) }
         };
+        public static List<Thread> runningThreads = new List<Thread>();
 
         List<string> VendorIds;
         List<string> ModelList;
