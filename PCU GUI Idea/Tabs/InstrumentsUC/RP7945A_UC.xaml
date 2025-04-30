@@ -6,18 +6,19 @@
              xmlns:local="clr-namespace:PCU_GUI_Idea.Tabs.InstrumentsUC"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
            mc:Ignorable="d" 
-           d:DesignHeight="895" d:DesignWidth="695">
+           d:DesignHeight="855" d:DesignWidth="675">
     <Grid>
         <!-- TextBoxes to show values from Supply -->
         <Label Visibility="Hidden" Content="Current" Width="200" Height="55" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="415,328,60,472"/>
-        <TextBox x:Name="ps_currentCH1" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource TextForeground}" Width="240" Height="80" Margin="38,388,397,387" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>
+        <TextBox x:Name="ps_currentCH1" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource TextForeground}" Width="240" Height="80" Margin="38,388,397,387" telerik:CornerRadiusHelper.ClipRadius="15" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>
         <Label Content="Voltage" Width="200" Height="55" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource TextForeground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="58,174,417,626"/>
-        <TextBox x:Name="ps_voltageCH1" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource TextForeground}" Width="240" Height="80" Margin="38,236,397,539" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>
+        <TextBox x:Name="ps_voltageCH1" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource TextForeground}" Width="240" Height="80" Margin="38,236,397,539" telerik:CornerRadiusHelper.ClipRadius="15" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>
         <Label Content="Power" Width="200" Height="55" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource TextForeground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="415,174,60,626"/>
         <TextBox Visibility="Hidden" x:Name="ps_currentCH2" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" Width="240" Height="80" Margin="395,388,40,387" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>
         <Label Content="Current" Width="200" Height="55" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource TextForeground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="58,328,417,472"/>
-        <TextBox x:Name="ps_power" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource TextForeground}" Width="240" Height="80" Margin="395,236,40,539" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>
-
+        <TextBox x:Name="ps_power" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource TextForeground}" Width="240" Height="80" Margin="395,236,40,539" telerik:CornerRadiusHelper.ClipRadius="15" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>
+        <!--<Label Content="Efficiency" Width="200" Height="55" FontSize="32" FontWeight="Medium" Foreground="{DynamicResource TextForeground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="415,333,60,467"/>
+        <TextBox x:Name="ps_efficiency" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource TextForeground}" Width="240" Height="80" Margin="395,388,40,387" telerik:CornerRadiusHelper.ClipRadius="15" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Medium"/>-->
         <!-- Supply CH1 Control -->
         <Label Content="Current" FontSize="24" FontWeight="Medium" Foreground="{DynamicResource TextForeground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="38,721,487,94"/>
         <TextBox x:Name="supplyCurrentCH1" KeyDown="SendSupplyValue" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource TextForeground}" Width="150" Height="50" Margin="38,761,487,44" telerik:CornerRadiusHelper.ClipRadius="10" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium"/>
@@ -35,6 +36,13 @@
           <Button x:Uid="1" x:Name="supplyCC" Click="SetWorkMode" Style="{DynamicResource ToolbarButton}" Height="40" Width="90"  Content="CC" telerik:CornerRadiusHelper.ClipRadius="6" Margin="5,10,53,50"/>
       </Grid>
 
+
+        <Grid x:Name="SupplyDirection" Height="100" Width="200" Margin="415,507,60,248">
+            <Label Content="How will it work" FontSize="24" FontWeight="Medium" Foreground="{DynamicResource TextForeground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,10,0,40"/>
+            <Button x:Name="deviceAsSupply" Click="SetSupplyOrLoad" Style="{DynamicResource ToolbarButton}" Height="40" Width="90" Content="Supply" telerik:CornerRadiusHelper.ClipRadius="6" Margin="0,60,110,0"/>
+            <Button x:Name="deviceAsLoad" Click="SetSupplyOrLoad" Style="{DynamicResource ToolbarButton}" Height="40" Width="90" Content="Load" telerik:CornerRadiusHelper.ClipRadius="6" Margin="110,60,0,0" Grid.ColumnSpan="2"/>
+        </Grid>
+        
         <!-- Supply Toggles -->
         <!--<Button x:Name="supplyToggleCH2" Click="TurnOnSupply" FontSize="24" Content="CH2" Style="{DynamicResource ToolbarButton}" Width="150" Height="50" Margin="265,765,260,40" telerik:CornerRadiusHelper.ClipRadius="10"/>-->
         <Button x:Name="supplyToggleCH1" Click="TurnOnSupply" FontSize="24" Content="Off" Style="{DynamicResource ToolbarButton}" Width="150" Height="50" Margin="265,671,260,134" telerik:CornerRadiusHelper.ClipRadius="10"/>

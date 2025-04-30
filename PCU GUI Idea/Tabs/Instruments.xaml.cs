@@ -18,6 +18,7 @@ using DeviceControlLib.TTi;
 using PCU_GUI_Idea.Tabs.InstrumentsUC;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.FieldList;
+using Telerik.Windows.Documents.Spreadsheet.Expressions.Functions;
 
 namespace PCU_GUI_Idea.Tabs
 {
@@ -26,20 +27,30 @@ namespace PCU_GUI_Idea.Tabs
     /// </summary>
     public partial class Instruments : UserControl
     {
+        public static double efficiency_excel;
+
+        private Thread efficiencyThread;
+
         private Dictionary<string, Func<DeviceControlLib.IDevice, UserControl>> deviceControls = 
         new Dictionary<string, Func<DeviceControlLib.IDevice, UserControl>>()
         {
             { "CPX400DP", device => new CPX400DP_UC(device) },
             { "DL3031", device => new DL3031_UC(device) },
+            { "RP7945A | 0135 ", device => new RP7945A_UC(device) },
             { "RP7945A | 0128 ", device => new RP7945A_UC(device) },
-            { "RP7945A | 0135 ", device => new RP7945A_UC(device) }
+            { "RP7945A | 0141 ", device => new RP7945A_UC(device) },
+            { "RP7945A | 0137 ", device => new RP7945A_UC(device) }
         };
+
         public static List<Thread> runningThreads = new List<Thread>();
 
         List<string> VendorIds;
         List<string> ModelList;
         List<string> ConnectedDevicesIds;
         List<string> ConnectedDevicesParsed = new List<string>();
+
+        private double power1;
+        private double power2;
 
         private Dictionary<string, int> OperationMode = new Dictionary<string, int> 
         {
@@ -53,6 +64,7 @@ namespace PCU_GUI_Idea.Tabs
         {
             InitializeComponent();
             InitializeInstruments();
+
         }
 
         private void InitializeInstruments()
@@ -118,10 +130,58 @@ namespace PCU_GUI_Idea.Tabs
                 }
                 else if (radComboBox.Name == "deviceRight_comboBox")
                 {
-                    deviceRght.Content = deviceControls[ConnectedDevicesParsed[radComboBox.SelectedIndex]](device); 
+                    deviceRight.Content = deviceControls[ConnectedDevicesParsed[radComboBox.SelectedIndex]](device); 
                 }
             }
-            
+
+            if (deviceLeft.Content != null && deviceRight.Content != null)
+            {
+                efficiencyThread = new Thread(new ThreadStart(ParseEfficiency));
+                efficiencyThread.Start();
+                Instruments.runningThreads.Add(efficiencyThread);
+            }
+        }
+
+        private void ParseEfficiency() 
+        {
+            while (efficiencyThread.IsAlive)
+            {
+                Dispatcher.Invoke(() =>
+                {
+                    var content = deviceLeft.Content as FrameworkElement;
+                    var textbox = content.FindName("ps_power");
+                    if((textbox as TextBox).Text != "")
+                        power1 = Math.Round(double.Parse((textbox as TextBox).Text.Replace("W", "")),1);
+
+                    content = deviceRight.Content as FrameworkElement;
+                    textbox = content.FindName("ps_power");
+                    if ((textbox as TextBox).Text != "")
+                        power2 = double.Parse((textbox as TextBox).Text.Replace("W", ""));
+
+                    efficiency.Text = Math.Round((-power2 / power1) * 100, 2).ToString();
+                    efficiency_excel = double.Parse(efficiency.Text);
+                });
+                Thread.Sleep(100);
+            }
+        }
+
+        public void UpdateLoadAndSendEfficiency(int value)
+        {
+            TextBox tb;
+            var content = deviceRight.Content as FrameworkElement;
+            var textbox = content.FindName("supplyCurrentCH1");
+            tb = (TextBox)textbox;
+            tb.Text = value.ToString();
+            var source = PresentationSource.FromVisual(tb);
+            if (source != null)
+            {
+                KeyEventArgs enterKeyEvent = new KeyEventArgs(Keyboard.PrimaryDevice, PresentationSource.FromVisual(tb), 0, Key.Enter)
+                {
+                    RoutedEvent = UIElement.KeyDownEvent
+                };
+
+                tb.RaiseEvent(enterKeyEvent);
+            }
         }
 
 

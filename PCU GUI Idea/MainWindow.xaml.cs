@@ -54,6 +54,9 @@ namespace PCU_GUI_Idea
             controls.Add("HelpButton", help_UC);
             controls.Add("InstrumentsButton", instruments_UC);
 
+
+            int tier = RenderCapability.Tier >> 16;
+            Console.WriteLine("Rendering Tier: " + tier);
             // Added the UC for each device.
         }
 

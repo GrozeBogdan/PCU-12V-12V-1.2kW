@@ -74,6 +74,15 @@ namespace PCU_GUI_Idea.Tabs
             Load3DModel();
         }
 
+        /// <summary>
+        /// <b>OUTDATED</b>
+        /// <br/>
+        /// Standard function to put SignalValue in the CAN Byte Array
+        /// </summary>
+        /// <param name="binaryArray"></param>
+        /// <param name="value"></param>
+        /// <param name="startBit"></param>
+        /// <param name="length"></param>
         private void AppendSignalValue(byte[] binaryArray, int value, int startBit, int length)
         {
             for (int i = 0; i < length; i++)
@@ -82,6 +91,51 @@ namespace PCU_GUI_Idea.Tabs
                 int byteIndex = (startBit + i) / 8;
                 int bitIndex = (startBit + i) % 8;
                 binaryArray[byteIndex] |= (byte)(bit << bitIndex);
+            }
+        }
+        /// <summary>
+        /// Newer function to put Signal Value in the CAN Byte Array of the respective message.
+        /// <br/>
+        /// It takes signal <b>Data Type</b> to see what type of signal is used.
+        /// </summary>
+        /// <param name="binaryArray"></param>
+        /// <param name="value"></param>
+        /// <param name="startBit"></param>
+        /// <param name="length"></param>
+        /// <param name="dataType"></param>
+        private void AppendSignalValue(byte[] binaryArray, double value, int startBit, int length, string dataType)
+        {
+            if(dataType == "Unsigned")
+            {
+                for (int i = 0; i < length; i++)
+                {
+                    int bit = ((int)value >> i) & 1;
+                    int byteIndex = (startBit + i) / 8;
+                    int bitIndex = (startBit + i) % 8;
+                    binaryArray[byteIndex] |= (byte)(bit << bitIndex);
+                }
+            }
+            else if(dataType == "Float")
+            {
+                if (length == 32) // Handling float (4 bytes)
+                {
+                    byte[] floatBytes = BitConverter.GetBytes((float)value); // Convert float to byte array (4 bytes)
+
+                    for (int i = 0; i < 32; i++) // Loop through 32 bits
+                    {
+                        int bit = (floatBytes[i / 8] >> (i % 8)) & 1; // Extract bit from byte
+                        int byteIndex = (startBit + i) / 8;
+                        int bitIndex = (startBit + i) % 8;
+                        binaryArray[byteIndex] |= (byte)(bit << bitIndex); // Set bit in target array
+                    }
+                }
+                else if (length == 1) // Handling single bit
+                {
+                    int bit = (value >= 1.0) ? 1 : 0; // Convert value to a single bit (thresholding)
+                    int byteIndex = startBit / 8;
+                    int bitIndex = startBit % 8;
+                    binaryArray[byteIndex] |= (byte)(bit << bitIndex);
+                }
             }
         }
 
@@ -297,7 +351,7 @@ namespace PCU_GUI_Idea.Tabs
                             {
                                 if (toggle.Name.Contains(signal.Name))
                                 {
-                                    AppendSignalValue(binaryArray, System.Convert.ToInt16(toggle.IsChecked.Value), signal.StartBit, signal.Length);
+                                    AppendSignalValue(binaryArray, System.Convert.ToInt16(toggle.IsChecked.Value), signal.StartBit, signal.Length, signal.DataType);
                                     break;
                                 }
                             }
@@ -316,26 +370,27 @@ namespace PCU_GUI_Idea.Tabs
         {
            if(toggle.Name.Contains("trip_all"))
             {
-                Enables_and_Readings_0x0D2_trip_ph1_in.Unchecked -= ToggleButton_Checked;
-                Enables_and_Readings_0x0D2_trip_ph1_out.Unchecked -= ToggleButton_Checked;
-                Enables_and_Readings_0x0D2_trip_ph2_in.Unchecked -= ToggleButton_Checked;
-                Enables_and_Readings_0x0D2_trip_ph2_out.Unchecked -= ToggleButton_Checked;
+                Enables_and_Readings_0x0E1_trip_ph1_in.Unchecked -= ToggleButton_Checked;
+                Enables_and_Readings_0x0E1_trip_ph1_out.Unchecked -= ToggleButton_Checked;
+                Enables_and_Readings_0x0E1_trip_ph2_in.Unchecked -= ToggleButton_Checked;
+                Enables_and_Readings_0x0E1_trip_ph2_out.Unchecked -= ToggleButton_Checked;
 
-                Enables_and_Readings_0x0D2_trip_ph1_in.IsChecked = false;
-                Enables_and_Readings_0x0D2_trip_ph1_out.IsChecked = false;
-                Enables_and_Readings_0x0D2_trip_ph2_in.IsChecked = false;
-                Enables_and_Readings_0x0D2_trip_ph2_out.IsChecked = false;
+                Enables_and_Readings_0x0E1_trip_ph1_in.IsChecked = false;
+                Enables_and_Readings_0x0E1_trip_ph1_out.IsChecked = false;
+                Enables_and_Readings_0x0E1_trip_ph2_in.IsChecked = false;
+                Enables_and_Readings_0x0E1_trip_ph2_out.IsChecked = false;
 
-                Enables_and_Readings_0x0D2_trip_ph1_in.Unchecked += ToggleButton_Checked;
-                Enables_and_Readings_0x0D2_trip_ph1_out.Unchecked += ToggleButton_Checked;
-                Enables_and_Readings_0x0D2_trip_ph2_in.Unchecked += ToggleButton_Checked;
-                Enables_and_Readings_0x0D2_trip_ph2_out.Unchecked += ToggleButton_Checked;
+                Enables_and_Readings_0x0E1_trip_ph1_in.Unchecked += ToggleButton_Checked;
+                Enables_and_Readings_0x0E1_trip_ph1_out.Unchecked += ToggleButton_Checked;
+                Enables_and_Readings_0x0E1_trip_ph2_in.Unchecked += ToggleButton_Checked;
+                Enables_and_Readings_0x0E1_trip_ph2_out.Unchecked += ToggleButton_Checked;
             }
         }
 
         private void Send_PWM_Values(object sender, KeyEventArgs e)
         {
-            byte[] binaryArray = new byte[8];
+            //byte[] binaryArray = new byte[8];
+            List<Message> sentMessages = new List<Message>();
             TextBox senderBox = sender as TextBox;
             if(e.Key == Key.Enter)
             {
@@ -353,24 +408,32 @@ namespace PCU_GUI_Idea.Tabs
                                     textBoxes.Add(textbox);
                                 }
                             }
-
-                            foreach (var signal in message.Signals)
+                        }
+                    }
+                    foreach (var message in DbcParser.Messages)
+                    { 
+                        foreach (TextBox textbox in textBoxes) 
+                        {
+                            if(textbox.Name.Contains(message.Name))
                             {
-                                foreach (var text in textBoxes)
+                                byte[] binaryArray = new byte[8];
+                                foreach (var signal in message.Signals)
                                 {
-                                    if (text.Name.Contains(signal.Name))
+                                    foreach (var text in textBoxes)
                                     {
-                                        AppendSignalValue(binaryArray, System.Convert.ToInt16(text.Text), signal.StartBit, signal.Length);
-                                    }
-                                    if (signal.Name.Contains(text.Uid))
-                                    {
-                                        AppendSignalValue(binaryArray, 1, signal.StartBit, signal.Length);
+                                        if (text.Name.Contains(signal.Name))
+                                        {
+                                            AppendSignalValue(binaryArray, System.Convert.ToDouble(text.Text), signal.StartBit, signal.Length, signal.DataType);
+                                        }
+                                        if (signal.Name.Contains(text.Uid))
+                                        {
+                                            AppendSignalValue(binaryArray, 1, signal.StartBit, signal.Length, signal.DataType);
+                                        }
                                     }
                                 }
+                                //sentMessages.Add(message);
+                                AppendAndTransmitData(message, binaryArray);
                             }
-
-                            AppendAndTransmitData(message, binaryArray);
-                            break;
                         }
                     }
                 }
@@ -400,6 +463,10 @@ namespace PCU_GUI_Idea.Tabs
                 else if(element is BarIndicator barIndicator) 
                 {
                     barIndicator.Value = Math.Min(value,120.0);
+                    if(barIndicator.Name.Contains("Phase1_LEFT"))
+                        temp_hb1.Text = barIndicator.Value.ToString();
+                    else if(barIndicator.Name.Contains("Phase1_RIGHT"))
+                        temp_hb2.Text = barIndicator.Value.ToString();
                 }
             }
         }
@@ -545,17 +612,17 @@ namespace PCU_GUI_Idea.Tabs
 
                                 if (Madalina[(WorkMode)item].Item1 == signal.Name)
                                 {
-                                    AppendSignalValue(array, 1, signal.StartBit, signal.Length);
-                                    WorkingMode_StateMachine_0x0D3_pcu_direction_.IsEnabled = Madalina[(WorkMode)item].Item2;
-                                    CheckTextBoxes((WorkMode)item, WorkingMode_StateMachine_0x0D3_pcu_direction_.IsChecked.Value);
+                                    AppendSignalValue(array, 1, signal.StartBit, signal.Length, signal.DataType);
+                                    WorkingMode_StateMachine_0x0E2_pcu_direction_.IsEnabled = Madalina[(WorkMode)item].Item2;
+                                    CheckTextBoxes((WorkMode)item, WorkingMode_StateMachine_0x0E2_pcu_direction_.IsChecked.Value);
                                 }
-                                else if (signal.Name.Contains(ValueToDirection[WorkingMode_StateMachine_0x0D3_pcu_direction_.IsChecked.Value]) && (WorkMode)item != WorkMode.BUCK_BOOST_MODE)
+                                else if (signal.Name.Contains(ValueToDirection[WorkingMode_StateMachine_0x0E2_pcu_direction_.IsChecked.Value]) && (WorkMode)item != WorkMode.BUCK_BOOST_MODE)
                                 {
-                                    AppendSignalValue(array, WorkingMode_StateMachine_0x0D3_pcu_direction_.IsChecked.Value ? 1 : 1, signal.StartBit, signal.Length);
-                                    CheckTextBoxes((WorkMode)item, WorkingMode_StateMachine_0x0D3_pcu_direction_.IsChecked.Value);
+                                    AppendSignalValue(array, WorkingMode_StateMachine_0x0E2_pcu_direction_.IsChecked.Value ? 1 : 1, signal.StartBit, signal.Length, signal.DataType);
+                                    CheckTextBoxes((WorkMode)item, WorkingMode_StateMachine_0x0E2_pcu_direction_.IsChecked.Value);
                                 }
                                 else
-                                    AppendSignalValue(array, 0, signal.StartBit, signal.Length);
+                                    AppendSignalValue(array, 0, signal.StartBit, signal.Length, signal.DataType);
                             }
                             AppendAndTransmitData(message, array);
                             return;
@@ -573,12 +640,12 @@ namespace PCU_GUI_Idea.Tabs
 
             Message message = DbcParser.FindMessage(toggle.Name);
             Signal directionSignal = DbcParser.FindSignal(message, ValueToDirection[toggle.IsChecked.Value]);
-            Signal workModeSignal = DbcParser.FindSignal(message, Madalina[(WorkMode)WorkingMode_StateMachine_0x0D3_pcu_work_mode_.Value].Item1);
+            Signal workModeSignal = DbcParser.FindSignal(message, Madalina[(WorkMode)WorkingMode_StateMachine_0x0E2_pcu_work_mode_.Value].Item1);
 
-            CheckTextBoxes((WorkMode)WorkingMode_StateMachine_0x0D3_pcu_work_mode_.Value, toggle.IsChecked.Value);
+            CheckTextBoxes((WorkMode)WorkingMode_StateMachine_0x0E2_pcu_work_mode_.Value, toggle.IsChecked.Value);
 
-            AppendSignalValue(array, 1, workModeSignal.StartBit, workModeSignal.Length);
-            AppendSignalValue(array, 1, directionSignal.StartBit, directionSignal.Length);
+            AppendSignalValue(array, 1, workModeSignal.StartBit, workModeSignal.Length, workModeSignal.DataType);
+            AppendSignalValue(array, 1, directionSignal.StartBit, directionSignal.Length, directionSignal.DataType);
 
             AppendAndTransmitData(message, array);
         }

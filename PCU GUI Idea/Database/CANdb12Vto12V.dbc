@@ -73,18 +73,42 @@ BO_ 169 OVP_OCP_0x0A9: 1 Vector__XXX
  SG_ output_OV : 2|1@1+ (1,0) [0|0] ""  Canoe_Debug
  SG_ output_OC : 3|1@1+ (1,0) [0|0] ""  Canoe_Debug
 
-BO_ 209 PWM_Updates_0X0D1: 8 Canoe_Debug
- SG_ frequency : 0|9@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dutyCycle : 9|7@1 (1,0) [0|0] "" Vector__XXX
- SG_ deadbandRED : 16|10@1+ (1,0) [0|0] "" Vector__XXX
- SG_ deadbandFED : 26|10@1+ (1,0) [0|0] "" Vector__XXX
- SG_ phase : 36|9@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ph1in : 45|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ph1out : 46|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ph2in : 47|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ph2out : 48|1@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 209 PWM_Frequency_0x0D1: 5 Canoe_Debug
+ SG_ frequency : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ ph1in : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph1out : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph2in : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph2out : 35|1@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 210 Enables_and_Readings_0x0D2: 1 Canoe_Debug
+BO_ 210 PWM_DutyCycle_0x0D2: 5 Canoe_Debug
+ SG_ dutyCycle : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ ph1in : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph1out : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph2in : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph2out : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 211 PWM_DeadbandRED_0x0D3: 5 Canoe_Debug
+ SG_ deadbandRED : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ ph1in : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph1out : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph2in : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph2out : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 212 PWM_DeadbandFED_0x0D4: 5 Canoe_Debug
+ SG_ deadbandFED : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ ph1in : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph1out : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph2in : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph2out : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 213 PWM_Phaseshift_0x0D5: 5 Canoe_Debug
+ SG_ phase : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ ph1in : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph1out : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph2in : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ph2out : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 225 Enables_and_Readings_0x0E1: 1 Canoe_Debug
  SG_ trip_in : 0|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ trip_out : 1|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ trip_ph1_in : 2|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -93,7 +117,7 @@ BO_ 210 Enables_and_Readings_0x0D2: 1 Canoe_Debug
  SG_ trip_ph2_out : 5|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ trip_all : 6|1@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 211 WorkingMode_StateMachine_0x0D3: 1 Canoe_Debug
+BO_ 226 WorkingMode_StateMachine_0x0E2: 1 Canoe_Debug
  SG_ pcu_work_mode_buck : 0|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ pcu_work_mode_boost : 1|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ pcu_work_mode_buck_boost : 2|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -132,5 +156,10 @@ SIG_VALTYPE_ 166 current_ph2_out : 1;
 SIG_VALTYPE_ 167 power12V_phase1 : 1;
 SIG_VALTYPE_ 167 power12V_phase2 : 1;
 SIG_VALTYPE_ 168 efficiency : 1;
+SIG_VALTYPE_ 209 frequency : 1;
+SIG_VALTYPE_ 210 dutyCycle : 1;
+SIG_VALTYPE_ 211 deadbandRED : 1;
+SIG_VALTYPE_ 212 deadbandFED : 1;
+SIG_VALTYPE_ 213 phase : 1;
 
 

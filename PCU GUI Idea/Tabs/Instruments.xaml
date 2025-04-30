@@ -30,7 +30,7 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-
+                
                 <telerik:RadComboBox  x:Name="deviceLeft_comboBox"
                                       VerticalContentAlignment="Center" 
                                       VerticalAlignment="Top"
@@ -66,8 +66,10 @@
                             <telerik:RadGlyph Glyph="{Binding}" Foreground="{DynamicResource TextForeground}"/>
                         </DataTemplate>
                     </telerik:RadComboBox.DropDownButtonIconTemplate>
-
+            
                 </telerik:RadComboBox>
+
+                <TextBox x:Name="efficiency" Height="50" Width="200" Grid.ColumnSpan="2" Margin="575,40,575,765" Focusable="False" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource TextForeground}" telerik:CornerRadiusHelper.ClipRadius="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="Medium"/>
                 <Image Height="80" Width="300" Margin="190,99,185,676"/>
 
                 <telerik:RadComboBox  x:Name="deviceRight_comboBox"                                     
@@ -114,7 +116,7 @@
                 </Grid>
 
                 <Grid Grid.Column="1">
-                    <ContentControl x:Name="deviceRght"/>
+                    <ContentControl x:Name="deviceRight"/>
                 </Grid>
 
             </Grid>

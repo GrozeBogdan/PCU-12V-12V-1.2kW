@@ -24,6 +24,7 @@ using Microsoft.Office.Interop.Excel;
 using Telerik.Windows.Documents.Fixed.Model.Graphics;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
 using Telerik.Windows.Controls.Spreadsheet.Worksheets;
+using PCU_GUI_Idea.Tabs.InstrumentsUC;
 
 namespace PCU_GUI_Idea.Tabs
 {
@@ -250,6 +251,8 @@ namespace PCU_GUI_Idea.Tabs
 
         private async void Converter_Efficency_Model(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = (MainWindow)System.Windows.Application.Current.MainWindow;
+            RP7945A_UC load = (RP7945A_UC)mainWindow.instruments_UC.deviceRight.Content;
             Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = excelTable.Workbook;
             Telerik.Windows.Documents.Spreadsheet.Model.Worksheet sheet = (Telerik.Windows.Documents.Spreadsheet.Model.Worksheet)workbook.ActiveSheet ;
 
@@ -260,12 +263,29 @@ namespace PCU_GUI_Idea.Tabs
             
             for(int collumn = 2; collumn <= workingRange.ToIndex.ColumnIndex; collumn++) 
             {
+                if (collumn == 3)
+                    return;
                 increment = 1;
                 for (int rows = 5; rows <= workingRange.ToIndex.RowIndex; rows++)
                 {
-                    sheet.Cells[rows, collumn].SetValue(increment);
+                    load.supplyCurrentCH1.Text = increment.ToString();
+                    load.SendSupplyValue2(null,null);
+                    await Task.Delay(3000);
+                    sheet.Cells[rows, collumn].SetValue(Instruments.efficiency_excel);
                     increment++;
-                    await Task.Delay(100);
+                }
+
+                if (increment == 51)
+                {
+                    for (int i = 1; i <= 5; i++)
+                    {
+                        var test = increment - (i * 10 + 1) ;
+                        if (test == 0)
+                            test = 1;
+                        load.supplyCurrentCH1.Text = test.ToString();
+                        load.SendSupplyValue2(null, null);
+                        await Task.Delay(2000);
+                    }
                 }
             }
 
