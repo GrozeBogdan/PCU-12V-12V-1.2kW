@@ -473,7 +473,7 @@ namespace PCU_GUI_Idea.Tabs
         private void Load3DModel()
         {
             var stLReader = new StLReader();
-            Model3D model = stLReader.Read("C:\\Users\\Bogdan\\Documents\\GitHub\\PCU-12V-12V-1.2kW\\PCU GUI Idea\\Pictures\\3D Models\\car-battery.stl");
+            Model3D model = stLReader.Read(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Pictures/3D Models/car-battery.stl");
 
             model = CenterAndScaleModel(model, 10.0); // Adjust size (5.0 is a good default scale)
 

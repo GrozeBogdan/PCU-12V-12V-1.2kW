@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\
 PCU_GUI_Idea
 none
 false
 DEBUG;TRACE
-C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\App.xaml
+C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\App.xaml
 25-1435507201
 
 23-1946511254
-1041044511739
+104781121796
 MainWindow.xaml;Menu\MenuTab.xaml;Pictures\SVG\3d-cube.xaml;Pictures\SVG\arrow.xaml;Pictures\SVG\diagram.xaml;Pictures\SVG\length-vertical.xaml;Pictures\SVG\length.xaml;Pictures\SVG\pcu_buck_boost_converter.xaml;Pictures\SVG\pcu_buck_boost_inductor_down.xaml;Pictures\SVG\pcu_buck_boost_inductor_up.xaml;Pictures\SVG\pie-chart.xaml;Pictures\SVG\pwm_duty.xaml;Pictures\SVG\pwm_freq.xaml;Pictures\SVG\SchematicConv.xaml;Pictures\SVG\thermometer.xaml;Tabs\AddSignalWindow.xaml;Tabs\Converter.xaml;Tabs\Graphics.xaml;Tabs\Customize.xaml;Tabs\InstrumentsUC\CPX400DP_UC.xaml;Tabs\InstrumentsUC\DL3031_UC.xaml;Tabs\InstrumentsUC\RP7945A_UC.xaml;Tabs\UC_Template.xaml;Tabs\Instruments.xaml;Tabs\Help.xaml;
 
 True
