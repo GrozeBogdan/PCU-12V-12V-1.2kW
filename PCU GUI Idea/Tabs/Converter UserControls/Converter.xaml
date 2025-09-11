@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PCU_GUI_Idea.Tabs.Converter"
+﻿<UserControl x:Class="PCU_GUI_Idea.Tabs.Converter_UserControls.Converter"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,7 +8,7 @@
              xmlns:helix="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="945" 
-             d:DesignWidth="1390"
+             d:DesignWidth="1490"
              >
     <UserControl.Resources>
         <telerik:Windows8Colors x:Key="Windows8Colors" />
@@ -45,12 +45,12 @@
             </Grid>
 
             <!--Tab contating Converter and other functionalities-->
-            <Grid Grid.Row="1" x:Name="convTab">
+            <Grid Grid.Row="1" x:Name="convTab" Width="1390" HorizontalAlignment="Left" Margin="-60,0,60,0">
                 <!--<Image Margin="400, 0, 400, 550" x:Name="converter_ph1" Source="C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_transp.png">
                 </Image>
                 <Image Margin="400, 350, 400, 300" x:Name="converter_ph2" Source="C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_transp.png">
                 </Image>-->
-                <!--<Image Margin="15,25,40,130" Source="C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_converter.png"/>-->
+                <!--<Image Margin="15,25,40,130" Source="C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\Pictures\SVG\pcu_buck_boost_converter.png"/>-->
 
                 <!--Correct Image-->
                 <!--<Image Margin="100,50,100,150">
@@ -59,7 +59,7 @@
                     </Image.Source>
                 </Image>-->
             </Grid>
-            <Grid Grid.Row="1" x:Name="gridContainingElements">
+            <Grid Grid.Row="1" x:Name="gridContainingElements" Width="1390" HorizontalAlignment="Left" Margin="-60,0,60,0">
 
                 <!--Current Measurements TextBoxes-->
                 <TextBox x:Name="current_ph1_in"  Width="100" Height="50" Margin="135,35,1115,770" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Focusable="False" Text="200"/>
@@ -76,10 +76,10 @@
 
                 <!--<Label Content="Direction" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="595,170,643,644" HorizontalContentAlignment="Center"/>-->
                 <!--<Label Content="Left" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,136,744,669" HorizontalContentAlignment="Center"/>-->
-                <Grid x:Name="directionLeft" Height="50" Margin="701,133,567,672"/>
-                
+                <Grid x:Name="directionLeft" Width="85" Height="40" Margin="725,138,580,677"/>
+
                 <!--<Label Content="Right" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,136,567,669" HorizontalContentAlignment="Center"/>-->
-                <Grid x:Name="directionRight" Height="50" Margin="518,133,758,672" RenderTransformOrigin="0.5,0.5">
+                <Grid x:Name="directionRight" Width="80" Height="40" Margin="535,138,775,677" RenderTransformOrigin="0.5,0.5">
                     <Grid.RenderTransform>
                         <TransformGroup>
                             <RotateTransform Angle="-180"/>
@@ -95,8 +95,8 @@
                 <Label Content="Buck-Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="583,85,630,720" HorizontalContentAlignment="Center"/>
                 <Label Content="Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="725,85,551,720" HorizontalContentAlignment="Center"/>
                 <Slider Name="WorkingMode_StateMachine_0x0E2_pcu_work_mode_" Style="{DynamicResource ThreeStateToggleSliderStyle}" Width="200" Margin="551,40,599,775" ValueChanged="ChangeWorkMode" Value="1"/>
-                
-                
+
+
                 <!--<ToggleButton x:Name="WorkingMode_StateMachine_0x0D3_pcu_work_mode" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,60,654,755" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>-->
 
                 <!--<ToggleButton x:Name="trip_in" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="58,360,1202,455" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked" RenderTransformOrigin="0.5,0.5" >
@@ -156,7 +156,7 @@
                 <Grid Width="100" Height="40" x:Name="pwm_freq3" Margin="966,419,284,396"/>
                 <Grid Width="100" Height="40" x:Name="pwm_freq4" Margin="966,97,284,718"/>
 
-                <TextBox x:Name="temp_hb1" Background="Transparent" BorderBrush="Transparent" Margin="529,316,786,507" FontSize="24" Text="24" Foreground="{DynamicResource TextForeground}" FontWeight="Medium"/>
+                <TextBox Width="35" x:Name="temp_hb1" Background="Transparent" BorderBrush="Transparent" Margin="506,344,848,479" FontSize="24" Text="24" Foreground="{DynamicResource TextForeground}" FontWeight="Medium"/>
                 <!--Temperature controls-->
                 <Grid x:Name="thermometer_hb1" Margin="484,222,826,507"/>
                 <telerik:RadVerticalLinearGauge Width="20" Margin="494,232,836,517" telerik:StyleManager.Theme="VisualStudio2019" Background="Transparent" Foreground="{DynamicResource SVGBackground}" RenderTransformOrigin="-1.425,-0.505">
@@ -238,7 +238,7 @@
                     </telerik:VerticalLinearScale>
                 </telerik:RadVerticalLinearGauge>
 
-                <TextBox x:Name="temp_hb2" Background="Transparent" BorderBrush="Transparent" Margin="729,316,588,507" FontSize="24" Text="24" Foreground="{DynamicResource TextForeground}" FontWeight="Medium"/>
+                <TextBox Width="35" x:Name="temp_hb2" Background="Transparent" BorderBrush="Transparent" Margin="820,344,536,479" FontSize="24" Text="24" Foreground="{DynamicResource TextForeground}" FontWeight="Medium"/>
                 <Grid x:Name="thermometer_hb2" Margin="797,222,513,507"/>
                 <telerik:RadVerticalLinearGauge Width="20" Margin="807,232,523,517" telerik:StyleManager.Theme="VisualStudio2019" Background="Transparent" Foreground="{DynamicResource SVGBackground}" RenderTransformOrigin="-1.425,-0.505">
                     <telerik:VerticalLinearScale 
@@ -420,7 +420,7 @@
                                 Fill="Transparent" 
                                 Stroke="Transparent" 
                                 IsInteractive="False" FontSize="14" Foreground="{DynamicResource SVGBackground}" MajorTickBackground="{DynamicResource SVGBackground}" MiddleTickBackground="{DynamicResource SVGBackground}" >
-                       <telerik:VerticalLinearScale.Ranges>
+                        <telerik:VerticalLinearScale.Ranges>
                             <telerik:GaugeRange Min="0" Max="30" 
                                 StartWidth="0" 
                                 EndWidth="0" 
@@ -474,7 +474,7 @@
                 </telerik:RadVerticalLinearGauge>
 
                 <!--3D Models for the battery + voltage readings-->
-                <helix:HelixViewport3D x:Name="battery_in" Width="150" Height="150" Margin="35,680,1165,25" ShowViewCube="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <helix:HelixViewport3D x:Name="battery_in" Width="100" Height="100" Margin="35,680,1165,25" ShowViewCube="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
                     <helix:DefaultLights/>
                     <Viewport2DVisual3D>
                         <Viewport2DVisual3D.Transform>
@@ -502,7 +502,7 @@
                     </Viewport2DVisual3D>
                 </helix:HelixViewport3D>
 
-                <helix:HelixViewport3D x:Name="battery_out" Width="150" Height="150" Margin="1178,680,22,25" ShowViewCube="False" >
+                <helix:HelixViewport3D x:Name="battery_out" Width="100" Height="100" Margin="1178,680,22,25" ShowViewCube="False" >
                     <helix:DefaultLights/>
                     <Viewport2DVisual3D>
                         <Viewport2DVisual3D.Transform>
@@ -539,23 +539,23 @@
                 </ToggleButton>-->
 
                 <ToggleButton x:Name="Enables_and_Readings_0x0E1_trip_all"
-                              Width="100" Height="100"
+                              Width="125" Height="125"
                               Background="Transparent"
                               BorderThickness="0"
-                              Margin="601,705,649,50" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked">
+                              Margin="609,347,656,383" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked">
                     <ToggleButton.Template>
                         <ControlTemplate TargetType="ToggleButton">
                             <Grid>
                                 <!-- Circular Background -->
                                 <Ellipse x:Name="ButtonEllipse"
-                         Width="100" Height="100"
+                         Width="125" Height="125"
                          Fill="Red"
                          Stroke="DarkRed" StrokeThickness="3"/>
-
+                                <TextBlock Text="STOP" Foreground="White" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
                                 <!-- Canvas for Arrows -->
                                 <Canvas Width="90" Height="90">
                                     <!-- Upper Arrow (Clockwise) -->
-                                    <Path Stroke="White" StrokeThickness="3"
+                                    <!--<Path Stroke="White" StrokeThickness="3"
                           Data="M 68.5,20 A 30,30 0 0,1 20,55 M 20,55 L 25,70 M 20,55 L 35,58"
                           StrokeEndLineCap="Round" StrokeStartLineCap="Round"
                           Canvas.Left="11.998" Canvas.Top="9.665" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
@@ -569,7 +569,7 @@
                                         </Path.RenderTransform>
                                     </Path>
 
-                                    <!-- Lower Arrow (Counterclockwise) -->
+                                    --><!-- Lower Arrow (Counterclockwise) --><!--
                                     <Path Stroke="White" StrokeThickness="3"
                           Data="M 68,20 A 30,30 0 0,1 20,55.5 M 20,55 L 25,70 M 20,55 L 35,58"
                           StrokeEndLineCap="Round" StrokeStartLineCap="Round"
@@ -582,7 +582,7 @@
                                                 <TranslateTransform/>
                                             </TransformGroup>
                                         </Path.RenderTransform>
-                                    </Path>
+                                    </Path>-->
                                 </Canvas>
                             </Grid>
 
@@ -596,6 +596,10 @@
                         </ControlTemplate>
                     </ToggleButton.Template>
                 </ToggleButton>
+
+                <Slider Style="{DynamicResource ThreeStateToggleSliderStyle}" Width="200" Height="40" Margin="324,755,866,60" ValueChanged="ChangeCommunication" Value="1" />
+                <Grid Width="100" Height="40" x:Name="lin_logo" Margin="199,755,1051,60"/>
+                <Grid Width="100" Height="40" x:Name="can_logo" Margin="546,755,744,60"/>
             </Grid>
         </Grid>
     </Grid>

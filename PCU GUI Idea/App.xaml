@@ -104,8 +104,8 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Button}" x:Name="MenuButton">
-                            <Border Width="350" 
-                            Height="125"
+                            <Border Width="250" 
+                            Height="75"
                             CornerRadius="24"
                             Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"

@@ -7,7 +7,7 @@
              xmlns:local="clr-namespace:PCU_GUI_Idea.Menu"
              mc:Ignorable="d" 
              d:DesignHeight="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=ActualHeight}"
-             d:DesignWidth="450">
+             d:DesignWidth="350">
              <!--Future Use
              d:DesigndHeight="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=ActualHeight}"-->
     <UserControl.Resources>
@@ -49,51 +49,77 @@
                     <Style TargetType="ScrollBar" BasedOn="{StaticResource CustomScrollBar}"></Style>
                 </ScrollViewer.Resources>
                 <StackPanel Height="Auto" Orientation="Vertical" CanVerticallyScroll="True" x:Name="buttonTab" Margin="0,0,30,0">
-                    <Button x:Name="ConverterButton"
+                    <!--<Button x:Name="ConverterButton"
                             Style="{DynamicResource MenuButton}"
                             Content="⎓ Converter"
-                            FontSize="30"
+                            FontSize="22"
                             Margin="20, 20, 0 ,0"
                             HorizontalContentAlignment="Left"
                             Click="Menu_Button_Clicked"
-                            />
+                            />-->
+                    <Button x:Name="SelectorButton"
+                           Style="{DynamicResource MenuButton}"
+                           Content="⎓ Selector"
+                           FontSize="22"
+                           Margin="20, 30, 0 ,0"
+                           Click="Menu_Button_Clicked"
+                           />
                     <Button x:Name="GraphicsButton"
                             Style="{DynamicResource MenuButton}"
                             Content="📈 Graphics"
-                            FontSize="30"
-                            Margin="20, 40, 0 ,0" 
+                            FontSize="22"
+                            Margin="20, 30, 0 ,0" 
                             Click="Menu_Button_Clicked"
                             />
                     <Button x:Name="CustomizeButton"
                             Style="{DynamicResource MenuButton}"
                             Content="⚙️ Customize"
-                            FontSize="30"
-                            Margin="20, 40, 0 ,0"
+                            FontSize="22"
+                            Margin="20, 30, 0 ,0"
                             Click="Menu_Button_Clicked"
                             />
                     <Button x:Name="InstrumentsButton"
                             Style="{DynamicResource MenuButton}"
                             Content="🔌 Instrumentation"
-                            FontSize="30"
-                            Margin="20, 40, 0 ,0"
+                            FontSize="22"
+                            Margin="20, 30, 0 ,0"
                             Click="Menu_Button_Clicked"
                             />
                     <Button x:Name="HelpButton"
                             Style="{DynamicResource MenuButton}"
                             Content="❓ Help"
-                            FontSize="30"
-                            Margin="20, 40, 0 ,0"
+                            FontSize="22"
+                            Margin="20, 30, 0 ,0"
                             Click="Menu_Button_Clicked"
                             />
                     <Button Style="{DynamicResource MenuButton}"
                             Content="To be added"
-                            FontSize="30"
-                            Margin="20, 40, 0 ,0"
+                            FontSize="22"
+                            Margin="20, 30, 0 ,0"
+                            Click="Menu_Button_Clicked"
                             />
                     <Button Style="{DynamicResource MenuButton}"
                             Content="To be added"
-                            FontSize="30"
-                            Margin="20, 40, 0 ,0"
+                            FontSize="22"
+                            Margin="20, 30, 0 ,0"
+                            Click="Menu_Button_Clicked"
+                            />
+                    <Button Style="{DynamicResource MenuButton}"
+                            Content="To be added"
+                            FontSize="22"
+                            Margin="20, 30, 0 ,0"
+                            Click="Menu_Button_Clicked"
+                            />
+                    <Button Style="{DynamicResource MenuButton}"
+                            Content="To be added"
+                            FontSize="22"
+                            Margin="20, 30, 0 ,0"
+                            Click="Menu_Button_Clicked"
+                            />
+                    <Button Style="{DynamicResource MenuButton}"
+                            Content="To be added"
+                            FontSize="22"
+                            Margin="20, 30, 0 ,0"
                             Click="Menu_Button_Clicked"
                             />
                 </StackPanel>

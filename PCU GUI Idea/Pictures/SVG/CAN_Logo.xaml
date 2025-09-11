@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <DrawingGroup x:Key="CanLogo">
+        <DrawingGroup.ClipGeometry>
+            <RectangleGeometry Rect="0.0,0.0,373.33,266.67"/>
+        </DrawingGroup.ClipGeometry>
+        <GeometryDrawing Brush="#ff05734e">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="M 108.116 112.905 V 78.9047 H 85.7979 c -34.0648 0 -67.0995 20.671 -66.955 57 c 0.148476 37.323 38.6354 57 66.955 57 h 22.3184 v -34 H 86.9726 c -14.0958 0 -22.3183 -13.056 -22.3183 -23 c 0 -9.944 8.22255 -23 22.3183 -23 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ff05734e">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="m 121.037 192.905 l 0.92298 -74.859 c 0.33422 -27.106 27.4105 -40.531 50.7613 -41.141 c 22.4405 -0.58621 51.5413 13.488 51.5366 36.915 l 0.14761 79.085 h -41.1127 l 0.16667 -34.989 l -13.0879 -0.0113 v -30 h 12.9212 v -10 c 0 -6 -4.68227 -9 -9.3972 -9 c -4.71492 0 -9.3972 3 -9.3972 9 v 75 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+        <GeometryDrawing Brush="#ff04744e">
+            <GeometryDrawing.Geometry>
+                <PathGeometry Figures="m 243.201 192.905 h 43.462 l -0.57031 -46.395 l 24.1579 40.081 c 4.2877 7.1138 15.6499 9.7748 24.0874 8.1763 c 9.55965 -1.8111 20.164 -5.942 20.1006 -18.242 l -0.50066 -97.967 l -41.5979 0.22648 l 0.25424 47.345 l -21.6535 -36.753 c -5.66804 -9.6208 -16.1091 -13.89 -26.19 -13.093 c -8.92828 0.7057 -20.2416 7.3654 -20.2921 15.034 z" FillRule="Nonzero"/>
+            </GeometryDrawing.Geometry>
+        </GeometryDrawing>
+    </DrawingGroup>
+    <DrawingBrush Stretch="Uniform" Drawing="{DynamicResource CanLogo}" x:Key="db_CanLogo"/>
+</ResourceDictionary>

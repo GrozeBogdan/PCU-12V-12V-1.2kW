@@ -25,6 +25,9 @@ using Telerik.Windows.Documents.Fixed.Model.Graphics;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
 using Telerik.Windows.Controls.Spreadsheet.Worksheets;
 using PCU_GUI_Idea.Tabs.InstrumentsUC;
+using PCU_GUI_Idea.Tabs.Converter_UserControls;
+using Application = System.Windows.Application;
+using PCU_GUI_Idea.Modules;
 
 namespace PCU_GUI_Idea.Tabs
 {
@@ -60,9 +63,22 @@ namespace PCU_GUI_Idea.Tabs
                     {
                         databaseBox.Items.Add(file.Replace(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database\\", ""));
                     }
+                    else if(file.Contains(".ldf"))
+                    {
+                        databaseBox.Items.Add(file.Replace(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database\\", ""));
+                    }
                 }
             }
         }
+        private void LoadDatabase(object sender, SelectionChangedEventArgs e)
+        {
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            RadComboBox radComboBox = sender as RadComboBox;
+            DbcParser.ParseDatabase(radComboBox.SelectedItem.ToString());
+            ConvertorUCSelector.UpdateSignalBind(true);
+
+        }
+
         private void Generate_Excel(object sender, RoutedEventArgs e)
         {
             string directory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Excel Templates/Excel Data";

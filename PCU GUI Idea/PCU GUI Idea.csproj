@@ -398,10 +398,14 @@
     <Compile Include="Modules\BatteryModel3D.cs" />
     <Compile Include="Modules\DataPoint.cs" />
     <Compile Include="Modules\DbcParser.cs" />
+    <Compile Include="Modules\ISignalBinded.cs" />
     <Compile Include="Modules\ThemeManager.cs" />
     <Compile Include="Syles\Theme.cs" />
     <Compile Include="Tabs\AddSignalWindow.xaml.cs">
       <DependentUpon>AddSignalWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\Converter UserControls\FourSW_BB_LM.xaml.cs">
+      <DependentUpon>FourSW_BB_LM.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Customize.xaml.cs">
       <DependentUpon>Customize.xaml</DependentUpon>
@@ -414,6 +418,9 @@
     </Compile>
     <Compile Include="Tabs\InstrumentsUC\RP7945A_UC.xaml.cs">
       <DependentUpon>RP7945A_UC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\ConvertorUCSelector.xaml.cs">
+      <DependentUpon>ConvertorUCSelector.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tabs\UC_Template.xaml.cs">
       <DependentUpon>UC_Template.xaml</DependentUpon>
@@ -448,6 +455,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pictures\SVG\CAN_Logo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pictures\SVG\diagram.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -457,6 +468,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pictures\SVG\length.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pictures\SVG\lin_logo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -496,7 +511,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Tabs\Converter.xaml">
+    <Page Include="Tabs\Converter UserControls\FourSW_BB_LM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Tabs\Converter UserControls\Converter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -520,6 +539,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Tabs\ConvertorUCSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Tabs\UC_Template.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -537,7 +560,7 @@
     <Compile Include="Menu\MenuTab.xaml.cs">
       <DependentUpon>MenuTab.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Tabs\Converter.xaml.cs">
+    <Compile Include="Tabs\Converter UserControls\Converter.xaml.cs">
       <DependentUpon>Converter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Graphics.xaml.cs">
@@ -589,6 +612,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\emergency-stop-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

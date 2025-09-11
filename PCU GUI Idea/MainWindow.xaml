@@ -86,7 +86,7 @@
                 <!--Gird used for Main UI-->
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="470"/>
+                        <ColumnDefinition Width="370"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 

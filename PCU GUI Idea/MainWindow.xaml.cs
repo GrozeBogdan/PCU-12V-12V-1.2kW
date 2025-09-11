@@ -1,5 +1,6 @@
 ﻿using ExCSS;
 using PCU_GUI_Idea.Tabs;
+using PCU_GUI_Idea.Tabs.Converter_UserControls;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -26,8 +27,10 @@ namespace PCU_GUI_Idea
     /// </summary>
     public partial class MainWindow : Window
     {
+        public bool _guiSelected;
         private Customize customize_UC = new Customize();
-        public Converter converter_UC = new Converter();
+        //public Converter converter_UC = new Converter();
+        public ConvertorUCSelector selector_UC = new ConvertorUCSelector();
         public Graphics graphics_UC = new Graphics();
         private Help help_UC = new Help();
         public Instruments instruments_UC = new Instruments();
@@ -37,23 +40,23 @@ namespace PCU_GUI_Idea
         public MainWindow()
         {
             InitializeComponent();
-            DbcParser.ParseDatabase("CANdb12Vto12V.dbc");
-            CAN.Initialize(this);
-            CAN.Start_CAN();
+            //DbcParser.ParseDatabase("CANdb12Vto12V.dbc");
+            //CAN.Initialize(this);
+            //CAN.Start_CAN();
 
             customize_UC.InitializeComponent();
-            converter_UC.InitializeComponent();
+            //converter_UC.InitializeComponent();
             graphics_UC.InitializeComponent();
             help_UC.InitializeComponent();
             instruments_UC.InitializeComponent();
             AddSignalWindow.Initialize(this);
 
             controls.Add("CustomizeButton", customize_UC);
-            controls.Add("ConverterButton", converter_UC);
+            //controls.Add("ConverterButton", converter_UC);
             controls.Add("GraphicsButton", graphics_UC);
             controls.Add("HelpButton", help_UC);
             controls.Add("InstrumentsButton", instruments_UC);
-
+            controls.Add("SelectorButton", selector_UC);
 
             int tier = RenderCapability.Tier >> 16;
             Console.WriteLine("Rendering Tier: " + tier);

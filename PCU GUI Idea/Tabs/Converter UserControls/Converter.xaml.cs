@@ -31,12 +31,12 @@ using vxlapi_NET;
 using static DbcParser;
 using Image = System.Windows.Controls.Image;
 
-namespace PCU_GUI_Idea.Tabs
+namespace PCU_GUI_Idea.Tabs.Converter_UserControls
 {
     /// <summary>
     /// Interaction logic for Converter.xaml
     /// </summary>
-    public partial class Converter : UserControl
+    public partial class Converter : UserControl, ISignalBindable
     {
         public static List<UIElement> elements;
 
@@ -73,6 +73,12 @@ namespace PCU_GUI_Idea.Tabs
             this.Loaded += BindSignalToFrameworkElement;
             Load3DModel();
         }
+
+        public void ChangeSignalBinding(bool value)
+        {
+            _signalesBinded = !value;
+        }
+
 
         /// <summary>
         /// <b>OUTDATED</b>
@@ -159,6 +165,11 @@ namespace PCU_GUI_Idea.Tabs
         /// 
         private void BindSignalToFrameworkElement(object sender, RoutedEventArgs e)
         {
+            if (DbcParser.Messages == null)
+            {
+                MessageBox.Show("No COM database loaded. \n Go on Customize Tab to choose.");
+                return;
+            }
             if(!_signalesBinded)
             {  
                 // Now that the control is loaded, we can safely get all elements inside it
@@ -299,7 +310,7 @@ namespace PCU_GUI_Idea.Tabs
         private void InitizalizeImages()
         {
             // Puting the converter in the UC
-            LoadXAMLFile("pcu_buck_boost_converter", "PCU_Layout", new Thickness(100, 50, 100, 150), convTab);
+            LoadXAMLFile("pcu_buck_boost_converter", "PCU_Layout", new Thickness(100, 50, 80, 150), convTab);
 
             // Images coresponding for each Duty Cycle
             LoadXAMLFile("pwm_duty", "PWM_Duty", new Thickness(), pwm_duty);
@@ -321,7 +332,9 @@ namespace PCU_GUI_Idea.Tabs
 
             LoadXAMLFile("arrow", "Arrow", new Thickness(), directionLeft);
             LoadXAMLFile("arrow", "Arrow", new Thickness(), directionRight);
-            
+
+            LoadXAMLFile("lin_logo", "LinLogo", new Thickness(), lin_logo);
+            LoadXAMLFile("can_logo", "CanLogo", new Thickness(), can_logo);
         }
 
 
@@ -523,7 +536,7 @@ namespace PCU_GUI_Idea.Tabs
                 Position = new Point3D(0, distance/5, distance),
                 LookDirection = new Vector3D(0, 0, -1),
                 UpDirection = new Vector3D(0, 1, 0),
-                FieldOfView = 50
+                FieldOfView = 40
             };
 
             battery_out.Camera = new PerspectiveCamera
@@ -531,7 +544,7 @@ namespace PCU_GUI_Idea.Tabs
                 Position = new Point3D(0, distance/5, distance),
                 LookDirection = new Vector3D(0, 0, -1),
                 UpDirection = new Vector3D(0, 1, 0),
-                FieldOfView = 50
+                FieldOfView = 40
             };
 
             // Panned view Top-Left
@@ -679,6 +692,32 @@ namespace PCU_GUI_Idea.Tabs
                         textBox.Opacity = 1;
                         textBox.IsEnabled = true;
                     }
+                }
+            }
+        }
+
+        private void ChangeCommunication(object sender, RoutedEventArgs e)
+        {
+            Slider slider = sender as Slider;
+            if (Application.Current.MainWindow is MainWindow main)
+            {
+                if (slider.Value == 2)
+                {
+                    //For future implementation of LIN
+                    //LIN.Stop_LIN();
+                    CAN.Initialize(main);
+                    CAN.Start_CAN();
+                }
+                if (slider.Value == 1)
+                {
+                    //LIN.Stop_LIN();
+                    CAN.Stop_CAN();
+                }
+
+                if(slider.Value == 0)
+                {
+                    CAN.Stop_CAN();
+                    //LIN.Start_LIN();
                 }
             }
         }

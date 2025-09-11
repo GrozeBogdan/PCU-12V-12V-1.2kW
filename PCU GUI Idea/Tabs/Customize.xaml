@@ -7,7 +7,7 @@
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              mc:Ignorable="d" 
             d:DesignHeight="945" 
-            d:DesignWidth="1390"
+            d:DesignWidth="1490"
              >
     <!--Unloaded="UserControl_Unloaded"
 Loaded="IntializeOthersFromMemory"-->
@@ -33,7 +33,71 @@ Loaded="IntializeOthersFromMemory"-->
                 <telerik:RadSpreadsheet x:Name="excelTable" Margin="50,20,61,0" VerticalAlignment="Top" Height="600" Visibility="Visible">
 
                 </telerik:RadSpreadsheet>
-                <telerik:RadComboBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" EmptyText="Theme Select" Height="50" Width="300" Margin="411,662,639,143" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" FontSize="24" BorderThickness="0" BorderBrush="Transparent" telerik:StyleManager.Theme="Windows8" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="themeBox" DropDownButtonIconContent="⮟" SelectionChanged="themeBox_SelectionChanged">
+
+                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Height="220">
+                    <StackPanel Orientation="Horizontal" Height="110">
+                        <telerik:RadComboBox Margin="50,0,0,0" x:Name="databaseBox" HorizontalContentAlignment="Center" Height="50" VerticalContentAlignment="Center" SelectionChanged="LoadDatabase" EmptyText="Select Database" DropDownOpened="SearchForDatabases" DropDownButtonIconContent="⮟" telerik:CornerRadiusHelper.ClipRadius="12" BorderThickness="0" BorderBrush="Transparent" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" telerik:StyleManager.Theme="Windows8" FontSize="24" Width="300">
+                            <telerik:RadComboBox.ItemContainerStyle>
+                                <Style TargetType="{x:Type telerik:RadComboBoxItem}">
+                                    <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                                    <Setter Property="BorderBrush" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource TextForeground}"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="FontSize" Value="24"/>
+                                </Style>
+                            </telerik:RadComboBox.ItemContainerStyle>
+                            <telerik:RadComboBox.DropDownButtonIconTemplate>
+                                <DataTemplate>
+                                    <telerik:RadGlyph Foreground="{DynamicResource TextForeground}" Glyph="{Binding}"/>
+                                </DataTemplate>
+                            </telerik:RadComboBox.DropDownButtonIconTemplate>
+                        </telerik:RadComboBox>
+
+                        <telerik:RadComboBox Margin="40,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" EmptyText="Theme Select" Height="50" Width="300" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" FontSize="24" BorderThickness="0" BorderBrush="Transparent" telerik:StyleManager.Theme="Windows8" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="themeBox" DropDownButtonIconContent="⮟" SelectionChanged="themeBox_SelectionChanged">
+                            <telerik:RadComboBox.ItemContainerStyle>
+                                <Style TargetType="{x:Type telerik:RadComboBoxItem}">
+                                    <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                                    <Setter Property="BorderBrush" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource TextForeground}" />
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="FontSize" Value="24"/>
+                                </Style>
+                            </telerik:RadComboBox.ItemContainerStyle>
+                            <telerik:RadComboBox.DropDownButtonIconTemplate>
+                                <DataTemplate>
+                                    <telerik:RadGlyph Glyph="{Binding}" Foreground="{DynamicResource TextForeground}"/>
+                                </DataTemplate>
+                            </telerik:RadComboBox.DropDownButtonIconTemplate>
+                            <telerik:RadComboBoxItem Content="Sunset"/>
+                            <telerik:RadComboBoxItem Content="Chill"/>
+                        </telerik:RadComboBox>
+                        <Button Margin="40,0,0,0" Click="Converter_Efficency_Model" Style="{DynamicResource ToolbarButton}" Height="50" Width="300" telerik:CornerRadiusHelper.ClipRadius="8" Content="Start Characterization" FontSize="24"/>
+                        <StackPanel Margin="30,0,0,0">
+                            <Label Content="Min Current" Foreground="{DynamicResource TextForeground}" FontWeight="Medium" FontSize="15" Width="150" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <TextBox BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" Width="150" Height="50" telerik:CornerRadiusHelper.ClipRadius="12" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium" FontSize="20"/>
+                        </StackPanel>
+                        <StackPanel Margin="30,0,0,0">
+                            <Label Content="Max Current" Foreground="{DynamicResource TextForeground}" FontWeight="Medium" FontSize="15" Width="150" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <TextBox x:Name="excel_Current" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" Width="150" Height="50" telerik:CornerRadiusHelper.ClipRadius="12" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium" FontSize="20"/>
+                        </StackPanel>
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Horizontal" Height="110">
+                        <Button Margin="50,0,0,0" Style="{DynamicResource ToolbarButton}" Height="50" Width="300" telerik:CornerRadiusHelper.ClipRadius="8" Content="Upload to Cloud" FontSize="24"/>
+                        <Button Margin="40,0,0,0" Style="{DynamicResource ToolbarButton}" Height="50" Width="300" telerik:CornerRadiusHelper.ClipRadius="8" Content="Autoselect Instrumentation" FontSize="22"/>
+                        <Button Margin="40,0,0,0" Click="Generate_Excel" Style="{DynamicResource ToolbarButton}" Height="50" Width="300" telerik:CornerRadiusHelper.ClipRadius="8" Content="Generate Excel Template" FontSize="24"/>
+                        <StackPanel Margin="30,0,0,0">
+                            <Label Content="Min Frequency" Foreground="{DynamicResource TextForeground}" FontWeight="Medium" FontSize="15" Width="150" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <TextBox BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}"  Width="150" Height="50" telerik:CornerRadiusHelper.ClipRadius="12" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium" FontSize="20"/>
+                        </StackPanel>
+                        <StackPanel Margin="30,0,0,0">
+                            <Label Content="Max Frequency" Foreground="{DynamicResource TextForeground}" FontWeight="Medium" FontSize="15" Width="150" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <TextBox x:Name="excel_Frequency" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}"  Width="150" Height="50" telerik:CornerRadiusHelper.ClipRadius="12" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium" FontSize="20"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+                <!--<telerik:RadComboBox  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="300" Margin="100,662,1050,143" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" FontSize="24" BorderThickness="0" BorderBrush="Transparent" telerik:StyleManager.Theme="Windows8" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="databaseBox" DropDownButtonIconContent="⮟" DropDownOpened="SearchForDatabases" SelectionChanged="LoadDatabase" EmptyText="Select Database">
                     <telerik:RadComboBox.ItemContainerStyle>
                         <Style TargetType="telerik:RadComboBoxItem">
                             <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>
@@ -48,37 +112,7 @@ Loaded="IntializeOthersFromMemory"-->
                             <telerik:RadGlyph Glyph="{Binding}" Foreground="{DynamicResource TextForeground}"/>
                         </DataTemplate>
                     </telerik:RadComboBox.DropDownButtonIconTemplate>
-                    <telerik:RadComboBoxItem Content="Sunset"/>
-                    <telerik:RadComboBoxItem Content="Chill"/>
-                </telerik:RadComboBox>
-
-                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="50,762,1000,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Upload to Cloud" FontSize="24"/>
-                <Button Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="411,762,639,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Autoselect Instrumentation" FontSize="22"/>
-                <Button Click="Generate_Excel" Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="776,762,274,43" telerik:CornerRadiusHelper.ClipRadius="8" Content="Generate Excel Template" FontSize="24"/>
-                <Button Click="Converter_Efficency_Model" Style="{DynamicResource ToolbarButton}" Height="50" Width="300" Margin="776,662,274,143" telerik:CornerRadiusHelper.ClipRadius="8" Content="Start Characterization" FontSize="24"/>
-
-                <Label Content="Max Current" Foreground="{DynamicResource TextForeground}" FontWeight="Medium" FontSize="15" Width="150" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="1139,732,61,93"/>
-                <TextBox x:Name="excel_Current" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" Width="150" Height="50" Margin="1139,762,61,43" telerik:CornerRadiusHelper.ClipRadius="12" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium" FontSize="20"/>
-                <Label Content="Max Frequency" Foreground="{DynamicResource TextForeground}" FontWeight="Medium" FontSize="15" Width="150" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="1139,632,61,193"/>
-                <TextBox x:Name="excel_Frequency" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}"  Width="150" Height="50" Margin="1139,662,61,143" telerik:CornerRadiusHelper.ClipRadius="12" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Medium" FontSize="20"/>
-
-                <telerik:RadComboBox  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="300" Margin="50,660,1000,145" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" FontSize="24" BorderThickness="0" BorderBrush="Transparent" telerik:StyleManager.Theme="Windows8" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="databaseBox" DropDownButtonIconContent="⮟" DropDownOpened="SearchForDatabases" EmptyText="Select Database">
-                    <telerik:RadComboBox.ItemContainerStyle>
-                        <Style TargetType="telerik:RadComboBoxItem">
-                            <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>
-                            <Setter Property="BorderBrush" Value="{DynamicResource ButtonAndHighlightBackground}"/>
-                            <Setter Property="Foreground" Value="{DynamicResource TextForeground}" />
-                            <Setter Property="BorderThickness" Value="0"/>
-                            <Setter Property="FontSize" Value="24"/>
-                        </Style>
-                    </telerik:RadComboBox.ItemContainerStyle>
-                    <telerik:RadComboBox.DropDownButtonIconTemplate>
-                        <DataTemplate>
-                            <telerik:RadGlyph Glyph="{Binding}" Foreground="{DynamicResource TextForeground}"/>
-                        </DataTemplate>
-                    </telerik:RadComboBox.DropDownButtonIconTemplate>
-                </telerik:RadComboBox>
- 
+                </telerik:RadComboBox>-->
             </Grid>
 
         </Grid>

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32.SafeHandles;
 using PCU_GUI_Idea;
+using PCU_GUI_Idea.Modules;
 using PCU_GUI_Idea.Tabs;
 using System;
 using System.Collections.Generic;
@@ -43,10 +44,11 @@ using vxlapi_NET;
         public static bool blockRxThread = false;
     // -----------------------------------------------------------------------------------------------
         private static MainWindow mainWindowInstance;
-
+        private static ISignalBindable activeUC;
         public static void Initialize(MainWindow mainWindow)
         {
             mainWindowInstance = mainWindow;
+            activeUC = mainWindow.tab.Content as ISignalBindable;
         }
 
 
@@ -163,12 +165,12 @@ using vxlapi_NET;
             //Console.WriteLine("Close Driver                   : " + CAND.XL_CloseDriver());
 
             return 0;
-                    }
+        }
     // -----------------------------------------------------------------------------------------------
 
         public static void Stop_CAN()
         { 
-            rxThread.Abort();
+            rxThread?.Abort();
         }
 
         private static float BinaryToFloat(byte[] byteArray, int startBit, int bitLength)
@@ -424,7 +426,7 @@ using vxlapi_NET;
                                                         //                //var olupitia = MainWindow.ConvertingDigitalValueToAnalogValue(signal.Value, signal.Name);
                                                         Application.Current.Dispatcher.Invoke(() =>
                                                         {
-                                                            mainWindowInstance.converter_UC.UpdateUI(signal.Name, Math.Round(signal.Value, 3), signal.AssociatedElement);
+                                                            activeUC?.UpdateUI(signal.Name, Math.Round(signal.Value, 3), signal.AssociatedElement);
                                                             mainWindowInstance.graphics_UC.UpdateChart(signal, Math.Round(signal.Value, 3));
                                                         });
                                                     }
