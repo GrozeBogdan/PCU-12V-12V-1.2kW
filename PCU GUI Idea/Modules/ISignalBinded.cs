@@ -11,5 +11,6 @@ namespace PCU_GUI_Idea.Modules
     {
         void ChangeSignalBinding(bool value);
         void UpdateUI(string name, double value, FrameworkElement element);
+
     }
 }

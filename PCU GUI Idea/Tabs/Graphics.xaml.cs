@@ -22,6 +22,7 @@ using Telerik.Charting;
 using Telerik.Windows.Controls.ChartView;
 using Telerik.Windows.Documents.Spreadsheet.Expressions.Functions;
 using static DbcParser;
+using static LdfParser;
 using DataPoint = PCU_GUI_Idea.Modules.DataPoint;
 
 namespace PCU_GUI_Idea.Tabs
@@ -280,25 +281,46 @@ namespace PCU_GUI_Idea.Tabs
         }
 
 
-        public void UpdateChart(Signal signal, double value)
+        public void UpdateChart(object signal, double value)
         {
             if(chart.Visibility == Visibility.Visible) 
             { 
                 foreach (LineSeries lineSeries in chart.Series)
                 {
-                    if (signal.Name == lineSeries.Name && signal.ChartData != null)
-                    {
-                        var newDataPoint = GenerateDataPoint(value);
-
-                        signal.ChartData.Add(newDataPoint);
-
-                        if (signal.ChartData.Count > 10)
+                    if( signal is Signal canSig)
+                    { 
+                        if (canSig.Name == lineSeries.Name && canSig.ChartData != null)
                         {
-                            signal.ChartData.RemoveAt(0);
-                        }
+                            var newDataPoint = GenerateDataPoint(value);
 
-                        lineSeries.ItemsSource = signal.ChartData;
-                        chart.DataContext = this;
+                            canSig.ChartData.Add(newDataPoint);
+
+                            if (canSig.ChartData.Count > 10)
+                            {
+                                canSig.ChartData.RemoveAt(0);
+                            }
+
+                            lineSeries.ItemsSource = canSig.ChartData;
+                            chart.DataContext = this;
+                        }
+                    }
+
+                    if (signal is LinSignal linSig)
+                    {
+                        if (linSig.Name == lineSeries.Name && linSig.ChartData != null)
+                        {
+                            var newDataPoint = GenerateDataPoint(value);
+
+                            linSig.ChartData.Add(newDataPoint);
+
+                            if (linSig.ChartData.Count > 10)
+                            {
+                                linSig.ChartData.RemoveAt(0);
+                            }
+
+                            lineSeries.ItemsSource = linSig.ChartData;
+                            chart.DataContext = this;
+                        }
                     }
                 }
             }

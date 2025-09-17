@@ -9,7 +9,7 @@
              d:DesignHeight="945" d:DesignWidth="1390">
     <Grid Background="{DynamicResource PanelBackground}" telerik:CornerRadiusHelper.ClipRadius="24">
         <Grid Margin="24" Background="{DynamicResource ButtonContrast}" telerik:CornerRadiusHelper.ClipRadius="4">
-            <telerik:RadComboBox  x:Name="deviceLeft_comboBox"
+            <telerik:RadComboBox  x:Name="usercontrolSelectorComboBox"
                                   Margin="100,0,0,0"
                                   VerticalContentAlignment="Center" 
                                   VerticalAlignment="Center"
@@ -26,7 +26,7 @@
                                   telerik:CornerRadiusHelper.ClipRadius="12"  
                                   DropDownButtonIconContent="⮟" 
                                   DropDownOpened="SearchForConverters" 
-                                  SelectionChanged="Load_Converter"
+                                  SelectionChanged="LoadConverter"
                                   EmptyText="Select Converters">
 
                 <telerik:RadComboBox.ItemContainerStyle>
@@ -46,7 +46,46 @@
                 </telerik:RadComboBox.DropDownButtonIconTemplate>
 
             </telerik:RadComboBox>
+
+            <telerik:RadComboBox x:Name="databaseBox"
+                      Margin="800,0,0,0"
+                      VerticalContentAlignment="Center" 
+                      VerticalAlignment="Center"
+                      HorizontalContentAlignment="Center" 
+                      HorizontalAlignment="Left"
+                      Height="100"
+                      Width="400" 
+                      Background="{DynamicResource ButtonAndHighlightBackground}" 
+                      Foreground="{DynamicResource TextForeground}" 
+                      FontSize="24" 
+                      BorderThickness="0" 
+                      BorderBrush="Transparent" 
+                      telerik:StyleManager.Theme="Windows8" 
+                      telerik:CornerRadiusHelper.ClipRadius="12"  
+                      DropDownButtonIconContent="⮟" 
+                      DropDownOpened="SearchForDatabases" 
+                      SelectionChanged="LoadDatabase"
+                      EmptyText="Select Database"
+                      Visibility="Hidden">
+
+                <telerik:RadComboBox.ItemContainerStyle>
+                    <Style TargetType="telerik:RadComboBoxItem">
+                        <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ButtonAndHighlightBackground}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource TextForeground}" />
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="FontSize" Value="24"/>
+                    </Style>
+                </telerik:RadComboBox.ItemContainerStyle>
+
+                <telerik:RadComboBox.DropDownButtonIconTemplate>
+                    <DataTemplate>
+                        <telerik:RadGlyph Glyph="{Binding}" Foreground="{DynamicResource TextForeground}"/>
+                    </DataTemplate>
+                </telerik:RadComboBox.DropDownButtonIconTemplate>
+            </telerik:RadComboBox>
+
+            <Label Visibility="Hidden" x:Name="feedBack" Width="500" Height="100" VerticalAlignment="Bottom" Margin="421,0,421,100" Content="Loading..." Foreground="{DynamicResource TextForeground}" FontSize="54" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="DemiBold"/>
         </Grid>
-        
     </Grid>
 </UserControl>

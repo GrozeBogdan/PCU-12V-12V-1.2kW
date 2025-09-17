@@ -40,7 +40,7 @@ namespace PCU_GUI_Idea.Tabs
         {
             InitializeComponent();
         }
-        private void themeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ThemeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var radComboBox = sender as RadComboBox;
             RadComboBoxItem item = radComboBox.SelectedItem as RadComboBoxItem; 
@@ -59,11 +59,7 @@ namespace PCU_GUI_Idea.Tabs
             {
                 if (databaseBox.Items.Contains(file.Replace(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database\\", "")) == false)
                 {
-                    if (file.Contains(".dbc"))
-                    {
-                        databaseBox.Items.Add(file.Replace(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database\\", ""));
-                    }
-                    else if(file.Contains(".ldf"))
+                    if (file.Contains(".dbc") || file.Contains(".ldf"))
                     {
                         databaseBox.Items.Add(file.Replace(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database\\", ""));
                     }
@@ -74,7 +70,10 @@ namespace PCU_GUI_Idea.Tabs
         {
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
             RadComboBox radComboBox = sender as RadComboBox;
-            DbcParser.ParseDatabase(radComboBox.SelectedItem.ToString());
+            if (radComboBox.SelectedItem.ToString().Contains(".dbc"))
+                DbcParser.ParseDatabase(radComboBox.SelectedItem.ToString());
+            else
+                LdfParser.ParseDatabase(radComboBox.SelectedItem.ToString());
             ConvertorUCSelector.UpdateSignalBind(true);
 
         }
@@ -96,8 +95,10 @@ namespace PCU_GUI_Idea.Tabs
 
             else
             {
-                Excel.Application app = new Excel.Application();
-                app.Visible = true;
+                Excel.Application app = new Excel.Application
+                {
+                    Visible = true
+                };
                 Excel.Worksheet worksheet;
                 string date = DateTime.Now.Date.ToString("dd-MM-yyyy") + " " + DateTime.Now.ToString("HH-mm");
 

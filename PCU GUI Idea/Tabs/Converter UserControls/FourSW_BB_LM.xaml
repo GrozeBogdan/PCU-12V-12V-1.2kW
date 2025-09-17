@@ -76,26 +76,11 @@
 
                 <!--<Label Content="Direction" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="595,170,643,644" HorizontalContentAlignment="Center"/>-->
                 <!--<Label Content="Left" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="532,136,744,669" HorizontalContentAlignment="Center"/>-->
-                <Grid x:Name="directionLeft" Width="85" Height="40" Margin="725,138,580,677"/>
-
                 <!--<Label Content="Right" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="701,136,567,669" HorizontalContentAlignment="Center"/>-->
-                <Grid x:Name="directionRight" Width="80" Height="40" Margin="535,138,775,677" RenderTransformOrigin="0.5,0.5">
-                    <Grid.RenderTransform>
-                        <TransformGroup>
-                            <RotateTransform Angle="-180"/>
-                        </TransformGroup>
-                    </Grid.RenderTransform>
-                </Grid>
-
-                <ToggleButton IsEnabled="False" x:Name="WorkingMode_StateMachine_0x0E2_pcu_direction_" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,138,654,677" Checked="ChangeDirection" Unchecked="ChangeDirection" />
 
                 <!--WorkingMode_StateMachine_0x0D3_-->
-                <Label Content="Mode" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Margin="595,-2,643,820" HorizontalContentAlignment="Center"/>
-                <Label Content="Buck" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="504,85,772,720" HorizontalContentAlignment="Center"/>
-                <Label Content="Buck-Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="583,85,630,720" HorizontalContentAlignment="Center"/>
-                <Label Content="Boost" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Height="50" Margin="725,85,551,720" HorizontalContentAlignment="Center"/>
-                <Slider Name="WorkingMode_StateMachine_0x0E2_pcu_work_mode_" Style="{DynamicResource ThreeStateToggleSliderStyle}" Width="200" Margin="551,40,599,775" ValueChanged="ChangeWorkMode" Value="1"/>
-
+                <Label Content="Communication" Foreground="{DynamicResource SVGBackground}" FontSize="24" FontWeight="DemiBold" Width="Auto" Margin="576,-2,628,820" HorizontalContentAlignment="Center"/>
+              
 
                 <!--<ToggleButton x:Name="WorkingMode_StateMachine_0x0D3_pcu_work_mode" Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="606,60,654,755" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Checked"/>-->
 
@@ -124,37 +109,13 @@
 
                 <!--TextBoxes needed for PWM Control: Frequency,Duty,Deadband,Phaseshift-->
                 <TextBox x:Uid="ph1in" x:Name="PWM_Frequency_0x0D1_frequency_ph1_hbIn_"  Width="100" Height="50" Margin="135,142,1115,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
-                <TextBox x:Uid="ph1in" x:Name="PWM_DeadbandRED_0x0D3_deadbandRED_ph1_hbIn_"  Width="100" Height="50" Margin="135,232,1115,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
-                <TextBox x:Uid="ph1in" x:Name="PWM_DutyCycle_0x0D2_dutyCycle_ph1_hbIn_"  Width="100" Height="50" Margin="265,142,985,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
-                <TextBox x:Uid="ph1in" x:Name="PWM_DeadbandFED_0x0D4_deadbandFED_ph1_hbIn_"  Width="100" Height="50" Margin="265,232,985,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold"  Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
 
                 <TextBox x:Uid="ph2in" x:Name="PWM_Frequency_0x0D1_frequency_ph2_hbIn_"  Width="100" Height="50" Margin="135,464,1115,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
-                <TextBox x:Uid="ph2in" x:Name="PWM_DeadbandRED_0x0D3_deadbandRED_ph2_hbIn_"  Width="100" Height="50" Margin="135,554,1115,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
-                <TextBox x:Uid="ph2in" x:Name="PWM_DutyCycle_0x0D2_dutyCycle_ph2_hbIn_"  Width="100" Height="50" Margin="265,464,985,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
-                <TextBox x:Uid="ph2in" x:Name="PWM_DeadbandFED_0x0D4_deadbandFED_ph2_hbIn_"  Width="100" Height="50" Margin="265,554,985,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
-                <TextBox x:Uid="ph2in" x:Name="PWM_Phaseshift_0x0D5_phase_ph2_hbIn_"  Width="100" Height="50" Margin="199,628,1051,177" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="180" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
-
-                <TextBox x:Uid="ph2out" x:Name="PWM_Frequency_0x0D11_frequency_ph2_hbOut"  Width="100" Height="50" Margin="966,464,284,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
-                <TextBox x:Uid="ph2out" x:Name="PWM_DeadbandRED_0x0D3_deadbandRED_ph2_hbOut"  Width="100" Height="50" Margin="966,554,284,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
-                <TextBox x:Uid="ph2out" x:Name="PWM_DutyCycle_0x0D2_dutyCycle_ph2_hbOut"  Width="100" Height="50" Margin="1100,464,150,341" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
-                <TextBox x:Uid="ph2out" x:Name="PWM_DeadbandFED_0x0D4_deadbandFED_ph2_hbOut"  Width="100" Height="50" Margin="1100,554,150,251" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
-                <TextBox x:Uid="ph2out" x:Name="PWM_Phaseshift_0x0D5_phase_ph2_hbOut"  Width="100" Height="50" Margin="1033,628,217,177" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="180" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
-
-                <TextBox x:Uid="ph1out" x:Name="PWM_Frequency_0x0D1_frequency_ph1_hbOut"  Width="100" Height="50" Margin="966,142,284,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box" TextChanged="Sync_Text_In_TextBox"/>
-                <TextBox x:Uid="ph1out" x:Name="PWM_DeadbandRED_0x0D3_deadbandRED_ph1_hbOut"  Width="100" Height="50" Margin="966,232,284,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
-                <TextBox x:Uid="ph1out" x:Name="PWM_DutyCycle_0x0D2_dutyCycle_ph1_hbOut"  Width="100" Height="50" Margin="1100,142,150,663" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="50" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
-                <TextBox x:Uid="ph1out" x:Name="PWM_DeadbandFED_0x0D4_deadbandFED_ph1_hbOut"  Width="100" Height="50" Margin="1100,232,150,573" telerik:CornerRadiusHelper.ClipRadius="12" BorderBrush="{DynamicResource ButtonAndHighlightBackground}" Background="{DynamicResource ButtonAndHighlightBackground}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="{DynamicResource SVGBackground}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24" FontWeight="DemiBold" Text="100" BorderThickness="0" KeyDown="Send_PWM_Values" GotFocus="Clear_Box"/>
 
                 <!--Grid to load dynamically the Images for Frequency / Duty <=> Trying to respect Bauhaus-->
-                <Grid Width="100" Height="40" x:Name="pwm_duty" Margin="265,97,985,718"/>
-                <Grid Width="100" Height="40" x:Name="pwm_duty2" Margin="265,419,985,396"/>
-                <Grid Width="100" Height="40" x:Name="pwm_duty3" Margin="1100,419,150,396"/>
-                <Grid Width="100" Height="40" x:Name="pwm_duty4" Margin="1100,97,150,718"/>
 
                 <Grid Width="100" Height="40" x:Name="pwm_freq" Margin="135,97,1115,718"/>
                 <Grid Width="100" Height="40" x:Name="pwm_freq2" Margin="135,419,1115,396"/>
-                <Grid Width="100" Height="40" x:Name="pwm_freq3" Margin="966,419,284,396"/>
-                <Grid Width="100" Height="40" x:Name="pwm_freq4" Margin="966,97,284,718"/>
 
                 <TextBox Width="35" x:Name="temp_hb1" Background="Transparent" BorderBrush="Transparent" Margin="506,344,848,479" FontSize="24" Text="24" Foreground="{DynamicResource TextForeground}" FontWeight="Medium"/>
                 <!--Temperature controls-->
@@ -569,7 +530,9 @@
                                         </Path.RenderTransform>
                                     </Path>
 
-                                    --><!-- Lower Arrow (Counterclockwise) --><!--
+                                    -->
+                                    <!-- Lower Arrow (Counterclockwise) -->
+                                    <!--
                                     <Path Stroke="White" StrokeThickness="3"
                           Data="M 68,20 A 30,30 0 0,1 20,55.5 M 20,55 L 25,70 M 20,55 L 35,58"
                           StrokeEndLineCap="Round" StrokeStartLineCap="Round"
@@ -597,9 +560,9 @@
                     </ToggleButton.Template>
                 </ToggleButton>
 
-                <ToggleButton Style="{DynamicResource SliderButton}" Width="90" Height="40" Margin="315,755,945,60" Checked="ChangeCommunication" Unchecked="ChangeCommunication" />
-                <Grid Width="100" Height="40" x:Name="lin_logo" Margin="199,755,1051,60"/>
-                <Grid Width="100" Height="40" x:Name="can_logo" Margin="416,755,834,60"/>
+                <Slider Style="{DynamicResource ThreeStateToggleSliderStyle}" Width="200" Height="40" Margin="569,40,621,775" ValueChanged="ChangeCommunication" Value="1" />
+                <Grid Width="100" Height="40" x:Name="lin_logo" Margin="464,40,826,775"/>
+                <Grid Width="100" Height="40" x:Name="can_logo" Margin="792,40,498,775"/>
             </Grid>
         </Grid>
     </Grid>

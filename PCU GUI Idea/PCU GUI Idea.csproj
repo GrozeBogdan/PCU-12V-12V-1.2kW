@@ -394,10 +394,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Modules\CAN.cs" />
+    <Compile Include="Modules\Communication\CAN\CAN.cs" />
     <Compile Include="Modules\BatteryModel3D.cs" />
+    <Compile Include="Modules\Communication\LIN\LdfParser.cs" />
+    <Compile Include="Modules\Communication\LIN\LIN.cs" />
     <Compile Include="Modules\DataPoint.cs" />
-    <Compile Include="Modules\DbcParser.cs" />
+    <Compile Include="Modules\Communication\CAN\DbcParser.cs" />
     <Compile Include="Modules\ISignalBinded.cs" />
     <Compile Include="Modules\ThemeManager.cs" />
     <Compile Include="Syles\Theme.cs" />
@@ -614,7 +616,12 @@
     <Resource Include="Pictures\emergency-stop-button.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image1.png" />
+    <Content Include="Database\LIN_Network.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\Messages.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

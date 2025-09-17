@@ -55,8 +55,8 @@ using vxlapi_NET;
 
     // -----------------------------------------------------------------------------------------------
     /// <summary>
-    /// MAIN
-    /// 
+    /// <b>MAIN</b>
+    /// <br/>
     /// Sends and receives CAN messages using main methods of the "XLDriver" class.
     /// This demo requires two connected CAN channels (Vector network interface). 
     /// The configuration is read from Vector Hardware Config (vcanconf.exe).
@@ -297,7 +297,7 @@ using vxlapi_NET;
         // -----------------------------------------------------------------------------------------------
         /// <summary>
         /// EVENT THREAD (RX)
-        /// 
+        /// <br/>
         /// RX thread waits for Vector interface events and displays filtered CAN messages.
         /// </summary>
         // ----------------------------------------------------------------------------------------------- 

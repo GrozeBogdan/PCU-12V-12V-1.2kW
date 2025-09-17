@@ -53,7 +53,7 @@ Loaded="IntializeOthersFromMemory"-->
                             </telerik:RadComboBox.DropDownButtonIconTemplate>
                         </telerik:RadComboBox>
 
-                        <telerik:RadComboBox Margin="40,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" EmptyText="Theme Select" Height="50" Width="300" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" FontSize="24" BorderThickness="0" BorderBrush="Transparent" telerik:StyleManager.Theme="Windows8" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="themeBox" DropDownButtonIconContent="⮟" SelectionChanged="themeBox_SelectionChanged">
+                        <telerik:RadComboBox Margin="40,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" EmptyText="Theme Select" Height="50" Width="300" Background="{DynamicResource ButtonAndHighlightBackground}" Foreground="{DynamicResource TextForeground}" FontSize="24" BorderThickness="0" BorderBrush="Transparent" telerik:StyleManager.Theme="Windows8" telerik:CornerRadiusHelper.ClipRadius="12" x:Name="themeBox" DropDownButtonIconContent="⮟" SelectionChanged="ThemeBox_SelectionChanged">
                             <telerik:RadComboBox.ItemContainerStyle>
                                 <Style TargetType="{x:Type telerik:RadComboBoxItem}">
                                     <Setter Property="Background" Value="{DynamicResource ButtonAndHighlightBackground}"/>

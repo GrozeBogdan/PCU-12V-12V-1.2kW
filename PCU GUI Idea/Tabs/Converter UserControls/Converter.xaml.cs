@@ -165,34 +165,50 @@ namespace PCU_GUI_Idea.Tabs.Converter_UserControls
         /// 
         private void BindSignalToFrameworkElement(object sender, RoutedEventArgs e)
         {
-            if (DbcParser.Messages == null)
+            if (!_signalesBinded)
             {
-                MessageBox.Show("No COM database loaded. \n Go on Customize Tab to choose.");
-                return;
-            }
-            if(!_signalesBinded)
-            {  
                 // Now that the control is loaded, we can safely get all elements inside it
                 var allElements = GetAllUIElements(gridContainingElements); // 'this' refers to the UserControl
                 elements = allElements;
                 // Do something with allElements
                 foreach (var element in elements)
                 {
-                    foreach(var message in DbcParser.Messages)
+                    if (DbcParser.Messages != null)
                     {
-                        foreach(var signal in message.Signals)
+                        foreach (var message in DbcParser.Messages)
                         {
-                            if (element is FrameworkElement frameworkElement && frameworkElement.Name.Contains(signal.Name))
+                            foreach (var signal in message.Signals)
                             {
-                                signal.AssociatedElement = frameworkElement;
-                                Debug.WriteLine("");
-                                Debug.WriteLine("Message:" + message.Name + "  " + signal.Name);
-                                Debug.WriteLine("UI Element: " + frameworkElement.Name);
-                                Debug.WriteLine("Type: " + frameworkElement.GetType());
-                                Debug.WriteLine("");
+                                if (element is FrameworkElement frameworkElement && frameworkElement.Name.Contains(signal.Name))
+                                {
+                                    signal.AssociatedElement = frameworkElement;
+                                    Debug.WriteLine("");
+                                    Debug.WriteLine("Message:" + message.Name + "  " + signal.Name);
+                                    Debug.WriteLine("UI Element: " + frameworkElement.Name);
+                                    Debug.WriteLine("Type: " + frameworkElement.GetType());
+                                    Debug.WriteLine("");
+                                }
                             }
-                        }    
-                    }    
+                        }
+                    }
+                    else if (LdfParser.Frames != null)
+                    {
+                        foreach (var message in LdfParser.Frames)
+                        {
+                            foreach (var signal in message.Signals)
+                            {
+                                if (element is FrameworkElement frameworkElement && frameworkElement.Name.Contains(signal.Name))
+                                {
+                                    signal.AssociatedElement = frameworkElement;
+                                    Debug.WriteLine("");
+                                    Debug.WriteLine("Message:" + message.Name + "  " + signal.Name);
+                                    Debug.WriteLine("UI Element: " + frameworkElement.Name);
+                                    Debug.WriteLine("Type: " + frameworkElement.GetType());
+                                    Debug.WriteLine("");
+                                }
+                            }
+                        }
+                    }
                 }
                 _signalesBinded = true;
             }

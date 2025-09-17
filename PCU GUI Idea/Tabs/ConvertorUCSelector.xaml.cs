@@ -11,6 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -21,6 +22,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using Telerik.Windows.Controls;
+using Application = System.Windows.Application;
 
 namespace PCU_GUI_Idea.Tabs
 {
@@ -91,10 +93,17 @@ namespace PCU_GUI_Idea.Tabs
             }
         }
 
-        private void Load_Converter(object sender, SelectionChangedEventArgs e)
+        private void LoadConverter(object sender, SelectionChangedEventArgs e)
         {
             try
             {
+                if((DbcParser.Messages == null || !DbcParser.Messages.Any()) && (LdfParser.Frames == null || !LdfParser.Frames.Any()))
+                {
+                    MessageBox.Show("No COM database loaded. \n Go on Customize Tab to choose.");
+                    databaseBox.Visibility = Visibility.Visible;
+                    return;
+                }
+                
                 if (System.Windows.Application.Current.MainWindow is MainWindow mainWindow)
                 {
                     RadComboBox radComboBox = sender as RadComboBox;
@@ -136,6 +145,36 @@ namespace PCU_GUI_Idea.Tabs
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void SearchForDatabases(object sender, EventArgs e)
+        {
+            string directory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database";
+            foreach (string file in Directory.GetFiles(directory))
+            {
+                if (databaseBox.Items.Contains(file.Replace(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database\\", "")) == false)
+                {
+                    if (file.Contains(".dbc") || file.Contains(".ldf"))
+                    {
+                        databaseBox.Items.Add(file.Replace(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database\\", ""));
+                    }
+                }
+            }
+        }
+        private async void LoadDatabase(object sender, SelectionChangedEventArgs e)
+        {
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            RadComboBox radComboBox = sender as RadComboBox;
+            if (radComboBox.SelectedItem.ToString().Contains(".dbc"))
+                DbcParser.ParseDatabase(radComboBox.SelectedItem.ToString());
+            else
+                LdfParser.ParseDatabase(radComboBox.SelectedItem.ToString());
+            ConvertorUCSelector.UpdateSignalBind(true);
+
+            feedBack.Visibility = Visibility.Visible;
+            await Task.Delay(2000);
+
+            LoadConverter(usercontrolSelectorComboBox, e);
         }
 
         //private void Load_Converter(object sender, SelectionChangedEventArgs e)

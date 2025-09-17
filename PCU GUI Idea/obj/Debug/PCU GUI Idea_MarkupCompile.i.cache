@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\
 PCU_GUI_Idea
 none
 false
 DEBUG;TRACE
-C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\App.xaml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\App.xaml
 292004918186
-
-26-2130726202
-1041241266101
+2-1511697252
+28-1878204414
+1041044511739
 MainWindow.xaml;Menu\MenuTab.xaml;Pictures\SVG\3d-cube.xaml;Pictures\SVG\arrow.xaml;Pictures\SVG\CAN_Logo.xaml;Pictures\SVG\diagram.xaml;Pictures\SVG\length-vertical.xaml;Pictures\SVG\length.xaml;Pictures\SVG\lin_logo.xaml;Pictures\SVG\pcu_buck_boost_converter.xaml;Pictures\SVG\pcu_buck_boost_inductor_down.xaml;Pictures\SVG\pcu_buck_boost_inductor_up.xaml;Pictures\SVG\pie-chart.xaml;Pictures\SVG\pwm_duty.xaml;Pictures\SVG\pwm_freq.xaml;Pictures\SVG\SchematicConv.xaml;Pictures\SVG\thermometer.xaml;Tabs\AddSignalWindow.xaml;Tabs\Converter UserControls\FourSW_BB_LM.xaml;Tabs\Converter UserControls\Converter.xaml;Tabs\Graphics.xaml;Tabs\Customize.xaml;Tabs\InstrumentsUC\CPX400DP_UC.xaml;Tabs\InstrumentsUC\DL3031_UC.xaml;Tabs\InstrumentsUC\RP7945A_UC.xaml;Tabs\ConvertorUCSelector.xaml;Tabs\UC_Template.xaml;Tabs\Instruments.xaml;Tabs\Help.xaml;
 
-True
+False
 

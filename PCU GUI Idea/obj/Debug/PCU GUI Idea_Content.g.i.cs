@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/svg/pcu_buck_boost_inductor_up.svg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/lin_network.ldf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/messages.ldf")]
 
 

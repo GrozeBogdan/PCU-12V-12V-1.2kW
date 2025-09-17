@@ -19,11 +19,10 @@ using vxlapi_NET;
 using static DbcParser;
 using DataPoint = PCU_GUI_Idea.Modules.DataPoint;
 
-public  class DbcParser
+public class DbcParser
 {
     private readonly static List<SolidColorBrush> AvailableColors = new List<SolidColorBrush>();
    
-
     public class Signal : INotifyPropertyChanged
     {
         private TextDecorationCollection dectoration = null;    

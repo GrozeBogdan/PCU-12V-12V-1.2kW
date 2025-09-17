@@ -57,13 +57,6 @@ namespace PCU_GUI_Idea.Tabs.Converter_UserControls
             {false, "left"},
             {true, "right"}
         };
-        //private Dictionary<WorkMode, (bool, string)> CorrespondingWorkMode = new Dictionary<WorkMode, (bool, string)>
-        //{
-        //    {WorkMode.BUCK_MODE,  (false, "in")},
-        //    {WorkMode.BUCK_MODE,  (true,  "out")},
-        //    {WorkMode.BOOST_MODE, (false, "out")},
-        //    {WorkMode.BOOST_MODE, (true,  "in")}
-        //};
 
         private bool _signalesBinded;
         public FourSW_BB_LM()
@@ -165,11 +158,6 @@ namespace PCU_GUI_Idea.Tabs.Converter_UserControls
         /// 
         private void BindSignalToFrameworkElement(object sender, RoutedEventArgs e)
         {
-            if (DbcParser.Messages == null)
-            {
-                MessageBox.Show("No COM database loaded. \n Go on Customize Tab to choose.");
-                return;
-            }
             if(!_signalesBinded)
             {  
                 // Now that the control is loaded, we can safely get all elements inside it
@@ -178,21 +166,42 @@ namespace PCU_GUI_Idea.Tabs.Converter_UserControls
                 // Do something with allElements
                 foreach (var element in elements)
                 {
-                    foreach(var message in DbcParser.Messages)
+                    if(DbcParser.Messages != null)
                     {
-                        foreach(var signal in message.Signals)
+                        foreach (var message in DbcParser.Messages)
                         {
-                            if (element is FrameworkElement frameworkElement && frameworkElement.Name.Contains(signal.Name))
+                            foreach (var signal in message.Signals)
                             {
-                                signal.AssociatedElement = frameworkElement;
-                                Debug.WriteLine("");
-                                Debug.WriteLine("Message:" + message.Name + "  " + signal.Name);
-                                Debug.WriteLine("UI Element: " + frameworkElement.Name);
-                                Debug.WriteLine("Type: " + frameworkElement.GetType());
-                                Debug.WriteLine("");
+                                if (element is FrameworkElement frameworkElement && frameworkElement.Name.Contains(signal.Name))
+                                {
+                                    signal.AssociatedElement = frameworkElement;
+                                    Debug.WriteLine("");
+                                    Debug.WriteLine("Message:" + message.Name + "  " + signal.Name);
+                                    Debug.WriteLine("UI Element: " + frameworkElement.Name);
+                                    Debug.WriteLine("Type: " + frameworkElement.GetType());
+                                    Debug.WriteLine("");
+                                }
                             }
-                        }    
-                    }    
+                        }
+                    }
+                    else if(LdfParser.Frames != null)
+                    {
+                        foreach (var message in LdfParser.Frames)
+                        {
+                            foreach (var signal in message.Signals)
+                            {
+                                if (element is FrameworkElement frameworkElement && frameworkElement.Name.Contains(signal.Name))
+                                {
+                                    signal.AssociatedElement = frameworkElement;
+                                    Debug.WriteLine("");
+                                    Debug.WriteLine("Message:" + message.Name + "  " + signal.Name);
+                                    Debug.WriteLine("UI Element: " + frameworkElement.Name);
+                                    Debug.WriteLine("Type: " + frameworkElement.GetType());
+                                    Debug.WriteLine("");
+                                }
+                            }
+                        }
+                    } 
                 }
                 _signalesBinded = true;
             }
@@ -313,16 +322,11 @@ namespace PCU_GUI_Idea.Tabs.Converter_UserControls
             LoadXAMLFile("pcu_buck_boost_converter", "PCU_Layout", new Thickness(100, 50, 80, 150), convTab);
 
             // Images coresponding for each Duty Cycle
-            LoadXAMLFile("pwm_duty", "PWM_Duty", new Thickness(), pwm_duty);
-            LoadXAMLFile("pwm_duty", "PWM_Duty", new Thickness(), pwm_duty2);
-            LoadXAMLFile("pwm_duty", "PWM_Duty", new Thickness(), pwm_duty3);
-            LoadXAMLFile("pwm_duty", "PWM_Duty", new Thickness(), pwm_duty4);
 
             // Images coresponding for each Frequency
             LoadXAMLFile("pwm_freq", "PWM_Freq", new Thickness(), pwm_freq);
             LoadXAMLFile("pwm_freq", "PWM_Freq", new Thickness(), pwm_freq2);
-            LoadXAMLFile("pwm_freq", "PWM_Freq", new Thickness(), pwm_freq3);
-            LoadXAMLFile("pwm_freq", "PWM_Freq", new Thickness(), pwm_freq4);
+
 
             // Images coresponding for each Temp of the Halfbridge
             LoadXAMLFile("thermometer", "Thermo" , new Thickness(), thermometer_hb1);
@@ -330,9 +334,7 @@ namespace PCU_GUI_Idea.Tabs.Converter_UserControls
             LoadXAMLFile("thermometer", "Thermo" , new Thickness(), thermometer_hb3);
             LoadXAMLFile("thermometer", "Thermo" , new Thickness(), thermometer_hb4);
 
-            LoadXAMLFile("arrow", "Arrow", new Thickness(), directionLeft);
-            LoadXAMLFile("arrow", "Arrow", new Thickness(), directionRight);
-
+            // Images coresponding for LIN and CAN communcation
             LoadXAMLFile("lin_logo", "LinLogo", new Thickness(), lin_logo);
             LoadXAMLFile("can_logo", "CanLogo", new Thickness(), can_logo);
         }
@@ -604,113 +606,28 @@ namespace PCU_GUI_Idea.Tabs.Converter_UserControls
                 }
             }
         }
-
-        private void ChangeWorkMode(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)
-        {
-            Slider slider = sender as Slider;
-            var workModes = Enum.GetValues(typeof(WorkMode));
-            foreach(var item in workModes)
-            {
-                if (slider.Value == (int)item)
-                {
-                    byte[] array = new byte[8];
-                    if (DbcParser.Messages == null)
-                        return;
-                    foreach(var message in DbcParser.Messages)
-                    {
-                        if(slider.Name.Contains(message.Name))
-                        {
-                            foreach(var signal in message.Signals)
-                            {
-
-                                if (Madalina[(WorkMode)item].Item1 == signal.Name)
-                                {
-                                    AppendSignalValue(array, 1, signal.StartBit, signal.Length, signal.DataType);
-                                    WorkingMode_StateMachine_0x0E2_pcu_direction_.IsEnabled = Madalina[(WorkMode)item].Item2;
-                                    CheckTextBoxes((WorkMode)item, WorkingMode_StateMachine_0x0E2_pcu_direction_.IsChecked.Value);
-                                }
-                                else if (signal.Name.Contains(ValueToDirection[WorkingMode_StateMachine_0x0E2_pcu_direction_.IsChecked.Value]) && (WorkMode)item != WorkMode.BUCK_BOOST_MODE)
-                                {
-                                    AppendSignalValue(array, WorkingMode_StateMachine_0x0E2_pcu_direction_.IsChecked.Value ? 1 : 1, signal.StartBit, signal.Length, signal.DataType);
-                                    CheckTextBoxes((WorkMode)item, WorkingMode_StateMachine_0x0E2_pcu_direction_.IsChecked.Value);
-                                }
-                                else
-                                    AppendSignalValue(array, 0, signal.StartBit, signal.Length, signal.DataType);
-                            }
-                            AppendAndTransmitData(message, array);
-                            return;
-                        }
-                    }
-                }
-            }
-        }
-
-        // A different approach to write a function that sends a CAN MSG with the Signals i want..
-        private void ChangeDirection(object sender, RoutedEventArgs e)
-        {
-            ToggleButton toggle = (ToggleButton)sender;
-            byte[] array = new byte[8]; 
-
-            Message message = DbcParser.FindMessage(toggle.Name);
-            Signal directionSignal = DbcParser.FindSignal(message, ValueToDirection[toggle.IsChecked.Value]);
-            Signal workModeSignal = DbcParser.FindSignal(message, Madalina[(WorkMode)WorkingMode_StateMachine_0x0E2_pcu_work_mode_.Value].Item1);
-
-            CheckTextBoxes((WorkMode)WorkingMode_StateMachine_0x0E2_pcu_work_mode_.Value, toggle.IsChecked.Value);
-
-            AppendSignalValue(array, 1, workModeSignal.StartBit, workModeSignal.Length, workModeSignal.DataType);
-            AppendSignalValue(array, 1, directionSignal.StartBit, directionSignal.Length, directionSignal.DataType);
-
-            AppendAndTransmitData(message, array);
-        }
-
-        private void CheckTextBoxes(WorkMode workMode, bool direction)
-        {
-            string boxID = null;
-            if ((workMode == WorkMode.BUCK_MODE && direction ==  false) || (workMode == WorkMode.BOOST_MODE && direction == true))
-            {
-                boxID = "in";
-            }
-
-            if ((workMode == WorkMode.BUCK_MODE && direction == true) || (workMode == WorkMode.BOOST_MODE && direction == false))
-            {
-                boxID = "out";
-            }
-            if (workMode == WorkMode.BUCK_BOOST_MODE)
-                boxID = " ";
-
-            foreach (UIElement element in gridContainingElements.Children)
-            {
-                if(element is TextBox textBox)
-                {
-                    if (textBox.Uid.Contains(boxID))
-                    {
-                        textBox.Opacity = 0.5;
-                        textBox.IsEnabled = false;
-                    }
-                    else
-                    {
-                        textBox.Opacity = 1;
-                        textBox.IsEnabled = true;
-                    }
-                }
-            }
-        }
-
         private void ChangeCommunication(object sender, RoutedEventArgs e)
         {
-            ToggleButton toggle = sender as ToggleButton;
+            Slider slider = sender as Slider;
             if (Application.Current.MainWindow is MainWindow main)
             {
-                if ((bool)toggle.IsChecked)
+                if (slider.Value == 2)
                 {
                     //For future implementation of LIN
                     //LIN.Stop_LIN();
                     CAN.Initialize(main);
                     CAN.Start_CAN();
                 }
-                else
+                if (slider.Value == 1)
+                {
+                    //LIN.Stop_LIN();
+                    CAN.Stop_CAN();
+                }
+
+                if (slider.Value == 0)
                 {
                     CAN.Stop_CAN();
+                    //LIN.Initialize(main);
                     //LIN.Start_LIN();
                 }
             }

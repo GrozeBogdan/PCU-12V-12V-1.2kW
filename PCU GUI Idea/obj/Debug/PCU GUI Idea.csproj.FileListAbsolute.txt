@@ -348,7 +348,6 @@ C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictur
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\MainWindow.g.cs
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Menu\MenuTab.g.cs
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\AddSignalWindow.g.cs
-C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Converter.g.cs
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Graphics.g.cs
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Customize.g.cs
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\UC_Template.g.cs
@@ -362,7 +361,6 @@ C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\App.ba
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\MainWindow.baml
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Menu\MenuTab.baml
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\AddSignalWindow.baml
-C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Converter.baml
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Graphics.baml
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Customize.baml
 C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\UC_Template.baml
@@ -602,3 +600,14 @@ C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU 
 C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI .582BCEEA.Up2Date
 C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea.exe
 C:\Users\grozbo1\OneDrive - FORVIA\Documents\Git Projects\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea.pdb
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\CAN_Logo.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Pictures\SVG\lin_logo.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Converter UserControls\FourSW_BB_LM.g.cs
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Converter UserControls\Converter.g.cs
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\ConvertorUCSelector.g.cs
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Converter UserControls\FourSW_BB_LM.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\Converter UserControls\Converter.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\Tabs\ConvertorUCSelector.baml
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Database\LIN_Network.ldf
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\obj\Debug\PCU GUI Idea_Content.g.cs
+C:\Users\Bogdan\Documents\GitHub\PCU-12V-12V-1.2kW\PCU GUI Idea\bin\Debug\Database\Messages.ldf
