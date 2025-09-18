@@ -81,7 +81,7 @@ public class DbcParser
     }
 
     private static readonly Random _random = new Random();
-    public static List<Message> Messages { get; private set; }
+    public static List<Message> Messages { get; set; }
     public static XLClass.xl_event_collection sentEvents = new XLClass.xl_event_collection(0);
     public static XLClass.xl_event_collection receivedEvents = new XLClass.xl_event_collection(0);
     public DbcParser()

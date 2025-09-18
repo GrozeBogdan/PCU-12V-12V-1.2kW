@@ -14,6 +14,7 @@ using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Interop;
 using System.Windows.Media;
+using Telerik.Windows.Controls.FieldList;
 using Telerik.Windows.Documents.FormatProviders.Html.Parsing.Dom;
 using vxlapi_NET;
 using DataPoint = PCU_GUI_Idea.Modules.DataPoint;
@@ -109,7 +110,7 @@ public class LdfParser
     }
 
     public static List<LinSignal> Signals = new List<LinSignal>();
-    public static List<LinFrame> Frames { get; private set; }
+    public static List<LinFrame> Frames { get; set; }
 
     public static List<Tuple<string, float>> EncodingList = new List<Tuple<string, float>>();
       
@@ -117,7 +118,6 @@ public class LdfParser
 
     public static void ParseDatabase(string database)
     {
-        
         string ldfContents = File.ReadAllText(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "/Database/" + database);
         ParseLdf(ldfContents);
 
@@ -286,6 +286,18 @@ public class LdfParser
             return new ObservableCollection<DataPoint>();
         else
             return null;
+    }
+  
+    public static LinFrame GetIndividualMsgByID(byte id)
+    {
+        foreach(LinFrame linFrame in Frames)
+        {
+            return linFrame.ID == id ? linFrame : null;
+        }
+
+        // This should not happen
+        return null;
+        // This should not happen
     }
 }
 

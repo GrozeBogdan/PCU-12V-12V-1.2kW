@@ -22,7 +22,7 @@ using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HelixToolkit.Wpf;
-using PCU_GUI_Idea.Modules;
+using PCU_GUI_Idea.Modules.Interfaces;
 using Telerik.Windows.Controls.FieldList;
 using Telerik.Windows.Controls.Gauge;
 using Telerik.Windows.Documents.Fixed.Model.Objects;

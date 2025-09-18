@@ -1,6 +1,7 @@
 ﻿using DeviceControlLib;
 using Microsoft.Office.Interop.Excel;
 using PCU_GUI_Idea.Modules;
+using PCU_GUI_Idea.Modules.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -163,6 +164,14 @@ namespace PCU_GUI_Idea.Tabs
         }
         private async void LoadDatabase(object sender, SelectionChangedEventArgs e)
         {
+            //Clear lists.
+            if (DbcParser.Messages != null || LdfParser.Frames != null)
+            {
+                DbcParser.Messages.Clear();
+                LdfParser.Frames.Clear();
+            }
+
+            //Load database
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
             RadComboBox radComboBox = sender as RadComboBox;
             if (radComboBox.SelectedItem.ToString().Contains(".dbc"))

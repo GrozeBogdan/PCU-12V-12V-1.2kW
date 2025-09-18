@@ -22,7 +22,7 @@ using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HelixToolkit.Wpf;
-using PCU_GUI_Idea.Modules;
+using PCU_GUI_Idea.Modules.Interfaces;
 using Telerik.Windows.Controls.FieldList;
 using Telerik.Windows.Controls.Gauge;
 using Telerik.Windows.Documents.Fixed.Model.Objects;
@@ -39,25 +39,6 @@ namespace PCU_GUI_Idea.Tabs.Converter_UserControls
     public partial class FourSW_BB_LM : UserControl, ISignalBindable
     {
         public static List<UIElement> elements;
-
-        private enum WorkMode 
-        { 
-            BUCK_MODE,
-            BUCK_BOOST_MODE,
-            BOOST_MODE,
-        };
-        private Dictionary<WorkMode, (string, bool)> Madalina = new Dictionary<WorkMode, (string, bool)>
-        {
-            {WorkMode.BUCK_MODE, ("pcu_work_mode_buck" , true)},
-            {WorkMode.BOOST_MODE, ("pcu_work_mode_boost", true)},
-            {WorkMode.BUCK_BOOST_MODE, ("pcu_work_mode_buck_boost", false)}
-        };
-        private Dictionary<bool, string> ValueToDirection = new Dictionary<bool, string>
-        {
-            {false, "left"},
-            {true, "right"}
-        };
-
         private bool _signalesBinded;
         public FourSW_BB_LM()
         {
@@ -613,22 +594,30 @@ namespace PCU_GUI_Idea.Tabs.Converter_UserControls
             {
                 if (slider.Value == 2)
                 {
-                    //For future implementation of LIN
-                    //LIN.Stop_LIN();
+                    //LIN
+                    LIN.Stop_LIN();
+
+                    //CAN
                     CAN.Initialize(main);
                     CAN.Start_CAN();
                 }
                 if (slider.Value == 1)
                 {
-                    //LIN.Stop_LIN();
+                    //LIN
+                    LIN.Stop_LIN();
+
+                    //CAN
                     CAN.Stop_CAN();
                 }
 
                 if (slider.Value == 0)
                 {
+                    //CAN
                     CAN.Stop_CAN();
-                    //LIN.Initialize(main);
-                    //LIN.Start_LIN();
+
+                    //LIN
+                    LIN.Initialize(main);
+                    LIN.Start_LIN();
                 }
             }
         }

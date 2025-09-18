@@ -7,6 +7,7 @@ using PCU_GUI_Idea.Modules;
 using PCU_GUI_Idea;
 using static LdfParser;
 using System.Windows;
+using PCU_GUI_Idea.Modules.Interfaces;
 
 public static class LIN
     {
@@ -43,7 +44,7 @@ public static class LIN
 
         [STAThread]
 
-        public static void LinInit()
+        public static void Start_LIN()
         {
             XLDefine.XL_Status status;
 
@@ -131,7 +132,12 @@ public static class LIN
                 Console.WriteLine("\nSet Notification               : " + status);
                 if (status != XLDefine.XL_Status.XL_SUCCESS) PrintFunctionError();
 
-                Console.WriteLine("Start Rx Thread...");
+                if (status != XLDefine.XL_Status.XL_SUCCESS)
+                {
+                    // This should happen when its not ok to turn on the rxThread
+                    return;
+                }
+
                 rxThread = new Thread(new ThreadStart(RXThread));
                 rxThread.Start();
             }
@@ -305,157 +311,157 @@ public static class LIN
 
     // UNUSED FOR NOW
 
-    //public static void RxThreadProcessData(XLClass.xl_event receivedEvent)
-    //    {
-    //        string Source = string.Empty;
+    public static void RxThreadProcessData(XLClass.xl_event receivedEvent)
+    {
+        string Source = string.Empty;
 
-    //        LinFrame linFrame = LdfParser.GetIndividualMsgByID(receivedEvent.tagData.linMsgApi.linMsg.id);
-    //        byte[] data = receivedEvent.tagData.linMsgApi.linMsg.data;
+        LinFrame linFrame = LdfParser.GetIndividualMsgByID(receivedEvent.tagData.linMsgApi.linMsg.id);
+        byte[] data = receivedEvent.tagData.linMsgApi.linMsg.data;
 
-    //        linFrame.DataBytes = data;
+        linFrame.DataBytes = data;
 
-    //        if ((receivedEvent.tagData.linMsgApi.linMsg.flags & XLDefine.XL_MessageFlags.XL_LIN_MSGFLAG_TX) == XLDefine.XL_MessageFlags.XL_LIN_MSGFLAG_TX)
-    //        {
-    //            Source = "TX";
-    //        }
-    //        else
-    //        {
-    //            Source = "RX";
-    //        }
+        if ((receivedEvent.tagData.linMsgApi.linMsg.flags & XLDefine.XL_MessageFlags.XL_LIN_MSGFLAG_TX) == XLDefine.XL_MessageFlags.XL_LIN_MSGFLAG_TX)
+        {
+            Source = "TX";
+        }
+        else
+        {
+            Source = "RX";
+        }
 
-    //        if (Source == "RX")
-    //        {
-    //            LdfParser.AddDataToFrameLayout(linFrame);
-    //        }
+        if (Source == "RX")
+        {
+            //LdfParser.AddDataToFrameLayout(linFrame);
+        }
 
-    //    }
+    }
 
-    //    public static void LinRequest()
-    //    {
-    //        foreach (LinFrame linFrame in LdfParser.Frames)
-    //        {
-    //            if (linFrame.Sender != "MASTER")
-    //            {
-    //                XLDefine.XL_Status msg = LIND.XL_LinSendRequest(portHandle, accessMaskMaster, linFrame.ID, 0);
-    //                //Console.WriteLine("*** LIN Send Request : " + msg);
-    //            }
-    //        }
-    //    }
+    public static void LinRequest()
+    {
+        foreach (LinFrame linFrame in LdfParser.Frames)
+        {
+            if (linFrame.Sender != "MASTER")
+            {
+                XLDefine.XL_Status msg = LIND.XL_LinSendRequest(portHandle, accessMaskMaster, linFrame.ID, 0);
+                //Console.WriteLine("*** LIN Send Request : " + msg);
+            }
+        }
+    }
 
-    //    public static void LinTransmit()
-    //    {
-    //        byte[] linData = LdfParser.Frames[0].DataBytes;
-    //        linData[0] = 255;
-    //        linData[1] = 0;
-    //        if (LIND.XL_LinSetSlave(portHandle, accessMaskMaster, 1, linData, 8, XLDefine.XL_LIN_CalcChecksum.XL_LIN_CALC_CHECKSUM_ENHANCED) == XLDefine.XL_Status.XL_SUCCESS)
-    //        {
-    //            if (LIND.XL_LinSendRequest(portHandle, accessMaskMaster, 1, 0) == XLDefine.XL_Status.XL_SUCCESS)
-    //            {
-    //                Console.WriteLine("trimis");
-    //            }
-    //        }
-    //    }
+    public static void LinTransmit()
+    {
+        byte[] linData = LdfParser.Frames[0].DataBytes;
+        linData[0] = 255;
+        linData[1] = 0;
+        if (LIND.XL_LinSetSlave(portHandle, accessMaskMaster, 1, linData, 8, XLDefine.XL_LIN_CalcChecksum.XL_LIN_CALC_CHECKSUM_ENHANCED) == XLDefine.XL_Status.XL_SUCCESS)
+        {
+            if (LIND.XL_LinSendRequest(portHandle, accessMaskMaster, 1, 0) == XLDefine.XL_Status.XL_SUCCESS)
+            {
+                Console.WriteLine("trimis");
+            }
+        }
+    }
 
-    //    public static void LinTransmitGPIOState()
-    //    {
-    //        LinFrame frm = LdfParser.Frames[0];
-    //        for (int i = 0; i < frm.Signals.Count; i++)
-    //        {
-    //            frm.Layout[i] = frm.Signals[i].Layout[0];
-    //        }
+    public static void LinTransmitGPIOState()
+    {
+        LinFrame frm = LdfParser.Frames[0];
+        for (int i = 0; i < frm.Signals.Count; i++)
+        {
+            frm.Layout[i] = frm.Signals[i].Layout[0];
+        }
 
-    //        for (int j = 0; j < 8; j++)
-    //        {
-    //            // Take 8 integers at a time, convert each to a byte
-    //            // Here, the method of conversion will be simple truncation to fit in the byte
-    //            byte value = 0;
-    //            for (int k = 7; k >= 0; k--)
-    //            {
-    //                value <<= 1; // Shift left to make room for the next bit
-    //                value |= (byte)(frm.Layout[j * 8 + k] & 1); // Set the least significant bit
-    //            }
-    //            frm.DataBytes[j] = value; // Simple example: sum of 8 elements
-    //        }
+        for (int j = 0; j < 8; j++)
+        {
+            // Take 8 integers at a time, convert each to a byte
+            // Here, the method of conversion will be simple truncation to fit in the byte
+            byte value = 0;
+            for (int k = 7; k >= 0; k--)
+            {
+                value <<= 1; // Shift left to make room for the next bit
+                value |= (byte)(frm.Layout[j * 8 + k] & 1); // Set the least significant bit
+            }
+            frm.DataBytes[j] = value; // Simple example: sum of 8 elements
+        }
 
-    //        if (LIND.XL_LinSetSlave(portHandle, accessMaskMaster, 1, frm.DataBytes, 8, XLDefine.XL_LIN_CalcChecksum.XL_LIN_CALC_CHECKSUM_ENHANCED) == XLDefine.XL_Status.XL_SUCCESS)
-    //        {
-    //            if (LIND.XL_LinSendRequest(portHandle, accessMaskMaster, 1, 0) == XLDefine.XL_Status.XL_SUCCESS)
-    //            {
-    //                Console.WriteLine("trimis");
-    //            }
-    //        }
-    //    }
+        if (LIND.XL_LinSetSlave(portHandle, accessMaskMaster, 1, frm.DataBytes, 8, XLDefine.XL_LIN_CalcChecksum.XL_LIN_CALC_CHECKSUM_ENHANCED) == XLDefine.XL_Status.XL_SUCCESS)
+        {
+            if (LIND.XL_LinSendRequest(portHandle, accessMaskMaster, 1, 0) == XLDefine.XL_Status.XL_SUCCESS)
+            {
+                Console.WriteLine("trimis");
+            }
+        }
+    }
 
-    //    public static void LinTransmitAQVControlDEAStates()
-    //    {
-    //        LinFrame frm = LdfParser.Frames.FirstOrDefault(frame => frame.Name == "AQV_Control_DEA_States_0x0");
+    public static void LinTransmitAQVControlDEAStates()
+    {
+        LinFrame frm = LdfParser.Frames.FirstOrDefault(frame => frame.Name == "AQV_Control_DEA_States_0x0");
 
-    //        for (int i = 0; i < frm.Signals.Count; i++)
-    //        {
-    //            frm.Layout[i] = frm.Signals[i].Layout[0];
-    //        }
-
-
-    //        for (int j = 0; j < 8; j++)
-    //        {
-    //            // Take 8 integers at a time, convert each to a byte
-    //            // Here, the method of conversion will be simple truncation to fit in the byte
-    //            byte value = 0;
-    //            for (int k = 7; k >= 0; k--)
-    //            {
-    //                value <<= 1; // Shift left to make room for the next bit
-    //                value |= (byte)(frm.Layout[j * 8 + k] & 1); // Set the least significant bit
-    //            }
-    //            frm.DataBytes[j] = value;
-    //        }
+        for (int i = 0; i < frm.Signals.Count; i++)
+        {
+            frm.Layout[i] = frm.Signals[i].Layout[0];
+        }
 
 
-    //        if (LIND.XL_LinSetSlave(portHandle, accessMaskMaster, 5, frm.DataBytes, 8, XLDefine.XL_LIN_CalcChecksum.XL_LIN_CALC_CHECKSUM_ENHANCED) == XLDefine.XL_Status.XL_SUCCESS)
-    //        {
-    //            if (LIND.XL_LinSendRequest(portHandle, accessMaskMaster, 5, 0) == XLDefine.XL_Status.XL_SUCCESS)
-    //            {
-    //                Console.WriteLine("trimis");
-    //            }
-    //        }
-    //    }
-
-    //    public static void LinTransmitPWMConfig(int freq, int duty, int duration, int number, int pwmOn)
-    //    {
-    //        LinFrame PWMfrm = LdfParser.Frames.FirstOrDefault(frame => frame.Name == "PWM_Config_0x50");
-
-    //        PWMfrm.Signals[0].Value = freq;
-    //        PWMfrm.Signals[1].Value = duty;
-    //        PWMfrm.Signals[2].Value = duration;
-    //        PWMfrm.Signals[3].Value = number;
-    //        PWMfrm.Signals[4].Value = pwmOn;
-
-    //        for (int i = 0; i < PWMfrm.Signals.Count; i++)
-    //        {
-    //            PWMfrm.Layout[i] = (int)PWMfrm.Signals[i].Value;
-    //            Console.WriteLine(PWMfrm.Signals[i].Name);
-    //            Console.WriteLine(PWMfrm.Signals[i].Layout[0]);
-    //            Console.WriteLine(PWMfrm.Signals[i].Value);
-    //        }
+        for (int j = 0; j < 8; j++)
+        {
+            // Take 8 integers at a time, convert each to a byte
+            // Here, the method of conversion will be simple truncation to fit in the byte
+            byte value = 0;
+            for (int k = 7; k >= 0; k--)
+            {
+                value <<= 1; // Shift left to make room for the next bit
+                value |= (byte)(frm.Layout[j * 8 + k] & 1); // Set the least significant bit
+            }
+            frm.DataBytes[j] = value;
+        }
 
 
-    //        for (int j = 0; j < 8; j++)
-    //        {
-    //            byte value = 0;
-    //            //for (int k = 7; k >= 0; k--)
-    //            //{
-    //                value <<= 1; 
-    //                value |= (byte)(PWMfrm.Layout[j]); 
-    //            //}
-    //            PWMfrm.DataBytes[j] = value;
-    //            Console.WriteLine("PWMFrm.DataBytes[" + j + "] : " + PWMfrm.DataBytes[j]);
-    //        }
+        if (LIND.XL_LinSetSlave(portHandle, accessMaskMaster, 5, frm.DataBytes, 8, XLDefine.XL_LIN_CalcChecksum.XL_LIN_CALC_CHECKSUM_ENHANCED) == XLDefine.XL_Status.XL_SUCCESS)
+        {
+            if (LIND.XL_LinSendRequest(portHandle, accessMaskMaster, 5, 0) == XLDefine.XL_Status.XL_SUCCESS)
+            {
+                Console.WriteLine("trimis");
+            }
+        }
+    }
 
-    //        if (LIND.XL_LinSetSlave(portHandle, accessMaskMaster, 50, PWMfrm.DataBytes, 8, XLDefine.XL_LIN_CalcChecksum.XL_LIN_CALC_CHECKSUM_ENHANCED) == XLDefine.XL_Status.XL_SUCCESS)
-    //        {
-    //            if (LIND.XL_LinSendRequest(portHandle, accessMaskMaster, 50, 0) == XLDefine.XL_Status.XL_SUCCESS)
-    //            {
-    //                Console.WriteLine("trimis");
-    //            }
-    //        }
-    //    }
+    public static void LinTransmitPWMConfig(int freq, int duty, int duration, int number, int pwmOn)
+    {
+        LinFrame PWMfrm = LdfParser.Frames.FirstOrDefault(frame => frame.Name == "PWM_Config_0x50");
+
+        PWMfrm.Signals[0].Value = freq;
+        PWMfrm.Signals[1].Value = duty;
+        PWMfrm.Signals[2].Value = duration;
+        PWMfrm.Signals[3].Value = number;
+        PWMfrm.Signals[4].Value = pwmOn;
+
+        for (int i = 0; i < PWMfrm.Signals.Count; i++)
+        {
+            PWMfrm.Layout[i] = (int)PWMfrm.Signals[i].Value;
+            Console.WriteLine(PWMfrm.Signals[i].Name);
+            Console.WriteLine(PWMfrm.Signals[i].Layout[0]);
+            Console.WriteLine(PWMfrm.Signals[i].Value);
+        }
+
+
+        for (int j = 0; j < 8; j++)
+        {
+            byte value = 0;
+            //for (int k = 7; k >= 0; k--)
+            //{
+            value <<= 1;
+            value |= (byte)(PWMfrm.Layout[j]);
+            //}
+            PWMfrm.DataBytes[j] = value;
+            Console.WriteLine("PWMFrm.DataBytes[" + j + "] : " + PWMfrm.DataBytes[j]);
+        }
+
+        if (LIND.XL_LinSetSlave(portHandle, accessMaskMaster, 50, PWMfrm.DataBytes, 8, XLDefine.XL_LIN_CalcChecksum.XL_LIN_CALC_CHECKSUM_ENHANCED) == XLDefine.XL_Status.XL_SUCCESS)
+        {
+            if (LIND.XL_LinSendRequest(portHandle, accessMaskMaster, 50, 0) == XLDefine.XL_Status.XL_SUCCESS)
+            {
+                Console.WriteLine("trimis");
+            }
+        }
+    }
 }

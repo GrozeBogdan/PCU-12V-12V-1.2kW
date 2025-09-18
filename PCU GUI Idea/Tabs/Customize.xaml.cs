@@ -68,6 +68,12 @@ namespace PCU_GUI_Idea.Tabs
         }
         private void LoadDatabase(object sender, SelectionChangedEventArgs e)
         {
+            if(DbcParser.Messages != null || LdfParser.Frames != null)
+            {
+                DbcParser.Messages = null;
+                LdfParser.Frames = null;
+            }
+
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
             RadComboBox radComboBox = sender as RadComboBox;
             if (radComboBox.SelectedItem.ToString().Contains(".dbc"))

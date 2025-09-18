@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace PCU_GUI_Idea.Modules
+namespace PCU_GUI_Idea.Modules.Interfaces
 {
     public interface ISignalBindable
     {

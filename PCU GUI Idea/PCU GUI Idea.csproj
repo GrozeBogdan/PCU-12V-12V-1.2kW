@@ -400,7 +400,8 @@
     <Compile Include="Modules\Communication\LIN\LIN.cs" />
     <Compile Include="Modules\DataPoint.cs" />
     <Compile Include="Modules\Communication\CAN\DbcParser.cs" />
-    <Compile Include="Modules\ISignalBinded.cs" />
+    <Compile Include="Modules\Interfaces\ICommunicationDriver.cs" />
+    <Compile Include="Modules\Interfaces\ISignalBinded.cs" />
     <Compile Include="Modules\ThemeManager.cs" />
     <Compile Include="Syles\Theme.cs" />
     <Compile Include="Tabs\AddSignalWindow.xaml.cs">

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32.SafeHandles;
 using PCU_GUI_Idea;
 using PCU_GUI_Idea.Modules;
+using PCU_GUI_Idea.Modules.Interfaces;
 using PCU_GUI_Idea.Tabs;
 using System;
 using System.Collections.Generic;
@@ -154,8 +155,14 @@ using vxlapi_NET;
             Console.WriteLine("Reset Clock           : " + status + "\n\n");
             if (status != XLDefine.XL_Status.XL_SUCCESS) PrintFunctionError();
 
+            if(status != XLDefine.XL_Status.XL_SUCCESS)
+            {
+                // This should happen when its not ok to turn on the rxThread
+                return -1;
+            }
             // Run Rx Thread
             //Console.WriteLine("Start Rx thread...");
+            
             rxThread = new Thread(new ThreadStart(RXThread));
             rxThread.Start();
 
