@@ -1,0 +1,275 @@
+
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: MASTER, 5 ms, 0.17 ms ;
+  Slaves: CONTROL_BOX ;
+}
+
+Signals {
+  ADC_0x02_ANI2: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x02_ANI3: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x02_ANI4: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x02_ANI5: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x06_ANI6: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x06_ANI7: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x06_ANI8: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x06_ANI9: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x10_ANI10: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x10_ANI11: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x10_ANI12: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x24_ANI24: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x24_ANI25: 16, 0, CONTROL_BOX, MASTER ;
+  Error_Frame_0x03_Res_Err: 1, 0, CONTROL_BOX, MASTER ;
+  ADC_0x00_ANI0: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_0x00_ANI1: 16, 0, CONTROL_BOX, MASTER ;
+  GPIO_States_0x01_P10: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P11: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P15: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P16: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P17: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P30: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P32: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P70: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P71: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P72: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P73: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P130: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P140: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P00: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P63: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P62: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P61: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P60: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P137: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P41: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P54: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P55: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P47: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P120: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P56: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P51: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P125: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P44: 1, 0, MASTER, CONTROL_BOX ;
+  GPIO_States_0x01_P52: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA8: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA6: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA4: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA2: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA16: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA14: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA12: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA10: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_EB1: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_EB2: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA22: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA20: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA18: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_EB3: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_EB4: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA17: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA19: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA21: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA9: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA11: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA13: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA15: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA1: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA3: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA5: 1, 0, MASTER, CONTROL_BOX ;
+  AQV_Control_DEA_States_0x0_DEA7: 1, 0, MASTER, CONTROL_BOX ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  GPIO_States_0x01: 1, MASTER, 8 {
+    GPIO_States_0x01_P10, 0 ;
+    GPIO_States_0x01_P11, 1 ;
+    GPIO_States_0x01_P15, 2 ;
+    GPIO_States_0x01_P16, 3 ;
+    GPIO_States_0x01_P17, 4 ;
+    GPIO_States_0x01_P30, 5 ;
+    GPIO_States_0x01_P32, 6 ;
+    GPIO_States_0x01_P70, 7 ;
+    GPIO_States_0x01_P71, 8 ;
+    GPIO_States_0x01_P72, 9 ;
+    GPIO_States_0x01_P73, 10 ;
+    GPIO_States_0x01_P130, 11 ;
+    GPIO_States_0x01_P140, 12 ;
+    GPIO_States_0x01_P00, 13 ;
+    GPIO_States_0x01_P63, 14 ;
+    GPIO_States_0x01_P62, 15 ;
+    GPIO_States_0x01_P61, 16 ;
+    GPIO_States_0x01_P60, 17 ;
+    GPIO_States_0x01_P137, 18 ;
+    GPIO_States_0x01_P41, 19 ;
+    GPIO_States_0x01_P54, 20 ;
+    GPIO_States_0x01_P55, 21 ;
+    GPIO_States_0x01_P47, 22 ;
+    GPIO_States_0x01_P120, 23 ;
+    GPIO_States_0x01_P56, 24 ;
+    GPIO_States_0x01_P51, 25 ;
+    GPIO_States_0x01_P125, 26 ;
+    GPIO_States_0x01_P44, 27 ;
+    GPIO_States_0x01_P52, 28 ;
+  }
+  ADC_0x02: 2, CONTROL_BOX, 8 {
+    ADC_0x02_ANI2, 0 ;
+    ADC_0x02_ANI3, 16 ;
+    ADC_0x02_ANI4, 32 ;
+    ADC_0x02_ANI5, 48 ;
+  }
+  ADC_0x06: 6, CONTROL_BOX, 8 {
+    ADC_0x06_ANI6, 0 ;
+    ADC_0x06_ANI7, 16 ;
+    ADC_0x06_ANI8, 32 ;
+    ADC_0x06_ANI9, 48 ;
+  }
+  ADC_0x10: 10, CONTROL_BOX, 8 {
+    ADC_0x10_ANI10, 0 ;
+    ADC_0x10_ANI11, 16 ;
+    ADC_0x10_ANI12, 32 ;
+  }
+  ADC_0x24: 24, CONTROL_BOX, 8 {
+    ADC_0x24_ANI24, 0 ;
+    ADC_0x24_ANI25, 16 ;
+  }
+  Error_Frame_0x03: 3, CONTROL_BOX, 1 {
+    Error_Frame_0x03_Res_Err, 0 ;
+  }
+  ADC_0x00: 0, CONTROL_BOX, 8 {
+    ADC_0x00_ANI0, 0 ;
+    ADC_0x00_ANI1, 16 ;
+  }
+  AQV_Control_DEA_States_0x0: 5, MASTER, 8 {
+    AQV_Control_DEA_States_0x0_DEA8, 0 ;
+    AQV_Control_DEA_States_0x0_DEA6, 1 ;
+    AQV_Control_DEA_States_0x0_DEA4, 2 ;
+    AQV_Control_DEA_States_0x0_DEA2, 3 ;
+    AQV_Control_DEA_States_0x0_DEA16, 4 ;
+    AQV_Control_DEA_States_0x0_DEA14, 5 ;
+    AQV_Control_DEA_States_0x0_DEA12, 6 ;
+    AQV_Control_DEA_States_0x0_DEA10, 7 ;
+    AQV_Control_DEA_States_0x0_EB1, 8 ;
+    AQV_Control_DEA_States_0x0_EB2, 9 ;
+    AQV_Control_DEA_States_0x0_DEA22, 10 ;
+    AQV_Control_DEA_States_0x0_DEA20, 11 ;
+    AQV_Control_DEA_States_0x0_DEA18, 12 ;
+    AQV_Control_DEA_States_0x0_EB3, 13 ;
+    AQV_Control_DEA_States_0x0_EB4, 14 ;
+    AQV_Control_DEA_States_0x0_DEA17, 15 ;
+    AQV_Control_DEA_States_0x0_DEA19, 16 ;
+    AQV_Control_DEA_States_0x0_DEA21, 17 ;
+    AQV_Control_DEA_States_0x0_DEA9, 18 ;
+    AQV_Control_DEA_States_0x0_DEA11, 19 ;
+    AQV_Control_DEA_States_0x0_DEA13, 20 ;
+    AQV_Control_DEA_States_0x0_DEA15, 21 ;
+    AQV_Control_DEA_States_0x0_DEA1, 22 ;
+    AQV_Control_DEA_States_0x0_DEA3, 23 ;
+    AQV_Control_DEA_States_0x0_DEA5, 24 ;
+    AQV_Control_DEA_States_0x0_DEA7, 25 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  CONTROL_BOX{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x5 ;
+    initial_NAD = 0x5 ;
+    product_id = 0x124, 0x1, 0 ;
+    response_error = Error_Frame_0x03_Res_Err ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      GPIO_States_0x01 ;
+      ADC_0x02 ;
+      ADC_0x06 ;
+      ADC_0x10 ;
+      ADC_0x24 ;
+      Error_Frame_0x03 ;
+      ADC_0x00 ;
+      AQV_Control_DEA_States_0x0 ;
+    }
+  }
+}
+
+Schedule_tables {
+ schedule_master_req {
+    MasterReq delay 10 ms ;
+  }
+ schedule_normal {
+    AQV_Control_DEA_States_0x0 delay 10 ms ;
+    ADC_0x00 delay 10 ms ;
+    Error_Frame_0x03 delay 5 ms ;
+    ADC_0x24 delay 10 ms ;
+    ADC_0x10 delay 10 ms ;
+    ADC_0x06 delay 10 ms ;
+    ADC_0x02 delay 10 ms ;
+    GPIO_States_0x01 delay 10 ms ;
+  }
+ schedule_slave_resp {
+    SlaveResp delay 10 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  float_encoding {
+    physical_value, 0, 0, 0.01, 0 ;
+  }
+}
+
+Signal_representation {
+  float_encoding: ADC_0x02_ANI2, ADC_0x02_ANI3, ADC_0x02_ANI4, ADC_0x02_ANI5, ADC_0x06_ANI6, ADC_0x06_ANI7, ADC_0x06_ANI8, ADC_0x06_ANI9, ADC_0x10_ANI10, ADC_0x10_ANI11, ADC_0x10_ANI12, ADC_0x24_ANI24, ADC_0x24_ANI25, ADC_0x00_ANI0, ADC_0x00_ANI1 ;
+}
