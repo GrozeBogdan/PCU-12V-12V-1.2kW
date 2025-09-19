@@ -6,17 +6,35 @@ LIN_language_version = "2.1";
 LIN_speed = 19.2 kbps;
 
 Nodes {
-  Master: LIN_Commander, 1 ms, 0 ms ;
+  Master: MASTER, 5 ms, 0.17 ms ;
   Slaves: CONTROL_BOX ;
 }
 
 Signals {
-  Enables_0x00_test1: 8, 0, LIN_Commander, CONTROL_BOX ;
-  Enables_0x00_test2: 8, 0, LIN_Commander, CONTROL_BOX ;
-  Enables_0x00_test3: 8, 0, LIN_Commander, CONTROL_BOX ;
-  Enables_0x00_test4: 8, 0, LIN_Commander, CONTROL_BOX ;
-  ADC_0x01_voltage: 8, 0, CONTROL_BOX, LIN_Commander ;
-  ADC_0x01_temper: 8, 0, CONTROL_BOX, LIN_Commander ;
+  Error_Frame_0x0A_error: 1, 0, CONTROL_BOX, MASTER ;
+  Enables_0x01_enable_uvlo_ph1: 1, 0, MASTER, CONTROL_BOX ;
+  Enables_0x01_enable_uvlo_ph2: 1, 0, MASTER, CONTROL_BOX ;
+  Enables_0x01_sync_ph1: 1, 0, MASTER, CONTROL_BOX ;
+  Enables_0x01_sync_ph2: 1, 0, MASTER, CONTROL_BOX ;
+  Enables_0x01_reset_ph1: 1, 0, MASTER, CONTROL_BOX ;
+  Enables_0x01_mode_ph1: 3, 0, MASTER, CONTROL_BOX ;
+  Enables_0x01_mode_ph2: 3, 0, MASTER, CONTROL_BOX ;
+  Enables_0x01_end_frame: 1, 0, MASTER, CONTROL_BOX ;
+  Fault_Controller_0x02_fault_ph1: 1, 0, CONTROL_BOX, MASTER ;
+  Fault_Controller_0x02_fault_ph2: 1, 0, CONTROL_BOX, MASTER ;
+  Fault_Controller_0x02_end_frame: 8, 0, CONTROL_BOX, MASTER ;
+  ADC_Voltage_Readings_0x03_voltageIn: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_Voltage_Readings_0x03_voltageOut: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_Voltage_Readings_0x03_end_frame: 1, 0, CONTROL_BOX, MASTER ;
+  ADC_Temperature_Readings_0x04_Temp_Buck_Ph1: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_Temperature_Readings_0x04_Temp_Boost_Ph1: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_Temperature_Readings_0x04_Temp_Buck_Ph2: 16, 0, CONTROL_BOX, MASTER ;
+  ADC_Temperature_Readings_0x04_Temp_Boost_Ph2: 16, 0, CONTROL_BOX, MASTER ;
+  Error_Frame_0x0A_end_frame: 1, 0, CONTROL_BOX, MASTER ;
+  PWM_Config_0x05_frequency: 10, 0, MASTER, CONTROL_BOX ;
+  PWM_Config_0x05_dtrk_ph1: 10, 0, MASTER, CONTROL_BOX ;
+  PWM_Config_0x05_dtrk_ph2: 10, 0, MASTER, CONTROL_BOX ;
+  PWM_Config_0x05_end_frame: 1, 0, MASTER, CONTROL_BOX ;
 }
 
 Diagnostic_signals {
@@ -41,15 +59,41 @@ Diagnostic_signals {
 
 
 Frames {
-  Enables_0x00: 0, LIN_Commander, 8 {
-    Enables_0x00_test1, 0 ;
-    Enables_0x00_test2, 8 ;
-    Enables_0x00_test3, 16 ;
-    Enables_0x00_test4, 24 ;
+  Enables_0x01: 1, MASTER, 8 {
+    Enables_0x01_enable_uvlo_ph1, 0 ;
+    Enables_0x01_enable_uvlo_ph2, 1 ;
+    Enables_0x01_sync_ph1, 2 ;
+    Enables_0x01_sync_ph2, 3 ;
+    Enables_0x01_reset_ph1, 4 ;
+    Enables_0x01_mode_ph1, 5 ;
+    Enables_0x01_mode_ph2, 8 ;
+    Enables_0x01_end_frame, 11 ;
   }
-  ADC_0x01: 1, CONTROL_BOX, 8 {
-    ADC_0x01_voltage, 0 ;
-    ADC_0x01_temper, 8 ;
+  Fault_Controller_0x02: 2, CONTROL_BOX, 8 {
+    Fault_Controller_0x02_fault_ph1, 0 ;
+    Fault_Controller_0x02_fault_ph2, 1 ;
+    Fault_Controller_0x02_end_frame, 2 ;
+  }
+  ADC_Voltage_Readings_0x03: 3, CONTROL_BOX, 8 {
+    ADC_Voltage_Readings_0x03_voltageIn, 0 ;
+    ADC_Voltage_Readings_0x03_voltageOut, 16 ;
+    ADC_Voltage_Readings_0x03_end_frame, 32 ;
+  }
+  ADC_Temperature_Readings_0x04: 4, CONTROL_BOX, 8 {
+    ADC_Temperature_Readings_0x04_Temp_Buck_Ph1, 0 ;
+    ADC_Temperature_Readings_0x04_Temp_Boost_Ph1, 16 ;
+    ADC_Temperature_Readings_0x04_Temp_Buck_Ph2, 32 ;
+    ADC_Temperature_Readings_0x04_Temp_Boost_Ph2, 48 ;
+  }
+  Error_Frame_0x0A: 10, CONTROL_BOX, 1 {
+    Error_Frame_0x0A_error, 0 ;
+    Error_Frame_0x0A_end_frame, 1 ;
+  }
+  PWM_Config_0x05: 5, MASTER, 8 {
+    PWM_Config_0x05_frequency, 0 ;
+    PWM_Config_0x05_dtrk_ph1, 10 ;
+    PWM_Config_0x05_dtrk_ph2, 20 ;
+    PWM_Config_0x05_end_frame, 30 ;
   }
 }
 
@@ -81,22 +125,49 @@ Diagnostic_frames {
 Node_attributes {
   CONTROL_BOX{
     LIN_protocol = "2.1" ;
-    configured_NAD = 0xFF ;
-    initial_NAD = 0xFF ;
-    product_id = 0x0, 0x0, 255 ;
+    configured_NAD = 0x5 ;
+    initial_NAD = 0x5 ;
+    product_id = 0x124, 0x1, 0 ;
+    response_error = Error_Frame_0x0A_error ;
     P2_min = 50 ms ;
     ST_min = 0 ms ;
     N_As_timeout = 1000 ms ;
     N_Cr_timeout = 1000 ms ;
     configurable_frames {
-      Enables_0x00 ;
-      ADC_0x01 ;
+      Fault_Controller_0x02 ;
+      ADC_Voltage_Readings_0x03 ;
+      ADC_Temperature_Readings_0x04 ;
+      Error_Frame_0x0A ;
+      Enables_0x01 ;
+      PWM_Config_0x05 ;
     }
   }
 }
 
 Schedule_tables {
+ schedule_master_req {
+    MasterReq delay 10 ms ;
+  }
+ schedule_normal {
+    PWM_Config_0x05 delay 10 ms ;
+    Error_Frame_0x0A delay 5 ms ;
+    ADC_Temperature_Readings_0x04 delay 10 ms ;
+    ADC_Voltage_Readings_0x03 delay 10 ms ;
+    Fault_Controller_0x02 delay 10 ms ;
+    Enables_0x01 delay 10 ms ;
+  }
+ schedule_slave_resp {
+    SlaveResp delay 10 ms ;
+  }
 }
 
 
+Signal_encoding_types {
+  float_encoding {
+    physical_value, 0, 0, 0.01, 0 ;
+  }
+}
 
+Signal_representation {
+  float_encoding: ADC_Voltage_Readings_0x03_voltageIn, ADC_Voltage_Readings_0x03_voltageOut ;
+}
